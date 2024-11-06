@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Invoice
+      items: []
+      source:
+        cmd: |
+          linode account invoices-list --json
+        path-id: $[::].id
+        path-name: $[::].label
+      produces:
+        - variable: account_invoice_id

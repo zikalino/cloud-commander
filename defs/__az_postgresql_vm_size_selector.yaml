@@ -1,0 +1,14 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select SKU
+      items: []
+      consumes:
+        - variable: postgresql_server_region
+      source:
+        cmd: |
+          az postgres flexible-server list-skus --location ${postgresql_server_region}
+        path-id: $[0].supportedFastProvisioningEditions[*].supportedSku
+        path-name: $[0].supportedFastProvisioningEditions[*].supportedSku
+      produces:
+        - variable: postgresql_server_sku

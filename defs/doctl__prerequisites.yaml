@@ -1,0 +1,19 @@
+type: layout-form
+id: root
+form:
+  - type: fieldset
+    subitems:
+      - $include: __go_install_step.yaml
+      - type: 'action-row'
+        name: Install Digital Ocean CLI
+        verify: doctl version
+        install: go install github.com/digitalocean/doctl/cmd/doctl@latest
+
+
+footer:
+  - type: footer
+    id: footer
+    subitems:
+      - type: button
+        id: install_button
+        text: Create

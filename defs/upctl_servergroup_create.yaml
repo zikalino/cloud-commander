@@ -1,0 +1,42 @@
+type: layout-form
+header:
+  - type: header
+    title: Create Server Group
+    logo: icon.webp
+form:
+  - type: fieldset
+    subitems:
+      - type: row
+        subitems:
+          - type: textfield
+            name: Title
+            produces:
+              - variable: title
+      - type: row
+        subitems:
+          - type: combo
+            name: Anti-affinity Policy
+            items: ['yes', 'strict', 'no']
+            produces:
+              - variable: anti_affinity_policy
+      - $include: __upctl_server_list_selector.yaml
+
+      - type: 'action-row'
+        id: create-container-instance
+        name: Create Server Group
+        consumes:
+          - variable: title
+          - variable: anti_affinity_policy
+          - variable: server
+        verify: |
+            upctl servergroup show ${title}
+        install: upctl servergroup create --title ${title} --anti-affinity-policy ${anti_affinity_policy} --server ${server}
+        uninstall: upctl servergroup delete ${title}
+
+footer:
+  - type: footer
+    id: footer
+    subitems:
+      - type: button
+        id: install_button
+        text: Create

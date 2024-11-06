@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Snapshot
+      items: []
+      source:
+        cmd: |
+          doctl compute snapshot list --output json
+        path-id: $[::].id
+        path-name: $[::].name
+      produces:
+        - variable: compute_snapshot_id

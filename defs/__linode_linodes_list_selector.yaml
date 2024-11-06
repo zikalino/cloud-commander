@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Linode
+      items: []
+      source:
+        cmd: |
+          linode linodes list --json
+        path-id: $[::].id
+        path-name: $[::].label
+      produces:
+        - variable: linodes_id

@@ -1,0 +1,22 @@
+type: layout-form
+id: root
+form:
+  - type: fieldset
+    subitems:
+      - $include: __python_install_step.yaml
+      - type: 'action-row'
+        name: Install Linode CLI
+        verify: linode-cli --version
+        install: | 
+                pip3 install linode-cli
+      - type: 'action-row'
+        name: Login
+        # will fail if tries interactive login as will encounter
+        verify: echo "" | linode-cli
+        # start interactive login here
+        install: linode ; $?
+footer:
+  - type: footer
+    subitems:
+      - type: button
+        codicon: run-all

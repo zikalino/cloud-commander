@@ -1,0 +1,19 @@
+type: layout-form
+id: root
+form:
+  - type: fieldset
+    subitems:
+      - $include: __go_install_step.yaml
+      - type: 'action-row'
+        name: Install UpCloud CLI
+        verify: upctl version
+        install: go install github.com/UpCloudLtd/upcloud-cli/v3/...@latest
+
+
+footer:
+  - type: footer
+    id: footer
+    subitems:
+      - type: button
+        id: install_button
+        codicon: run-all

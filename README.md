@@ -1,2 +1,2 @@
-# cloud-commander
-Multi-cloud Visual Studio Code Extension
+# vcode-azure
+VSCode Azure tools by smarter> code .

@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Resource Group
+      items: []
+      source:
+        cmd: |
+          az group list
+        path-id: $[*].name
+        path-name: $[*].name
+      produces:
+        - variable: resource_group

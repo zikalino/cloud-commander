@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Kubernetes Plan
+      items: []
+      source:
+        cmd: |
+          upctl kubernetes plans --output json
+        path-id: $[::].name
+        path-name: $[::].name
+      produces:
+        - variable: kubernetes_plan

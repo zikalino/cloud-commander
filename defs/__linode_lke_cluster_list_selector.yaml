@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Kubernetes Cluster
+      items: []
+      source:
+        cmd: |
+          linode lke clusters-list --json
+        path-id: $[::].id
+        path-name: $[::].label
+      produces:
+        - variable: lke_cluster_id

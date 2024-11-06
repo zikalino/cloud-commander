@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Router
+      items: []
+      source:
+        cmd: |
+          upctl router list --output json
+        path-id: $.routers.[*].uuid
+        path-name: $.routers.[*].name
+      produces:
+        - variable: router_id

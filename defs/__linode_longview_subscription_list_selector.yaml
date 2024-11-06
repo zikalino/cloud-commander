@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Longview Subscription
+      items: []
+      source:
+        cmd: |
+          linode longview subscriptions-list --json
+        path-id: $[::].id
+        path-name: $[::].label
+      produces:
+        - variable: longview_subscription_id

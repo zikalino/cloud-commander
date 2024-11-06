@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Tag
+      items: []
+      source:
+        cmd: |
+          linode tags list --json
+        path-id: $[::].label
+        path-name: $[::].label
+      produces:
+        - variable: tags_id

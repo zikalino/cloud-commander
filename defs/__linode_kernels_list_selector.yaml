@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Linode Kernel
+      items: []
+      source:
+        cmd: |
+          linode kernels list --json
+        path-id: $[::].id
+        path-name: $[::].label
+      produces:
+        - variable: kernels_id

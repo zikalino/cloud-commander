@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Linode Kubernetes Engine Version
+      items: []
+      source:
+        cmd: |
+          linode lke versions-list --json
+        path-id: $[::].id
+        path-name: $[::].id
+      produces:
+        - variable: lke_version_id

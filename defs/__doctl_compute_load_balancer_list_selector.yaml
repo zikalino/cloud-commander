@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Load Balancer
+      items: []
+      source:
+        cmd: |
+          doctl compute load-balancer list --output json
+        path-id: $[::].id
+        path-name: $[::].name
+      produces:
+        - variable: compute_load_balancer_id

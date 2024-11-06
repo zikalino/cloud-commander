@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Event
+      items: []
+      source:
+        cmd: |
+          linode events list --json
+        path-id: $[::].id
+        path-name: $[::].id
+      produces:
+        - variable: events_id

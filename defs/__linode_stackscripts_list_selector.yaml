@@ -1,0 +1,14 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select StackScript
+      items: []
+      source:
+        cmd: |
+          linode stackscripts list --json
+        path-id: $[::].id
+        path-name: $[::].label
+      produces:
+        - variable: stackscripts_id
+
+

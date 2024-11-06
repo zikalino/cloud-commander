@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Image
+      items: []
+      source:
+        cmd: |
+          linode images list --json
+        path-id: $[::].id
+        path-name: $[::].label
+      produces:
+        - variable: images_id

@@ -1,0 +1,26 @@
+type: layout-form
+id: root
+form:
+  #
+  # AWS CLI
+  #
+  - type: fieldset
+    platform: win32
+    subitems:
+      - type: 'action-row'
+        platform: win32
+        id: install-aws-cli
+        name: Install AWS CLI
+        banner: |
+            Installing AWS CLI.
+        verify: aws --version
+        install: | 
+                winget install -e --id Amazon.AWSCLI
+
+footer:
+  - type: footer
+    id: footer
+    subitems:
+      - type: button
+        id: install_button
+        codicon: run-all

@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Ticket
+      items: []
+      source:
+        cmd: |
+          linode tickets list --json
+        path-id: $[::].id
+        path-name: $[::].summary
+      produces:
+        - variable: tickets_id

@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Domain
+      items: []
+      source:
+        cmd: |
+          linode domains list --json
+        path-id: $[::].id
+        path-name: $[::].domain
+      produces:
+        - variable: domains_id

@@ -1,0 +1,17 @@
+type: layout-form
+id: root
+form:
+  - type: fieldset
+    subitems:
+      - $include: __go_install_step.yaml
+      - type: 'action-row'
+        name: Install Vultr CLI
+        verify: vultr-cli version
+        install: go install github.com/vultr/vultr-cli/v3@latest
+
+footer:
+  - type: footer
+    subitems:
+      - type: button
+        id: install_button
+        codicon: run-all

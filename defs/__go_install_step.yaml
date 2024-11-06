@@ -1,0 +1,12 @@
+
+- type: 'action-row'
+  platform: win32
+  name: Install Go
+  verify: go version
+  install: winget install go	
+
+- type: 'action-row'
+  platform: linux
+  name: Install Go
+  verify: go version
+  install: xxx tbd

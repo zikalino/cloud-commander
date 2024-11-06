@@ -1,0 +1,14 @@
+
+- type: 'action-row'
+  platform: win32
+  name: Install Python
+  verify: python --version
+  install: winget install python --accept-package-agreements
+
+- type: 'action-row'
+  platform: linux
+  name: Install Python
+  verify: python3 --version
+  install: |
+      sudo apt update
+      sudo install python3

@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select User
+      items: []
+      source:
+        cmd: |
+          linode users list --json
+        path-id: $[::].username
+        path-name: $[::].username
+      produces:
+        - variable: users_id

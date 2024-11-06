@@ -1,0 +1,74 @@
+type: layout-form
+id: root
+header:
+  - type: header
+    title: Logic App
+    logo: icon.webp
+form:
+  - $include: __az_resource_group_select_or_create.yaml
+  - $include: __az_storage_account_selector.yaml
+  - $include: __az_app_service_plan_selector.yaml
+
+  #
+  # LOGIC APP APP ITSELF
+  #
+  - type: fieldset
+    subitems:
+      - type: row
+        subitems:
+          - type: textfield
+            name: Name
+            produces:
+              - variable: logicapp_name
+      - type: 'action-row'
+        name: Create Logic App
+        consumes:
+          - variable: resource_group_name
+          - variable: logicapp_name
+          - variable: storage_account_name
+          - variable: appservice_plan_name
+        verify: |
+            az logicapp show --resource-group ${resource_group_name} --name ${logicapp_name}
+        install: az logicapp create --resource-group ${resource_group_name} --name ${logicapp_name} --storage-account ${storage_account_name} --plan ${appservice_plan_name}
+        uninstall: az logicapp delete --resource-group ${resource_group_name} --name ${logicapp_name} --yes
+
+footer:
+  - type: footer
+    id: footer
+    subitems:
+      - type: button
+        id: install_button
+        text: Create
+
+#    --name -n                 [Required] : Name of the new logic app.
+#    --resource-group -g       [Required] : Name of resource group. You can configure the default
+#                                           group using `az configure --defaults group=<name>`.
+#    --storage-account -s      [Required] : Provide a string value of a Storage Account in the
+#                                           provided Resource Group. Or Resource ID of a Storage
+#                                           Account in a different Resource Group.
+#    --app-insights                       : Name of the existing App Insights project to be added to
+#                                           the logic app. Must be in the same resource group.
+#    --app-insights-key                   : Instrumentation key of App Insights to be added.
+#    --deployment-container-image-name -i : Container image name from container registry, e.g.
+#                                           publisher/image-name:tag.
+#    --deployment-local-git -l            : Enable local git.
+#    --deployment-source-branch -b        : The branch to deploy.  Default: master.
+#    --deployment-source-url -u           : Git repository URL to link with manual integration.
+#    --disable-app-insights               : Disable creating application insights resource during
+#                                           logicapp create. No logs will be available.  Allowed
+#                                           values: false, true.
+#    --docker-registry-server-password -w : The container registry server password. Required for
+#                                           private registries.
+#    --docker-registry-server-user -d     : The container registry server username.
+#    --functions-version -v               : The functions version for logic app.  Allowed values: 4.
+#                                           Default: 4.
+#    --https-only                         : Redirect all traffic made to an app using HTTP to HTTPS.
+#                                           Allowed values: false, true.
+#    --plan -p                            : Name or resource id of the logicapp app service plan. Use
+#                                           'appservice plan create' to get one. If using an App
+#                                           Service plan from a different resource group, the full
+#                                           resource id must be used and not the plan name.
+#    --runtime-version                    : The runtime version for logic app.  Allowed values: ~14,
+#                                           ~16, ~18.
+#    --tags                               : Space-separated tags: key[=value] [key[=value] ...]. Use
+#                                           "" to clear existing tags.

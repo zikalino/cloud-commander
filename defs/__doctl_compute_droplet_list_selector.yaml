@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Droplet
+      items: []
+      source:
+        cmd: |
+          doctl compute droplet list --output json
+        path-id: $[::].id
+        path-name: $[::].name
+      produces:
+        - variable: compute_droplet_id

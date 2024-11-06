@@ -1,0 +1,15 @@
+type: layout-form
+id: root
+form:
+  - type: fieldset
+    platform: win32
+    subitems:
+      - $include: __git_install_step.yaml
+
+footer:
+  - type: footer
+    id: footer
+    subitems:
+      - type: button
+        id: install_button
+        text: Create

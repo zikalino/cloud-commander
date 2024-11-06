@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Beta
+      items: []
+      source:
+        cmd: |
+          linode betas list --json
+        path-id: $[::].id
+        path-name: $[::].label
+      produces:
+        - variable: betas_id

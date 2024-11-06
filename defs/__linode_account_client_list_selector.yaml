@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Account Client
+      items: []
+      source:
+        cmd: |
+          linode account clients-list --json
+        path-id: $[::].id
+        path-name: $[::].label
+      produces:
+        - variable: account_client_id

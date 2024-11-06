@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Login
+      items: []
+      source:
+        cmd: |
+          linode account logins-list --json
+        path-id: $[::].id
+        path-name: $[::].datetime
+      produces:
+        - variable: account_login_id

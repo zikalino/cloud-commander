@@ -1,0 +1,89 @@
+type: layout-form
+header:
+  - type: header
+    title: Create Server
+    logo: icon.webp
+form:
+  #--avoid-host int                  Host to avoid when scheduling the server. Use this to make sure VMs do not reside on specific host.
+  #                                  Refers to value from `host` attribute. Useful when building HA-environments.
+  #                                  Default: 0
+  #--boot-order string               The boot device order, disk / cdrom / network or comma separated combination.
+  #--cores int                       Number of cores. Only allowed if `plan` option is set to "custom".
+  #                                  Default: 0
+  #--create-password                 Create an admin password.
+  #--enable-firewall                 Enable firewall.
+  #--enable-metadata                 Enable metadata service. The metadata service will be enabled by default, if the selected OS
+  #                                  template uses cloud-init and thus requires metadata service.
+  #--enable-remote-access            Enable remote access.
+  #--host int                        Schedule the server on a specific host. Refers to value from `host` attribute. Only available in
+  #                                  private clouds.
+  #                                  Default: 0
+  #--hostname string                 Server hostname.
+  #--label stringArray               Labels to describe the server in `key=value` format, multiple can be declared. Usage: --label
+  #                                  env=dev
+  #
+  #                                  --label owner=operations
+  #--memory int                      Memory amount in MiB. Only allowed if `plan` option is set to "custom".
+  #                                  Default: 0
+  #--network stringArray             A network interface for the server, multiple can be declared. Usage: --network
+  #                                  family=IPv4,type=public
+  #                                  --network type=private,network=037a530b-533e-4cef-b6ad-6af8094bb2bc,ip-address=10.0.0.1
+  #--os string                       Server OS to use (will be the first storage device). The value should be title or UUID of an either
+  #                                  public or private template. Set to empty to fully customise the storages.
+  #                                  Default: Ubuntu Server 24.04 LTS (Noble Numbat)
+  #--os-storage-size int             OS storage size in GiB. This is only applicable if `os` is also set. Zero value makes the disk equal
+  #                                  to the minimum size of the template.
+  #                                  Default: 0
+  #--os-storage-encrypt              Encrypt the OS storage. This is only applicable if `os` is also set.
+  #--password-delivery string        Defines how password is delivered. Available: email, sms
+  #                                  Default: none
+  #--plan string                     Server plan name. See "server plans" command for valid plans. Set to "custom" and use `cores` and
+  #                                  `memory` options for flexible plan.
+  #                                  Default: 1xCPU-2GB
+  #--remote-access-password string   Defines the remote access password.
+  #--remote-access-type string       Set a remote access type. Available: vnc, spice
+  #--server-group string             UUID of a server group for the server. To remove the server from the group, see `servergroup modify
+  #--simple-backup string            Simple backup rule. Format (HHMM,{dailies,weeklies,monthlies}). Example: 2300,dailies
+  #--ssh-keys stringSlice            Add one or more SSH keys to the admin account. Accepted values are SSH public keys or filenames from
+  #                                  where to read the keys.
+  #--storage stringArray             A storage connected to the server, multiple can be declared. Usage: --storage
+  #                                  action=attach,storage=01000000-0000-4000-8000-000020010301,type=cdrom
+  #--time-zone string                Time zone to set the RTC to.
+  #                                  Default: UTC
+  #--title string                    A short, informational description.
+  #--user-data string                Defines URL for a server setup script, or the script body itself.
+  #--username string                 Admin account username.
+  #--video-model string              Video interface model of the server. Available: vga, cirrus
+  #                                  Default: vga
+  #--wait                            Wait for server to be in started state before returning.
+  #--zone string                     Zone where to create the server. Run `upctl zone list` to list all available zones.
+
+  - type: fieldset
+    subitems:
+      - $include: __upctl_zone_list_selector.yaml
+      - type: row
+        subitems:
+          - type: textfield
+            name: Host Name
+            produces:
+              - variable: host_name
+      - $include: __upctl_server_plans_selector.yaml
+      - type: 'action-row'
+        id: create-container-instance
+        name: Create Container Instance
+        consumes:
+          - variable: host_name
+          - variable: zone
+          - variable: server_plan
+        verify: |
+            upctl server show ${host_name}
+        install: upctl server create --hostname ${host_name} --zone ${zone} --plan ${server_plan} --password-delivery email
+        uninstall: upctl server delete ${host_name}
+
+footer:
+  - type: footer
+    id: footer
+    subitems:
+      - type: button
+        id: install_button
+        text: Create

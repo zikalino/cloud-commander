@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Kubernetes Version
+      items: []
+      source:
+        cmd: |
+          upctl kubernetes versions --output json
+        path-id: $[::].id
+        path-name: $[::].version
+      produces:
+        - variable: kubernetes_version

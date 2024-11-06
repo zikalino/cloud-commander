@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Firewall
+      items: []
+      source:
+        cmd: |
+          doctl compute firewall list --output json
+        path-id: $[::].id
+        path-name: $[::].name
+      produces:
+        - variable: compute_firewall_id

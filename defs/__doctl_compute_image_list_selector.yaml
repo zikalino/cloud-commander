@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Image
+      items: []
+      source:
+        cmd: |
+          doctl compute image list --output json
+        path-id: $[::].id
+        path-name: $[::].name
+      produces:
+        - variable: image
