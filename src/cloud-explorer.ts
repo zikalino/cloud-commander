@@ -108,6 +108,7 @@ async function tryToQueryItems(view: any, id: string) {
             var cmd = operation['cmd'].replaceAll("${id}", ids[idx].toString());
             cmd = cmd.replaceAll("${name}", names[idx]);
             child_operation['cmd'] = cmd;
+            child_operation['global'] = false;
           }
           if ('query' in operation) {
             var query = operation['query'].replaceAll("${id}", ids[idx].toString());
@@ -387,24 +388,30 @@ function findOperations(item_id: string): any[] {
   var item = findItem(resources, item_id);
 
   if (item !== null) {
-    findOperationsRecursive(item, operations);
+    findOperationsRecursive(item, operations, 0);
   }
 
   return operations;
 }
 
-function findOperationsRecursive(item: any, operations: any[]) {
+function findOperationsRecursive(item: any, operations: any[], level: number) {
 
   if (item !== null) {
     // operations from this item
     if ('operations' in item) {
-      operations.push(...item['operations']);
+      for (var opIdx = 0; opIdx < item['operations'].length; opIdx++) {
+        let operation = item['operations'][opIdx];
+        let global = !('global' in operation) || operation['global'];
+        if (level === 0 || global) {
+          operations.push(operation);
+        }
+      }
     }
 
     // and all the matching operations from subitems
     if ('subitems' in item) {
       for (var idx in item['subitems']) {
-        findOperationsRecursive(item['subitems'][idx], operations);
+        findOperationsRecursive(item['subitems'][idx], operations, level + 1);
       }
     }
   }
