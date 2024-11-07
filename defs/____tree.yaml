@@ -271,6 +271,41 @@
           name: Delete
           cmd: linode linodes delete ${id}
           refresh: parent
+        - type: reboot
+          name: Reboot
+          cmd: linode linodes reboot ${id}
+        - type: rebuild
+          name: Rebuild
+          cmd: linode linodes rebuild ${id}
+
+        - type: power-off
+          name: Power off
+          cmd: linode linodes shutdown ${id}
+        - type: power-on
+          name: Power on
+          cmd: linode linodes boot ${id}
+        - type: other
+          name: Enable backups
+          cmd: linode linodes backups-enable ${id}
+        - type: other
+          name: Update
+          cmd: linode linodes update ${id}
+        - type: other
+          name: Upgrade
+          cmd: linode linodes upgrade ${id}
+        - type: other
+          name: Snapshot
+          cmd: linode linodes snapshot ${id}
+        - type: other
+          name: Resize
+          cmd: linode linodes resize ${id}
+        - type: other
+          name: Rescue
+          cmd: linode linodes rescue ${id}
+        - type: other
+          name: Clone
+          cmd: linode linodes clone ${id}
+
     - name: Node Balancers
       id: cloud-linode-nodebalancers
       icon: linode.png
