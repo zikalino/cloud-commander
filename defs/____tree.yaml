@@ -74,6 +74,36 @@
         - type: other
           name: Disable backups
           cmd: doctl compute droplet-action disable-backups ${id}
+    - name: Volumes
+      id: cloud-digital-ocean-volumes
+      icon: digital-ocean.svg
+      subitems: []
+      raw: {}
+      query: doctl compute volume list --output json
+      path-id: $[::].id
+      path-name: $[::].name
+      path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Volume
+          template: doctl_compute_volume_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: doctl compute volume delete ${id} --force
+          refresh: parent
+        - type: other
+          name: Resize
+          cmd: doctl compute volume-action resize ${id}
+          refresh: self
+        - type: other
+          name: Attach
+          cmd: doctl compute volume-action attach ${id}
+          refresh: self
+        - type: other
+          name: Detach
+          cmd: doctl compute volume-action detach ${id}
+          refresh: self
     - name: Kubernetes
       id: cloud-digital-ocean-kubernetes
       icon: digital-ocean.svg
@@ -126,24 +156,6 @@
           cmd: doctl databases delete ${id} --force
           refresh: parent
 
-    - name: Volumes Block Storage
-      id: cloud-digital-ocean-volumes-block-storage
-      icon: digital-ocean.svg
-      subitems: []
-      raw: {}
-      query: doctl compute volume list --output json
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
-      operations:
-        - type: create
-          name: Create Droplet
-          template: doctl_compute_volume_create
-      child-operations:
-        - type: delete
-          name: Delete
-          cmd: doctl compute volume delete ${id} --force
-          refresh: parent
 
     - name: Spaces Object Storage
       id: cloud-digital-ocean-spaces-object-storage
