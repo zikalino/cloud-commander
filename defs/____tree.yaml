@@ -57,7 +57,7 @@
       child-operations:
         - type: delete
           name: Delete
-          cmd: doctl compute droplet delete ${id}
+          cmd: doctl compute droplet delete ${id} --force
           refresh: parent
         - type: reboot
           name: Reboot
