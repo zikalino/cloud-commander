@@ -39,6 +39,7 @@ form:
             description: The Volume's label, which is also used in the filesystem_path of the resulting volume. 
             produces: 
               - variable: label
+      - $include: __linode_regions_list_selector.yaml
       - type: row
         subitems: 
           - type: textfield
@@ -56,13 +57,6 @@ form:
       - type: row
         subitems: 
           - type: textfield
-            name: region
-            description: The Region to deploy this Volume in.
-            produces: 
-              - variable: region
-      - type: row
-        subitems: 
-          - type: textfield
             name: size
             description: The initial size of this volume, in GB.
             produces: 
@@ -75,14 +69,14 @@ form:
           - variable: label
             parameter: --label
             required: true
+          - variable: region
+            parameter: --region
+            required: true
           - variable: config_id
             parameter: --config_id
             required: false
           - variable: linode_id
             parameter: --linode_id
-            required: false
-          - variable: region
-            parameter: --region
             required: false
           - variable: size
             parameter: --size
