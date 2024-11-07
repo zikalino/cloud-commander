@@ -368,7 +368,24 @@
         - type: stop
           name: Restart
           cmd: upctl server restart ${id}
-
+    - name: Storage
+      id: cloud-upcloud-storages
+      icon: upcloud.png
+      subitems: []
+      raw: {}
+      query: upctl storage list -o json
+      path-id: $.storages[::].uuid
+      path-name: $.storages[::].title
+      path-raw: $.storages[::]
+      operations:
+      - type: create
+        name: Create Storage
+        template: upctl_storage_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: upctl storage delete ${id}
+          refresh: parent
     - name: Server Groups
       id: cloud-upcloud-server-groups
       icon: upcloud.png
@@ -438,6 +455,10 @@
       path-id: $.kubernetes.[::].uuid
       path-name: $.kubernetes[::].name
       path-raw: $.kubernetes[::]
+      operations:
+      - type: create
+        name: Create Kubernetes Cluster
+        template: upctl_kubernetes_create
       child-operations:
         - type: delete
           name: Delete
