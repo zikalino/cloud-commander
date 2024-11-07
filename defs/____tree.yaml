@@ -270,6 +270,7 @@
         - type: delete
           name: Delete
           cmd: linode linodes delete ${id}
+          refresh: parent
     - name: Node Balancers
       id: cloud-linode-nodebalancers
       icon: linode.png
@@ -287,6 +288,7 @@
         - type: delete
           name: Delete
           cmd: linode loadbalancers delete ${id}
+          refresh: parent
 
     - name: Firewalls
       id: cloud-linode-firewalls
@@ -305,6 +307,7 @@
         - type: delete
           name: Delete
           cmd: linode firewalls delete ${id}
+          refresh: parent
 
     - name: Networking IPs
       id: cloud-linode-networking-ips
@@ -341,6 +344,7 @@
         - type: delete
           name: Delete
           cmd: linode volumes delete ${id}
+          refresh: parent
 
     - name: VPCs
       id: cloud-linode-vpcs

@@ -9,4 +9,4 @@
         path-id: $[*].id
         path-name: $[*].label
       produces:
-        - variable: regions_id
+        - variable: region

@@ -27,7 +27,7 @@ form:
         name: Create Linode
         consumes:
           - variable: linode_type
-          - variable: regions_id
+          - variable: region
           - variable: name
           - variable: password
         verify: |
