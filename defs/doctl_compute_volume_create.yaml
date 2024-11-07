@@ -54,6 +54,7 @@ form:
             description: volume-name
             produces: 
               - variable: volume_name
+      - $include: __doctl_compute_region_list_selector.yaml
       - type: row
         subitems: 
           - type: textfield
@@ -110,14 +111,6 @@ form:
         subitems: 
           - type: checkbox
             name: snapshot
-            description: The volume's region. Not compatible with the --snapshot flag
-            val-false: undefined
-            produces: 
-              - variable: snapshot
-      - type: row
-        subitems: 
-          - type: checkbox
-            name: snapshot
             description: Creates a volume from the specified snapshot ID. Not compatible with the --region flag
             val-false: undefined
             produces: 
@@ -126,81 +119,18 @@ form:
         subitems: 
           - type: checkbox
             name: tag
-            description: "A comma-separated list of tags to apply to the volume. For example, --tag frontend or `--tag frontend,backend`  lobal Flags:"
+            description: A comma-separated list of tags to apply to the volume. For example, --tag frontend or `--tag frontend,backend` 
             val-false: undefined
             produces: 
               - variable: tag
-      - type: row
-        subitems: 
-          - type: textfield
-            name: access-token
-            description: API V2 access token
-            produces: 
-              - variable: access_token
-      - type: row
-        subitems: 
-          - type: textfield
-            name: api-url
-            description: Override default API endpoint
-            produces: 
-              - variable: api_url
-      - type: row
-        subitems: 
-          - type: textfield
-            name: config
-            description: "Specify a custom config file (default \"C:\\Users\\Lenovo\\AppData\\Roaming\\doctl\\config.yaml\")"
-            produces: 
-              - variable: config
-      - type: row
-        subitems: 
-          - type: textfield
-            name: context
-            description: Specify a custom authentication context name
-            produces: 
-              - variable: context
-      - type: row
-        subitems: 
-          - type: textfield
-            name: http-retry-max
-            description: Set maximum number of retries for requests that fail with a 429 or 500-level error (default 5)
-            produces: 
-              - variable: http_retry_max
-      - type: row
-        subitems: 
-          - type: checkbox
-            name: interactive
-            description: Enable interactive behavior. Defaults to true if the terminal supports it (default false)
-            val-false: undefined
-            produces: 
-              - variable: interactive
-      - type: row
-        subitems: 
-          - type: textfield
-            name: output
-            description: Desired output format [text|json] (default "text")
-            produces: 
-              - variable: output
-      - type: row
-        subitems: 
-          - type: checkbox
-            name: trace
-            description: Show a log of network activity while performing a command
-            val-false: undefined
-            produces: 
-              - variable: trace
-      - type: row
-        subitems: 
-          - type: checkbox
-            name: verbose
-            description: Enable verbose output 
-            val-false: undefined
-            produces: 
-              - variable: verbose
       - type: 'action-row'
         expandable: false
         name: doctl compute volume create
         consumes:
           - variable: volume_name
+            required: true
+          - variable: region
+            parameter: --region
             required: true
           - variable: size
             parameter: --size
@@ -223,38 +153,8 @@ form:
           - variable: snapshot
             parameter: --snapshot
             required: false
-          - variable: snapshot
-            parameter: --snapshot
-            required: false
           - variable: tag
             parameter: --tag
-            required: false
-          - variable: access_token
-            parameter: --access-token
-            required: false
-          - variable: api_url
-            parameter: --api-url
-            required: false
-          - variable: config
-            parameter: --config
-            required: false
-          - variable: context
-            parameter: --context
-            required: false
-          - variable: http_retry_max
-            parameter: --http-retry-max
-            required: false
-          - variable: interactive
-            parameter: --interactive
-            required: false
-          - variable: output
-            parameter: --output
-            required: false
-          - variable: trace
-            parameter: --trace
-            required: false
-          - variable: verbose
-            parameter: --verbose
             required: false
         install: doctl compute volume create ${volume_name}
         produces:

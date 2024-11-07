@@ -142,7 +142,7 @@
       child-operations:
         - type: delete
           name: Delete
-          cmd: doctl compute volume delete ${id}
+          cmd: doctl compute volume delete ${id} --force
           refresh: parent
 
     - name: Spaces Object Storage
