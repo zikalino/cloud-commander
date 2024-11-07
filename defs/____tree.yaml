@@ -123,7 +123,7 @@
       child-operations:
         - type: delete
           name: Delete
-          cmd: doctl databases delete ${id}
+          cmd: doctl databases delete ${id} --force
           refresh: parent
 
     - name: Volumes Block Storage
