@@ -83,6 +83,16 @@
       path-id: $[::].id
       path-name: $[::].name
       path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Kubernetes Cluster
+          template: doctl_kubernetes_cluster_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: doctl kubernetes cluster delete ${id}
+          refresh: parent
+
     - name: App Platform
       id: cloud-digital-ocean-app-platform
       icon: digital-ocean.svg
@@ -106,6 +116,16 @@
       path-id: $[::].id
       path-name: $[::].name
       path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Database
+          template: doctl_databases_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: doctl databases delete ${id}
+          refresh: parent
+
     - name: Volumes Block Storage
       id: cloud-digital-ocean-volumes-block-storage
       icon: digital-ocean.svg
@@ -115,6 +135,16 @@
       path-id: $[::].id
       path-name: $[::].name
       path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Droplet
+          template: doctl_compute_volume_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: doctl compute volume delete ${id}
+          refresh: parent
+
     - name: Spaces Object Storage
       id: cloud-digital-ocean-spaces-object-storage
       icon: digital-ocean.svg
@@ -134,6 +164,15 @@
       path-id: $[::].id
       path-name: $[::].name
       path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Droplet
+          template: doctl_compute_firewall_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: doctl compute firewall delete ${id}
+          refresh: parent
     - name: Reserved IPs
       id: cloud-digital-ocean-reserved-ips
       icon: digital-ocean.svg
@@ -152,6 +191,24 @@
       path-id: $[::].id
       path-name: $[::].name
       path-raw: $[::]
+    - name: Container Registries
+      id: cloud-digital-ocean-registries
+      icon: digital-ocean.svg
+      subitems: []
+      raw: {}
+      query: doctl registry list --output json
+      path-id: $[::].id
+      path-name: $[::].name
+      path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Container Registry
+          template: doctl_registry_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: doctl registry delete ${id}
+          refresh: parent
   raw: {}
   details: doctl__prerequisites.yaml
 - name: GCP
