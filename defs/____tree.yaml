@@ -194,59 +194,13 @@
       path-name: $[::].label
       path-raw: $[::]
       operations:
-      - type: create
-        name: Create Linode (Virtual Machine)
-        template: linode_linodes_create
-      # Distribute operations below
-      - type: create
-        name: Capture Image
-        template: linode_images_create
-      - type: create
-        name: Create PostgreSQL Server
-        template: linode_databases_postgresql_create_
-      - type: create
-        name: Create MySQL Server
-        template: linode_databases_mysql_create_
-      - type: create
-        name: Create Domain
-        template: linode_domains_create_
-      - type: create
-        name: Create LKE (Kubernetes)
-        template: linode_lke_create_
-      - type: create
-        name: Create Volume
-        template: linode_volumes_create
-      - type: create
-        name: Create VPC
-        template: linode_vpc_create
-      - type: create
-        name: Create User
-        template: linode_users_create
-      - type: create
-        name: Create Support Ticket
-        template: linode_tickets_create
-      - type: create
-        name: Create Tag
-        template: linode_tags_create
-      - type: create
-        name: Add SSH Key
-        template: linode_sshkeys_create
-      - type: create
-        name: Create Service Transfer
-        template: linode_service_transfers_create
-      - type: create
-        name: Create Payment Method
-        template: linode_payment_methods_create
-      - type: create
-        name: Create IP Address
-        template: linode_networking_ip_add
-      - type: create
-        name: Create IP V6 Range
-        template: linode_networking_v6_range_create
-      - type: create
-        name: Create Managed Service
-        template: linode_managed_service_create
-
+        - type: create
+          name: Create Linode (Virtual Machine)
+          template: linode_linodes_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: linode linodes delete ${id}
     - name: Node Balancers
       id: cloud-linode-nodebalancers
       icon: linode.png
@@ -257,9 +211,13 @@
       path-name: $[::].label
       path-raw: $[::]
       operations:
-      - type: create
-        name: Create Node Balancer
-        template: linode_nodebalancers_create
+        - type: create
+          name: Create Node Balancer
+          template: linode_nodebalancers_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: linode loadbalancers delete ${id}
 
     - name: Firewalls
       id: cloud-linode-firewalls
@@ -274,6 +232,11 @@
       - type: create
         name: Create Firewall
         template: linode_firewalls_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: linode firewalls delete ${id}
+
     - name: Networking IPs
       id: cloud-linode-networking-ips
       icon: linode.png
@@ -301,6 +264,15 @@
       path-id: $[::].id
       path-name: $[::].label
       path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Volume
+          template: linode_volumes_create
+      child-operations:
+        - type: delete
+          name: Delete
+          cmd: linode volumes delete ${id}
+
     - name: VPCs
       id: cloud-linode-vpcs
       icon: linode.png
