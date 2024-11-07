@@ -120,7 +120,7 @@
       child-operations:
         - type: delete
           name: Delete
-          cmd: doctl kubernetes cluster delete ${id}
+          cmd: doctl kubernetes cluster delete ${id} --force
           refresh: parent
 
     - name: App Platform
@@ -322,7 +322,7 @@
       child-operations:
         - type: delete
           name: Delete
-          cmd: linode loadbalancers delete ${id}
+          cmd: linode nodebalancers delete ${id}
           refresh: parent
 
     - name: Firewalls

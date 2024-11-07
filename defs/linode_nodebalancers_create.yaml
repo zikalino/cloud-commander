@@ -72,13 +72,7 @@ header:
 form:
   - type: fieldset
     subitems:
-      - type: row
-        subitems: 
-          - type: textfield
-            name: region (required)
-            description: The ID of the Region to create this NodeBalancer in. 
-            produces: 
-              - variable: region
+      - $include: __linode_regions_list_selector.yaml
       - type: row
         subitems: 
           - type: textfield
