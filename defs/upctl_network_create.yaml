@@ -66,7 +66,7 @@ form:
         subitems: 
           - type: textfield
             name: ip-network
-            description: "A network interface for the server, multiple can be declared.  Fields: address: string family: string gateway: string dhcp: true/false dhcp-default-route: true/false dhcp-dns: array of strings  lobal Options:"
+            description: "A network interface for the server, multiple can be declared.  Fields: address: string family: string gateway: string dhcp: true/false dhcp-default-route: true/false dhcp-dns: array of strings "
             produces: 
               - variable: ip_network
       - type: 'action-row'

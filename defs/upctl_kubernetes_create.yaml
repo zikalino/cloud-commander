@@ -73,6 +73,7 @@ header:
 form:
   - type: fieldset
     subitems:
+      - $include: __upctl_network_list_selector.yaml
       - type: row
         subitems: 
           - type: textfield
@@ -89,13 +90,6 @@ form:
               - variable: label
       - $include: __upctl_kubernetes_plans_selector.yaml
       - $include: __upctl_kubernetes_versions_selector.yaml
-      - type: row
-        subitems: 
-          - type: textfield
-            name: network
-            description: Network to use. The value should be name or UUID of a private network. 
-            produces: 
-              - variable: network
       - type: row
         subitems: 
           - type: textfield
@@ -119,10 +113,21 @@ form:
             produces: 
               - variable: private_node_groups
       - $include: __upctl_zone_list_selector.yaml
+      - type: row
+        subitems: 
+          - type: checkbox
+            name: wait
+            description: Wait for cluster to be in running state before returning. 
+            val-false: false
+            produces: 
+              - variable: wait
       - type: 'action-row'
         expandable: false
         name: upctl kubernetes create
         consumes:
+          - variable: network
+            parameter: --network
+            required: true
           - variable: name
             parameter: --name
             required: false
@@ -134,9 +139,6 @@ form:
             required: false
           - variable: version
             parameter: --version
-            required: false
-          - variable: network
-            parameter: --network
             required: false
           - variable: node_group
             parameter: --node-group
@@ -152,24 +154,6 @@ form:
             required: false
           - variable: wait
             parameter: --wait
-            required: false
-          - variable: client_timeout
-            parameter: --client-timeout
-            required: false
-          - variable: config
-            parameter: --config
-            required: false
-          - variable: debug
-            parameter: --debug
-            required: false
-          - variable: force_colours
-            parameter: --force-colours
-            required: false
-          - variable: no_colours
-            parameter: --no-colours
-            required: false
-          - variable: output
-            parameter: --output
             required: false
         install: upctl kubernetes create
         produces:

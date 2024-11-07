@@ -581,6 +581,10 @@
       path-id: $.networks[::].uuid
       path-name: $.networks[::].name
       path-raw: $.networks[::]
+      operations:
+        - type: create
+          name: Create Network
+          template: upctl_network_create
       child-operations:
         - type: delete
           name: Delete
