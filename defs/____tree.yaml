@@ -1,3 +1,7 @@
+- name: Welcome
+  id: welcome
+  icon: icon.webp
+  details: welcome_details.yaml
 - name: AWS
   id: cloud-aws
   icon: aws.png
