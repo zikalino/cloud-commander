@@ -9,4 +9,4 @@
         path-id: $.networks.[*].uuid
         path-name: $.networks.[*].name
       produces:
-        - variable: server_id
+        - variable: network
