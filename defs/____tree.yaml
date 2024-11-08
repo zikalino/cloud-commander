@@ -519,12 +519,12 @@
       raw: {}
       query: upctl ip-address list -o json
       path-id: $.ip_addresses.[::].address
-      path-name: $.ip_addresses[::].ptr_record
+      path-name: $.ip_addresses[::].address
       path-raw: $.ip_addresses[::]
       child-operations:
         - type: delete
           name: Delete
-          cmd: upctl ip-address delete ${id}
+          cmd: upctl ip-address remove ${id}
           refresh: parent
     - name: Kubernetes
       id: cloud-upcloud-kubernetes
@@ -532,9 +532,9 @@
       subitems: []
       raw: {}
       query: upctl kubernetes list -o json
-      path-id: $.kubernetes.[::].uuid
-      path-name: $.kubernetes[::].name
-      path-raw: $.kubernetes[::]
+      path-id: $.[::].uuid
+      path-name: $.[::].name
+      path-raw: $.[::]
       operations:
       - type: create
         name: Create Kubernetes Cluster
