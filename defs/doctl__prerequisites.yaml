@@ -3,6 +3,11 @@ id: root
 form:
   - type: fieldset
     subitems:
+      - type: text-block
+        width: wide
+        font: header-1
+        content: Prerequisites
+      - type: separator
       - $include: __go_install_step.yaml
       - type: 'action-row'
         name: Install Digital Ocean CLI
@@ -16,4 +21,4 @@ footer:
     subitems:
       - type: button
         id: install_button
-        text: Create
+        codicon: run-all

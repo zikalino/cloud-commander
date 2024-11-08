@@ -148,45 +148,97 @@ function createDetailsView(view: any, id: string) {
       // If there's raw resource, we can also check if there are any operations that
       // could be executed on that resource. If so, append appropriate actions.
       //
-      var raw = JSON.stringify(resource['raw'], null, 2);
       let yml = loadYaml(extensionContext.extensionPath + "/defs/empty.yaml");
       yml['form'] = [
         {
           type: 'fieldset',
-          subitems: [
-            {
-              type: 'code-block',
-              content: raw
-            }
-          ]
+          subitems: []
         }
       ];
+
+      //
+      // Basic Information - whatever is available for this resource type
+      //
+
+      yml['form'][0]['subitems'].push(
+        {
+          type: 'text-block',
+          width: 'wide',
+          font: 'header-1',
+          content: 'Basic Information'
+        },
+        {
+          type: 'separator'
+        },
+        {
+          type: 'text-block',
+          width: 'wide',
+          content: 'Some basic information will go here, blabalaballalalala.'
+        },
+        {
+          type: 'separator'
+        }
+      );
+
 
       //
       // get all the operations here
       //
       var operations = findOperations(id);
-      for (var idx in operations) {
-        var op = operations[idx];
-        if (op['type'] !== 'create') {
-          var cmd = op['cmd'].replace("${id}", id);
-          var name = op['name'];
-          var row: any = {
-              type: 'action-row',
-              name: name,
-              install: cmd
-            };
-          // does anything need to be refreshed after operation is executed?
-          if ('refresh' in op) {
-            if (op['refresh'] === 'parent') {
-              // we need to refresh list where this particular item is located
-              var parent = findParent({ subitems: resources}, id);
-              row['refresh'] = parent['id'];
+
+      if (operations.length > 0) {
+        yml['form'][0]['subitems'].push(
+          {
+            type: 'text-block',
+            width: 'wide',
+            font: 'header-1',
+            content: 'Operations'
+          },
+          {
+            type: 'separator'
+          }  
+        );
+
+        for (var idx in operations) {
+          var op = operations[idx];
+          if (op['type'] !== 'create') {
+            var cmd = op['cmd'].replace("${id}", id);
+            var name = op['name'];
+            var row: any = {
+                type: 'action-row',
+                name: name,
+                install: cmd
+              };
+            // does anything need to be refreshed after operation is executed?
+            if ('refresh' in op) {
+              if (op['refresh'] === 'parent') {
+                // we need to refresh list where this particular item is located
+                var parent = findParent({ subitems: resources}, id);
+                row['refresh'] = parent['id'];
+              }
             }
+            yml['form'][0]['subitems'].push(row);
           }
-          yml['form'][0]['subitems'].push(row);
         }
       }
+
+      var raw = JSON.stringify(resource['raw'], null, 2);
+      yml['form'][0]['subitems'].push(
+            {
+              type: 'text-block',
+              width: 'wide',
+              font: 'header-1',
+              content: 'Raw Info'
+            },
+            {
+              type: 'separator'
+            },
+            {
+              type: 'code-block',
+              content: raw
+            }
+          );
+
 
       view.updateTreeViewDetails(yml);
     } else {

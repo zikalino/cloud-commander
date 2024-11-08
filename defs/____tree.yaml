@@ -137,6 +137,10 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
+      query: doctl serverless functions list --output json
+      path-id: $[::].id
+      path-name: $[::].spec_name
+      path-raw: $[::]
     - name: Databases
       id: cloud-digital-ocean-databases
       icon: digital-ocean.svg
@@ -167,6 +171,10 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
+      query: doctl compute domain list --output json
+      path-id: $[::].domain
+      path-name: $[::].domain
+      path-raw: $[::]
     - name: Cloud Firewalls
       id: cloud-digital-ocean-firewalls
       icon: digital-ocean.svg

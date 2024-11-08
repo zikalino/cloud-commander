@@ -3,6 +3,11 @@ id: root
 form:
   - type: fieldset
     subitems:
+      - type: text-block
+        width: wide
+        font: header-1
+        content: Prerequisites
+      - type: separator
       - $include: __go_install_step.yaml
       - type: 'action-row'
         name: Install UpCloud CLI
