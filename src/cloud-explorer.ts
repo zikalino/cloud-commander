@@ -91,10 +91,10 @@ async function tryToQueryItems(view: any, id: string) {
         "raw": raw[idx]
       };
 
-      if ('child-operations' in resource) {
+      if ('child-template' in resource) {
         item['operations'] = [];
-        for (var opIdx in resource['child-operations']) {
-          var operation = resource['child-operations'][opIdx];
+        for (var opIdx in resource['child-template']) {
+          var operation = resource['child-template'][opIdx];
           var child_operation: any = {
             type: operation['type'],
             name: operation['name']

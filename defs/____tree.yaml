@@ -30,7 +30,7 @@
     - type: create
       name: Create Container Registry
       template: az_acr_create
-  child-operations:
+  child-template:
     - type: delete
       name: Delete
       cmd: az resource delete --ids ${id}
@@ -58,7 +58,7 @@
         - type: create
           name: Create Droplet
           template: doctl_compute_droplet_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: doctl compute droplet delete ${id} --force
@@ -91,7 +91,7 @@
         - type: create
           name: Create Volume
           template: doctl_compute_volume_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: doctl compute volume delete ${id} --force
@@ -121,7 +121,7 @@
         - type: create
           name: Create Kubernetes Cluster
           template: doctl_kubernetes_cluster_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: doctl kubernetes cluster delete ${id} --force
@@ -158,7 +158,7 @@
         - type: create
           name: Create Database
           template: doctl_databases_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: doctl databases delete ${id} --force
@@ -192,7 +192,7 @@
         - type: create
           name: Create Droplet
           template: doctl_compute_firewall_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: doctl compute firewall delete ${id}
@@ -228,7 +228,7 @@
         - type: create
           name: Create Container Registry
           template: doctl_registry_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: doctl registry delete ${id}
@@ -278,7 +278,7 @@
         - type: create
           name: Create Linode (Virtual Machine)
           template: linode_linodes_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: linode linodes delete ${id}
@@ -331,7 +331,7 @@
         - type: create
           name: Create Node Balancer
           template: linode_nodebalancers_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: linode nodebalancers delete ${id}
@@ -350,7 +350,7 @@
       - type: create
         name: Create Firewall
         template: linode_firewalls_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: linode firewalls delete ${id}
@@ -387,7 +387,7 @@
         - type: create
           name: Create Volume
           template: linode_volumes_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: linode volumes delete ${id}
@@ -446,7 +446,7 @@
       - type: create
         name: Create Server
         template: upctl_server_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl server delete ${id}
@@ -457,18 +457,21 @@
         - type: start
           name: Start
           cmd: upctl server start ${id}
+          refresh: self
           when:
             path: state
             value: stopped
         - type: stop
           name: Stop
           cmd: upctl server stop ${id}
+          refresh: self
           when:
             path: state
             value: started
         - type: restart
           name: Restart
           cmd: upctl server restart ${id}
+          refresh: self
           when:
             path: state
             value: started
@@ -485,7 +488,7 @@
       - type: create
         name: Create Storage
         template: upctl_storage_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl storage delete ${id}
@@ -503,7 +506,7 @@
       - type: create
         name: Create Server Group
         template: upctl_servergroup_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl servergroup delete ${id}
@@ -517,7 +520,7 @@
       path-id: $.databases[::].uuid
       path-name: $.databases[::].title
       path-raw: $.databases[::]
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl database delete ${id}
@@ -531,7 +534,7 @@
       path-id: $.gateways[::].uuid
       path-name: $.gateways[::].name
       path-raw: $.gateways[::]
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl gateway delete ${id}
@@ -545,7 +548,7 @@
       path-id: $.ip_addresses.[::].address
       path-name: $.ip_addresses[::].address
       path-raw: $.ip_addresses[::]
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl ip-address remove ${id}
@@ -563,7 +566,7 @@
       - type: create
         name: Create Kubernetes Cluster
         template: upctl_kubernetes_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl kubernetes delete ${id}
@@ -577,7 +580,7 @@
       path-id: $.hosts[::].id
       path-name: $.hosts[::].description
       path-raw: $.hosts[::]
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl host delete ${id}
@@ -591,7 +594,7 @@
       path-id: $.loadbalancers[::].uuid
       path-name: $.loadbalancers[::].name
       path-raw: $.loadbalancers[::]
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl loadbalancer delete ${id}
@@ -609,7 +612,7 @@
         - type: create
           name: Create Network
           template: upctl_network_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl network delete ${id}
@@ -623,7 +626,7 @@
       path-id: $.networks[::].uuid
       path-name: $.networks[::].name
       path-raw: $.networks[::]
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl networkpeering delete ${id}
@@ -637,7 +640,7 @@
       path-id: $.object_storages[::].uuid
       path-name: $.object_storages[::].name
       path-raw: $.object_storages[::]
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl object-storage delete ${id}
@@ -655,7 +658,7 @@
         - type: create
           name: Create Router
           template: upctl_router_create
-      child-operations:
+      child-template:
         - type: delete
           name: Delete
           cmd: upctl router delete ${id}
