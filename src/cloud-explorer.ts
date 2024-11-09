@@ -159,27 +159,44 @@ function createDetailsView(view: any, id: string) {
       //
       // Basic Information - whatever is available for this resource type
       //
+      if ('id' in resource) {
+        yml['form'][0]['subitems'].push(
+          {
+            type: 'text-block',
+            width: 'wide',
+            font: 'header-1',
+            content: 'Basic Information'
+          },
+          {
+            type: 'separator'
+          }
+        );
 
-      yml['form'][0]['subitems'].push(
-        {
-          type: 'text-block',
-          width: 'wide',
-          font: 'header-1',
-          content: 'Basic Information'
-        },
-        {
-          type: 'separator'
-        },
-        {
-          type: 'text-block',
-          width: 'wide',
-          content: 'Some basic information will go here, blabalaballalalala.'
-        },
-        {
-          type: 'separator'
+        if ('id' in resource) {
+          yml['form'][0]['subitems'].push(
+            {
+              type: 'info-row',
+              codicon: 'symbol-field',
+              color: 'black',
+              label: 'ID',
+              value: resource['id']
+            }
+          );
         }
-      );
 
+        if ('name' in resource) {
+          yml['form'][0]['subitems'].push(
+            {
+              type: 'info-row',
+              codicon: 'symbol-string',
+              color: 'black',
+              label: 'Name',
+              value: resource['name']
+            }
+          );
+        }
+
+      }
 
       //
       // get all the operations here
