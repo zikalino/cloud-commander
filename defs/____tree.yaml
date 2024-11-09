@@ -451,15 +451,27 @@
           name: Delete
           cmd: upctl server delete ${id}
           refresh: parent
+          when:
+            path: state
+            value: stopped
         - type: start
           name: Start
           cmd: upctl server start ${id}
+          when:
+            path: state
+            value: stopped
         - type: stop
           name: Stop
           cmd: upctl server stop ${id}
-        - type: stop
+          when:
+            path: state
+            value: started
+        - type: restart
           name: Restart
           cmd: upctl server restart ${id}
+          when:
+            path: state
+            value: started
     - name: Storage
       id: cloud-upcloud-storages
       icon: upcloud.png

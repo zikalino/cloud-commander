@@ -110,6 +110,10 @@ async function tryToQueryItems(view: any, id: string) {
             child_operation['cmd'] = cmd;
             child_operation['global'] = false;
           }
+
+          if ('when' in operation) {
+            child_operation['when'] = operation['when'];
+          }
           if ('query' in operation) {
             var query = operation['query'].replaceAll("${id}", ids[idx].toString());
             query = query.replaceAll("${name}", names[idx]);
@@ -218,6 +222,18 @@ function createDetailsView(view: any, id: string) {
 
         for (var idx in operations) {
           var op = operations[idx];
+
+          // check condition
+          if ('when' in op) {
+            var p = op['when']['path'];
+            var requiredValue = op['when']['value'];
+            var actualValue = JSONPath({path: p, json: resource['raw']})[0];
+
+            if (requiredValue !== actualValue) {
+              continue;
+            }
+          }
+
           if (op['type'] !== 'create') {
             var cmd = op['cmd'].replace("${id}", id);
             var name = op['name'];
