@@ -262,6 +262,8 @@ function createDetailsView(view: any, id: string) {
                 // we need to refresh list where this particular item is located
                 var parent = findParent({ subitems: resources}, id);
                 row['refresh'] = parent['id'];
+              } else if (op['refresh'] === 'self') {
+                row['refresh'] = id;
               }
             }
             yml['form'][0]['subitems'].push(row);

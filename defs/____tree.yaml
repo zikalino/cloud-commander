@@ -449,6 +449,7 @@
       child-template:
         - type: query-details
           query: upctl server show ${id} -o json
+          refresh: self
         - type: delete
           name: Delete
           cmd: upctl server delete ${id}
