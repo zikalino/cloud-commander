@@ -466,7 +466,7 @@
             value: stopped
         - type: stop
           name: Stop
-          cmd: upctl server stop ${id}
+          cmd: upctl server stop ${id} --wait
           refresh: self
           when:
             path: state

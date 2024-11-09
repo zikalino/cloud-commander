@@ -79,6 +79,7 @@ async function tryToQueryItems(view: any, id: string) {
 
     // update details
     createDetailsView(view, id);
+    view.postMessage({ command: 'set-item-state', id: id, state: 'loaded'});
   }
 
   if ('query' in resource) {
