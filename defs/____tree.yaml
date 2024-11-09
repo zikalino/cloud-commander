@@ -59,6 +59,9 @@
           name: Create Droplet
           template: doctl_compute_droplet_create
       child-template:
+        - type: query-details
+          query: doctl compute droplet get ${id} -o json
+          refresh: self
         - type: delete
           name: Delete
           cmd: doctl compute droplet delete ${id} --force
