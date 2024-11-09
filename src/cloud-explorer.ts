@@ -72,7 +72,16 @@ async function tryToQueryItems(view: any, id: string) {
 
   var resource = setContext(id);
 
-  if (('query' in resource)) {
+  if ('query-details' in resource) {
+    view.postMessage({ command: 'set-item-state', id: id, state: 'loading'});
+    var data = genericQuery(resource['query-details']);
+    resource['raw'] = data;
+
+    // update details
+    createDetailsView(view, id);
+  }
+
+  if ('query' in resource) {
 
     view.postMessage({ command: 'set-item-state', id: id, state: 'loading'});
 
@@ -114,7 +123,12 @@ async function tryToQueryItems(view: any, id: string) {
           if ('when' in operation) {
             child_operation['when'] = operation['when'];
           }
-          if ('query' in operation) {
+          if (operation['type'] === 'query-details') {
+            var query = operation['query'].replaceAll("${id}", ids[idx].toString());
+            query = query.replaceAll("${name}", names[idx]);
+            item['query-details'] = query;
+            // XXX - details mapping???
+          } else if ('query' in operation) {
             var query = operation['query'].replaceAll("${id}", ids[idx].toString());
             query = query.replaceAll("${name}", names[idx]);
             item['query'] = query;
