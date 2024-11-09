@@ -21,6 +21,15 @@ form:
         verify: aws --version
         install: | 
                 winget install -e --id Amazon.AWSCLI
+      - type: 'action-row'
+        id: aws-login
+        name: Login
+        banner: |
+            Configuring AWS CLI
+        verify: aws account list-regions
+        install: | 
+                aws configure
+        interactive: true
 
 footer:
   - type: footer
