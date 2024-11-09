@@ -77,6 +77,19 @@ async function tryToQueryItems(view: any, id: string) {
     var data = genericQuery(resource['query-details']);
     resource['raw'] = data;
 
+    if ('extract-details' in resource) {
+      var extract = resource['extract-details'];
+      for (var extractIdx = 0; extractIdx < extract.length; extractIdx++) {
+        var field = extract[extractIdx]['field'];
+        var path = extract[extractIdx]['path'];
+        var value = JSONPath({path: path, json: data})[0];
+        if ('map' in extract[extractIdx]) {
+          value = extract[extractIdx]['map'][value];
+        }
+        resource[field] = value;
+      }
+    }
+
     // update details
     createDetailsView(view, id);
     view.postMessage({ command: 'set-item-state', id: id, state: 'loaded'});
@@ -128,6 +141,9 @@ async function tryToQueryItems(view: any, id: string) {
             var query = operation['query'].replaceAll("${id}", ids[idx].toString());
             query = query.replaceAll("${name}", names[idx]);
             item['query-details'] = query;
+            if ('extract' in operation) {
+              item['extract-details'] = operation['extract'];
+            }
             // XXX - details mapping???
           } else if ('query' in operation) {
             var query = operation['query'].replaceAll("${id}", ids[idx].toString());
@@ -214,7 +230,17 @@ function createDetailsView(view: any, id: string) {
             }
           );
         }
-
+        if ('state' in resource) {
+          yml['form'][0]['subitems'].push(
+            {
+              type: 'info-row',
+              codicon: 'symbol-string',
+              color: 'black',
+              label: 'State',
+              value: resource['state']
+            }
+          );
+        }
       }
 
       //

@@ -62,6 +62,16 @@
         - type: query-details
           query: doctl compute droplet get ${id} -o json
           refresh: self
+          extract:
+            - field: state
+              path: "$[0].status"
+              map:
+                active: started
+                off: stopped
+            - field: slug
+              path: "$[0].size.slug"
+            - field: location
+              path: "$[0].region.slug"
         - type: delete
           name: Delete
           cmd: doctl compute droplet delete ${id} --force
