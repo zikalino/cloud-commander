@@ -241,6 +241,28 @@ function createDetailsView(view: any, id: string) {
             }
           );
         }
+        if ('location' in resource) {
+          yml['form'][0]['subitems'].push(
+            {
+              type: 'info-row',
+              codicon: 'location',
+              color: 'black',
+              label: 'Location',
+              value: resource['location']
+            }
+          );
+        }
+        if ('size' in resource) {
+          yml['form'][0]['subitems'].push(
+            {
+              type: 'info-row',
+              codicon: 'location',
+              color: 'black',
+              label: 'Size',
+              value: resource['size']
+            }
+          );
+        }
       }
 
       //

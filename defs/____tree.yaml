@@ -68,7 +68,7 @@
               map:
                 active: started
                 off: stopped
-            - field: slug
+            - field: size
               path: "$[0].size.slug"
             - field: location
               path: "$[0].region.slug"
@@ -292,6 +292,47 @@
           name: Create Linode (Virtual Machine)
           template: linode_linodes_create
       child-template:
+        - type: query-details
+          query: linode linodes view ${id} --json
+          refresh: self
+          extract:
+            - field: state
+              path: "$[0].status"
+              map:
+                running: started
+                offline: stopped
+                provisioning: provisioning
+            - field: size
+              path: "$[0].type"
+            - field: location
+              path: "$[0].region"
+            - field: cores
+              path: "$[0].specs.vcpus"
+            - field: memory
+              path: "$[0].specs.memory"
+            - field: disk
+              path: "$[0].specs.disk"
+        - type: delete
+          name: Delete
+          cmd: doctl compute droplet delete ${id} --force
+          refresh: parent
+        - type: reboot
+          name: Reboot
+          cmd: doctl compute droplet-action reboot ${id}
+        - type: power-off
+          name: Power off
+          cmd: doctl compute droplet-action power-off ${id}
+        - type: power-on
+          name: Power on
+          cmd: doctl compute droplet-action power-on ${id}
+        - type: other
+          name: Enable backups
+          cmd: doctl compute droplet-action enable-backups ${id}
+        - type: other
+          name: Disable backups
+          cmd: doctl compute droplet-action disable-backups ${id}
+
+
         - type: delete
           name: Delete
           cmd: linode linodes delete ${id}
@@ -302,7 +343,6 @@
         - type: rebuild
           name: Rebuild
           cmd: linode linodes rebuild ${id}
-
         - type: power-off
           name: Power off
           cmd: linode linodes shutdown ${id}
