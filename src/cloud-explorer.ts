@@ -24,12 +24,8 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
   view.MsgHandler = function (msg: any) {
     switch (msg.command) {
       case 'ready':
-        //view.postMessage(populateMsg);
-        let yml = loadYaml(extensionContext.extensionPath + "/defs/welcome.yaml");
-
         queryAllResources();
         view.updateTreeViewItems(resources, null);
-        view.updateTreeViewDetails(yml);
         return;
       case 'refresh':
         // XXX - need to send refresh event to explorer
