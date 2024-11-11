@@ -263,7 +263,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'location',
+              codicon: 'chip',
               color: 'black',
               label: 'Cores',
               value: resource['size_cores']
@@ -274,7 +274,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'location',
+              codicon: 'chip',
               color: 'black',
               label: 'Memory',
               value: resource['size_memory']
@@ -285,7 +285,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'location',
+              codicon: 'database',
               color: 'black',
               label: 'Disk Size',
               value: resource['size_disk']
@@ -300,6 +300,17 @@ function createDetailsView(view: any, id: string) {
               color: 'black',
               label: 'Price (Monthly)',
               value: resource['price']
+            }
+          );
+        }
+        if ('image' in resource) {
+          yml['form'][0]['subitems'].push(
+            {
+              type: 'info-row',
+              codicon: 'file-binary',
+              color: 'black',
+              label: 'Image',
+              value: resource['image']
             }
           );
         }

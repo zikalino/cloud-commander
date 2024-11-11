@@ -80,6 +80,8 @@
               path: "$[0].size.disk"
             - field: price
               path: "$[0].size.price_monthly"
+            - field: image
+              path: "$[0].image.slug"
         - type: delete
           name: Delete
           cmd: doctl compute droplet delete ${id} --force
@@ -314,12 +316,14 @@
               path: "$[0].type"
             - field: location
               path: "$[0].region"
-            - field: cores
+            - field: size_cores
               path: "$[0].specs.vcpus"
-            - field: memory
+            - field: size_memory
               path: "$[0].specs.memory"
-            - field: disk
+            - field: size_disk
               path: "$[0].specs.disk"
+            - field: image
+              path: "$[0].image"
         - type: delete
           name: Delete
           cmd: doctl compute droplet delete ${id} --force
@@ -511,6 +515,21 @@
         - type: query-details
           query: upctl server show ${id} -o json
           refresh: self
+          extract:
+            - field: state
+              path: "$.state"
+            - field: size
+              path: "$.plan"
+            - field: location
+              path: "$.zone"
+            - field: size_cores
+              path: "$.core_number"
+            - field: size_memory
+              path: "$.memory_amount"
+            - field: size_disk
+              path: "$[0].specs.disk"
+            - field: image
+              path: "$[0].image"
         - type: delete
           name: Delete
           cmd: upctl server delete ${id}
