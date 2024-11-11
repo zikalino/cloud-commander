@@ -174,7 +174,7 @@ function createDetailsView(view: any, id: string) {
       //
       let yml = loadYaml(extensionContext.extensionPath + "/defs/" + resource['details']);
       view.updateTreeViewDetails(yml);
-    } else if ('raw' in resource) {
+    } else if ('raw' in resource && Object.keys(resource['raw']).length !== 0) {
       //
       // If there's raw resource, we can also check if there are any operations that
       // could be executed on that resource. If so, append appropriate actions.
