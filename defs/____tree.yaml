@@ -72,6 +72,14 @@
               path: "$[0].size.slug"
             - field: location
               path: "$[0].region.slug"
+            - field: size_cores
+              path: "$[0].size.vcpus"
+            - field: size_memory
+              path: "$[0].size.memory"
+            - field: size_disk
+              path: "$[0].size.disk"
+            - field: price
+              path: "$[0].size.price_monthly"
         - type: delete
           name: Delete
           cmd: doctl compute droplet delete ${id} --force

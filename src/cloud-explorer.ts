@@ -259,6 +259,50 @@ function createDetailsView(view: any, id: string) {
             }
           );
         }
+        if ('size_cores' in resource) {
+          yml['form'][0]['subitems'].push(
+            {
+              type: 'info-row',
+              codicon: 'location',
+              color: 'black',
+              label: 'Cores',
+              value: resource['size_cores']
+            }
+          );
+        }
+        if ('size_memory' in resource) {
+          yml['form'][0]['subitems'].push(
+            {
+              type: 'info-row',
+              codicon: 'location',
+              color: 'black',
+              label: 'Memory',
+              value: resource['size_memory']
+            }
+          );
+        }
+        if ('size_disk' in resource) {
+          yml['form'][0]['subitems'].push(
+            {
+              type: 'info-row',
+              codicon: 'location',
+              color: 'black',
+              label: 'Disk Size',
+              value: resource['size_disk']
+            }
+          );
+        }
+        if ('price' in resource) {
+          yml['form'][0]['subitems'].push(
+            {
+              type: 'info-row',
+              codicon: 'graph',
+              color: 'black',
+              label: 'Price (Monthly)',
+              value: resource['price']
+            }
+          );
+        }
       }
 
       //
