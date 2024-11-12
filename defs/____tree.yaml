@@ -340,44 +340,46 @@
               path: "$[0].image"
         - type: delete
           name: Delete
-          cmd: doctl compute droplet delete ${id} --force
-          refresh: parent
-        - type: reboot
-          name: Reboot
-          cmd: doctl compute droplet-action reboot ${id}
-        - type: power-off
-          name: Power off
-          cmd: doctl compute droplet-action power-off ${id}
-        - type: power-on
-          name: Power on
-          cmd: doctl compute droplet-action power-on ${id}
-        - type: other
-          name: Enable backups
-          cmd: doctl compute droplet-action enable-backups ${id}
-        - type: other
-          name: Disable backups
-          cmd: doctl compute droplet-action disable-backups ${id}
-
-
-        - type: delete
-          name: Delete
           cmd: linode linodes delete ${id}
           refresh: parent
         - type: reboot
           name: Reboot
           cmd: linode linodes reboot ${id}
+          when:
+            path: "$[0].status"
+            value: running
+          refresh: self
         - type: rebuild
           name: Rebuild
           cmd: linode linodes rebuild ${id}
         - type: power-off
           name: Power off
           cmd: linode linodes shutdown ${id}
+          when:
+            path: "$[0].status"
+            value: running
+          refresh: self
         - type: power-on
           name: Power on
           cmd: linode linodes boot ${id}
+          when:
+            path: "$[0].status"
+            value: offline
+          refresh: self
         - type: other
           name: Enable backups
           cmd: linode linodes backups-enable ${id}
+          when:
+            path: "$[0].backups.enabled"
+            value: false
+          refresh: self
+        - type: other
+          name: Enable backups
+          cmd: linode linodes backups-cancel ${id}
+          when:
+            path: "$[0].backups.enabled"
+            value: true
+          refresh: self
         - type: other
           name: Update
           cmd: linode linodes update ${id}
