@@ -89,18 +89,32 @@
         - type: reboot
           name: Reboot
           cmd: doctl compute droplet-action reboot ${id}
+          when:
+            path: "$[0].status"
+            value: active
+          refresh: self
         - type: power-off
           name: Power off
           cmd: doctl compute droplet-action power-off ${id}
+          when:
+            path: "$[0].status"
+            value: active
+          refresh: self
         - type: power-on
           name: Power on
           cmd: doctl compute droplet-action power-on ${id}
+          when:
+            path: "$[0].status"
+            value: off
+          refresh: self
         - type: other
           name: Enable backups
           cmd: doctl compute droplet-action enable-backups ${id}
+          refresh: self
         - type: other
           name: Disable backups
           cmd: doctl compute droplet-action disable-backups ${id}
+          refresh: self
     - name: Volumes
       id: cloud-digital-ocean-volumes
       icon: digital-ocean.svg
