@@ -54,6 +54,13 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
           displayCreateResourceMenu(currentResourceId);
         }
         return;
+      case 'button-clicked':
+
+        if (msg.id === 'install_button') {
+          view.runStepsInstallation();
+        }
+        return;
+  
      default:
         console.log('XXX');
     }
