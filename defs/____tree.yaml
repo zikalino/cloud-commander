@@ -28,6 +28,9 @@
       name: Create Resource Group
       template: az_group_create
     - type: create
+      name: Create Virtual Machine
+      template: az_vm_create
+    - type: create
       name: Create Container Registry
       template: az_acr_create
   child-template:
