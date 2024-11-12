@@ -1,0 +1,187 @@
+- name: Linode/Akamai
+  id: cloud-linode
+  icon: linode.png
+  subitems:
+    - name: Linodes
+      id: cloud-linode-linodes
+      icon: linode.png
+      subitems: []
+      raw: {}
+      query: linode linodes list --json
+      path-id: $[::].id
+      path-name: $[::].label
+      path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Linode (Virtual Machine)
+          template: linode_linodes_create
+      child-template:
+        - type: query-details
+          query: linode linodes view ${id} --json
+          refresh: self
+          extract:
+            - field: state
+              path: "$[0].status"
+              map:
+                running: started
+                offline: stopped
+                provisioning: provisioning
+            - field: size
+              path: "$[0].type"
+            - field: location
+              path: "$[0].region"
+            - field: size_cores
+              path: "$[0].specs.vcpus"
+            - field: size_memory
+              path: "$[0].specs.memory"
+            - field: size_disk
+              path: "$[0].specs.disk"
+            - field: image
+              path: "$[0].image"
+        - type: delete
+          name: Delete
+          cmd: linode linodes delete ${id}
+          refresh: parent
+        - type: reboot
+          name: Reboot
+          cmd: linode linodes reboot ${id}
+          when:
+            path: "$[0].status"
+            value: running
+          refresh: self
+        - type: rebuild
+          name: Rebuild
+          cmd: linode linodes rebuild ${id}
+        - type: power-off
+          name: Power off
+          cmd: linode linodes shutdown ${id}
+          when:
+            path: "$[0].status"
+            value: running
+          refresh: self
+        - type: power-on
+          name: Power on
+          cmd: linode linodes boot ${id}
+          when:
+            path: "$[0].status"
+            value: offline
+          refresh: self
+        - type: other
+          name: Enable backups
+          cmd: linode linodes backups-enable ${id}
+          when:
+            path: "$[0].backups.enabled"
+            value: false
+          refresh: self
+        - type: other
+          name: Enable backups
+          cmd: linode linodes backups-cancel ${id}
+          when:
+            path: "$[0].backups.enabled"
+            value: true
+          refresh: self
+        - type: other
+          name: Update
+          cmd: linode linodes update ${id}
+        - type: other
+          name: Upgrade
+          cmd: linode linodes upgrade ${id}
+        - type: other
+          name: Snapshot
+          cmd: linode linodes snapshot ${id}
+        - type: other
+          name: Resize
+          cmd: linode linodes resize ${id}
+        - type: other
+          name: Rescue
+          cmd: linode linodes rescue ${id}
+        - type: other
+          name: Clone
+          cmd: linode linodes clone ${id}
+
+    - name: Node Balancers
+      id: cloud-linode-nodebalancers
+      icon: linode.png
+      subitems: []
+      raw: {}
+      query: linode nodebalancers list --json
+      path-id: $[::].id
+      path-name: $[::].label
+      path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Node Balancer
+          template: linode_nodebalancers_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: linode nodebalancers delete ${id}
+          refresh: parent
+
+    - name: Firewalls
+      id: cloud-linode-firewalls
+      icon: linode.png
+      subitems: []
+      raw: {}
+      query: linode firewalls list --json
+      path-id: $[::].id
+      path-name: $[::].label
+      path-raw: $[::]
+      operations:
+      - type: create
+        name: Create Firewall
+        template: linode_firewalls_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: linode firewalls delete ${id}
+          refresh: parent
+
+    - name: Networking IPs
+      id: cloud-linode-networking-ips
+      icon: linode.png
+      subitems: []
+      raw: {}
+      query: linode networking ips-list --json
+      path-id: $[::].address
+      path-name: $[::].address
+      path-raw: $[::]
+    - name: Object Storage Clusters
+      id: cloud-linode-object-storage-clusters
+      icon: linode.png
+      subitems: []
+      raw: {}
+      query: linode object-storage clusters-list --json
+      path-id: $[::].id
+      path-name: $[::].domain
+      path-raw: $[::]
+    - name: Volumes
+      id: cloud-linode-volumes
+      icon: linode.png
+      subitems: []
+      raw: {}
+      query: linode volumes list --json
+      path-id: $[::].id
+      path-name: $[::].label
+      path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Volume
+          template: linode_volumes_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: linode volumes delete ${id}
+          refresh: parent
+
+    - name: VPCs
+      id: cloud-linode-vpcs
+      icon: linode.png
+      subitems: []
+      raw: {}
+      query: linode vpcs list --json
+      path-id: $[::].id
+      path-name: $[::].label
+      path-raw: $[::]
+  raw: {}
+  details: linode__prerequisites.yaml

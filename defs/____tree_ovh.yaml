@@ -1,0 +1,11 @@
+- name: OVH Cloud
+  id: cloud-ovh
+  icon: ovh.png
+  subitems:
+    - name: Coming Soon...
+      id: cloud-ovh-coming-soon
+      icon: ovh.png
+      subitems: []
+      raw: {}
+  raw: {}
+  details: ovh__prerequisites.yaml

@@ -1,0 +1,11 @@
+- name: AWS
+  id: cloud-aws
+  icon: aws.png
+  subitems:
+    - name: Coming Soon...
+      id: cloud-aws-coming-soon
+      icon: aws.png
+      subitems: []
+      raw: {}
+  raw: {}
+  details: aws__prerequisites.yaml

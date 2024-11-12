@@ -1,0 +1,30 @@
+- name: Azure
+  id: cloud-azure
+  icon: azure.png
+  subitems: []
+  raw: {}
+  details: az__prerequisites.yaml
+  query: az group list
+  path-id: $[::].id
+  path-name: $[::].name
+  path-raw: $[::]
+  operations:
+    - type: create
+      name: Create Resource Group
+      template: az_group_create
+    - type: create
+      name: Create Virtual Machine
+      template: az_vm_create
+    - type: create
+      name: Create Container Registry
+      template: az_acr_create
+  child-template:
+    - type: delete
+      name: Delete
+      cmd: az resource delete --ids ${id}
+      refresh: parent
+    - type: query
+      query: az resource list --resource-group ${name}
+      path-id: $[::].id
+      path-name: $[::].name
+      path-raw: $[::]

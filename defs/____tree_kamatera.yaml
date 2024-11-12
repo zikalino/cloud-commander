@@ -1,0 +1,15 @@
+- name: Kamatera
+  id: cloud-kamatera
+  icon: kamatera.png
+  subitems:
+    - name: Servers
+      id: cloud-kamatera-servers
+      icon: kamatera.png
+      subitems: []
+      raw: {}
+      query: C:\dev\cloudcli.exe server list --format json
+      path-id: $[::].id
+      path-name: $[::].name
+      path-raw: $[::]
+  raw: {}
+  details: kamatera__prerequisites.yaml

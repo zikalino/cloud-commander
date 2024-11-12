@@ -1,0 +1,11 @@
+- name: Oracle Cloud Infrastructure
+  id: cloud-oci
+  icon: oci.svg
+  subitems:
+    - name: Coming Soon...
+      id: cloud-oci-coming-soon
+      icon: oci.svg
+      subitems: []
+      raw: {}
+  raw: {}
+  details: oci__prerequisites.yaml

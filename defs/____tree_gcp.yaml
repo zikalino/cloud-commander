@@ -1,0 +1,11 @@
+- name: GCP
+  id: cloud-gcp
+  icon: gcp.png
+  subitems:
+    - name: Coming Soon...
+      id: cloud-gcp-coming-soon
+      icon: gcp.png
+      subitems: []
+      raw: {}
+  raw: {}
+  details: gcp__prerequisites.yaml
