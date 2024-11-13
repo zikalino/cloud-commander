@@ -243,7 +243,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'symbol-field',
+              icon: 'codicon-symbol-field',
               color: 'black',
               label: 'ID',
               value: resource['id']
@@ -255,7 +255,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'symbol-string',
+              icon: 'codicon-symbol-string',
               color: 'black',
               label: 'Name',
               value: resource['name']
@@ -266,7 +266,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'symbol-string',
+              icon: 'codicon-symbol-string',
               color: 'black',
               label: 'State',
               value: resource['state']
@@ -277,7 +277,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'location',
+              icon: 'codicon-location',
               color: 'black',
               label: 'Location',
               value: resource['location']
@@ -288,7 +288,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'location',
+              icon: 'codicon-location',
               color: 'black',
               label: 'Size',
               value: resource['size']
@@ -299,7 +299,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'chip',
+              icon: 'codicon-chip',
               color: 'black',
               label: 'Cores',
               value: resource['size_cores']
@@ -310,7 +310,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'chip',
+              icon: 'codicon-chip',
               color: 'black',
               label: 'Memory',
               value: resource['size_memory']
@@ -321,7 +321,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'database',
+              icon: 'azure.png',
               color: 'black',
               label: 'Disk Size',
               value: resource['size_disk']
@@ -332,7 +332,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'graph',
+              icon: 'codicon-graph',
               color: 'black',
               label: 'Price (Monthly)',
               value: resource['price']
@@ -343,7 +343,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              codicon: 'file-binary',
+              icon: 'codicon-file-binary',
               color: 'black',
               label: 'Image',
               value: resource['image']
