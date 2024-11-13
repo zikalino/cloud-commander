@@ -19,6 +19,7 @@
       name: Create Container Registry
       template: az_acr_create
   child-template:
+    # this is a template for resource group level
     - type: delete
       name: Delete
       cmd: az resource delete --ids ${id}
@@ -28,3 +29,26 @@
       path-id: $[::].id
       path-name: $[::].name
       path-raw: $[::]
+    - type: child-template
+      # this is a template for any resource in the resource group
+      template:
+        # delete is the same for any resouce in tre resource group
+        - type: delete
+          name: Delete
+          cmd: az resource delete --ids ${id}
+          refresh: parent
+        # This is details query for VMs only
+        - type: query-details
+          when:
+            path: "$.type"
+            value: "Microsoft.Compute/virtualMachines"
+          query: az vm get-instance-view --ids ${id}
+          refresh: self
+          extract:
+            - field: state
+              path: "$[0].status"
+              map:
+                active: started
+                off: stopped
+
+

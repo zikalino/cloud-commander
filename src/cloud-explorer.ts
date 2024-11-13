@@ -121,6 +121,13 @@ async function tryToQueryItems(view: any, id: string) {
         item['operations'] = [];
         for (var opIdx in resource['child-template']) {
           var operation = resource['child-template'][opIdx];
+
+          // if it has another child-template, then stick it into the item
+          if (operation['type'] === 'child-template') {
+            item['child-template'] = operation['template'];
+            continue;
+          }
+
           var child_operation: any = {
             type: operation['type'],
             name: operation['name']
