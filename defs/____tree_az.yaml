@@ -37,6 +37,28 @@
           name: Delete
           cmd: az resource delete --ids ${id}
           refresh: parent
+        - type: start
+          name: Start
+          cmd: az vm start --ids ${id}
+          refresh: self
+          when:
+            path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
+            value: "PowerState/stopped"
+        - type: stop
+          name: Stop
+          cmd: az vm stop --ids ${id}
+          refresh: self
+          when:
+            path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
+            value: "PowerState/running"
+        - type: restart
+          name: Restart
+          cmd: az vm restart --ids ${id}
+          refresh: self
+          when:
+            path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
+            value: "PowerState/running"
+
         # This is details query for VMs only
         - type: query-details
           when:
@@ -48,14 +70,22 @@
             - field: state
               path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
               map:
-                "PowerState/started": started
+                "PowerState/running": started
                 "PowerState/stopped": stopped
             - field: size
               path: "$.hardwareProfile.vmSize"
             - field: size_disk
               path: "$.storageProfile.osDisk.diskSizeGb"
-            - field: size_disk
-              path: "$.storageProfile.osDisk.diskSizeGb"
             - field: location
               path: "$.location"
-
+        # This is details query for any other resources
+        - type: query-details
+          when:
+            path: "$.type"
+            value: "Microsoft.Compute/virtualMachines"
+            compare: ne
+          query: az resource show --ids ${id}
+          refresh: self
+          extract:
+            - field: location
+              path: "$.location"

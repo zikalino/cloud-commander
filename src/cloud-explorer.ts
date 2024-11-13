@@ -189,9 +189,12 @@ function validateCondition(resource: any, op: any) {
     var p = op['when']['path'];
     var requiredValue = op['when']['value'];
     var actualValue = JSONPath({path: p, json: resource['raw']})[0];
+    var compare = (("compare" in op['when']) ? op['when']['compare'] : "eq"); 
 
-    if (requiredValue !== actualValue) {
-      return false;
+    if (compare === "eq") {
+      return (requiredValue === actualValue);
+    } else if (compare === "ne") {
+      return (requiredValue !== actualValue);
     }
   }
   return true;
