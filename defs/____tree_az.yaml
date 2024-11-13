@@ -50,5 +50,12 @@
               map:
                 "PowerState/started": started
                 "PowerState/stopped": stopped
-
+            - field: size
+              path: "$.hardwareProfile.vmSize"
+            - field: size_disk
+              path: "$.storageProfile.osDisk.diskSizeGb"
+            - field: size_disk
+              path: "$.storageProfile.osDisk.diskSizeGb"
+            - field: location
+              path: "$.location"
 
