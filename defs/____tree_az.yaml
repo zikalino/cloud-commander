@@ -46,9 +46,9 @@
           refresh: self
           extract:
             - field: state
-              path: "$[0].status"
+              path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
               map:
-                active: started
-                off: stopped
+                "PowerState/started": started
+                "PowerState/stopped": stopped
 
 
