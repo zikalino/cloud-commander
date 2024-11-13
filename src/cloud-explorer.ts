@@ -76,6 +76,9 @@ async function tryToQueryItems(view: any, id: string) {
   var resource = setContext(id);
 
   if ('query-details' in resource) {
+
+    // check if there's condition and validate
+    // XXX - could we have more query details than one?
     view.postMessage({ command: 'set-item-state', id: id, state: 'loading'});
     var data = genericQuery(resource['query-details']);
     resource['raw'] = data;
@@ -148,11 +151,14 @@ async function tryToQueryItems(view: any, id: string) {
             child_operation['when'] = operation['when'];
           }
           if (operation['type'] === 'query-details') {
-            var query = operation['query'].replaceAll("${id}", ids[idx].toString());
-            query = query.replaceAll("${name}", names[idx]);
-            item['query-details'] = query;
-            if ('extract' in operation) {
-              item['extract-details'] = operation['extract'];
+            // we know item type already, so we can check it now and create query-details if matches
+            if (validateCondition(item, operation)) {
+              var query = operation['query'].replaceAll("${id}", ids[idx].toString());
+              query = query.replaceAll("${name}", names[idx]);
+              item['query-details'] = query;
+              if ('extract' in operation) {
+                item['extract-details'] = operation['extract'];
+              }
             }
             // XXX - details mapping???
           } else if ('query' in operation) {
@@ -176,6 +182,19 @@ async function tryToQueryItems(view: any, id: string) {
     resource.subitems = items;
     view.updateTreeViewItems(items, id);
   }
+}
+
+function validateCondition(resource: any, op: any) {
+  if ('when' in op) {
+    var p = op['when']['path'];
+    var requiredValue = op['when']['value'];
+    var actualValue = JSONPath({path: p, json: resource['raw']})[0];
+
+    if (requiredValue !== actualValue) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function createDetailsView(view: any, id: string) {
@@ -351,15 +370,9 @@ function createDetailsView(view: any, id: string) {
         for (var idx in operations) {
           var op = operations[idx];
 
-          // check condition
-          if ('when' in op) {
-            var p = op['when']['path'];
-            var requiredValue = op['when']['value'];
-            var actualValue = JSONPath({path: p, json: resource['raw']})[0];
-
-            if (requiredValue !== actualValue) {
-              continue;
-            }
+          // check if there's condition and validate
+          if (!validateCondition(resource, op)) {
+            continue;
           }
 
           if (op['type'] !== 'create') {
