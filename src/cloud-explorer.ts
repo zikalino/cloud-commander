@@ -263,10 +263,18 @@ function createDetailsView(view: any, id: string) {
           );
         }
         if ('state' in resource) {
+
+          var icon = 'icon-square-orange.png';
+          if (resource['state'] === 'started') {
+            icon = 'icon-square-green.png';
+          } else if (resource['state'] === 'stopped') {
+            icon = 'icon-square-red.png';
+          }
+
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              icon: 'codicon-symbol-string',
+              icon: icon,
               color: 'black',
               label: 'State',
               value: resource['state']
@@ -310,7 +318,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              icon: 'codicon-chip',
+              icon: 'icon-memory.png',
               color: 'black',
               label: 'Memory',
               value: resource['size_memory']
@@ -321,7 +329,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              icon: 'azure.png',
+              icon: 'icon-storage.png',
               color: 'black',
               label: 'Disk Size',
               value: resource['size_disk']
@@ -332,7 +340,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              icon: 'codicon-graph',
+              icon: 'icon-price.png',
               color: 'black',
               label: 'Price (Monthly)',
               value: resource['price']

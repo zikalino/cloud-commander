@@ -1,4 +1,5 @@
 - name: Welcome
+  description: Welcome to Cloud Commander!
   id: welcome
   icon: icon.webp
   details: welcome_details.yaml
