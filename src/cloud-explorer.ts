@@ -204,6 +204,9 @@ function createDetailsView(view: any, id: string) {
   var resource = setContext(id);
 
   if (resource) {
+    var hasQuery: boolean = ('query' in resource);
+    var hasQueryDetails: boolean = ('query-details' in resource);
+
     if ('details' in resource) {
       //
       // if details definition is specified, just use it
@@ -451,15 +454,15 @@ function createDetailsView(view: any, id: string) {
         description: 'Create Resource',
         action: 'action-add'
       });
+    }
 
-      if (resource['id'].startsWith('cloud-') || (resource['raw']['type'] && resource['raw']['type'] === 'Microsoft.Resources/resourceGroups') ) {
-        setActionsMsg['data'].push(
-        {
-          codicon: 'codicon-refresh',
-          description: 'Refresh',
-          action: 'action-refresh'
-        });
-      }
+    if (hasQuery || hasQueryDetails) {
+      setActionsMsg['data'].push(
+      {
+        codicon: 'codicon-refresh',
+        description: 'Refresh',
+        action: 'action-refresh'
+      });
     }
 
     view.postMessage(setActionsMsg);
