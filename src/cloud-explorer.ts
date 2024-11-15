@@ -299,7 +299,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              icon: 'codicon-location',
+              icon: 'icon-size.png',
               color: 'black',
               label: 'Size',
               value: resource['size']
@@ -310,7 +310,7 @@ function createDetailsView(view: any, id: string) {
           yml['form'][0]['subitems'].push(
             {
               type: 'info-row',
-              icon: 'codicon-chip',
+              icon: 'icon-cores.png',
               color: 'black',
               label: 'Cores',
               value: resource['size_cores']
