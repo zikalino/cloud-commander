@@ -254,19 +254,7 @@ function createDetailsView(view: any, id: string) {
           );
         }
 
-        if ('name' in resource) {
-          yml['form'][0]['subitems'].push(
-            {
-              type: 'info-row',
-              icon: 'codicon-symbol-string',
-              color: 'black',
-              label: 'Name',
-              value: resource['name']
-            }
-          );
-        }
-        if ('state' in resource) {
-
+        if ('name' in resource || 'state' in resource || 'location' in resource) {
           var icon = 'icon-square-orange.png';
           if (resource['state'] === 'started') {
             icon = 'icon-square-green.png';
@@ -276,80 +264,89 @@ function createDetailsView(view: any, id: string) {
 
           yml['form'][0]['subitems'].push(
             {
-              type: 'info-row',
-              icon: icon,
-              color: 'black',
-              label: 'State',
-              value: resource['state']
+              type: 'row',
+              subitems: [
+                {
+                  type: 'field',
+                  icon: 'codicon-symbol-string',
+                  color: 'black',
+                  label: 'Name:',
+                  value: resource['name']
+                },
+                {
+                  type: 'field',
+                  icon: icon,
+                  color: 'black',
+                  label: 'State:',
+                  value: resource['state']
+                },
+                {
+                  type: 'info-row',
+                  icon: 'codicon-location',
+                  color: 'black',
+                  label: 'Location:',
+                  value: resource['location']
+                }        
+              ]
             }
           );
         }
-        if ('location' in resource) {
+
+        if ('size' in resource || 'price' in resource) {
           yml['form'][0]['subitems'].push(
             {
-              type: 'info-row',
-              icon: 'codicon-location',
-              color: 'black',
-              label: 'Location',
-              value: resource['location']
+              type: 'row',
+              subitems: [
+                {
+                  type: 'field',
+                  icon: 'icon-size.png',
+                  color: 'black',
+                  label: 'Size:',
+                  value: resource['size']
+                },
+                {
+                  type: 'field',
+                  icon: 'icon-price.png',
+                  color: 'black',
+                  label: 'Price:',
+                  value: resource['price'] + "/month"
+                }    
+              ]
             }
           );
         }
-        if ('size' in resource) {
+
+        if ('size_cores' in resource || 'size_memory' in resource || 'size_disk' in resource) {
           yml['form'][0]['subitems'].push(
             {
-              type: 'info-row',
-              icon: 'icon-size.png',
-              color: 'black',
-              label: 'Size',
-              value: resource['size']
+              type: 'row',
+              subitems: [
+                {
+                  type: 'field',
+                  icon: 'icon-cores.png',
+                  color: 'black',
+                  label: 'Cores:',
+                  value: resource['size_cores']
+                },
+                {
+                  type: 'field',
+                  icon: 'icon-memory.png',
+                  color: 'black',
+                  label: 'Memory:',
+                  value: resource['size_memory']
+                },
+                {
+                  type: 'field',
+                  icon: 'icon-storage.png',
+                  color: 'black',
+                  label: 'Disk Size:',
+                  value: resource['size_disk']
+                }
+              ]
             }
           );
         }
-        if ('size_cores' in resource) {
-          yml['form'][0]['subitems'].push(
-            {
-              type: 'info-row',
-              icon: 'icon-cores.png',
-              color: 'black',
-              label: 'Cores',
-              value: resource['size_cores']
-            }
-          );
-        }
-        if ('size_memory' in resource) {
-          yml['form'][0]['subitems'].push(
-            {
-              type: 'info-row',
-              icon: 'icon-memory.png',
-              color: 'black',
-              label: 'Memory',
-              value: resource['size_memory']
-            }
-          );
-        }
-        if ('size_disk' in resource) {
-          yml['form'][0]['subitems'].push(
-            {
-              type: 'info-row',
-              icon: 'icon-storage.png',
-              color: 'black',
-              label: 'Disk Size',
-              value: resource['size_disk']
-            }
-          );
-        }
-        if ('price' in resource) {
-          yml['form'][0]['subitems'].push(
-            {
-              type: 'info-row',
-              icon: 'icon-price.png',
-              color: 'black',
-              label: 'Price (Monthly)',
-              value: resource['price']
-            }
-          );
-        }
+
         if ('image' in resource) {
           yml['form'][0]['subitems'].push(
             {
