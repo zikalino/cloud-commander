@@ -281,7 +281,7 @@ function createDetailsView(view: any, id: string) {
                   value: resource['state']
                 },
                 {
-                  type: 'info-row',
+                  type: 'field',
                   icon: 'codicon-location',
                   color: 'black',
                   label: 'Location:',
