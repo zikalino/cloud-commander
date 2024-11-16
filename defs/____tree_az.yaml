@@ -29,6 +29,18 @@
       path-id: $[::].id
       path-name: $[::].name
       path-raw: $[::]
+    # This is copied from level below, but is exactly the same
+    - type: query-details
+      when:
+        path: "$.type"
+        value: "Microsoft.Compute/virtualMachines"
+        compare: ne
+      query: az resource show --ids ${id}
+      refresh: self
+      extract:
+        - field: location
+          path: "$.location"
+
     - type: child-template
       # this is a template for any resource in the resource group
       template:
