@@ -200,6 +200,14 @@ function validateCondition(resource: any, op: any) {
   return true;
 }
 
+function getFormattedValue(resource: any, id: string): string {
+  if (id in resource) {
+    return resource[id];
+  } else {
+    return "-";
+  }
+}
+
 function createDetailsView(view: any, id: string) {
   var resource = setContext(id);
 
@@ -271,21 +279,21 @@ function createDetailsView(view: any, id: string) {
                   icon: 'codicon-symbol-string',
                   color: 'black',
                   label: 'Name:',
-                  value: resource['name']
+                  value: getFormattedValue(resource, "name")
                 },
                 {
                   type: 'field',
                   icon: icon,
                   color: 'black',
                   label: 'State:',
-                  value: resource['state']
+                  value: getFormattedValue(resource, "state")
                 },
                 {
                   type: 'field',
                   icon: 'codicon-location',
                   color: 'black',
                   label: 'Location:',
-                  value: resource['location']
+                  value: getFormattedValue(resource, "location")
                 }        
               ]
             }
@@ -302,14 +310,14 @@ function createDetailsView(view: any, id: string) {
                   icon: 'icon-size.png',
                   color: 'black',
                   label: 'Size:',
-                  value: resource['size']
+                  value: getFormattedValue(resource, "size")
                 },
                 {
                   type: 'field',
                   icon: 'icon-price.png',
                   color: 'black',
                   label: 'Price:',
-                  value: resource['price'] + "/month"
+                  value: getFormattedValue(resource, "price") + "/month"
                 }    
               ]
             }
@@ -326,21 +334,21 @@ function createDetailsView(view: any, id: string) {
                   icon: 'icon-cores.png',
                   color: 'black',
                   label: 'Cores:',
-                  value: resource['size_cores']
+                  value: getFormattedValue(resource, "size_cores")
                 },
                 {
                   type: 'field',
                   icon: 'icon-memory.png',
                   color: 'black',
                   label: 'Memory:',
-                  value: resource['size_memory']
+                  value: getFormattedValue(resource, "size_memory")
                 },
                 {
                   type: 'field',
                   icon: 'icon-storage.png',
                   color: 'black',
                   label: 'Disk Size:',
-                  value: resource['size_disk']
+                  value: getFormattedValue(resource, "size_disk")
                 }
               ]
             }
@@ -354,7 +362,7 @@ function createDetailsView(view: any, id: string) {
               icon: 'codicon-file-binary',
               color: 'black',
               label: 'Image',
-              value: resource['image']
+              value: getFormattedValue(resource, "image")
             }
           );
         }
