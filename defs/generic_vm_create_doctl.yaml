@@ -67,16 +67,12 @@
       val-false: undefined
       produces: 
         - variable: droplet_agent=false
-- type: row
-  subitems: 
     - type: checkbox
       name: enable-backups
       description: Enables backups for the Droplet. By default, backups are created on a daily basis.
       val-false: undefined
       produces: 
         - variable: enable_backups
-- type: row
-  subitems: 
     - type: checkbox
       name: enable-ipv6
       description: Enables IPv6 support and assigns an IPv6 address to the Droplet
@@ -91,8 +87,6 @@
       val-false: undefined
       produces: 
         - variable: enable_monitoring
-- type: row
-  subitems: 
     - type: checkbox
       name: enable-private-networking
       description: Enables private networking for the Droplet by provisioning it inside of your account's default VPC for the region
