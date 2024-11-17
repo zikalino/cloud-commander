@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: field
+      icon: icon-price.png
+      color: black
+      label: 'Price (mth):'
+      value: 'x.xx EUR'
+    - type: field
+      icon: icon-price.png
+      color: black
+      label: 'Price (hr):'
+      value: 'x.xx EUR'

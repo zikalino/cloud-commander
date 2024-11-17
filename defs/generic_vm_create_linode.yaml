@@ -9,6 +9,7 @@
 
 
 - $include: generic_vm_size_information.yaml
+- $include: generic_vm_price_information.yaml
 
 - type: row
   subitems:
