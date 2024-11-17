@@ -124,14 +124,14 @@
 #                                   Default: human                                                                                      
 # 
 
-- $include: __upctl_zone_list_selector.yaml
 - type: row
   subitems:
     - type: textfield
       name: Host Name
       produces:
         - variable: host_name
-- $include: __upctl_server_plans_selector.yaml
+    - $include: __upctl_zone_list_selector_field.yaml
+    - $include: __upctl_server_plans_selector_field.yaml
 - type: 'action-row'
   name: Create UpCloud Server
   consumes:
