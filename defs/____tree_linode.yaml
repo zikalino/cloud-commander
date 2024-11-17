@@ -14,7 +14,7 @@
       operations:
         - type: create
           name: Create Linode (Virtual Machine)
-          template: linode_linodes_create
+          template: generic_vm_create
       child-template:
         - type: query-details
           query: linode linodes view ${id} --json

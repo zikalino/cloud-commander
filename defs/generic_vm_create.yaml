@@ -1,0 +1,35 @@
+type: layout-form
+id: root
+header:
+  - type: header
+    title: Create Virtual Machine
+    logo: icon.webp
+form:
+  - type: fieldset
+    subitems:
+      - $include: __generic_provider_selector.yaml
+
+  - type: fieldset
+    show-if:
+      variable: cloud_provider
+      value: cloud-linode
+    subitems:
+      - $include: generic_vm_create_linode.yaml
+  - type: fieldset
+    show-if:
+      variable: cloud_provider
+      value: cloud-az
+    subitems:
+      - $include: generic_vm_create_az.yaml
+  - type: fieldset
+    show-if:
+      variable: cloud_provider
+      value: cloud-upctl
+    subitems:
+      - $include: generic_vm_create_upctl.yaml
+  - type: fieldset
+    show-if:
+      variable: cloud_provider
+      value: cloud-doctl
+    subitems:
+      - $include: generic_vm_create_doctl.yaml

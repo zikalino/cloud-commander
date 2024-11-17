@@ -5,11 +5,11 @@
       items:
         - id: cloud-az
           label: Azure
-        - id: cloud-upctl
-          label: Digital Ocean
         - id: cloud-doctl
-          label: Linode
+          label: Digital Ocean
         - id: cloud-linode
+          label: Linode
+        - id: cloud-upctl
           label: UpCloud
       produces:
         - variable: cloud_provider
