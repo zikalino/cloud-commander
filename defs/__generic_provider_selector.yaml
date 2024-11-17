@@ -1,0 +1,15 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Infrastructure Provider
+      items:
+        - id: cloud-az
+          label: Azure
+        - id: cloud-upctl
+          label: Digital Ocean
+        - id: cloud-doctl
+          label: Linode
+        - id: cloud-linode
+          label: UpCloud
+      produces:
+        - variable: cloud_provider
