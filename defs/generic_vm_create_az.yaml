@@ -1,4 +1,14 @@
-#- $include: __az_resource_group_select_or_create.yaml
+- type: row
+  subitems:
+    - type: textfield
+      name: Name
+      produces:
+        - variable: virtual_machine_name
+    - $include: __az_region_selector_field.yaml
+      prefix: virtual_machine_
+    - $include: __az_vm_size_selector_field.yaml
+
+  #- $include: __az_resource_group_select_or_create.yaml
 
 - type: text-block
   font: header-1
@@ -51,15 +61,6 @@
     value: attach
 
 
-- type: row
-  subitems:
-    - type: textfield
-      name: Name
-      produces:
-        - variable: virtual_machine_name
-- $include: __az_region_selector.yaml
-  prefix: virtual_machine_
-- $include: __az_vm_size_selector.yaml
 - $include: __az_subnet_selector.yaml
 - type: 'action-row'
   name: Create Virtual Machine
