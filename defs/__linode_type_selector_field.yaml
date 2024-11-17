@@ -1,0 +1,10 @@
+- type: combo
+  name: Select Linode Size
+  items: []
+  source:
+    cmd: |
+      linode linodes types --json
+    path-id: $[*].id
+    path-name: $[*].label
+  produces:
+    - variable: linode_type

@@ -4,9 +4,8 @@
       name: Name
       produces:
         - variable: name
-
-- $include: __linode_regions_list_selector.yaml
-- $include: __linode_type_selector.yaml
+    - $include: __linode_regions_list_selector_field.yaml
+    - $include: __linode_type_selector_field.yaml
 - type: row
   subitems:
     - type: textfield

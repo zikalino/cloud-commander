@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Region
+      items: []
+      source:
+        cmd: |
+          linode regions list --json
+        path-id: $[*].id
+        path-name: $[*].label
+      produces:
+        - variable: region
