@@ -33,3 +33,8 @@ form:
       value: cloud-doctl
     subitems:
       - $include: generic_vm_create_doctl.yaml
+  - type: fieldset
+    subitems:
+      - type: 'output-row'
+        data: output
+        content: ...

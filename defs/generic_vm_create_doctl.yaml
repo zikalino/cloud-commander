@@ -354,6 +354,3 @@
   install: doctl compute droplet create ${droplet_name}
   produces:
     - variable: output
-- type: 'output-row'
-  data: output
-  content: ...

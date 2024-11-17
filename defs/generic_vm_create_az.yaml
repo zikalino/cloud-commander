@@ -80,7 +80,6 @@
   verify: |
       az vm show --resource-group ${resource_group_name} --name ${virtual_machine_name}
   install: az vm create --resource-group ${resource_group_name} --name ${virtual_machine_name} --location ${virtual_machine_region}
-  uninstall: az vm delete --resource-group ${resource_group_name} --name ${virtual_machine_name} --yes
 
 #    --name -n                                       [Required] : Name of the virtual machine.
 #    --resource-group -g                             [Required] : Name of resource group. You can

@@ -14,7 +14,7 @@
       template: az_group_create
     - type: create
       name: Create Virtual Machine
-      template: az_vm_create
+      template: generic_vm_create
     - type: create
       name: Create Container Registry
       template: az_acr_create

@@ -14,7 +14,8 @@
       operations:
         - type: create
           name: Create Droplet
-          template: doctl_compute_droplet_create
+          template: generic_vm_create
+
       child-template:
         - type: query-details
           query: doctl compute droplet get ${id} -o json

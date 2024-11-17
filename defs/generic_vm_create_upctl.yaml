@@ -124,38 +124,20 @@
 #                                   Default: human                                                                                      
 # 
 
-type: layout-form
-header:
-  - type: header
-    title: Create Server
-    logo: icon.webp
-form:
-  - type: fieldset
-    subitems:
-      - $include: __upctl_zone_list_selector.yaml
-      - type: row
-        subitems:
-          - type: textfield
-            name: Host Name
-            produces:
-              - variable: host_name
-      - $include: __upctl_server_plans_selector.yaml
-      - type: 'action-row'
-        id: create-container-instance
-        name: Create Container Instance
-        consumes:
-          - variable: host_name
-          - variable: zone
-          - variable: server_plan
-        verify: |
-            upctl server show ${host_name}
-        install: upctl server create --hostname ${host_name} --zone ${zone} --plan ${server_plan} --password-delivery email
-        uninstall: upctl server delete ${host_name}
-
-footer:
-  - type: footer
-    id: footer
-    subitems:
-      - type: button
-        id: install_button
-        text: Create
+- $include: __upctl_zone_list_selector.yaml
+- type: row
+  subitems:
+    - type: textfield
+      name: Host Name
+      produces:
+        - variable: host_name
+- $include: __upctl_server_plans_selector.yaml
+- type: 'action-row'
+  name: Create UpCloud Server
+  consumes:
+    - variable: host_name
+    - variable: zone
+    - variable: server_plan
+  verify: |
+      upctl server show ${host_name}
+  install: upctl server create --hostname ${host_name} --zone ${zone} --plan ${server_plan} --password-delivery email

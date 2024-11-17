@@ -7,10 +7,12 @@
 
 - $include: __linode_regions_list_selector.yaml
 - $include: __linode_type_selector.yaml
-- type: textfield
-  name: Root Password
-  produces:
-    - variable: password
+- type: row
+  subitems:
+    - type: textfield
+      name: Root Password
+      produces:
+        - variable: password
 
 - type: 'action-row'
   name: Create Linode
@@ -22,7 +24,6 @@
   verify: |
       linode list --label ${name}
   install: linode linodes create --region ${region} --type ${linode_type} --label ${name}  --root_pass ${password}
-  uninstall: xxx
 
 # linode-cli linodes create
 # Create a Linode
