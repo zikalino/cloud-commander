@@ -10,6 +10,8 @@
 
   #- $include: __az_resource_group_select_or_create.yaml
 
+- $include: generic_vm_size_information.yaml
+
 - type: text-block
   font: header-1
   content: OS Disk

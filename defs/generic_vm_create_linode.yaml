@@ -6,6 +6,10 @@
         - variable: name
     - $include: __linode_regions_list_selector_field.yaml
     - $include: __linode_type_selector_field.yaml
+
+
+- $include: generic_vm_size_information.yaml
+
 - type: row
   subitems:
     - type: textfield

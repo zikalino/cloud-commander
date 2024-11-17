@@ -1,0 +1,17 @@
+- type: row
+  subitems:
+    - type: field
+      icon: icon-cores.png
+      color: black
+      label: 'Cores:'
+      value: 2
+    - type: field
+      icon: icon-memory.png
+      color: black
+      label: 'Memory:'
+      value: 1024
+    - type: field
+      icon: icon-storage.png
+      color: black
+      label: 'Disk Size:'
+      value: 1024
