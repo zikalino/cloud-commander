@@ -4,14 +4,24 @@
       icon: icon-cores.png
       color: black
       label: 'Cores:'
-      value: 2
+      value: "-"
+      value_src: "$.vm_size_cores"
+      consumes:
+        - variable: vm_size_cores
+
     - type: field
       icon: icon-memory.png
       color: black
       label: 'Memory:'
-      value: 1024
+      value: "-"
+      value_src: "$.vm_size_memory"
+      consumes:
+        - variable: vm_size_memory
     - type: field
       icon: icon-storage.png
       color: black
       label: 'Disk Size:'
-      value: 1024
+      value: "-"
+      value_src: "$.vm_size_disk"
+      consumes:
+        - variable: vm_size_disk

@@ -5,6 +5,7 @@ import { JSONPath } from 'jsonpath-plus';
 import { displayMenu } from './extension';
 
 import { extensionContext } from './extension';
+import vm_sizes from './vm_sizes.json' assert {type: 'json'};
 
 var currentCloudId = "";
 var currentResourceId  = "";
@@ -20,6 +21,8 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
     };
 
   view = new helpers.GenericWebView(extensionContext, "Cloud Commander", "Cloud Commander");
+
+  view.setVariable("vm_sizes", vm_sizes);
 
   view.MsgHandler = function (msg: any) {
     switch (msg.command) {

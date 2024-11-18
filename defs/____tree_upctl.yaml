@@ -14,7 +14,7 @@
       operations:
       - type: create
         name: Create Server
-      template: generic_vm_create
+        template: generic_vm_create
       child-template:
         - type: query-details
           query: upctl server show ${id} -o json

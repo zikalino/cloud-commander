@@ -3,6 +3,7 @@ import YAML from 'yaml';
 import * as helpers from '@zim.kalinowski/vscode-helper-toolkit';
 
 import { displayCloudExplorer, CloudExplorerRefresh } from './cloud-explorer';
+import vm_sizes from './vm_sizes.json' assert {type: 'json'};
 
 //import SwaggerParser from "@apidevtools/swagger-parser";
 var extensionUri: vscode.Uri;
@@ -58,6 +59,8 @@ export async function displayMenu(submenu: any) {
 
 async function loadYamlView(yml: string, refresh_id: string|null) {
   let view = new helpers.GenericWebView(extensionContext, "Raw CLI", "Cloud Commmander"); 
+  view.setVariable("vm_sizes", vm_sizes);
+
   view.createPanel(yml, "media/icon.webp");
 
   view.MsgHandler = function (msg: any) {

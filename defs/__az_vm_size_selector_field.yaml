@@ -1,14 +1,24 @@
-- type: row
-  subitems:
-    - type: combo
-      name: Select Virtual Machine Size
-      items: []
-      consumes:
-        - variable: virtual_machine_region
-      source:
-        cmd: |
-          az vm list-sizes --location ${virtual_machine_region}
-        path-id: $[*].name
-        path-name: $[*].name
-      produces:
-        - variable: vm_size
+- type: combo
+  name: Select Virtual Machine Size
+  items: []
+  consumes:
+    - variable: virtual_machine_region
+  source:
+    cmd: |
+      az vm list-sizes --location ${virtual_machine_region}
+    path-id: $[*].name
+    path-name: $[*].name
+  produces:
+    - variable: vm_size
+    - variable: vm_price_month
+      path: "$.vm_sizes[?(@.id=='${vm_size}')].price_month"
+    - variable: vm_price_hour
+      path: "$.vm_sizes[?(@.id=='${vm_size}')].price_hour"
+    - variable: vm_price_currency
+      path: "$.vm_sizes[?(@.id=='${vm_size}')].price_currency"
+    - variable: vm_size_cores
+      path: "$.vm_sizes[?(@.id=='${vm_size}')].size_cores"
+    - variable: vm_size_memory
+      path: "$.vm_sizes[?(@.id=='${vm_size}')].size_memory"
+    - variable: vm_size_disk
+      path: "$.vm_sizes[?(@.id=='${vm_size}')].size_disk"
