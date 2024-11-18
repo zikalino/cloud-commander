@@ -3,10 +3,10 @@
     - type: field
       icon: icon-price.png
       color: black
-      label: 'Price (mth):'
+      label: 'Price (m):'
       value: 'x.xx EUR'
     - type: field
       icon: icon-price.png
       color: black
-      label: 'Price (hr):'
+      label: 'Price (h):'
       value: 'x.xx EUR'
