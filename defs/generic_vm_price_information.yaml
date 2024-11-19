@@ -5,8 +5,15 @@
       color: black
       label: 'Price (m):'
       value: 'x.xx EUR'
+      value_src: "$.vm_price_month"
+      consumes:
+        - variable: vm_price_month
+
     - type: field
       icon: icon-price.png
       color: black
       label: 'Price (h):'
       value: 'x.xx EUR'
+      value_src: "$.vm_price_hour"
+      consumes:
+        - variable: vm_price_hour

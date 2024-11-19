@@ -1910,7 +1910,7 @@
     "size_cores": 1,
     "size_disk": 10,
     "price_month": 4,
-    "price_hourly": 0.00595,
+    "price_hour": 0.00595,
     "regions": [
       "ams3",
       "fra1",
@@ -1938,7 +1938,7 @@
     "size_cores": 1,
     "size_disk": 25,
     "price_month": 6,
-    "price_hourly": 0.00893,
+    "price_hour": 0.00893,
     "regions": [
       "ams3",
       "blr1",
@@ -1972,7 +1972,7 @@
     "size_cores": 1,
     "size_disk": 25,
     "price_month": 7,
-    "price_hourly": 0.01042,
+    "price_hour": 0.01042,
     "regions": [
       "ams3",
       "blr1",
@@ -2005,7 +2005,7 @@
     "size_cores": 1,
     "size_disk": 25,
     "price_month": 7,
-    "price_hourly": 0.01042,
+    "price_hour": 0.01042,
     "regions": [
       "ams3",
       "blr1",
@@ -2038,7 +2038,7 @@
     "size_cores": 1,
     "size_disk": 35,
     "price_month": 8,
-    "price_hourly": 0.0119,
+    "price_hour": 0.0119,
     "regions": [
       "ams3",
       "blr1",
@@ -2071,7 +2071,7 @@
     "size_cores": 1,
     "size_disk": 50,
     "price_month": 12,
-    "price_hourly": 0.01786,
+    "price_hour": 0.01786,
     "regions": [
       "ams3",
       "blr1",
@@ -2105,7 +2105,7 @@
     "size_cores": 1,
     "size_disk": 50,
     "price_month": 14,
-    "price_hourly": 0.02083,
+    "price_hour": 0.02083,
     "regions": [
       "ams3",
       "blr1",
@@ -2138,7 +2138,7 @@
     "size_cores": 1,
     "size_disk": 50,
     "price_month": 14,
-    "price_hourly": 0.02083,
+    "price_hour": 0.02083,
     "regions": [
       "ams3",
       "blr1",
@@ -2171,7 +2171,7 @@
     "size_cores": 1,
     "size_disk": 70,
     "price_month": 16,
-    "price_hourly": 0.02381,
+    "price_hour": 0.02381,
     "regions": [
       "ams3",
       "blr1",
@@ -2204,7 +2204,7 @@
     "size_cores": 2,
     "size_disk": 60,
     "price_month": 18,
-    "price_hourly": 0.02679,
+    "price_hour": 0.02679,
     "regions": [
       "ams3",
       "blr1",
@@ -2238,7 +2238,7 @@
     "size_cores": 2,
     "size_disk": 60,
     "price_month": 21,
-    "price_hourly": 0.03125,
+    "price_hour": 0.03125,
     "regions": [
       "ams3",
       "blr1",
@@ -2271,7 +2271,7 @@
     "size_cores": 2,
     "size_disk": 60,
     "price_month": 21,
-    "price_hourly": 0.03125,
+    "price_hour": 0.03125,
     "regions": [
       "ams3",
       "blr1",
@@ -2304,7 +2304,7 @@
     "size_cores": 2,
     "size_disk": 90,
     "price_month": 24,
-    "price_hourly": 0.03571,
+    "price_hour": 0.03571,
     "regions": [
       "ams3",
       "blr1",
@@ -2337,7 +2337,7 @@
     "size_cores": 2,
     "size_disk": 80,
     "price_month": 24,
-    "price_hourly": 0.03571,
+    "price_hour": 0.03571,
     "regions": [
       "ams3",
       "blr1",
@@ -2371,7 +2371,7 @@
     "size_cores": 2,
     "size_disk": 80,
     "price_month": 28,
-    "price_hourly": 0.04167,
+    "price_hour": 0.04167,
     "regions": [
       "ams3",
       "blr1",
@@ -2404,7 +2404,7 @@
     "size_cores": 2,
     "size_disk": 80,
     "price_month": 28,
-    "price_hourly": 0.04167,
+    "price_hour": 0.04167,
     "regions": [
       "ams3",
       "blr1",
@@ -2437,7 +2437,7 @@
     "size_cores": 2,
     "size_disk": 120,
     "price_month": 32,
-    "price_hourly": 0.04762,
+    "price_hour": 0.04762,
     "regions": [
       "ams3",
       "blr1",
@@ -2470,7 +2470,7 @@
     "size_cores": 2,
     "size_disk": 100,
     "price_month": 42,
-    "price_hourly": 0.0625,
+    "price_hour": 0.0625,
     "regions": [
       "ams3",
       "blr1",
@@ -2503,7 +2503,7 @@
     "size_cores": 2,
     "size_disk": 25,
     "price_month": 42,
-    "price_hourly": 0.0625,
+    "price_hour": 0.0625,
     "regions": [
       "ams3",
       "blr1",
@@ -2537,7 +2537,7 @@
     "size_cores": 2,
     "size_disk": 160,
     "price_month": 48,
-    "price_hourly": 0.07143,
+    "price_hour": 0.07143,
     "regions": [
       "ams3",
       "blr1",
@@ -2570,7 +2570,7 @@
     "size_cores": 4,
     "size_disk": 160,
     "price_month": 48,
-    "price_hourly": 0.07143,
+    "price_hour": 0.07143,
     "regions": [
       "ams3",
       "blr1",
@@ -2604,7 +2604,7 @@
     "size_cores": 4,
     "size_disk": 160,
     "price_month": 56,
-    "price_hourly": 0.08333,
+    "price_hour": 0.08333,
     "regions": [
       "ams3",
       "blr1",
@@ -2637,7 +2637,7 @@
     "size_cores": 4,
     "size_disk": 160,
     "price_month": 56,
-    "price_hourly": 0.08333,
+    "price_hour": 0.08333,
     "regions": [
       "ams3",
       "blr1",
@@ -2670,7 +2670,7 @@
     "size_cores": 2,
     "size_disk": 25,
     "price_month": 63,
-    "price_hourly": 0.09375,
+    "price_hour": 0.09375,
     "regions": [
       "ams3",
       "blr1",
@@ -2704,7 +2704,7 @@
     "size_cores": 4,
     "size_disk": 240,
     "price_month": 64,
-    "price_hourly": 0.09524,
+    "price_hour": 0.09524,
     "regions": [
       "ams3",
       "blr1",
@@ -2737,7 +2737,7 @@
     "size_cores": 2,
     "size_disk": 50,
     "price_month": 68,
-    "price_hourly": 0.10119,
+    "price_hour": 0.10119,
     "regions": [
       "ams3",
       "blr1",
@@ -2771,7 +2771,7 @@
     "size_cores": 4,
     "size_disk": 200,
     "price_month": 84,
-    "price_hourly": 0.125,
+    "price_hour": 0.125,
     "regions": [
       "ams3",
       "blr1",
@@ -2804,7 +2804,7 @@
     "size_cores": 2,
     "size_disk": 50,
     "price_month": 84,
-    "price_hourly": 0.125,
+    "price_hour": 0.125,
     "regions": [
       "ams3",
       "blr1",
@@ -2838,7 +2838,7 @@
     "size_cores": 4,
     "size_disk": 50,
     "price_month": 84,
-    "price_hourly": 0.125,
+    "price_hour": 0.125,
     "regions": [
       "ams3",
       "blr1",
