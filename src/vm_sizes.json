@@ -314,38 +314,38 @@
   {
     "id": "g6-nanode-1",
     "label": "Nanode 1GB",
-    "price": {
-      "hourly": 0.0075,
-      "monthly": 5.0
-    },
+    "price_hourl": 0.0075,
+    "price_month": 5.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.009,
-        "monthly": 6.0
+        "price_hour": 0.009,
+        "price_month": 6.0
       },
       {
         "id": "br-gru",
-        "hourly": 0.0105,
-        "monthly": 7.0
+        "price_hour": 0.0105,
+        "price_month": 7.0
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.003,
-          "monthly": 2.0
+          "price_hour": 0.003,
+          "price_month": 2.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.0036,
-            "monthly": 2.4
+            "price_hour": 0.0036,
+            "price_month": 2.4
           },
           {
             "id": "br-gru",
-            "hourly": 0.004,
-            "monthly": 2.8
+            "price_hour": 0.004,
+            "price_month": 2.8
           }
         ]
       }
@@ -362,38 +362,38 @@
   {
     "id": "g6-standard-1",
     "label": "Linode 2GB",
-    "price": {
-      "hourly": 0.018,
-      "monthly": 12.0
-    },
+    "price_hour": 0.018,
+    "price_month": 12.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.022,
-        "monthly": 14.4
+        "price_hour": 0.022,
+        "price_month": 14.4
       },
       {
         "id": "br-gru",
-        "hourly": 0.025,
-        "monthly": 16.8
+        "price_hour": 0.025,
+        "price_month": 16.8
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.004,
-          "monthly": 2.5
+          "price_hour": 0.004,
+          "price_month": 2.5
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.0045,
-            "monthly": 3.0
+            "price_hour": 0.0045,
+            "price_month": 3.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.005,
-            "monthly": 3.5
+            "price_hour": 0.005,
+            "price_month": 3.5
           }
         ]
       }
@@ -410,38 +410,38 @@
   {
     "id": "g6-standard-2",
     "label": "Linode 4GB",
-    "price": {
-      "hourly": 0.036,
-      "monthly": 24.0
-    },
+    "price_hour": 0.036,
+    "price_month": 24.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.043,
-        "monthly": 28.8
+        "price_hour": 0.043,
+        "price_month": 28.8
       },
       {
         "id": "br-gru",
-        "hourly": 0.05,
-        "monthly": 33.6
+        "price_hour": 0.05,
+        "price_month": 33.6
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.008,
-          "monthly": 5.0
+          "price_hour": 0.008,
+          "price_month": 5.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.009,
-            "monthly": 6.0
+            "price_hour": 0.009,
+            "price_month": 6.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.01,
-            "monthly": 7.0
+            "price_hour": 0.01,
+            "price_month": 7.0
           }
         ]
       }
@@ -458,38 +458,38 @@
   {
     "id": "g6-standard-4",
     "label": "Linode 8GB",
-    "price": {
-      "hourly": 0.072,
-      "monthly": 48.0
-    },
+    "price_hour": 0.072,
+    "price_month": 48.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.086,
-        "monthly": 57.6
+        "price_hour": 0.086,
+        "price_month": 57.6
       },
       {
         "id": "br-gru",
-        "hourly": 0.101,
-        "monthly": 67.2
+        "price_hour": 0.101,
+        "price_month": 67.2
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.015,
-          "monthly": 10.0
+          "price_hour": 0.015,
+          "price_month": 10.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.018,
-            "monthly": 12.0
+            "price_hour": 0.018,
+            "price_month": 12.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.021,
-            "monthly": 14.0
+            "price_hour": 0.021,
+            "price_month": 14.0
           }
         ]
       }
@@ -506,38 +506,38 @@
   {
     "id": "g6-standard-6",
     "label": "Linode 16GB",
-    "price": {
-      "hourly": 0.144,
-      "monthly": 96.0
-    },
+    "price_hour": 0.144,
+    "price_month": 96.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.173,
-        "monthly": 115.2
+        "price_hour": 0.173,
+        "price_month": 115.2
       },
       {
         "id": "br-gru",
-        "hourly": 0.202,
-        "monthly": 134.4
+        "price_hour": 0.202,
+        "price_month": 134.4
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.03,
-          "monthly": 20.0
+          "price_hour": 0.03,
+          "price_month": 20.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.036,
-            "monthly": 24.0
+            "price_hour": 0.036,
+            "price_month": 24.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.042,
-            "monthly": 28.0
+            "price_hour": 0.042,
+            "price_month": 28.0
           }
         ]
       }
@@ -554,38 +554,38 @@
   {
     "id": "g6-standard-8",
     "label": "Linode 32GB",
-    "price": {
-      "hourly": 0.288,
-      "monthly": 192.0
-    },
+    "price_hour": 0.288,
+    "price_month": 192.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.346,
-        "monthly": 230.4
+        "price_hour": 0.346,
+        "price_month": 230.4
       },
       {
         "id": "br-gru",
-        "hourly": 0.403,
-        "monthly": 268.8
+        "price_hour": 0.403,
+        "price_month": 268.8
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.06,
-          "monthly": 40.0
+          "price_hour": 0.06,
+          "price_month": 40.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.072,
-            "monthly": 48.0
+            "price_hour": 0.072,
+            "price_month": 48.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.084,
-            "monthly": 56.0
+            "price_hour": 0.084,
+            "price_month": 56.0
           }
         ]
       }
@@ -602,38 +602,38 @@
   {
     "id": "g6-standard-16",
     "label": "Linode 64GB",
-    "price": {
-      "hourly": 0.576,
-      "monthly": 384.0
-    },
+    "price_hour": 0.576,
+    "price_month": 384.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.691,
-        "monthly": 460.8
+        "price_hour": 0.691,
+        "price_month": 460.8
       },
       {
         "id": "br-gru",
-        "hourly": 0.806,
-        "monthly": 537.6
+        "price_hour": 0.806,
+        "price_month": 537.6
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.12,
-          "monthly": 80.0
+          "price_hour": 0.12,
+          "price_month": 80.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.144,
-            "monthly": 96.0
+            "price_hour": 0.144,
+            "price_month": 96.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.168,
-            "monthly": 112.0
+            "price_hour": 0.168,
+            "price_month": 112.0
           }
         ]
       }
@@ -650,38 +650,38 @@
   {
     "id": "g6-standard-20",
     "label": "Linode 96GB",
-    "price": {
-      "hourly": 0.864,
-      "monthly": 576.0
-    },
+    "price_hour": 0.864,
+    "price_month": 576.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 1.037,
-        "monthly": 691.2
+        "price_hour": 1.037,
+        "price_month": 691.2
       },
       {
         "id": "br-gru",
-        "hourly": 1.21,
-        "monthly": 806.4
+        "price_hour": 1.21,
+        "price_month": 806.4
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.18,
-          "monthly": 120.0
+          "price_hour": 0.18,
+          "price_month": 120.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.216,
-            "monthly": 144.0
+            "price_hour": 0.216,
+            "price_month": 144.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.252,
-            "monthly": 168.0
+            "price_hour": 0.252,
+            "price_month": 168.0
           }
         ]
       }
@@ -698,38 +698,38 @@
   {
     "id": "g6-standard-24",
     "label": "Linode 128GB",
-    "price": {
-      "hourly": 1.152,
-      "monthly": 768.0
-    },
+    "price_hour": 1.152,
+    "price_month": 768.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 1.382,
-        "monthly": 921.6
+        "price_hour": 1.382,
+        "price_month": 921.6
       },
       {
         "id": "br-gru",
-        "hourly": 1.613,
-        "monthly": 1075.2
+        "price_hour": 1.613,
+        "price_month": 1075.2
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.24,
-          "monthly": 160.0
+          "price_hour": 0.24,
+          "price_month": 160.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.288,
-            "monthly": 192.0
+            "price_hour": 0.288,
+            "price_month": 192.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.336,
-            "monthly": 224.0
+            "price_hour": 0.336,
+            "price_month": 224.0
           }
         ]
       }
@@ -746,38 +746,38 @@
   {
     "id": "g6-standard-32",
     "label": "Linode 192GB",
-    "price": {
-      "hourly": 1.728,
-      "monthly": 1152.0
-    },
+    "price_hour": 1.728,
+    "price_month": 1152.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 2.074,
-        "monthly": 1382.4
+        "price_hour": 2.074,
+        "price_month": 1382.4
       },
       {
         "id": "br-gru",
-        "hourly": 2.419,
-        "monthly": 1612.8
+        "price_hour": 2.419,
+        "price_month": 1612.8
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.36,
-          "monthly": 240.0
+          "price_hour": 0.36,
+          "price_month": 240.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.432,
-            "monthly": 288.0
+            "price_hour": 0.432,
+            "price_month": 288.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.504,
-            "monthly": 336.0
+            "price_hour": 0.504,
+            "price_month": 336.0
           }
         ]
       }
@@ -794,38 +794,38 @@
   {
     "id": "g7-highmem-1",
     "label": "Linode 24GB",
-    "price": {
-      "hourly": 0.09,
-      "monthly": 60.0
-    },
+    "price_hour": 0.09,
+    "price_month": 60.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.108,
-        "monthly": 72.0
+        "price_hour": 0.108,
+        "price_month": 72.0
       },
       {
         "id": "br-gru",
-        "hourly": 0.126,
-        "monthly": 84.0
+        "price_hour": 0.126,
+        "price_month": 84.0
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.0075,
-          "monthly": 5.0
+          "price_hour": 0.0075,
+          "price_month": 5.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.009,
-            "monthly": 6.0
+            "price_hour": 0.009,
+            "price_month": 6.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.0105,
-            "monthly": 7.0
+            "price_hour": 0.0105,
+            "price_month": 7.0
           }
         ]
       }
@@ -842,38 +842,38 @@
   {
     "id": "g7-highmem-2",
     "label": "Linode 48GB",
-    "price": {
-      "hourly": 0.18,
-      "monthly": 120.0
-    },
+    "price_hour": 0.18,
+    "price_month": 120.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.216,
-        "monthly": 144.0
+        "price_hour": 0.216,
+        "price_month": 144.0
       },
       {
         "id": "br-gru",
-        "hourly": 0.252,
-        "monthly": 168.0
+        "price_hour": 0.252,
+        "price_month": 168.0
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.015,
-          "monthly": 10.0
+          "price_hour": 0.015,
+          "price_month": 10.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.018,
-            "monthly": 12.0
+            "price_hour": 0.018,
+            "price_month": 12.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.021,
-            "monthly": 14.0
+            "price_hour": 0.021,
+            "price_month": 14.0
           }
         ]
       }
@@ -890,38 +890,38 @@
   {
     "id": "g7-highmem-4",
     "label": "Linode 90GB",
-    "price": {
-      "hourly": 0.36,
-      "monthly": 240.0
-    },
+    "price_hour": 0.36,
+    "price_month": 240.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.432,
-        "monthly": 288.0
+        "price_hour": 0.432,
+        "price_month": 288.0
       },
       {
         "id": "br-gru",
-        "hourly": 0.504,
-        "monthly": 336.0
+        "price_hour": 0.504,
+        "price_month": 336.0
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.03,
-          "monthly": 20.0
+          "price_hour": 0.03,
+          "price_month": 20.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.036,
-            "monthly": 24.0
+            "price_hour": 0.036,
+            "price_month": 24.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.042,
-            "monthly": 28.0
+            "price_hour": 0.042,
+            "price_month": 28.0
           }
         ]
       }
@@ -938,38 +938,38 @@
   {
     "id": "g7-highmem-8",
     "label": "Linode 150GB",
-    "price": {
-      "hourly": 0.72,
-      "monthly": 480.0
-    },
+    "price_hour": 0.72,
+    "price_month": 480.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.864,
-        "monthly": 576.0
+        "price_hour": 0.864,
+        "price_month": 576.0
       },
       {
         "id": "br-gru",
-        "hourly": 1.008,
-        "monthly": 672.0
+        "price_hour": 1.008,
+        "price_month": 672.0
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.06,
-          "monthly": 40.0
+          "price_hour": 0.06,
+          "price_month": 40.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.072,
-            "monthly": 48.0
+            "price_hour": 0.072,
+            "price_month": 48.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.084,
-            "monthly": 56.0
+            "price_hour": 0.084,
+            "price_month": 56.0
           }
         ]
       }
@@ -986,38 +986,38 @@
   {
     "id": "g7-highmem-16",
     "label": "Linode 300GB",
-    "price": {
-      "hourly": 1.44,
-      "monthly": 960.0
-    },
+    "price_hour": 1.44,
+    "price_month": 960.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 1.728,
-        "monthly": 1152.0
+        "price_hour": 1.728,
+        "price_month": 1152.0
       },
       {
         "id": "br-gru",
-        "hourly": 2.016,
-        "monthly": 1344.0
+        "price_hour": 2.016,
+        "price_month": 1344.0
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.12,
-          "monthly": 80.0
+          "price_hour": 0.12,
+          "price_month": 80.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.144,
-            "monthly": 96.0
+            "price_hour": 0.144,
+            "price_month": 96.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.168,
-            "monthly": 112.0
+            "price_hour": 0.168,
+            "price_month": 112.0
           }
         ]
       }
@@ -1034,38 +1034,38 @@
   {
     "id": "g6-dedicated-2",
     "label": "Dedicated 4GB",
-    "price": {
-      "hourly": 0.054,
-      "monthly": 36.0
-    },
+    "price_hour": 0.054,
+    "price_month": 36.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.065,
-        "monthly": 43.2
+        "price_hour": 0.065,
+        "price_month": 43.2
       },
       {
         "id": "br-gru",
-        "hourly": 0.076,
-        "monthly": 50.4
+        "price_hour": 0.076,
+        "price_month": 50.4
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.008,
-          "monthly": 5.0
+          "price_hour": 0.008,
+          "price_month": 5.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.009,
-            "monthly": 6.0
+            "price_hour": 0.009,
+            "price_month": 6.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.01,
-            "monthly": 7.0
+            "price_hour": 0.01,
+            "price_month": 7.0
           }
         ]
       }
@@ -1082,38 +1082,38 @@
   {
     "id": "g6-dedicated-4",
     "label": "Dedicated 8GB",
-    "price": {
-      "hourly": 0.108,
-      "monthly": 72.0
-    },
+    "price_hour": 0.108,
+    "price_month": 72.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.13,
-        "monthly": 86.4
+        "price_hour": 0.13,
+        "price_month": 86.4
       },
       {
         "id": "br-gru",
-        "hourly": 0.151,
-        "monthly": 100.8
+        "price_hour": 0.151,
+        "price_month": 100.8
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.015,
-          "monthly": 10.0
+          "price_hour": 0.015,
+          "price_month": 10.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.018,
-            "monthly": 12.0
+            "price_hour": 0.018,
+            "price_month": 12.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.021,
-            "monthly": 14.0
+            "price_hour": 0.021,
+            "price_month": 14.0
           }
         ]
       }
@@ -1130,38 +1130,38 @@
   {
     "id": "g6-dedicated-8",
     "label": "Dedicated 16GB",
-    "price": {
-      "hourly": 0.216,
-      "monthly": 144.0
-    },
+    "price_hour": 0.216,
+    "price_month": 144.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.259,
-        "monthly": 172.8
+        "price_hour": 0.259,
+        "price_month": 172.8
       },
       {
         "id": "br-gru",
-        "hourly": 0.302,
-        "monthly": 201.6
+        "price_hour": 0.302,
+        "price_month": 201.6
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.03,
-          "monthly": 20.0
+          "price_hour": 0.03,
+          "price_month": 20.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.036,
-            "monthly": 24.0
+            "price_hour": 0.036,
+            "price_month": 24.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.042,
-            "monthly": 28.0
+            "price_hour": 0.042,
+            "price_month": 28.0
           }
         ]
       }
@@ -1178,38 +1178,38 @@
   {
     "id": "g6-dedicated-16",
     "label": "Dedicated 32GB",
-    "price": {
-      "hourly": 0.432,
-      "monthly": 288.0
-    },
+    "price_hour": 0.432,
+    "price_month": 288.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.518,
-        "monthly": 345.6
+        "price_hour": 0.518,
+        "price_month": 345.6
       },
       {
         "id": "br-gru",
-        "hourly": 0.605,
-        "monthly": 403.2
+        "price_hour": 0.605,
+        "price_month": 403.2
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.06,
-          "monthly": 40.0
+          "price_hour": 0.06,
+          "price_month": 40.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.072,
-            "monthly": 48.0
+            "price_hour": 0.072,
+            "price_month": 48.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.084,
-            "monthly": 56.0
+            "price_hour": 0.084,
+            "price_month": 56.0
           }
         ]
       }
@@ -1226,38 +1226,38 @@
   {
     "id": "g6-dedicated-32",
     "label": "Dedicated 64GB",
-    "price": {
-      "hourly": 0.864,
-      "monthly": 576.0
-    },
+    "price_hour": 0.864,
+    "price_month": 576.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 1.037,
-        "monthly": 691.2
+        "price_hour": 1.037,
+        "price_month": 691.2
       },
       {
         "id": "br-gru",
-        "hourly": 1.21,
-        "monthly": 806.4
+        "price_hour": 1.21,
+        "price_month": 806.4
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.12,
-          "monthly": 80.0
+          "price_hour": 0.12,
+          "price_month": 80.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.144,
-            "monthly": 96.0
+            "price_hour": 0.144,
+            "price_month": 96.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.168,
-            "monthly": 112.0
+            "price_hour": 0.168,
+            "price_month": 112.0
           }
         ]
       }
@@ -1274,38 +1274,38 @@
   {
     "id": "g6-dedicated-48",
     "label": "Dedicated 96GB",
-    "price": {
-      "hourly": 1.296,
-      "monthly": 864.0
-    },
+    "price_hour": 1.296,
+    "price_month": 864.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 1.555,
-        "monthly": 1036.8
+        "price_hour": 1.555,
+        "price_month": 1036.8
       },
       {
         "id": "br-gru",
-        "hourly": 1.814,
-        "monthly": 1209.6
+        "price_hour": 1.814,
+        "price_month": 1209.6
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.18,
-          "monthly": 120.0
+          "price_hour": 0.18,
+          "price_month": 120.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.216,
-            "monthly": 144.0
+            "price_hour": 0.216,
+            "price_month": 144.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.252,
-            "monthly": 168.0
+            "price_hour": 0.252,
+            "price_month": 168.0
           }
         ]
       }
@@ -1322,38 +1322,38 @@
   {
     "id": "g6-dedicated-50",
     "label": "Dedicated 128GB",
-    "price": {
-      "hourly": 1.728,
-      "monthly": 1152.0
-    },
+    "price_hour": 1.728,
+    "price_month": 1152.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 2.074,
-        "monthly": 1382.4
+        "price_hour": 2.074,
+        "price_month": 1382.4
       },
       {
         "id": "br-gru",
-        "hourly": 2.419,
-        "monthly": 1612.8
+        "price_hour": 2.419,
+        "price_month": 1612.8
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.24,
-          "monthly": 160.0
+          "price_hour": 0.24,
+          "price_month": 160.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.288,
-            "monthly": 192.0
+            "price_hour": 0.288,
+            "price_month": 192.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.336,
-            "monthly": 224.0
+            "price_hour": 0.336,
+            "price_month": 224.0
           }
         ]
       }
@@ -1370,38 +1370,38 @@
   {
     "id": "g6-dedicated-56",
     "label": "Dedicated 256GB",
-    "price": {
-      "hourly": 3.456,
-      "monthly": 2304.0
-    },
+    "price_hour": 3.456,
+    "price_month": 2304.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 4.147,
-        "monthly": 2764.8
+        "price_hour": 4.147,
+        "price_month": 2764.8
       },
       {
         "id": "br-gru",
-        "hourly": 4.838,
-        "monthly": 3225.6
+        "price_hour": 4.838,
+        "price_month": 3225.6
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.3,
-          "monthly": 200.0
+          "price_hour": 0.3,
+          "price_month": 200.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.36,
-            "monthly": 240.0
+            "price_hour": 0.36,
+            "price_month": 240.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.42,
-            "monthly": 280.0
+            "price_hour": 0.42,
+            "price_month": 280.0
           }
         ]
       }
@@ -1418,17 +1418,17 @@
   {
     "id": "g1-gpu-rtx6000-1",
     "label": "Dedicated 32GB + RTX6000 GPU x1",
-    "price": {
-      "hourly": 1.5,
-      "monthly": 1000.0
-    },
+    "price_hour": 1.5,
+    "price_month": 1000.0,
+    "price_currency": "USD",
     "region_prices": [],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.06,
-          "monthly": 40.0
+          "price_hour": 0.06,
+          "price_month": 40.0
         },
+        "price_currency": "USD",
         "region_prices": []
       }
     },
@@ -1444,17 +1444,17 @@
   {
     "id": "g1-gpu-rtx6000-2",
     "label": "Dedicated 64GB + RTX6000 GPU x2",
-    "price": {
-      "hourly": 3.0,
-      "monthly": 2000.0
-    },
+    "price_hour": 3.0,
+    "price_month": 2000.0,
+    "price_currency": "USD",
     "region_prices": [],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.12,
-          "monthly": 80.0
+          "price_hour": 0.12,
+          "price_month": 80.0
         },
+        "price_currency": "USD",
         "region_prices": []
       }
     },
@@ -1470,17 +1470,17 @@
   {
     "id": "g1-gpu-rtx6000-3",
     "label": "Dedicated 96GB + RTX6000 GPU x3",
-    "price": {
-      "hourly": 4.5,
-      "monthly": 3000.0
-    },
+    "price_hour": 4.5,
+    "price_month": 3000.0,
+    "price_currency": "USD",
     "region_prices": [],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.18,
-          "monthly": 120.0
+          "price_hour": 0.18,
+          "price_month": 120.0
         },
+        "price_currency": "USD",
         "region_prices": []
       }
     },
@@ -1496,17 +1496,17 @@
   {
     "id": "g1-gpu-rtx6000-4",
     "label": "Dedicated 128GB + RTX6000 GPU x4",
-    "price": {
-      "hourly": 6.0,
-      "monthly": 4000.0
-    },
+    "price_hour": 6.0,
+    "price_month": 4000.0,
+    "price_currency": "USD",
     "region_prices": [],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.24,
-          "monthly": 160.0
+          "price_hour": 0.24,
+          "price_month": 160.0
         },
+        "price_currency": "USD",
         "region_prices": []
       }
     },
@@ -1522,38 +1522,36 @@
   {
     "id": "g7-premium-2",
     "label": "Premium 4GB",
-    "price": {
-      "hourly": 0.0645,
-      "monthly": 43.0
-    },
+    "price_hour": 0.0645,
+    "price_month": 43.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.078,
-        "monthly": 51.84
+        "price_hour": 0.078,
+        "price_month": 51.84
       },
       {
         "id": "br-gru",
-        "hourly": 0.091,
-        "monthly": 60.48
+        "price_hour": 0.091,
+        "price_month": 60.48
       }
     ],
     "addons": {
       "backups": {
-        "price": {
-          "hourly": 0.008,
-          "monthly": 5.0
-        },
+        "price_hour": 0.008,
+        "price_month": 5.0,
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.009,
-            "monthly": 6.0
+            "price_hour": 0.009,
+            "price_month": 6.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.01,
-            "monthly": 7.0
+            "price_hour": 0.01,
+            "price_month": 7.0
           }
         ]
       }
@@ -1570,38 +1568,38 @@
   {
     "id": "g7-premium-4",
     "label": "Premium 8GB",
-    "price": {
-      "hourly": 0.129,
-      "monthly": 86.0
-    },
+    "price_hour": 0.129,
+    "price_month": 86.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.156,
-        "monthly": 103.68
+        "price_hour": 0.156,
+        "price_month": 103.68
       },
       {
         "id": "br-gru",
-        "hourly": 0.181,
-        "monthly": 120.96
+        "price_hour": 0.181,
+        "price_month": 120.96
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.015,
-          "monthly": 10.0
+          "price_hour": 0.015,
+          "price_month": 10.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.018,
-            "monthly": 12.0
+            "price_hour": 0.018,
+            "price_month": 12.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.021,
-            "monthly": 14.0
+            "price_hour": 0.021,
+            "price_month": 14.0
           }
         ]
       }
@@ -1618,38 +1616,38 @@
   {
     "id": "g7-premium-8",
     "label": "Premium 16GB",
-    "price": {
-      "hourly": 0.2595,
-      "monthly": 173.0
-    },
+    "price_hour": 0.2595,
+    "price_month": 173.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.311,
-        "monthly": 207.36
+        "price_hour": 0.311,
+        "price_month": 207.36
       },
       {
         "id": "br-gru",
-        "hourly": 0.363,
-        "monthly": 241.92
+        "price_hour": 0.363,
+        "price_month": 241.92
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.03,
-          "monthly": 20.0
+          "price_hour": 0.03,
+          "price_month": 20.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.036,
-            "monthly": 24.0
+            "price_hour": 0.036,
+            "price_month": 24.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.042,
-            "monthly": 28.0
+            "price_hour": 0.042,
+            "price_month": 28.0
           }
         ]
       }
@@ -1666,38 +1664,38 @@
   {
     "id": "g7-premium-16",
     "label": "Premium 32GB",
-    "price": {
-      "hourly": 0.519,
-      "monthly": 346.0
-    },
+    "price_hour": 0.519,
+    "price_month": 346.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 0.622,
-        "monthly": 414.72
+        "price_hour": 0.622,
+        "price_month": 414.72
       },
       {
         "id": "br-gru",
-        "hourly": 0.726,
-        "monthly": 483.84
+        "price_hour": 0.726,
+        "price_month": 483.84
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.06,
-          "monthly": 40.0
+          "price_hour": 0.06,
+          "price_month": 40.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.072,
-            "monthly": 48.0
+            "price_hour": 0.072,
+            "price_month": 48.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.084,
-            "monthly": 56.0
+            "price_hour": 0.084,
+            "price_month": 56.0
           }
         ]
       }
@@ -1714,38 +1712,38 @@
   {
     "id": "g7-premium-32",
     "label": "Premium 64GB",
-    "price": {
-      "hourly": 1.0365,
-      "monthly": 691.0
-    },
+    "price_hour": 1.0365,
+    "price_month": 691.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 1.244,
-        "monthly": 829.44
+        "price_hour": 1.244,
+        "price_month": 829.44
       },
       {
         "id": "br-gru",
-        "hourly": 1.452,
-        "monthly": 967.68
+        "price_hour": 1.452,
+        "price_month": 967.68
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.12,
-          "monthly": 80.0
+          "price_hour": 0.12,
+          "price_month": 80.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.144,
-            "monthly": 96.0
+            "price_hour": 0.144,
+            "price_month": 96.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.168,
-            "monthly": 112.0
+            "price_hour": 0.168,
+            "price_month": 112.0
           }
         ]
       }
@@ -1762,38 +1760,38 @@
   {
     "id": "g7-premium-48",
     "label": "Premium 96GB",
-    "price": {
-      "hourly": 1.5555,
-      "monthly": 1037.0
-    },
+    "price_hour": 1.5555,
+    "price_month": 1037.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 1.866,
-        "monthly": 1244.16
+        "price_hour": 1.866,
+        "price_month": 1244.16
       },
       {
         "id": "br-gru",
-        "hourly": 2.177,
-        "monthly": 1451.52
+        "price_hour": 2.177,
+        "price_month": 1451.52
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.18,
-          "monthly": 120.0
+          "price_hour": 0.18,
+          "price_month": 120.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.216,
-            "monthly": 144.0
+            "price_hour": 0.216,
+            "price_month": 144.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.252,
-            "monthly": 168.0
+            "price_hour": 0.252,
+            "price_month": 168.0
           }
         ]
       }
@@ -1810,38 +1808,38 @@
   {
     "id": "g7-premium-50",
     "label": "Premium 128GB",
-    "price": {
-      "hourly": 2.073,
-      "monthly": 1382.0
-    },
+    "price_hour": 2.073,
+    "price_month": 1382.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 2.488,
-        "monthly": 1658.88
+        "price_hour": 2.488,
+        "price_month": 1658.88
       },
       {
         "id": "br-gru",
-        "hourly": 2.903,
-        "monthly": 1935.36
+        "price_hour": 2.903,
+        "price_month": 1935.36
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.24,
-          "monthly": 160.0
+          "price_hour": 0.24,
+          "price_month": 160.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.288,
-            "monthly": 192.0
+            "price_hour": 0.288,
+            "price_month": 192.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.336,
-            "monthly": 224.0
+            "price_hour": 0.336,
+            "price_month": 224.0
           }
         ]
       }
@@ -1858,38 +1856,38 @@
   {
     "id": "g7-premium-56",
     "label": "Premium 256GB",
-    "price": {
-      "hourly": 4.1475,
-      "monthly": 2765.0
-    },
+    "price_hour": 4.1475,
+    "price_month": 2765.0,
+    "price_currency": "USD",
     "region_prices": [
       {
         "id": "id-cgk",
-        "hourly": 4.977,
-        "monthly": 3317.76
+        "price_hour": 4.977,
+        "price_month": 3317.76
       },
       {
         "id": "br-gru",
-        "hourly": 5.806,
-        "monthly": 3870.72
+        "price_hour": 5.806,
+        "price_month": 3870.72
       }
     ],
     "addons": {
       "backups": {
         "price": {
-          "hourly": 0.3,
-          "monthly": 200.0
+          "price_hour": 0.3,
+          "price_month": 200.0
         },
+        "price_currency": "USD",
         "region_prices": [
           {
             "id": "id-cgk",
-            "hourly": 0.36,
-            "monthly": 240.0
+            "price_hour": 0.36,
+            "price_month": 240.0
           },
           {
             "id": "br-gru",
-            "hourly": 0.42,
-            "monthly": 280.0
+            "price_hour": 0.42,
+            "price_month": 280.0
           }
         ]
       }
