@@ -185,7 +185,7 @@
       path-raw: $[::]
       operations:
         - type: create
-          name: Create Droplet
+          name: Create Firewall
           template: doctl_compute_firewall_create
       child-template:
         - type: delete
