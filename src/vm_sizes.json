@@ -5,7 +5,10 @@
     "id": "DEV-1xCPU-1GB-10GB",
     "public_traffic_out": 1024,
     "size_disk": 10,
-    "storage_tier": "standard"
+    "storage_tier": "standard",
+    "price_hour": "-",
+    "price_month": 3,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 1,
@@ -13,7 +16,10 @@
     "id": "DEV-1xCPU-1GB",
     "public_traffic_out": 1024,
     "size_disk": 20,
-    "storage_tier": "standard"
+    "storage_tier": "standard",
+    "price_hour": "-",
+    "price_month": 4.5,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 1,
@@ -21,7 +27,10 @@
     "id": "1xCPU-1GB",
     "public_traffic_out": 1024,
     "size_disk": 25,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 7,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 1,
@@ -29,7 +38,10 @@
     "id": "DEV-1xCPU-2GB",
     "public_traffic_out": 1536,
     "size_disk": 30,
-    "storage_tier": "standard"
+    "storage_tier": "standard",
+    "price_hour": "-",
+    "price_month": 8,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 1,
@@ -37,7 +49,10 @@
     "id": "1xCPU-2GB",
     "public_traffic_out": 2048,
     "size_disk": 50,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 13,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 1,
@@ -45,7 +60,11 @@
     "id": "DEV-1xCPU-4GB",
     "public_traffic_out": 2048,
     "size_disk": 40,
-    "storage_tier": "standard"
+    "storage_tier": "standard",
+    "price_hour": "-",
+    "price_month": 15,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 2,
@@ -53,7 +72,10 @@
     "id": "2xCPU-2GB",
     "public_traffic_out": 3072,
     "size_disk": 60,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 18,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 2,
@@ -61,7 +83,11 @@
     "id": "DEV-2xCPU-4GB",
     "public_traffic_out": 2560,
     "size_disk": 60,
-    "storage_tier": "standard"
+    "storage_tier": "standard",
+    "price_hour": "-",
+    "price_month": 18,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 2,
@@ -69,7 +95,10 @@
     "id": "2xCPU-4GB",
     "public_traffic_out": 4096,
     "size_disk": 80,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 26,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 2,
@@ -77,7 +106,11 @@
     "id": "DEV-2xCPU-8GB",
     "public_traffic_out": 3072,
     "size_disk": 80,
-    "storage_tier": "standard"
+    "storage_tier": "standard",
+    "price_hour": "-",
+    "price_month": 25,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 2,
@@ -85,7 +118,11 @@
     "id": "HIMEM-2xCPU-8GB",
     "public_traffic_out": 2048,
     "size_disk": 100,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 40,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 2,
@@ -93,7 +130,10 @@
     "id": "DEV-2xCPU-16GB",
     "public_traffic_out": 4096,
     "size_disk": 100,
-    "storage_tier": "standard"
+    "storage_tier": "standard",
+    "price_hour": "-",
+    "price_month": 35,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 2,
@@ -101,7 +141,11 @@
     "id": "HIMEM-2xCPU-16GB",
     "public_traffic_out": 2048,
     "size_disk": 100,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 65,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 4,
@@ -109,7 +153,11 @@
     "id": "4xCPU-8GB",
     "public_traffic_out": 5120,
     "size_disk": 160,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 52,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 4,
@@ -117,7 +165,11 @@
     "id": "HIMEM-4xCPU-32GB",
     "public_traffic_out": 4096,
     "size_disk": 100,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 132,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 4,
@@ -125,7 +177,10 @@
     "id": "HIMEM-4xCPU-64GB",
     "public_traffic_out": 4096,
     "size_disk": 200,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 240,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 6,
@@ -133,7 +188,10 @@
     "id": "6xCPU-16GB",
     "public_traffic_out": 6144,
     "size_disk": 320,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 96,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 6,
@@ -141,7 +199,11 @@
     "id": "HIMEM-6xCPU-128GB",
     "public_traffic_out": 6144,
     "size_disk": 300,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 480,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 8,
@@ -149,7 +211,11 @@
     "id": "HICPU-8xCPU-12GB",
     "public_traffic_out": 4096,
     "size_disk": 100,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 130,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 8,
@@ -157,7 +223,10 @@
     "id": "HICPU-8xCPU-16GB",
     "public_traffic_out": 4096,
     "size_disk": 200,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 160,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 8,
@@ -165,7 +234,10 @@
     "id": "8xCPU-32GB",
     "public_traffic_out": 7168,
     "size_disk": 640,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 192,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 8,
@@ -173,7 +245,11 @@
     "id": "HIMEM-8xCPU-192GB",
     "public_traffic_out": 8192,
     "size_disk": 400,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 840,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 12,
@@ -181,7 +257,10 @@
     "id": "12xCPU-48GB",
     "public_traffic_out": 9216,
     "size_disk": 960,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 288,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 12,
@@ -189,7 +268,11 @@
     "id": "HIMEM-12xCPU-256GB",
     "public_traffic_out": 10240,
     "size_disk": 500,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 1080,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 16,
@@ -197,7 +280,10 @@
     "id": "HICPU-16xCPU-24GB",
     "public_traffic_out": 5120,
     "size_disk": 100,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 260,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 16,
@@ -205,7 +291,11 @@
     "id": "HICPU-16xCPU-32GB",
     "public_traffic_out": 5120,
     "size_disk": 200,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 310,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 16,
@@ -213,7 +303,10 @@
     "id": "16xCPU-64GB",
     "public_traffic_out": 10240,
     "size_disk": 1280,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 384,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 16,
@@ -221,7 +314,11 @@
     "id": "HIMEM-16xCPU-384GB",
     "public_traffic_out": 12288,
     "size_disk": 600,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 1680,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 24,
@@ -229,7 +326,11 @@
     "id": "24xCPU-96GB",
     "public_traffic_out": 12288,
     "size_disk": 1920,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 576,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 24,
@@ -237,7 +338,10 @@
     "id": "HIMEM-24xCPU-512GB",
     "public_traffic_out": 12288,
     "size_disk": 700,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 2160,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 32,
@@ -245,7 +349,11 @@
     "id": "HICPU-32xCPU-48GB",
     "public_traffic_out": 6144,
     "size_disk": 200,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 530,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 32,
@@ -253,7 +361,10 @@
     "id": "HICPU-32xCPU-64GB",
     "public_traffic_out": 6144,
     "size_disk": 300,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 620,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 32,
@@ -261,7 +372,11 @@
     "id": "32xCPU-128GB",
     "public_traffic_out": 24576,
     "size_disk": 2048,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 768,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 38,
@@ -269,7 +384,10 @@
     "id": "38xCPU-192GB",
     "public_traffic_out": 24576,
     "size_disk": 2048,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 1024,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 48,
@@ -277,7 +395,10 @@
     "id": "48xCPU-256GB",
     "public_traffic_out": 24576,
     "size_disk": 2048,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 1364,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 64,
@@ -285,7 +406,11 @@
     "id": "HICPU-64xCPU-96GB",
     "public_traffic_out": 7168,
     "size_disk": 200,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 1056,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 64,
@@ -293,7 +418,10 @@
     "id": "HICPU-64xCPU-128GB",
     "public_traffic_out": 7168,
     "size_disk": 300,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 1248,
+    "price_currency": "EUR"
   },
   {
     "size_cores": 64,
@@ -301,7 +429,11 @@
     "id": "64xCPU-384GB",
     "public_traffic_out": 24576,
     "size_disk": 2048,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 1922,
+    "price_currency": "EUR"
+
   },
   {
     "size_cores": 80,
@@ -309,7 +441,10 @@
     "id": "80xCPU-512GB",
     "public_traffic_out": 24576,
     "size_disk": 2048,
-    "storage_tier": "maxiops"
+    "storage_tier": "maxiops",
+    "price_hour": "-",
+    "price_month": 2552,
+    "price_currency": "EUR"
   },
   {
     "id": "g6-nanode-1",
