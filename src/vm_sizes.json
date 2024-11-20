@@ -1903,12 +1903,12 @@
     "class": "premium",
     "successor": null
   },
-
   {
     "id": "s-1vcpu-512mb-10gb",
     "size_memory": 512,
     "size_cores": 1,
     "size_disk": 10,
+    "price_currency": "USD",
     "price_month": 4,
     "price_hour": 0.00595,
     "regions": [
@@ -1937,6 +1937,7 @@
     "size_memory": 1024,
     "size_cores": 1,
     "size_disk": 25,
+    "price_currency": "USD",
     "price_month": 6,
     "price_hour": 0.00893,
     "regions": [
@@ -1971,6 +1972,7 @@
     "size_memory": 1024,
     "size_cores": 1,
     "size_disk": 25,
+    "price_currency": "USD",
     "price_month": 7,
     "price_hour": 0.01042,
     "regions": [
@@ -2004,6 +2006,7 @@
     "size_memory": 1024,
     "size_cores": 1,
     "size_disk": 25,
+    "price_currency": "USD",
     "price_month": 7,
     "price_hour": 0.01042,
     "regions": [
@@ -2037,6 +2040,7 @@
     "size_memory": 1024,
     "size_cores": 1,
     "size_disk": 35,
+    "price_currency": "USD",
     "price_month": 8,
     "price_hour": 0.0119,
     "regions": [
@@ -2070,6 +2074,7 @@
     "size_memory": 2048,
     "size_cores": 1,
     "size_disk": 50,
+    "price_currency": "USD",
     "price_month": 12,
     "price_hour": 0.01786,
     "regions": [
@@ -2104,6 +2109,7 @@
     "size_memory": 2048,
     "size_cores": 1,
     "size_disk": 50,
+    "price_currency": "USD",
     "price_month": 14,
     "price_hour": 0.02083,
     "regions": [
@@ -2137,6 +2143,7 @@
     "size_memory": 2048,
     "size_cores": 1,
     "size_disk": 50,
+    "price_currency": "USD",
     "price_month": 14,
     "price_hour": 0.02083,
     "regions": [
@@ -2170,6 +2177,7 @@
     "size_memory": 2048,
     "size_cores": 1,
     "size_disk": 70,
+    "price_currency": "USD",
     "price_month": 16,
     "price_hour": 0.02381,
     "regions": [
@@ -2203,6 +2211,7 @@
     "size_memory": 2048,
     "size_cores": 2,
     "size_disk": 60,
+    "price_currency": "USD",
     "price_month": 18,
     "price_hour": 0.02679,
     "regions": [
@@ -2237,6 +2246,7 @@
     "size_memory": 2048,
     "size_cores": 2,
     "size_disk": 60,
+    "price_currency": "USD",
     "price_month": 21,
     "price_hour": 0.03125,
     "regions": [
@@ -2270,6 +2280,7 @@
     "size_memory": 2048,
     "size_cores": 2,
     "size_disk": 60,
+    "price_currency": "USD",
     "price_month": 21,
     "price_hour": 0.03125,
     "regions": [
@@ -2303,6 +2314,7 @@
     "size_memory": 2048,
     "size_cores": 2,
     "size_disk": 90,
+    "price_currency": "USD",
     "price_month": 24,
     "price_hour": 0.03571,
     "regions": [
@@ -2336,6 +2348,7 @@
     "size_memory": 4096,
     "size_cores": 2,
     "size_disk": 80,
+    "price_currency": "USD",
     "price_month": 24,
     "price_hour": 0.03571,
     "regions": [
@@ -2370,6 +2383,7 @@
     "size_memory": 4096,
     "size_cores": 2,
     "size_disk": 80,
+    "price_currency": "USD",
     "price_month": 28,
     "price_hour": 0.04167,
     "regions": [
@@ -2403,6 +2417,7 @@
     "size_memory": 4096,
     "size_cores": 2,
     "size_disk": 80,
+    "price_currency": "USD",
     "price_month": 28,
     "price_hour": 0.04167,
     "regions": [
@@ -2436,6 +2451,7 @@
     "size_memory": 4096,
     "size_cores": 2,
     "size_disk": 120,
+    "price_currency": "USD",
     "price_month": 32,
     "price_hour": 0.04762,
     "regions": [
@@ -2469,6 +2485,7 @@
     "size_memory": 8192,
     "size_cores": 2,
     "size_disk": 100,
+    "price_currency": "USD",
     "price_month": 42,
     "price_hour": 0.0625,
     "regions": [
@@ -2502,6 +2519,7 @@
     "size_memory": 4096,
     "size_cores": 2,
     "size_disk": 25,
+    "price_currency": "USD",
     "price_month": 42,
     "price_hour": 0.0625,
     "regions": [
@@ -2536,6 +2554,7 @@
     "size_memory": 8192,
     "size_cores": 2,
     "size_disk": 160,
+    "price_currency": "USD",
     "price_month": 48,
     "price_hour": 0.07143,
     "regions": [
@@ -2569,6 +2588,7 @@
     "size_memory": 8192,
     "size_cores": 4,
     "size_disk": 160,
+    "price_currency": "USD",
     "price_month": 48,
     "price_hour": 0.07143,
     "regions": [
@@ -2603,6 +2623,7 @@
     "size_memory": 8192,
     "size_cores": 4,
     "size_disk": 160,
+    "price_currency": "USD",
     "price_month": 56,
     "price_hour": 0.08333,
     "regions": [
@@ -2636,6 +2657,7 @@
     "size_memory": 8192,
     "size_cores": 4,
     "size_disk": 160,
+    "price_currency": "USD",
     "price_month": 56,
     "price_hour": 0.08333,
     "regions": [
@@ -2669,6 +2691,7 @@
     "size_memory": 8192,
     "size_cores": 2,
     "size_disk": 25,
+    "price_currency": "USD",
     "price_month": 63,
     "price_hour": 0.09375,
     "regions": [
@@ -2703,6 +2726,7 @@
     "size_memory": 8192,
     "size_cores": 4,
     "size_disk": 240,
+    "price_currency": "USD",
     "price_month": 64,
     "price_hour": 0.09524,
     "regions": [
@@ -2736,6 +2760,7 @@
     "size_memory": 8192,
     "size_cores": 2,
     "size_disk": 50,
+    "price_currency": "USD",
     "price_month": 68,
     "price_hour": 0.10119,
     "regions": [
@@ -2770,6 +2795,7 @@
     "size_memory": 16384,
     "size_cores": 4,
     "size_disk": 200,
+    "price_currency": "USD",
     "price_month": 84,
     "price_hour": 0.125,
     "regions": [
@@ -2803,6 +2829,7 @@
     "size_memory": 16384,
     "size_cores": 2,
     "size_disk": 50,
+    "price_currency": "USD",
     "price_month": 84,
     "price_hour": 0.125,
     "regions": [
@@ -2837,6 +2864,7 @@
     "size_memory": 8192,
     "size_cores": 4,
     "size_disk": 50,
+    "price_currency": "USD",
     "price_month": 84,
     "price_hour": 0.125,
     "regions": [
