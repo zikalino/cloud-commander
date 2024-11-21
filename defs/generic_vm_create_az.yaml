@@ -71,6 +71,8 @@
     - variable: resource_group
     - variable: virtual_machine_name
     - variable: virtual_machine_region
+    - variable: vm_size
+      parameter: --size
     - variable: os_disk_id
       parameter: --attach-os-disk ${os_disk_id}
       required-if:
