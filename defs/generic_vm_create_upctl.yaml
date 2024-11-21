@@ -142,7 +142,7 @@
   consumes:
     - variable: host_name
     - variable: zone
-    - variable: server_plan
+    - variable: vm_size
   verify: |
       upctl server show ${host_name}
-  install: upctl server create --hostname ${host_name} --zone ${zone} --plan ${server_plan} --password-delivery email
+  install: upctl server create --hostname ${host_name} --zone ${zone} --plan ${vm_size} --password-delivery email

@@ -271,7 +271,7 @@
     - variable: region
       parameter: --region
       required: true
-    - variable: size
+    - variable: vm_size
       parameter: --size
       required: true
     - variable: droplet_agent=false

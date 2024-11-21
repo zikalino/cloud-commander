@@ -21,13 +21,13 @@
 - type: 'action-row'
   name: Create Linode
   consumes:
-    - variable: linode_type
+    - variable: vm_size
     - variable: region
     - variable: name
     - variable: password
   verify: |
       linode list --label ${name}
-  install: linode linodes create --region ${region} --type ${linode_type} --label ${name}  --root_pass ${password}
+  install: linode linodes create --region ${region} --type ${vm_size} --label ${name}  --root_pass ${password}
 
 # linode-cli linodes create
 # Create a Linode
