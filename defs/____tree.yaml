@@ -3,6 +3,11 @@
   id: welcome
   icon: icon.webp
   details: welcome_details.yaml
+  operations:
+    - type: create
+      name: Create Virtual Machine
+      template:
+        name: generic_vm_create
 
 - $include: ____tree_aws.yaml
 - $include: ____tree_az.yaml
