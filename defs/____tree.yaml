@@ -4,11 +4,13 @@
   icon: icon.webp
   details: welcome_details.yaml
   operations:
+    # add generic resource creation here
     - type: create
       name: Create Virtual Machine
       template:
         name: generic_vm_create
 
+  # add definitions for rspective sections / resouce providers here
 - $include: ____tree_aws.yaml
 - $include: ____tree_az.yaml
 - $include: ____tree_doctl.yaml

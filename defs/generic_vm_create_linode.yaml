@@ -18,6 +18,8 @@
       produces:
         - variable: password
 
+- type: separator
+
 - type: 'action-row'
   name: Create Linode
   consumes:

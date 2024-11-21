@@ -133,9 +133,10 @@
     - $include: __upctl_zone_list_selector_field.yaml
     - $include: __upctl_server_plans_selector_field.yaml
 
-
 - $include: generic_vm_size_information.yaml
 - $include: generic_vm_price_information.yaml
+
+- type: separator
 
 - type: 'action-row'
   name: Create UpCloud Server

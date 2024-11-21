@@ -65,6 +65,8 @@
 
 - $include: __az_subnet_selector.yaml
 
+- type: separator
+
 - type: 'action-row'
   name: Create Virtual Machine
   consumes:
