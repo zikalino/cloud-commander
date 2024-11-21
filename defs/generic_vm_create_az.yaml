@@ -1,7 +1,7 @@
 - type: row
   subitems:
     - type: textfield
-      name: Name
+      name: Name (required)
       produces:
         - variable: virtual_machine_name
     - $include: __az_region_selector_field.yaml

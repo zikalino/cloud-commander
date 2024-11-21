@@ -52,7 +52,7 @@
 - type: row
   subitems: 
     - type: textfield
-      name: <droplet_name> (required)
+      name: Name (required)
       description: droplet-name
       produces: 
         - variable: droplet_name

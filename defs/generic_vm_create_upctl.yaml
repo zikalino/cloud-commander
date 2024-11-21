@@ -127,7 +127,7 @@
 - type: row
   subitems:
     - type: textfield
-      name: Host Name
+      name: Name (required)
       produces:
         - variable: host_name
     - $include: __upctl_zone_list_selector_field.yaml

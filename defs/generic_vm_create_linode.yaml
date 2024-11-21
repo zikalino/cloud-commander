@@ -1,7 +1,7 @@
 - type: row
   subitems:
     - type: textfield
-      name: Name
+      name: Name (required)
       produces:
         - variable: name
     - $include: __linode_regions_list_selector_field.yaml
