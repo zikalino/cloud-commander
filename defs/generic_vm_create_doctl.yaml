@@ -99,37 +99,6 @@
         - variable: enable_private_networking
 - type: row
   subitems: 
-    - type: combo
-      name: format
-      description: "Columns for output in a comma-separated list. Possible values: ID, `Name`, `PublicIPv4`, `PrivateIPv4`, `PublicIPv6`, `Memory`, `VCPUs`, `Disk`, `Region`, `Image`, `VPCUUID`, `Status`, `Tags`, `Features`, `Volumes`."
-      items:
-        - ID
-        - Name
-        - PublicIPv4
-        - PrivateIPv4
-        - PublicIPv6
-        - Memory
-        - VCPUs
-        - Disk
-        - Region
-        - Image
-        - VPCUUID
-        - Status
-        - Tags
-        - Features
-        - Volumes
-      produces: 
-        - variable: format
-- type: row
-  subitems: 
-    - type: checkbox
-      name: no-header
-      description: Return raw data with no headers
-      val-false: undefined
-      produces: 
-        - variable: no_header
-- type: row
-  subitems: 
     - type: textfield
       name: project-id
       description: The UUID of the project to assign the Droplet to
@@ -193,72 +162,6 @@
       val-false: undefined
       produces: 
         - variable: wait
-- type: row
-  subitems: 
-    - type: textfield
-      name: access-token
-      description: API V2 access token
-      produces: 
-        - variable: access_token
-- type: row
-  subitems: 
-    - type: textfield
-      name: api-url
-      description: Override default API endpoint
-      produces: 
-        - variable: api_url
-- type: row
-  subitems: 
-    - type: textfield
-      name: config
-      description: "Specify a custom config file (default \"C:\\Users\\Lenovo\\AppData\\Roaming\\doctl\\config.yaml\")"
-      produces: 
-        - variable: config
-- type: row
-  subitems: 
-    - type: textfield
-      name: context
-      description: Specify a custom authentication context name
-      produces: 
-        - variable: context
-- type: row
-  subitems: 
-    - type: textfield
-      name: http-retry-max
-      description: Set maximum number of retries for requests that fail with a 429 or 500-level error (default 5)
-      produces: 
-        - variable: http_retry_max
-- type: row
-  subitems: 
-    - type: checkbox
-      name: interactive
-      description: Enable interactive behavior. Defaults to true if the terminal supports it (default false)
-      val-false: undefined
-      produces: 
-        - variable: interactive
-- type: row
-  subitems: 
-    - type: textfield
-      name: output
-      description: Desired output format [text|json] (default "text")
-      produces: 
-        - variable: output
-- type: row
-  subitems: 
-    - type: checkbox
-      name: trace
-      description: Show a log of network activity while performing a command
-      val-false: undefined
-      produces: 
-        - variable: trace
-- type: row
-  subitems: 
-    - type: checkbox
-      name: verbose
-      description: Enable verbose output 
-      val-false: undefined
-      produces: 
-        - variable: verbose
 - type: 'action-row'
   expandable: false
   name: doctl compute droplet create
@@ -289,12 +192,6 @@
     - variable: enable_private_networking
       parameter: --enable-private-networking
       required: false
-    - variable: format
-      parameter: --format
-      required: false
-    - variable: no_header
-      parameter: --no-header
-      required: false
     - variable: project_id
       parameter: --project-id
       required: false
@@ -321,33 +218,6 @@
       required: false
     - variable: wait
       parameter: --wait
-      required: false
-    - variable: access_token
-      parameter: --access-token
-      required: false
-    - variable: api_url
-      parameter: --api-url
-      required: false
-    - variable: config
-      parameter: --config
-      required: false
-    - variable: context
-      parameter: --context
-      required: false
-    - variable: http_retry_max
-      parameter: --http-retry-max
-      required: false
-    - variable: interactive
-      parameter: --interactive
-      required: false
-    - variable: output
-      parameter: --output
-      required: false
-    - variable: trace
-      parameter: --trace
-      required: false
-    - variable: verbose
-      parameter: --verbose
       required: false
   install: doctl compute droplet create ${droplet_name}
   produces:
