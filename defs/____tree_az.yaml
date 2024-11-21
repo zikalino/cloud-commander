@@ -14,7 +14,10 @@
       template: az_group_create
     - type: create
       name: Create Virtual Machine
-      template: generic_vm_create
+      template:
+        name: generic_vm_create
+        parameters:
+          cloud_provider: cloud-az
     - type: create
       name: Create Container Registry
       template: az_acr_create

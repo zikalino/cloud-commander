@@ -14,7 +14,10 @@
       operations:
         - type: create
           name: Create Droplet
-          template: generic_vm_create
+          template:
+            name: generic_vm_create
+            parameters:
+              cloud_provider: cloud-doctl
 
       child-template:
         - type: query-details

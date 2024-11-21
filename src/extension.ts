@@ -50,16 +50,23 @@ export async function displayMenu(submenu: any) {
         displayMenu(submenu[i].submenu);
       } else {
         // XXX - load yaml
+        var parameters: any = ('parameters' in submenu[i]) ? submenu[i]['parameters'] : {};
         let yml = loadYaml(extensionContext.extensionPath + "/defs/" + submenu[i].location);
-        loadYamlView(yml, (('refresh-id' in submenu[i]) ? submenu[i]['refresh-id'] : null));
+        loadYamlView(yml, (('refresh-id' in submenu[i]) ? submenu[i]['refresh-id'] : null), parameters);
       }
     }
   }
 }
 
-async function loadYamlView(yml: string, refresh_id: string|null) {
+async function loadYamlView(yml: string, refresh_id: string|null, parameters: any = null) {
   let view = new helpers.GenericWebView(extensionContext, "Raw CLI", "Cloud Commmander"); 
   view.setVariable("vm_sizes", vm_sizes);
+
+  if (parameters !== null) {
+    for (var p in parameters) {
+      view.setVariable(p, parameters[p]);
+    }
+  }
 
   view.createPanel(yml, "media/icon.webp");
 

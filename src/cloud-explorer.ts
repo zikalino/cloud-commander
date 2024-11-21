@@ -676,10 +676,26 @@ function displayCreateResourceMenu(item_id: string) {
   for (var idx in operations) {
     var operation = operations[idx];
     if (operation['type'] === 'create') {
-      menu_items.push({
-        location: operation['template'] + ".yaml",
-        name: operation['name']
-      });
+      if ('template' in operation) {
+        var template = "";
+        var parameters = {};
+        if (typeof operation['template'] === 'string') {
+          template = operation['template'];
+        } else if ('name' in operation['template']) {
+          template = operation['template']['name'];
+          if ('parameters' in operation['template']) {
+            parameters = operation['template']['parameters'];
+          }
+        }
+
+        if (template !== "") {
+          menu_items.push({
+            location: template + ".yaml",
+            name: operation['name'],
+            parameters: parameters
+          });
+        }
+      }
     }
   }
 
