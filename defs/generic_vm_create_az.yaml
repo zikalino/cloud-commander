@@ -8,7 +8,7 @@
       prefix: virtual_machine_
     - $include: __az_vm_size_selector_field.yaml
 
-  #- $include: __az_resource_group_select_or_create.yaml
+- $include: __az_resource_group_selector.yaml
 
 - $include: generic_vm_size_information.yaml
 - $include: generic_vm_price_information.yaml
@@ -63,12 +63,12 @@
     variable: data_disk_creation
     value: attach
 
-
 - $include: __az_subnet_selector.yaml
+
 - type: 'action-row'
   name: Create Virtual Machine
   consumes:
-    - variable: resource_group_name
+    - variable: resource_group
     - variable: virtual_machine_name
     - variable: virtual_machine_region
     - variable: os_disk_id
@@ -82,8 +82,8 @@
         variable: data_disk_creation
         value: attach
   verify: |
-      az vm show --resource-group ${resource_group_name} --name ${virtual_machine_name}
-  install: az vm create --resource-group ${resource_group_name} --name ${virtual_machine_name} --location ${virtual_machine_region}
+      az vm show --resource-group ${resource_group} --name ${virtual_machine_name}
+  install: az vm create --resource-group ${resource_group} --name ${virtual_machine_name} --location ${virtual_machine_region}
 
 #    --name -n                                       [Required] : Name of the virtual machine.
 #    --resource-group -g                             [Required] : Name of resource group. You can
