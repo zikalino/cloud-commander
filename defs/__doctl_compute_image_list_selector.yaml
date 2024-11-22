@@ -1,4 +1,5 @@
 - type: row
+  narrow: true
   subitems:
     - type: combo
       name: Select Image
