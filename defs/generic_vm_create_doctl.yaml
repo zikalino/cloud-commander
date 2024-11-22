@@ -66,7 +66,7 @@
 - type: row
   subitems: 
     - type: checkbox
-      name: droplet-agent=false
+      name: droplet-agent
       description: Specifies whether or not the Droplet monitoring agent should be installed. By default, the agent is installed on new Droplets but installation errors are ignored. Set --droplet-agent=false to prevent installation. Set to `true` to make installation errors fatal.
       val-false: undefined
       produces: 
@@ -97,71 +97,71 @@
       val-false: undefined
       produces: 
         - variable: enable_private_networking
-- type: row
-  subitems: 
-    - type: textfield
-      name: project-id
-      description: The UUID of the project to assign the Droplet to
-      produces: 
-        - variable: project_id
-- type: row
-  subitems: 
-    - type: textfield
-      name: ssh-keys
-      description: A list of SSH key IDs or fingerprints to embed in the Droplet's root account upon creation
-      produces: 
-        - variable: ssh_keys
-- type: row
-  subitems: 
-    - type: textfield
-      name: tag-name
-      description: Applies a tag to the Droplet
-      produces: 
-        - variable: tag_name
-- type: row
-  subitems: 
-    - type: textfield
-      name: tag-names
-      description: Applies a list of tags to the Droplet
-      produces: 
-        - variable: tag_names
-- type: row
-  subitems: 
-    - type: textfield
-      name: user-data
-      description: A shell script to run on the Droplet's first boot
-      produces: 
-        - variable: user_data
-- type: row
-  subitems: 
-    - type: checkbox
-      name: user-data-file
-      description: "The path to a file containing a shell script or Cloud-init YAML file to run on the Droplet's first boot. Example: path/to/file.yaml"
-      val-false: undefined
-      produces: 
-        - variable: user_data_file
-- type: row
-  subitems: 
-    - type: textfield
-      name: volumes
-      description: A list of block storage volume IDs to attach to the Droplet
-      produces: 
-        - variable: volumes
-- type: row
-  subitems: 
-    - type: textfield
-      name: vpc-uuid
-      description: The UUID of a non-default VPC to create the Droplet in
-      produces: 
-        - variable: vpc_uuid
-- type: row
-  subitems: 
-    - type: checkbox
-      name: wait
-      description: "Instructs the terminal to wait for the action to complete before returning access to the user  lobal Flags:"
-      val-false: undefined
-      produces: 
-        - variable: wait
+#- type: row
+#  subitems: 
+#    - type: textfield
+#      name: project-id
+#      description: The UUID of the project to assign the Droplet to
+#      produces: 
+#        - variable: project_id
+#- type: row
+#  subitems: 
+#    - type: textfield
+#      name: ssh-keys
+#      description: A list of SSH key IDs or fingerprints to embed in the Droplet's root account upon creation
+#      produces: 
+#        - variable: ssh_keys
+#- type: row
+#  subitems: 
+#    - type: textfield
+#      name: tag-name
+#      description: Applies a tag to the Droplet
+#      produces: 
+#        - variable: tag_name
+#- type: row
+#  subitems: 
+#    - type: textfield
+#      name: tag-names
+#      description: Applies a list of tags to the Droplet
+#      produces: 
+#        - variable: tag_names
+#- type: row
+#  subitems: 
+#    - type: textfield
+#      name: user-data
+#      description: A shell script to run on the Droplet's first boot
+#      produces: 
+#        - variable: user_data
+#- type: row
+#  subitems: 
+#    - type: checkbox
+#      name: user-data-file
+#      description: "The path to a file containing a shell script or Cloud-init YAML file to run on the Droplet's first boot. Example: path/to/file.yaml"
+#      val-false: undefined
+#      produces: 
+#        - variable: user_data_file
+#- type: row
+#  subitems: 
+#    - type: textfield
+#      name: volumes
+#      description: A list of block storage volume IDs to attach to the Droplet
+#      produces: 
+#        - variable: volumes
+#- type: row
+#  subitems: 
+#    - type: textfield
+#      name: vpc-uuid
+#      description: The UUID of a non-default VPC to create the Droplet in
+#      produces: 
+#        - variable: vpc_uuid
+#- type: row
+#  subitems: 
+#    - type: checkbox
+#      name: wait
+#      description: "Instructs the terminal to wait for the action to complete before returning access to the user  lobal Flags:"
+#      val-false: undefined
+#      produces: 
+#        - variable: wait
 
 - type: separator
 
