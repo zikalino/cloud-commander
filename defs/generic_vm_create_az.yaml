@@ -13,57 +13,57 @@
 - $include: generic_vm_size_information.yaml
 - $include: generic_vm_price_information.yaml
 
-- type: text-block
-  font: header-1
-  content: OS Disk
+#- type: text-block
+#  font: header-1
+#  content: OS Disk
 
-- type: radio-group
-  subitems:
-    - type: radio
-      value: default
-      text: Default
-      variable: os_disk_creation
-      default: true
-    - type: radio
-      value: attach
-      text: Attach Existing
-      variable: os_disk_creation
-    - type: radio
-      value: image
-      text: From Image
-      variable: os_disk_creation
+#- type: radio-group
+#  subitems:
+#    - type: radio
+#      value: default
+#      text: Default
+#      variable: os_disk_creation
+#      default: true
+#    - type: radio
+#      value: attach
+#      text: Attach Existing
+#      variable: os_disk_creation
+#    - type: radio
+#      value: image
+#      text: From Image
+#      variable: os_disk_creation
 
-- $include: __az_disk_selector.yaml
-  prefix: os_
-  show-if:
-    variable: os_disk_creation
-    value: attach
+#- $include: __az_disk_selector.yaml
+#  prefix: os_
+#  show-if:
+#    variable: os_disk_creation
+#    value: attach
 
-- type: text-block
-  font: header-1
-  content: Data Disks
-- type: radio-group
-  subitems:
-    - type: radio
-      value: default
-      text: Default
-      variable: data_disk_creation
-      default: true
-    - type: radio
-      value: attach
-      text: Attach Existing
-      variable: data_disk_creation
-    - type: radio
-      value: empty
-      text: Empty
-      variable: data_disk_creation
-- $include: __az_disk_selector.yaml
-  prefix: data_
-  show-if:
-    variable: data_disk_creation
-    value: attach
+#- type: text-block
+#  font: header-1
+#  content: Data Disks
+#- type: radio-group
+#  subitems:
+#    - type: radio
+#      value: default
+#      text: Default
+#      variable: data_disk_creation
+#      default: true
+#    - type: radio
+#      value: attach
+#      text: Attach Existing
+#      variable: data_disk_creation
+#    - type: radio
+#      value: empty
+#      text: Empty
+#      variable: data_disk_creation
+#- $include: __az_disk_selector.yaml
+#  prefix: data_
+#  show-if:
+#    variable: data_disk_creation
+#    value: attach
 
-- $include: __az_subnet_selector.yaml
+#- $include: __az_subnet_selector.yaml
 
 - type: separator
 
