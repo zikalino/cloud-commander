@@ -4,7 +4,8 @@
       icon: icon-price.png
       color: black
       label: 'Price (m):'
-      value: '${p[0]} ${p[1]}'
+      value: '-'
+      value-format: '${p[0]} ${p[1]}'
       value_src:
         - "$.vm_price_month"
         - "$.vm_price_currency"
@@ -16,7 +17,8 @@
       icon: icon-price.png
       color: black
       label: 'Price (h):'
-      value: '${p[0]} ${p[1]}'
+      value: '-'
+      value-format: '${p[0]} ${p[1]}'
       value_src:
         - "$.vm_price_hour"
         - "$.vm_price_currency"
