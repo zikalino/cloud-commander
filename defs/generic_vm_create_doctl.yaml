@@ -180,8 +180,8 @@
     - variable: vm_size
       parameter: --size
       required: true
-    - variable: droplet_agent=false
-      parameter: --droplet-agent=false
+    - variable: droplet_agent
+      parameter: --droplet-agent
       required: false
     - variable: enable_backups
       parameter: --enable-backups
