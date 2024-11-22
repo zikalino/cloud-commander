@@ -6,7 +6,7 @@
       source:
         cmd: |
           az account list-locations
-        path-id: $[*].name
-        path-name: $[*].displayName
+        path-id: $[?(@.metadata.regionType=='Physical')].name
+        path-name: $[?(@.metadata.regionType=='Physical')].displayName
       produces:
         - variable: region
