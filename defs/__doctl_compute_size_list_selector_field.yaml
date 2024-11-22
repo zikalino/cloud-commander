@@ -5,7 +5,8 @@
     cmd: |
       doctl compute size list --output json
     path-id: $[*].slug
-    path-name: $[*].description
+    path-name: $[*]
+    format-name: "${description} - ${slug}"
   produces:
     - variable: vm_size
     - variable: vm_price_month
