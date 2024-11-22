@@ -455,7 +455,9 @@ function createDetailsView(view: any, id: string) {
       ]
     };
 
-    if (resource['id'].startsWith('cloud-') || (resource['raw']['type'] && resource['raw']['type'] === 'Microsoft.Resources/resourceGroups' )) {
+    if (resource['id'].startsWith('cloud-') ||
+        resource['id'] === 'welcome' ||
+        (resource['raw'] && resource['raw']['type'] && resource['raw']['type'] === 'Microsoft.Resources/resourceGroups' )) {
       setActionsMsg['data'].push(
       {
         codicon: 'codicon-add',
