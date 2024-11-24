@@ -1,0 +1,13 @@
+- type: row
+  narrow: true
+  subitems:
+    - type: combo
+      name: Select Image
+      items: []
+      source:
+        cmd: |
+          upctl storage list --public --private --template --output json
+        path-id: $.storages.[*].uuid
+        path-name: $.storages.[*].title
+      produces:
+        - variable: storage_id
