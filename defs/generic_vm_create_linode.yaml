@@ -19,6 +19,8 @@
         - variable: password
 
 - type: separator
+- $include: __linode_images_list_selector.yaml
+- type: separator
 
 - type: 'action-row'
   name: Create Linode
@@ -27,6 +29,8 @@
     - variable: region
     - variable: name
     - variable: password
+    - variable: images_id
+      parameter: --image
   verify: |
       linode list --label ${name}
   install: linode linodes create --region ${region} --type ${vm_size} --label ${name}  --root_pass ${password}
