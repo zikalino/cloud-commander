@@ -67,6 +67,10 @@
 
 - type: separator
 
+- $include: __az_vm_image_list_selector_row.yaml
+
+- type: separator
+
 - type: 'action-row'
   name: Create Virtual Machine
   consumes:

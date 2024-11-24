@@ -1,0 +1,10 @@
+- type: combo
+  name: Select Image
+  items: []
+  source:
+    cmd: |
+      az vm image list
+    path-id: $[*].offer
+    path-name: $[*].urn
+  produces:
+    - variable: vm_image
