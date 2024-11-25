@@ -9,6 +9,10 @@
       name: Create Virtual Machine
       template:
         name: generic_vm_create
+    - type: create
+      name: Create Container Registry
+      template:
+        name: generic_container_registry_create
 
   # add definitions for rspective sections / resouce providers here
 - $include: ____tree_aws.yaml
