@@ -10,4 +10,4 @@
   name: Install Python
   verify: python3 --version
   interactive: true
-  install: "sudo apt update ; sudo install python3"
+  install: "sudo apt update ; sudo install python3 python3-pip"
