@@ -9,6 +9,5 @@
   platform: linux
   name: Install Python
   verify: python3 --version
-  install: |
-      sudo apt update
-      sudo install python3
+  interactive: true
+  install: "sudo apt update ; sudo install python3"
