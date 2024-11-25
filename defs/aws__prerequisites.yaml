@@ -22,6 +22,15 @@ form:
         install: | 
                 winget install -e --id Amazon.AWSCLI
       - type: 'action-row'
+        platform: linux
+        name: Install AWS CLI
+        banner: |
+            Installing AWS CLI.
+        verify: aws --version
+        interactive: true
+        install: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" ; unzip awscliv2.zip ; sudo ./aws/install
+
+      - type: 'action-row'
         id: aws-login
         name: Login
         banner: |

@@ -5,7 +5,6 @@ form:
   # Azure CLI
   #
   - type: fieldset
-    platform: win32
     subitems:
       - type: text-block
         width: wide
@@ -25,6 +24,14 @@ form:
         install: | 
                 winget install -e --id Microsoft.AzureCLI
                 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+
+      - type: action-row
+        platform: linux
+        name: Install Azure CLI
+        verify: az --version
+        interactive: true
+        install: "curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash"
+
       - type: 'action-row'
         name: Login
         banner: |
