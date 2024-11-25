@@ -1,15 +1,25 @@
 {
   "name": "vscode-cloud",
-  "displayName": "Cloud Commander",
-  "description": "Cloud Commander",
-  "version": "0.0.1",
-  "repository": "https://github.com/zikalino/vscode-cloud",
+  "displayName": "SmarterCode Cloud Commander",
+  "description": "SmarterCode Cloud Commander",
+  "version": "0.0.5",
+  "repository": "https://github.com/zikalino/cloud-commander",
   "publisher": "zikalinox",
+  "icon": "media/icon.webp",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "azure",
+    "digital ocean",
+    "upcloud",
+    "linode",
+    "akamai",
+    "cloud",
+    "cli"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -49,7 +59,7 @@
     "@apidevtools/swagger-parser": "^10.1.0",
     "@vscode/codicons": "0.0.20",
     "@vscode/webview-ui-toolkit": "^1.4.0",
-    "@zim.kalinowski/vscode-helper-toolkit": "^0.1.1",
+    "@zim.kalinowski/vscode-helper-toolkit": "^0.1.2",
     "jsonpath-plus": "^9.0.0",
     "marked": "^12.0.1",
     "yaml": "^2.3.4"
