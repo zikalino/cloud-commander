@@ -58,8 +58,11 @@ export async function displayMenu(submenu: any) {
   }
 }
 
-async function loadYamlView(yml: string, refresh_id: string|null, parameters: any = null) {
-  let view = new helpers.GenericWebView(extensionContext, "Raw CLI", "Cloud Commmander"); 
+async function loadYamlView(yml: any, refresh_id: string|null, parameters: any = null) {
+
+  var tabTitle: string = ('title' in yml) ? yml['title'] : "Raw CLI";
+
+  let view = new helpers.GenericWebView(extensionContext, tabTitle, "Cloud Commmander"); 
   view.setVariable("vm_sizes", vm_sizes);
 
   if (parameters !== null) {
