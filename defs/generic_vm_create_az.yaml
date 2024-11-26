@@ -13,6 +13,16 @@
 - $include: generic_vm_size_information.yaml
 - $include: generic_vm_price_information.yaml
 
+- type: separator
+
+- type: row
+  subitems:
+    - type: textfield
+      narrow: true
+      name: Root Password
+      produces:
+        - variable: password
+
 #- type: text-block
 #  font: header-1
 #  content: OS Disk
@@ -89,6 +99,9 @@
       required-if:
         variable: data_disk_creation
         value: attach
+    - variable: password
+      required: true
+      parameter: --admin-password
   verify: |
       az vm show --resource-group ${resource_group} --name ${virtual_machine_name}
   install: az vm create --resource-group ${resource_group} --name ${virtual_machine_name} --location ${virtual_machine_region}
