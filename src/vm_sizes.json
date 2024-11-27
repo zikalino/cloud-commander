@@ -7,7 +7,7 @@
     "public_traffic_out": 1024,
     "size_disk": 10,
     "storage_tier": "standard",
-    "price_hour": "-",
+    "price_hour": "0.0041",
     "price_month": 3,
     "price_currency": "EUR"
   },
@@ -19,7 +19,7 @@
     "public_traffic_out": 1024,
     "size_disk": 20,
     "storage_tier": "standard",
-    "price_hour": "-",
+    "price_hour": "0.0062",
     "price_month": 4.5,
     "price_currency": "EUR"
   },
@@ -31,7 +31,7 @@
     "public_traffic_out": 1024,
     "size_disk": 25,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.0096",
     "price_month": 7,
     "price_currency": "EUR"
   },
@@ -43,7 +43,7 @@
     "public_traffic_out": 1536,
     "size_disk": 30,
     "storage_tier": "standard",
-    "price_hour": "-",
+    "price_hour": "0.0110",
     "price_month": 8,
     "price_currency": "EUR"
   },
@@ -55,7 +55,7 @@
     "public_traffic_out": 2048,
     "size_disk": 50,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.0178",
     "price_month": 13,
     "price_currency": "EUR"
   },
@@ -67,7 +67,7 @@
     "public_traffic_out": 2048,
     "size_disk": 40,
     "storage_tier": "standard",
-    "price_hour": "-",
+    "price_hour": "0.0205",
     "price_month": 15,
     "price_currency": "EUR"
   },
@@ -79,7 +79,7 @@
     "public_traffic_out": 3072,
     "size_disk": 60,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.0247",
     "price_month": 18,
     "price_currency": "EUR"
   },
@@ -91,7 +91,7 @@
     "public_traffic_out": 2560,
     "size_disk": 60,
     "storage_tier": "standard",
-    "price_hour": "-",
+    "price_hour": "0.0247",
     "price_month": 18,
     "price_currency": "EUR"
   },
@@ -103,7 +103,7 @@
     "public_traffic_out": 4096,
     "size_disk": 80,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.0356",
     "price_month": 26,
     "price_currency": "EUR"
   },
@@ -115,7 +115,7 @@
     "public_traffic_out": 3072,
     "size_disk": 80,
     "storage_tier": "standard",
-    "price_hour": "-",
+    "price_hour": "0.0342",
     "price_month": 25,
     "price_currency": "EUR"
   },
@@ -127,7 +127,7 @@
     "public_traffic_out": 2048,
     "size_disk": 100,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.0548",
     "price_month": 40,
     "price_currency": "EUR"
   },
@@ -139,7 +139,7 @@
     "public_traffic_out": 4096,
     "size_disk": 100,
     "storage_tier": "standard",
-    "price_hour": "-",
+    "price_hour": "0.0479",
     "price_month": 35,
     "price_currency": "EUR"
   },
@@ -151,7 +151,7 @@
     "public_traffic_out": 2048,
     "size_disk": 100,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.0890",
     "price_month": 65,
     "price_currency": "EUR"
   },
@@ -163,7 +163,7 @@
     "public_traffic_out": 5120,
     "size_disk": 160,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.0712",
     "price_month": 52,
     "price_currency": "EUR"
   },
@@ -175,7 +175,7 @@
     "public_traffic_out": 4096,
     "size_disk": 100,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.1808",
     "price_month": 132,
     "price_currency": "EUR"
   },
@@ -187,7 +187,7 @@
     "public_traffic_out": 4096,
     "size_disk": 200,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.3288",
     "price_month": 240,
     "price_currency": "EUR"
   },
@@ -199,7 +199,7 @@
     "public_traffic_out": 6144,
     "size_disk": 320,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.1315",
     "price_month": 96,
     "price_currency": "EUR"
   },
@@ -211,7 +211,7 @@
     "public_traffic_out": 6144,
     "size_disk": 300,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.6575",
     "price_month": 480,
     "price_currency": "EUR"
   },
@@ -223,7 +223,7 @@
     "public_traffic_out": 4096,
     "size_disk": 100,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.1781",
     "price_month": 130,
     "price_currency": "EUR"
   },
@@ -235,7 +235,7 @@
     "public_traffic_out": 4096,
     "size_disk": 200,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.2192",
     "price_month": 160,
     "price_currency": "EUR"
   },
@@ -247,7 +247,7 @@
     "public_traffic_out": 7168,
     "size_disk": 640,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.2630",
     "price_month": 192,
     "price_currency": "EUR"
   },
@@ -259,7 +259,7 @@
     "public_traffic_out": 8192,
     "size_disk": 400,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "1.1507",
     "price_month": 840,
     "price_currency": "EUR"
   },
@@ -271,7 +271,7 @@
     "public_traffic_out": 9216,
     "size_disk": 960,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.3945",
     "price_month": 288,
     "price_currency": "EUR"
   },
@@ -283,7 +283,7 @@
     "public_traffic_out": 10240,
     "size_disk": 500,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "1.4795",
     "price_month": 1080,
     "price_currency": "EUR"
   },
@@ -295,7 +295,7 @@
     "public_traffic_out": 5120,
     "size_disk": 100,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.3562",
     "price_month": 260,
     "price_currency": "EUR"
   },
@@ -307,7 +307,7 @@
     "public_traffic_out": 5120,
     "size_disk": 200,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.4247",
     "price_month": 310,
     "price_currency": "EUR"
   },
@@ -319,7 +319,7 @@
     "public_traffic_out": 10240,
     "size_disk": 1280,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.5260",
     "price_month": 384,
     "price_currency": "EUR"
   },
@@ -331,7 +331,7 @@
     "public_traffic_out": 12288,
     "size_disk": 600,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "2.3014",
     "price_month": 1680,
     "price_currency": "EUR"
   },
@@ -343,7 +343,7 @@
     "public_traffic_out": 12288,
     "size_disk": 1920,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.7890",
     "price_month": 576,
     "price_currency": "EUR"
   },
@@ -355,7 +355,7 @@
     "public_traffic_out": 12288,
     "size_disk": 700,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "2.9589",
     "price_month": 2160,
     "price_currency": "EUR"
   },
@@ -367,7 +367,7 @@
     "public_traffic_out": 6144,
     "size_disk": 200,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.7260",
     "price_month": 530,
     "price_currency": "EUR"
   },
@@ -379,7 +379,7 @@
     "public_traffic_out": 6144,
     "size_disk": 300,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "0.8493",
     "price_month": 620,
     "price_currency": "EUR"
   },
@@ -391,7 +391,7 @@
     "public_traffic_out": 24576,
     "size_disk": 2048,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "1.0521",
     "price_month": 768,
     "price_currency": "EUR"
   },
@@ -403,7 +403,7 @@
     "public_traffic_out": 24576,
     "size_disk": 2048,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "1.4027",
     "price_month": 1024,
     "price_currency": "EUR"
   },
@@ -415,7 +415,7 @@
     "public_traffic_out": 24576,
     "size_disk": 2048,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "1.8685",
     "price_month": 1364,
     "price_currency": "EUR"
   },
@@ -427,7 +427,7 @@
     "public_traffic_out": 7168,
     "size_disk": 200,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "1.4466",
     "price_month": 1056,
     "price_currency": "EUR"
   },
@@ -439,7 +439,7 @@
     "public_traffic_out": 7168,
     "size_disk": 300,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "1.7096",
     "price_month": 1248,
     "price_currency": "EUR"
   },
@@ -451,7 +451,7 @@
     "public_traffic_out": 24576,
     "size_disk": 2048,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "2.6329",
     "price_month": 1922,
     "price_currency": "EUR"
   },
@@ -463,7 +463,7 @@
     "public_traffic_out": 24576,
     "size_disk": 2048,
     "storage_tier": "maxiops",
-    "price_hour": "-",
+    "price_hour": "3.4959",
     "price_month": 2552,
     "price_currency": "EUR"
   },
@@ -4584,7 +4584,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 4096,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4704,7 +4704,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 204800,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4800,7 +4800,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 102400,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4812,7 +4812,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 204800,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4824,7 +4824,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 409600,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4836,7 +4836,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 819200,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4848,7 +4848,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 102400,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4860,7 +4860,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 204800,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4872,7 +4872,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 409600,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4884,7 +4884,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 819200,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4896,7 +4896,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 14336,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4908,7 +4908,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 28672,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4920,7 +4920,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 57344,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4932,7 +4932,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 114688,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4944,7 +4944,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 28672,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4956,7 +4956,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 57344,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4968,7 +4968,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 114688,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -4980,7 +4980,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 229376,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -5292,7 +5292,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 1228800,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -5676,7 +5676,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 16384,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -6024,7 +6024,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 57344,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -6648,7 +6648,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 2457600,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -8364,7 +8364,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 1376256,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -8604,7 +8604,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -9480,7 +9480,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -9600,7 +9600,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -10056,7 +10056,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 71680,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -10807,7 +10807,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 753664,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -10819,7 +10819,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 1509376,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -10831,7 +10831,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 3018752,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -11311,7 +11311,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 614400,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -11599,7 +11599,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12199,7 +12199,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 3018752,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12211,7 +12211,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 393216,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12223,7 +12223,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 786432,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12235,7 +12235,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 1572864,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12247,7 +12247,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 3145728,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12259,7 +12259,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 6291456,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12271,7 +12271,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 57344,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12283,7 +12283,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 114688,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12295,7 +12295,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 229376,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12307,7 +12307,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 458752,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12319,7 +12319,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 458752,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12331,7 +12331,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 458752,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12343,7 +12343,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 917504,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12355,7 +12355,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 917504,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12367,7 +12367,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 917504,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12379,7 +12379,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 694272,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12391,7 +12391,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 1421312,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12403,7 +12403,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 2874368,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12415,7 +12415,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 5765120,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12679,7 +12679,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 348160,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12691,7 +12691,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 696320,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12703,7 +12703,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 1474560,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12715,7 +12715,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 1474560,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12799,7 +12799,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12859,7 +12859,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12931,7 +12931,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12955,7 +12955,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -12979,7 +12979,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -13015,7 +13015,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -13027,7 +13027,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -13051,7 +13051,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 0,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -13387,7 +13387,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 348160,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -13399,7 +13399,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 696320,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -13411,7 +13411,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 1474560,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -13567,7 +13567,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 39630000,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -13579,7 +13579,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 737280,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -13591,7 +13591,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 1474560,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   },
@@ -13603,7 +13603,7 @@
     "size_disk": 1047552,
     "resourceDiskSizeInMB": 2949120,
     "provider": "az",
-    "price_hour": "-",
+    "price_hour": "0.0000",
     "price_month": null,
     "price_currency": "USD"
   }
