@@ -6,7 +6,10 @@
     "size_disk": "25",
     "id": "g3.xsmall",
     "size_memory": "1024",
-    "type": "Instance"
+    "type": "Instance",
+    "price_hour": "-",
+    "price_month": 5.43,
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -15,7 +18,10 @@
     "size_disk": "25",
     "id": "g3.small",
     "size_memory": "2048",
-    "type": "Instance"
+    "type": "Instance",
+    "price_hour": "-",
+    "price_month": 10.86,
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -24,7 +30,10 @@
     "size_disk": "50",
     "id": "g3.medium",
     "size_memory": "4096",
-    "type": "Instance"
+    "type": "Instance",
+    "price_hour": "-",
+    "price_month": 21.73,
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -33,7 +42,10 @@
     "size_disk": "100",
     "id": "g3.large",
     "size_memory": "8192",
-    "type": "Instance"
+    "type": "Instance",
+    "price_hour": "-",
+    "price_month": 43.45,
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -42,7 +54,10 @@
     "size_disk": "150",
     "id": "g3.xlarge",
     "size_memory": "16384",
-    "type": "Instance"
+    "type": "Instance",
+    "price_hour": "-",
+    "price_month": 86.91,
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -51,43 +66,9 @@
     "size_disk": "200",
     "id": "g3.2xlarge",
     "size_memory": "32768",
-    "type": "Instance"
-  },
-  {
-    "provider": "civo",
-    "size_cores": "4",
-    "description": "Small - CPU optimized",
-    "size_disk": "60",
-    "id": "g3.kf.small",
-    "size_memory": "16384",
-    "type": "KfCluster"
-  },
-  {
-    "provider": "civo",
-    "size_cores": "8",
-    "description": "Medium - CPU optimized",
-    "size_disk": "80",
-    "id": "g3.kf.medium",
-    "size_memory": "32768",
-    "type": "KfCluster"
-  },
-  {
-    "provider": "civo",
-    "size_cores": "16",
-    "description": "Large - CPU optimized",
-    "size_disk": "120",
-    "id": "g3.kf.large",
-    "size_memory": "65536",
-    "type": "KfCluster"
-  },
-  {
-    "provider": "civo",
-    "size_cores": "32",
-    "description": "Extra Large - CPU optimized",
-    "size_disk": "180",
-    "id": "g3.kf.xlarge",
-    "size_memory": "131072",
-    "type": "KfCluster"
+    "type": "Instance",
+    "price_month": 173.81,
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -96,7 +77,9 @@
     "size_disk": "25",
     "id": "g4s.xsmall",
     "size_memory": "1024",
-    "type": "Instance"
+    "type": "Instance",
+    "price_month": "-",
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -105,7 +88,9 @@
     "size_disk": "25",
     "id": "g4s.small",
     "size_memory": "2048",
-    "type": "Instance"
+    "type": "Instance",
+    "price_month": "-",
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -114,7 +99,9 @@
     "size_disk": "50",
     "id": "g4s.medium",
     "size_memory": "4096",
-    "type": "Instance"
+    "type": "Instance",
+    "price_month": "-",
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -123,7 +110,9 @@
     "size_disk": "100",
     "id": "g4s.large",
     "size_memory": "8192",
-    "type": "Instance"
+    "type": "Instance",
+    "price_month": "-",
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -132,7 +121,9 @@
     "size_disk": "150",
     "id": "g4s.xlarge",
     "size_memory": "16384",
-    "type": "Instance"
+    "type": "Instance",
+    "price_month": "-",
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -141,7 +132,9 @@
     "size_disk": "200",
     "id": "g4s.2xlarge",
     "size_memory": "32768",
-    "type": "Instance"
+    "type": "Instance",
+    "price_month": "-",
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -150,7 +143,9 @@
     "size_disk": "200",
     "id": "an.g1.l40s.x1",
     "size_memory": "131072",
-    "type": "Instance"
+    "type": "Instance",
+    "price_month": "-",
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -159,7 +154,9 @@
     "size_disk": "200",
     "id": "an.g1.l40s.x2",
     "size_memory": "262133",
-    "type": "Instance"
+    "type": "Instance",
+    "price_month": "-",
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -168,7 +165,9 @@
     "size_disk": "400",
     "id": "an.g1.l40s.x4",
     "size_memory": "524288",
-    "type": "Instance"
+    "type": "Instance",
+    "price_month": "-",
+    "price_currency": "USD"
   },
   {
     "provider": "civo",
@@ -177,7 +176,9 @@
     "size_disk": "400",
     "id": "an.g1.l40s.x8",
     "size_memory": "1048576",
-    "type": "Instance"
+    "type": "Instance",
+    "price_month": "-",
+    "price_currency": "USD"
   },
   {
     "size_cores": 1,

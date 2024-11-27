@@ -1,0 +1,69 @@
+{
+  "zone": [
+    {
+      "id": "au-syd1",
+      "description": "Sydney #1",
+      "public": "yes"
+    },
+    {
+      "id": "de-fra1",
+      "description": "Frankfurt #1",
+      "public": "yes"
+    },
+    {
+      "id": "es-mad1",
+      "description": "Madrid #1",
+      "public": "yes"
+    },
+    {
+      "id": "fi-hel1",
+      "description": "Helsinki #1",
+      "public": "yes"
+    },
+    {
+      "id": "fi-hel2",
+      "description": "Helsinki #2",
+      "public": "yes"
+    },
+    {
+      "id": "nl-ams1",
+      "description": "Amsterdam #1",
+      "public": "yes"
+    },
+    {
+      "id": "pl-waw1",
+      "description": "Warsaw #1",
+      "public": "yes"
+    },
+    {
+      "id": "se-sto1",
+      "description": "Stockholm #1",
+      "public": "yes"
+    },
+    {
+      "id": "sg-sin1",
+      "description": "Singapore #1",
+      "public": "yes"
+    },
+    {
+      "id": "uk-lon1",
+      "description": "London #1",
+      "public": "yes"
+    },
+    {
+      "id": "us-chi1",
+      "description": "Chicago #1",
+      "public": "yes"
+    },
+    {
+      "id": "us-nyc1",
+      "description": "New York #1",
+      "public": "yes"
+    },
+    {
+      "id": "us-sjo1",
+      "description": "San Jose #1",
+      "public": "yes"
+    }
+  ]
+}
