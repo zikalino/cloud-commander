@@ -1,0 +1,10 @@
+- type: combo
+  name: Select Instance Size
+  items: []
+  source:
+    cmd: |
+      civo size list --filter instance --output json
+    path-id: $[*].name
+    path-name: $[*].description
+  produces:
+    - variable: size

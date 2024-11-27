@@ -25,6 +25,12 @@ form:
   - type: fieldset
     show-if:
       variable: cloud_provider
+      value: cloud-civo
+    subitems:
+      - $include: generic_vm_create_civo.yaml
+  - type: fieldset
+    show-if:
+      variable: cloud_provider
       value: cloud-upctl
     subitems:
       - $include: generic_vm_create_upctl.yaml

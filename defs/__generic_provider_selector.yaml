@@ -5,6 +5,8 @@
       items:
         - id: cloud-az
           label: Azure
+        - id: cloud-civo
+          label: Civo
         - id: cloud-doctl
           label: Digital Ocean
         - id: cloud-linode
