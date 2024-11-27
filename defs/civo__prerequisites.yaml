@@ -1,0 +1,26 @@
+type: layout-form
+id: root
+form:
+  - type: fieldset
+    platform: win32
+    subitems:
+      - type: text-block
+        width: wide
+        font: header-1
+        content: Prerequisites
+      - type: separator
+
+      - $include: __scoop_install_step.yaml
+
+      - type: 'action-row'
+        name: Install Civo CLI
+        verify: civo --version
+        install: |
+            scoop bucket add extras
+            scoop install civo
+footer:
+  - type: footer
+    subitems:
+      - type: button
+        id: install_button
+        codicon: run-all

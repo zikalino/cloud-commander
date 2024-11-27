@@ -21,6 +21,7 @@
   # add definitions for rspective sections / resouce providers here
 - $include: ____tree_aws.yaml
 - $include: ____tree_az.yaml
+- $include: ____tree_civo.yaml
 - $include: ____tree_doctl.yaml
 - $include: ____tree_gcp.yaml
 - $include: ____tree_kamatera.yaml

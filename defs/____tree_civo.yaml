@@ -1,0 +1,11 @@
+- name: Civo
+  id: cloud-civo
+  icon: civo.png
+  subitems:
+    - name: Coming Soon...
+      id: cloud-civo-coming-soon
+      icon: civo.png
+      subitems: []
+      raw: {}
+  raw: {}
+  details: civo__prerequisites.yaml

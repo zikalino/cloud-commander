@@ -72,10 +72,16 @@
           name: Enable backups
           cmd: doctl compute droplet-action enable-backups ${id}
           refresh: self
+          #when:
+          #  path: "$[0].status"
+          #  value: on
         - type: other
           name: Disable backups
           cmd: doctl compute droplet-action disable-backups ${id}
           refresh: self
+          #when:
+          #  path: "$[0].status"
+          #  value: off
     - name: Volumes
       id: cloud-digital-ocean-volumes
       icon: digital-ocean.svg
