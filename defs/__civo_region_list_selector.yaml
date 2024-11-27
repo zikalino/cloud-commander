@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: combo
+      name: Select Region
+      items: []
+      source:
+        cmd: |
+          civo region list --output json
+        path-id: $[*].code
+        path-name: $[*].country
+      produces:
+        - variable: region
