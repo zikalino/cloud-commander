@@ -1,5 +1,185 @@
 [
   {
+    "provider": "civo",
+    "size_cores": "1",
+    "description": "Extra Small",
+    "size_disk": "25",
+    "id": "g3.xsmall",
+    "size_memory": "1024",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "1",
+    "description": "Small",
+    "size_disk": "25",
+    "id": "g3.small",
+    "size_memory": "2048",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "2",
+    "description": "Medium",
+    "size_disk": "50",
+    "id": "g3.medium",
+    "size_memory": "4096",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "4",
+    "description": "Large",
+    "size_disk": "100",
+    "id": "g3.large",
+    "size_memory": "8192",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "6",
+    "description": "Extra Large",
+    "size_disk": "150",
+    "id": "g3.xlarge",
+    "size_memory": "16384",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "8",
+    "description": "2X Large",
+    "size_disk": "200",
+    "id": "g3.2xlarge",
+    "size_memory": "32768",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "4",
+    "description": "Small - CPU optimized",
+    "size_disk": "60",
+    "id": "g3.kf.small",
+    "size_memory": "16384",
+    "type": "KfCluster"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "8",
+    "description": "Medium - CPU optimized",
+    "size_disk": "80",
+    "id": "g3.kf.medium",
+    "size_memory": "32768",
+    "type": "KfCluster"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "16",
+    "description": "Large - CPU optimized",
+    "size_disk": "120",
+    "id": "g3.kf.large",
+    "size_memory": "65536",
+    "type": "KfCluster"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "32",
+    "description": "Extra Large - CPU optimized",
+    "size_disk": "180",
+    "id": "g3.kf.xlarge",
+    "size_memory": "131072",
+    "type": "KfCluster"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "1",
+    "description": "xSmall - Standard",
+    "size_disk": "25",
+    "id": "g4s.xsmall",
+    "size_memory": "1024",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "1",
+    "description": "Small - Standard",
+    "size_disk": "25",
+    "id": "g4s.small",
+    "size_memory": "2048",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "2",
+    "description": "Medium - Standard",
+    "size_disk": "50",
+    "id": "g4s.medium",
+    "size_memory": "4096",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "4",
+    "description": "Large - Standard",
+    "size_disk": "100",
+    "id": "g4s.large",
+    "size_memory": "8192",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "6",
+    "description": "Extra Large - Standard",
+    "size_disk": "150",
+    "id": "g4s.xlarge",
+    "size_memory": "16384",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "8",
+    "description": "2X Large - Standard",
+    "size_disk": "200",
+    "id": "g4s.2xlarge",
+    "size_memory": "32768",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "12",
+    "description": "Small - Nvidia L40S 40GB",
+    "size_disk": "200",
+    "id": "an.g1.l40s.x1",
+    "size_memory": "131072",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "24",
+    "description": "Medium - Nvidia L40S 40GB",
+    "size_disk": "200",
+    "id": "an.g1.l40s.x2",
+    "size_memory": "262133",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "48",
+    "description": "Large - Nvidia L40S 40GB",
+    "size_disk": "400",
+    "id": "an.g1.l40s.x4",
+    "size_memory": "524288",
+    "type": "Instance"
+  },
+  {
+    "provider": "civo",
+    "size_cores": "96",
+    "description": "Extra Large - Nvidia L40S 40GB",
+    "size_disk": "400",
+    "id": "an.g1.l40s.x8",
+    "size_memory": "1048576",
+    "type": "Instance"
+  },
+  {
     "size_cores": 1,
     "size_memory": 1024,
     "id": "DEV-1xCPU-1GB-10GB",
