@@ -7,7 +7,7 @@
       icon: kamatera.png
       subitems: []
       raw: {}
-      query: C:\dev\cloudcli.exe server list --format json
+      query: cloudcli server list --format json
       path-id: $[::].id
       path-name: $[::].name
       path-raw: $[::]
