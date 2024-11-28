@@ -1,0 +1,12 @@
+- type: row
+  subitems:
+    - type: dropdown
+      name: Select Application
+      items: []
+      source:
+        cmd: |
+          civo kubernetes applications ls --output json
+        path-id: $[*].name
+        path-name: $[*].name
+      produces:
+        - variable: application_name

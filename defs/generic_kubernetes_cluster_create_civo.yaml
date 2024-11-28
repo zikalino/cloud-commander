@@ -42,6 +42,9 @@
 #      produces: 
 #        - variable: private_node_groups
 - $include: __civo_region_list_selector.yaml
+
+- $include: __civo_kubernetes_applications_list_selector.yaml
+
 #- type: row
 #  subitems: 
 #    - type: checkbox
@@ -56,6 +59,8 @@
   consumes:
     - variable: name
       required: true
+    - variable: application_name
+      parameter: --applications
   install: civo kubernetes create ${name} --wait
   produces:
     - variable: output
