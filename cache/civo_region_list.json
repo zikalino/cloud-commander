@@ -1,0 +1,26 @@
+[
+  {
+    "code": "lon1",
+    "country": "United Kingdom",
+    "current": "No",
+    "name": "lon1"
+  },
+  {
+    "code": "nyc1",
+    "country": "United States",
+    "current": "Yes",
+    "name": "nyc1"
+  },
+  {
+    "code": "phx1",
+    "country": "United States",
+    "current": "No",
+    "name": "phx1"
+  },
+  {
+    "code": "fra1",
+    "country": "Germany",
+    "current": "No",
+    "name": "fra1"
+  }
+]

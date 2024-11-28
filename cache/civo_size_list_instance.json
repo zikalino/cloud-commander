@@ -1,0 +1,162 @@
+[
+  {
+    "cpu_cores": "1",
+    "description": "Extra Small",
+    "disk_gb": "25",
+    "name": "g3.xsmall",
+    "ram_mb": "1024",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "1",
+    "description": "Small",
+    "disk_gb": "25",
+    "name": "g3.small",
+    "ram_mb": "2048",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "2",
+    "description": "Medium",
+    "disk_gb": "50",
+    "name": "g3.medium",
+    "ram_mb": "4096",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "4",
+    "description": "Large",
+    "disk_gb": "100",
+    "name": "g3.large",
+    "ram_mb": "8192",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "6",
+    "description": "Extra Large",
+    "disk_gb": "150",
+    "name": "g3.xlarge",
+    "ram_mb": "16384",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "8",
+    "description": "2X Large",
+    "disk_gb": "200",
+    "name": "g3.2xlarge",
+    "ram_mb": "32768",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "4",
+    "description": "Small - CPU optimized",
+    "disk_gb": "60",
+    "name": "g3.kf.small",
+    "ram_mb": "16384",
+    "type": "KfCluster"
+  },
+  {
+    "cpu_cores": "8",
+    "description": "Medium - CPU optimized",
+    "disk_gb": "80",
+    "name": "g3.kf.medium",
+    "ram_mb": "32768",
+    "type": "KfCluster"
+  },
+  {
+    "cpu_cores": "16",
+    "description": "Large - CPU optimized",
+    "disk_gb": "120",
+    "name": "g3.kf.large",
+    "ram_mb": "65536",
+    "type": "KfCluster"
+  },
+  {
+    "cpu_cores": "32",
+    "description": "Extra Large - CPU optimized",
+    "disk_gb": "180",
+    "name": "g3.kf.xlarge",
+    "ram_mb": "131072",
+    "type": "KfCluster"
+  },
+  {
+    "cpu_cores": "1",
+    "description": "xSmall - Standard",
+    "disk_gb": "25",
+    "name": "g4s.xsmall",
+    "ram_mb": "1024",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "1",
+    "description": "Small - Standard",
+    "disk_gb": "25",
+    "name": "g4s.small",
+    "ram_mb": "2048",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "2",
+    "description": "Medium - Standard",
+    "disk_gb": "50",
+    "name": "g4s.medium",
+    "ram_mb": "4096",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "4",
+    "description": "Large - Standard",
+    "disk_gb": "100",
+    "name": "g4s.large",
+    "ram_mb": "8192",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "6",
+    "description": "Extra Large - Standard",
+    "disk_gb": "150",
+    "name": "g4s.xlarge",
+    "ram_mb": "16384",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "8",
+    "description": "2X Large - Standard",
+    "disk_gb": "200",
+    "name": "g4s.2xlarge",
+    "ram_mb": "32768",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "12",
+    "description": "Small - Nvidia L40S 40GB",
+    "disk_gb": "200",
+    "name": "an.g1.l40s.x1",
+    "ram_mb": "131072",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "24",
+    "description": "Medium - Nvidia L40S 40GB",
+    "disk_gb": "200",
+    "name": "an.g1.l40s.x2",
+    "ram_mb": "262133",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "48",
+    "description": "Large - Nvidia L40S 40GB",
+    "disk_gb": "400",
+    "name": "an.g1.l40s.x4",
+    "ram_mb": "524288",
+    "type": "Instance"
+  },
+  {
+    "cpu_cores": "96",
+    "description": "Extra Large - Nvidia L40S 40GB",
+    "disk_gb": "400",
+    "name": "an.g1.l40s.x8",
+    "ram_mb": "1048576",
+    "type": "Instance"
+  }
+]
