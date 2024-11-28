@@ -1,6 +1,6 @@
 - type: row
   subitems:
-    - type: combo
+    - type: dropdown
       name: Select User
       items: []
       source:

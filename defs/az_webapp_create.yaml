@@ -11,7 +11,7 @@ form:
     subitems:
       - type: row
         subitems:
-          - type: combo
+          - type: dropdown
             name: Runtime
             items: []
             source:

@@ -1,4 +1,4 @@
-- type: combo
+- type: dropdown
   name: Select Instance Size
   items: []
   source:

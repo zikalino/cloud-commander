@@ -70,7 +70,7 @@
 - type: row
   id: sku-row
   subitems:
-    - type: combo
+    - type: dropdown
       id: sku-combo
       name: Select SKU
       items:

@@ -78,7 +78,7 @@ form:
               - variable: UUID/Title/Hostname...
       - type: row
         subitems: 
-          - type: combo
+          - type: dropdown
             name: direction
             description: "Rule direction. Available: in / out "
             items:
@@ -87,7 +87,7 @@ form:
               - variable: direction
       - type: row
         subitems: 
-          - type: combo
+          - type: dropdown
             name: action
             description: "Rule action. Available: accept / drop "
             items:
@@ -96,7 +96,7 @@ form:
               - variable: action
       - type: row
         subitems: 
-          - type: combo
+          - type: dropdown
             name: family
             description: "IP family. Available: IPv4, IPv6 "
             items:
@@ -106,7 +106,7 @@ form:
               - variable: family
       - type: row
         subitems: 
-          - type: combo
+          - type: dropdown
             name: position
             description: "Position in relation to other rules. Available: 1-1000 Default: 0 "
             items:
@@ -115,7 +115,7 @@ form:
               - variable: position
       - type: row
         subitems: 
-          - type: combo
+          - type: dropdown
             name: protocol
             description: "Protocol. Available: tcp, udp, icmp "
             items:
@@ -126,7 +126,7 @@ form:
               - variable: protocol
       - type: row
         subitems: 
-          - type: combo
+          - type: dropdown
             name: icmp-type
             description: "ICMP type. Available: 0-255 "
             items:
@@ -142,7 +142,7 @@ form:
               - variable: dest_ipaddress_block
       - type: row
         subitems: 
-          - type: combo
+          - type: dropdown
             name: destination-port-start
             description: "Destination port range start. Available: 1-65535 "
             items:

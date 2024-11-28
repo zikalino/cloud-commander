@@ -52,7 +52,7 @@
     - type: row
       id: service-plan-selection-row
       subitems:
-        - type: combo
+        - type: dropdown
           id: service-plan-selection-combo
           name: Select App Service Plan
           items: []

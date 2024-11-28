@@ -77,7 +77,7 @@ form:
               - variable: network
       - type: row
         subitems: 
-          - type: combo
+          - type: dropdown
             name: type
             description: "Set the type of the network. Available: public, utility, private Default: private "
             items:

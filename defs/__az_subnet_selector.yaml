@@ -1,6 +1,6 @@
 - type: row
   subitems:
-    - type: combo
+    - type: dropdown
       name: Select Virtual Network
       items: []
       source:
@@ -12,7 +12,7 @@
         - variable: vnet_name
         - variable: vnet_resource_group
           path: $.resourceGroup
-    - type: combo
+    - type: dropdown
       name: Select Subnet
       items: []
       consumes:

@@ -57,7 +57,7 @@ form:
       - $include: __doctl_compute_region_list_selector.yaml
       - type: row
         subitems: 
-          - type: combo
+          - type: dropdown
             name: engine
             description: "The database's engine. Possible values are: pg, `mysql`, `redis`, `mongodb`, `kafka` and `opensearch`. (default \"pg\")"
             items:

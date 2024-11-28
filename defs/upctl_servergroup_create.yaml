@@ -71,7 +71,7 @@ form:
               - variable: title
       - type: row
         subitems:
-          - type: combo
+          - type: dropdown
             name: Anti-affinity Policy
             items: ['yes', 'strict', 'no']
             produces:

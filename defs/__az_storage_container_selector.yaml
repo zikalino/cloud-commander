@@ -1,6 +1,6 @@
 - type: row
   subitems:
-    - type: combo
+    - type: dropdown
       name: Select Storage Account
       items: []
       source:
@@ -10,7 +10,7 @@
         path-name: $[*].name
       produces:
         - variable: storage_account_name
-    - type: combo
+    - type: dropdown
       name: Select Container
       items: []
       source:

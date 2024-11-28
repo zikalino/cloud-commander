@@ -52,7 +52,7 @@
     - type: row
       id: storage-account-selection-row
       subitems:
-        - type: combo
+        - type: dropdown
           id: storage-account-selection-combo
           name: Select Storage Account
           items: []

@@ -97,7 +97,7 @@ form:
               - variable: backup_time
       - type: row
         subitems: 
-          - type: combo
+          - type: dropdown
             name: backup-interval
             description: "The interval of the backup. Available: daily,mon,tue,wed,thu,fri,sat,sun Default: daily "
             items:

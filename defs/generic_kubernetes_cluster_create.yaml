@@ -9,30 +9,51 @@ form:
     subitems:
       - $include: __generic_provider_selector.yaml
 
-  - type: fieldset
-    show-if:
-      variable: cloud_provider
-      value: cloud-linode
-    subitems:
-      - $include: generic_not_available.yaml
+  #
+  # Azure
+  #
   - type: fieldset
     show-if:
       variable: cloud_provider
       value: cloud-az
     subitems:
       - $include: generic_kubernetes_cluster_create_az.yaml
+  #
+  # Civo
+  #
   - type: fieldset
     show-if:
       variable: cloud_provider
-      value: cloud-upctl
+      value: cloud-civo
     subitems:
-      - $include: generic_kubernetes_cluster_create_upctl.yaml
+      - $include: generic_kubernetes_cluster_create_civo.yaml
+  #
+  # Digital Ocean
+  #      
   - type: fieldset
     show-if:
       variable: cloud_provider
       value: cloud-doctl
     subitems:
       - $include: generic_kubernetes_cluster_create_doctl.yaml
+  #
+  # Linode
+  #      
+  - type: fieldset
+    show-if:
+      variable: cloud_provider
+      value: cloud-linode
+    subitems:
+      - $include: generic_not_available.yaml
+  #
+  # UpCloud
+  #      
+  - type: fieldset
+    show-if:
+      variable: cloud_provider
+      value: cloud-upctl
+    subitems:
+      - $include: generic_kubernetes_cluster_create_upctl.yaml
   - type: fieldset
     subitems:
       - type: 'output-row'

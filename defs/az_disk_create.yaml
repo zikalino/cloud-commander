@@ -19,7 +19,7 @@ form:
               - variable: disk_name
       - type: row
         subitems:
-          - type: combo
+          - type: dropdown
             name: SKU
             items:
               - Premium_LRS

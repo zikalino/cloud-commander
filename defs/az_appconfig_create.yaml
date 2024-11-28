@@ -15,7 +15,7 @@ form:
             name: Name
             produces:
               - variable: app_service_plan_name
-          - type: combo
+          - type: dropdown
             name: SKU
             items:
               - id: F1
@@ -90,7 +90,7 @@ form:
                 label: WS3 - Logic Apps Workflow Standard 3
             produces:
               - variable: appservice_sku
-          - type: combo
+          - type: dropdown
             name: OS Type
             items:
               - Linux
