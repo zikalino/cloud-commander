@@ -1,0 +1,11 @@
+- type: dropdown
+  name: Select Image
+  items: []
+  source:
+    cmd: |
+      civo diskimage list --output json
+    path-id: $[*].id
+    path-name: $[*].name
+    cache: civo_diskimage_list
+  produces:
+    - variable: image_id

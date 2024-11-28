@@ -1,0 +1,4 @@
+- type: row
+  subitems:
+    - type: separator
+    - $include: __civo_diskimage_list_selector_field.yaml

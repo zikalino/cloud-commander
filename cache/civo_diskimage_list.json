@@ -1,0 +1,93 @@
+[
+  {
+    "distribution": "ubuntu",
+    "id": "9f953761-8b20-4623-8dff-e0c845201966",
+    "name": "ubuntu-jammy",
+    "state": "available",
+    "version": "22.04"
+  },
+  {
+    "distribution": "debian",
+    "id": "f398bcd6-c27e-4d56-a6df-d5aa63bb4083",
+    "name": "debian-11",
+    "state": "available",
+    "version": "11"
+  },
+  {
+    "distribution": "talos",
+    "id": "7bb21130-840a-484f-a049-dcbbb4fd87cf",
+    "name": "talos-v1.2.8",
+    "state": "available",
+    "version": "1.25.5"
+  },
+  {
+    "distribution": "ubuntu",
+    "id": "8eb48e20-e5db-49fe-9cdf-cc8f381c61c6",
+    "name": "ubuntu-focal",
+    "state": "available",
+    "version": "20.04"
+  },
+  {
+    "distribution": "talos",
+    "id": "64053a48-b20d-4345-860c-cfa0a688816d",
+    "name": "talos-v1.5.0",
+    "state": "available",
+    "version": "1.27.0"
+  },
+  {
+    "distribution": "debian",
+    "id": "4204229c-510c-4ba4-ab07-522e2aaa2cf8",
+    "name": "debian-10",
+    "state": "available",
+    "version": "10"
+  },
+  {
+    "distribution": "rocky",
+    "id": "4a7b536b-c893-41cf-b5e1-19f47933267d",
+    "name": "rocky-9-1",
+    "state": "available",
+    "version": "9.1"
+  },
+  {
+    "distribution": "ubuntu",
+    "id": "9fb7b840-6cde-448a-b570-6418430c6ac8",
+    "name": "ubuntu-noble",
+    "state": "available",
+    "version": "24.04"
+  },
+  {
+    "distribution": "debian",
+    "id": "cddce6c9-f84e-4e4f-ab8d-7a33cab85158",
+    "name": "debian-9",
+    "state": "available",
+    "version": "9"
+  },
+  {
+    "distribution": "talos",
+    "id": "ab3bbbcb-3b93-454f-b692-2ea164609800",
+    "name": "talos-v1.7.6",
+    "state": "available",
+    "version": "1.30.3"
+  },
+  {
+    "distribution": "ubuntu",
+    "id": "a9cf6632-d127-4516-9ce4-e2998e1bb2eb",
+    "name": "ubuntu-cuda12-2",
+    "state": "available",
+    "version": "22.04-cuda12-2"
+  },
+  {
+    "distribution": "ubuntu",
+    "id": "ac2aa741-b547-4b77-b3e8-fb40b73c6266",
+    "name": "ubuntu-cuda11-8",
+    "state": "available",
+    "version": "22.04-cuda11-8"
+  },
+  {
+    "distribution": "talos",
+    "id": "5be32b14-1536-4630-9758-84847a85149b",
+    "name": "talos-v1.6.8",
+    "state": "available",
+    "version": "1.29.7"
+  }
+]
