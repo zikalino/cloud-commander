@@ -70,10 +70,8 @@
   name: Create Civo Instances
   consumes:
     - variable: host_name
-    - variable: zone
+    - variable: region
     - variable: vm_size
-    #- variable: storage_id
-    #  parameter: --os
   verify: |
-      civo instance ${host_name}
-  install: civo instance create --hostname ${host_name} --region ${zone} --size ${vm_size}
+      civo instance show ${host_name} --region ${region} --output json
+  install: civo instance create --hostname ${host_name} --region ${region} --size ${vm_size}
