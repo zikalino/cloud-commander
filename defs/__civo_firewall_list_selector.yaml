@@ -1,0 +1,3 @@
+- type: row
+  subitems:
+    - $include: __civo_firewall_list_selector_field.yaml

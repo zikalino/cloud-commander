@@ -70,6 +70,10 @@
 
 - type: separator
 
+- $include: __civo_firewall_list_selector.yaml
+
+- type: separator
+
 - type: 'action-row'
   name: Create Civo Instances
   consumes:
