@@ -8,5 +8,6 @@
           az account list-locations
         path-id: $[?(@.metadata.regionType=='Physical')].name
         path-name: $[?(@.metadata.regionType=='Physical')].displayName
+        cache: az_account_list_locations
       produces:
         - variable: region

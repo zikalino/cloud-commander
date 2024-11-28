@@ -9,5 +9,6 @@
           doctl compute image list --output json
         path-id: $[::].id
         path-name: $[::].name
+        cache: doctl_compute_image_list
       produces:
         - variable: image
