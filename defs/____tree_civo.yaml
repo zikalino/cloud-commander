@@ -2,10 +2,85 @@
   id: cloud-civo
   icon: civo.png
   subitems:
-    - name: Coming Soon...
-      id: cloud-civo-coming-soon
+    - name: Instances
+      id: cloud-civo-instances
       icon: civo.png
       subitems: []
       raw: {}
+      query: civo instances list --region fra1 --output json
+      path-id: $[::].id
+      path-name: $[::].hostname
+      path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Instance
+          template:
+            name: generic_vm_create
+            parameters:
+              cloud_provider: cloud-civo
+
+      #child-template:
+      #  - type: query-details
+      #    query: doctl compute droplet get ${id} -o json
+      #    refresh: self
+      #    extract:
+      #      - field: state
+      #        path: "$[0].status"
+      #        map:
+      #          active: started
+      #          off: stopped
+      #      - field: size
+      #        path: "$[0].size.slug"
+      #      - field: location
+      #        path: "$[0].region.slug"
+      #      - field: size_cores
+      #        path: "$[0].size.vcpus"
+      #      - field: size_memory
+      #        path: "$[0].size.memory"
+      #      - field: size_disk
+      #        path: "$[0].size.disk"
+      #      - field: price
+      #        path: "$[0].size.price_monthly"
+      #      - field: image
+      #        path: "$[0].image.slug"
+      #  - type: delete
+      #    name: Delete
+      #    cmd: doctl compute droplet delete ${id} --force
+      #    refresh: parent
+      #  - type: reboot
+      #    name: Reboot
+      #    cmd: doctl compute droplet-action reboot ${id}
+      #    when:
+      #      path: "$[0].status"
+      #      value: active
+      #    refresh: self
+      #  - type: power-off
+      #    name: Power off
+      #    cmd: doctl compute droplet-action power-off ${id}
+      #    when:
+      #      path: "$[0].status"
+      #      value: active
+      #    refresh: self
+      #  - type: power-on
+      #    name: Power on
+      #    cmd: doctl compute droplet-action power-on ${id}
+      #    when:
+      #      path: "$[0].status"
+      #      value: off
+      #    refresh: self
+      #  - type: other
+      #    name: Enable backups
+      #    cmd: doctl compute droplet-action enable-backups ${id}
+      #    refresh: self
+      #    #when:
+      #    #  path: "$[0].status"
+      #    #  value: on
+      #  - type: other
+      #    name: Disable backups
+      #    cmd: doctl compute droplet-action disable-backups ${id}
+      #    refresh: self
+      #    #when:
+      #    #  path: "$[0].status"
+      #    #  value: off
   raw: {}
   details: civo__prerequisites.yaml
