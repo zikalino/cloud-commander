@@ -6,6 +6,6 @@
       linode regions list --json
     path-id: $[*].id
     path-name: $[*].label
-  cache: linode_region_list
+    cache: linode_region_list
   produces:
     - variable: region

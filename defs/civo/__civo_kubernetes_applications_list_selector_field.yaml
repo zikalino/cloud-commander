@@ -6,6 +6,6 @@
       civo kubernetes applications ls --output json
     path-id: $[*].name
     path-name: $[*].name
-  cache: civo_kubernetes_applications_list
+    cache: civo_kubernetes_applications_list
   produces:
     - variable: application_name

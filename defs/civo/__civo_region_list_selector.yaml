@@ -8,6 +8,6 @@
           civo region list --output json
         path-id: $[*].code
         path-name: $[*].country
-      cache: civo_region_list
+        cache: civo_region_list
       produces:
         - variable: region

@@ -8,7 +8,7 @@
           linode stackscripts list --json
         path-id: $[::].id
         path-name: $[::].label
-      cache: linode_stackscripts_list
+        cache: linode_stackscripts_list
       produces:
         - variable: stackscripts_id
 

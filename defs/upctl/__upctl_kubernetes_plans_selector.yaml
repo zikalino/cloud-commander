@@ -8,6 +8,6 @@
           upctl kubernetes plans --output json
         path-id: $[::].name
         path-name: $[::].name
-      cache: upctl_kubernetes_plans
+        cache: upctl_kubernetes_plans
       produces:
         - variable: kubernetes_plan

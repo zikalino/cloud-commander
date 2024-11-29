@@ -8,6 +8,6 @@
           linode lke versions-list --json
         path-id: $[::].id
         path-name: $[::].id
-      cache: linode_lke_version_list
+        cache: linode_lke_version_list
       produces:
         - variable: lke_version_id
