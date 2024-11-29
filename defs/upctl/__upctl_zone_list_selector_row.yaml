@@ -8,5 +8,6 @@
           upctl zone list --output json
         path-id: $.zone.[*].id
         path-name: $.zone.[*].description
+      cache: upctl_zone_list
       produces:
         - variable: zone
