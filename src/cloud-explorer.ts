@@ -595,7 +595,11 @@ function genericQuery(cmd: string) {
     r = cp.execSync(cmd, { shell: '/bin/bash' }).toString();
   }
 
-  return JSON.parse(r);
+  var json = [];
+  try {
+    json = JSON.parse(r);
+  } catch (e) {}
+  return json;  
 }
 
 function findItem(subtree: any[], item_id: string): any {
