@@ -3,6 +3,17 @@ id: root
 form:
   - type: fieldset
     subitems:
+      - type: link-row
+        text: Check documentation on Cloud Commander can be found here
+        link: https://zikalino.substack.com/p/cloud-commander-for-visual-studio
+      - type: link-row
+        text: GitHub donations are very welcome!
+        link: https://github.com/sponsors/zikalino
+      - type: link-row
+        text: Subscribe to Cloud Commander Substack
+        link: https://zikalino.substack.com
+      - type: separator
+
       - type: text-block
         width: wide
         font: header-1
@@ -10,6 +21,7 @@ form:
       - type: separator
       - $include: __git_install_step.yaml
       - $include: __gh_install_step.yaml
+
 footer:
   - type: footer
     subitems:
