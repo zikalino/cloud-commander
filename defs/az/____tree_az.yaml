@@ -3,7 +3,7 @@
   icon: azure.png
   subitems: []
   raw: {}
-  details: az__prerequisites.yaml
+  details: az/az__prerequisites.yaml
   query: az group list
   path-id: $[::].id
   path-name: $[::].name

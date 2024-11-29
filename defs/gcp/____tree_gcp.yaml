@@ -8,4 +8,4 @@
       subitems: []
       raw: {}
   raw: {}
-  details: gcp__prerequisites.yaml
+  details: gcp/gcp__prerequisites.yaml

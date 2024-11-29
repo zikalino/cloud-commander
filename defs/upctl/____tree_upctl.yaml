@@ -254,4 +254,4 @@
           cmd: upctl router delete ${id}
           refresh: parent
   raw: {}
-  details: upctl__prerequisites.yaml
+  details: upctl/upctl__prerequisites.yaml

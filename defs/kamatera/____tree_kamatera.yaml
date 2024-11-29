@@ -12,4 +12,4 @@
       path-name: $[::].name
       path-raw: $[::]
   raw: {}
-  details: kamatera__prerequisites.yaml
+  details: kamatera/kamatera__prerequisites.yaml

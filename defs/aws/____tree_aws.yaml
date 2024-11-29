@@ -8,4 +8,4 @@
       subitems: []
       raw: {}
   raw: {}
-  details: aws__prerequisites.yaml
+  details: aws/aws__prerequisites.yaml

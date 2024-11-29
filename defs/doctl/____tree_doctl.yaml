@@ -238,4 +238,4 @@
           cmd: doctl registry delete ${id}
           refresh: parent
   raw: {}
-  details: doctl__prerequisites.yaml
+  details: doctl/doctl__prerequisites.yaml

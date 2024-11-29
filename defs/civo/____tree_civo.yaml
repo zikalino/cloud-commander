@@ -174,4 +174,4 @@
       path-raw: $[::]
 
   raw: {}
-  details: civo__prerequisites.yaml
+  details: civo/civo__prerequisites.yaml
