@@ -12,6 +12,10 @@ form:
         font: header-1
         content: Prerequisites
       - type: separator
+      - type: link-row
+        text: Read Getting Started Guide to learn more details on registering and configuring your AWS account
+        link: https://zikalino.substack.com/p/getting-started-with-aws-using-cloudcommander
+      - type: separator
       - type: 'action-row'
         platform: win32
         id: install-aws-cli
