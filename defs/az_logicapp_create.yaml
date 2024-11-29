@@ -5,9 +5,9 @@ header:
     title: Logic App
     logo: icon.webp
 form:
-  - $include: __az_resource_group_select_or_create.yaml
-  - $include: __az_storage_account_selector.yaml
-  - $include: __az_app_service_plan_selector.yaml
+  - $include: az/__az_resource_group_select_or_create.yaml
+  - $include: az/__az_storage_account_selector.yaml
+  - $include: az/__az_app_service_plan_selector.yaml
 
   #
   # LOGIC APP APP ITSELF

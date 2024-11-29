@@ -58,7 +58,7 @@
 #                                         Default is to allow.  Allowed values: false, true.
 
 
-- $include: __az_resource_group_selector.yaml
+- $include: az/__az_resource_group_selector.yaml
 
 - type: row
   subitems:

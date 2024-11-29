@@ -45,7 +45,7 @@ header:
 form:
   - type: fieldset
     subitems:
-      - $include: __az_region_selector.yaml
+      - $include: az/__az_region_selector.yaml
       - type: row
         subitems: 
           - type: textfield
@@ -60,7 +60,7 @@ form:
             description: The ID of the resource that manages this resource group.
             produces: 
               - variable: managed_by
-      - $include: __az_tags_list.yaml
+      - $include: az/__az_tags_list.yaml
       - type: 'action-row'
         expandable: false
         name: az group create

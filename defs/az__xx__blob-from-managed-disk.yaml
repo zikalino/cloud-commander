@@ -6,10 +6,10 @@ header:
 form:
   - type: fieldset
     subitems:
-    - $include: __az_disk_selector.yaml
+    - $include: az/__az_disk_selector.yaml
   - type: fieldset
     subitems:
-    - $include: __az_storage_container_selector.yaml
+    - $include: az/__az_storage_container_selector.yaml
 
   - type: fieldset
     subitems:

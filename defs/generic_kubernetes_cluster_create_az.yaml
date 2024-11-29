@@ -1,4 +1,4 @@
-- $include: __az_resource_group_selector.yaml
+- $include: az/__az_resource_group_selector.yaml
 
 - type: row
   id: container-instance-name-row

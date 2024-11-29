@@ -5,7 +5,7 @@ header:
     title: Automation
     logo: icon.webp
 form:
-  - $include: __az_resource_group_select_or_create.yaml
+  - $include: az/__az_resource_group_select_or_create.yaml
 
   - type: fieldset
     id: fieldset-container-instance-creation

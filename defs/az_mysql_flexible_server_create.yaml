@@ -5,12 +5,12 @@ header:
     title: MySQL
     logo: icon.webp
 form:
-  - $include: __az_resource_group_select_or_create.yaml
+  - $include: az/__az_resource_group_select_or_create.yaml
 
   - type: fieldset
     id: fieldset-container-instance-creation
     subitems:
-      - $include: __az_region_selector.yaml
+      - $include: az/__az_region_selector.yaml
         prefix: mysql_server_
       - type: row
         subitems:
@@ -32,7 +32,7 @@ form:
             name: Password
             produces:
               - variable: mysql_server_password
-      - $include: __az_mysql_vm_size_selector.yaml
+      - $include: az/__az_mysql_vm_size_selector.yaml
       - type: 'action-row'
         name: Create MySQL Server
         consumes:

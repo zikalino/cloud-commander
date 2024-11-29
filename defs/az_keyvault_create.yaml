@@ -5,7 +5,7 @@ header:
     title: Key Vault
     logo: icon.webp
 form:
-  - $include: __az_resource_group_select_or_create.yaml
+  - $include: az/__az_resource_group_select_or_create.yaml
 
   - type: fieldset
     subitems:
@@ -15,7 +15,7 @@ form:
             name: Name
             produces:
               - variable: keyvault_name
-      - $include: __az_region_selector.yaml
+      - $include: az/__az_region_selector.yaml
         prefix: keyvault_
       - type: 'action-row'
         name: Create Key Vault

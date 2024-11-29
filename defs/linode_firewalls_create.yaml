@@ -64,7 +64,7 @@ form:
             description: The default behavior for outbound traffic.
             produces: 
               - variable: rules.outbound_policy
-      - $include: __az_tags_list.yaml
+      - $include: az/__az_tags_list.yaml
       - type: row
         subitems: 
           - type: textfield

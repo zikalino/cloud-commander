@@ -4,7 +4,7 @@ header:
     title: Storage Container
     logo: icon.webp
 form:
-  - $include: __az_storage_account_selector.yaml
+  - $include: az/__az_storage_account_selector.yaml
   - type: fieldset
     subitems:
       - type: row

@@ -4,11 +4,11 @@ header:
     title: Storage Account
     logo: icon.webp
 form:
-  - $include: __az_resource_group_select_or_create.yaml
+  - $include: az/__az_resource_group_select_or_create.yaml
 
   - type: fieldset
     subitems:
-      - $include: __az_region_selector.yaml
+      - $include: az/__az_region_selector.yaml
         prefix: storage_account_
       - type: row
         subitems:

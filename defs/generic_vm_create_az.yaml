@@ -4,11 +4,11 @@
       name: Name (required)
       produces:
         - variable: virtual_machine_name
-    - $include: __az_region_selector_field.yaml
+    - $include: az/__az_region_selector_field.yaml
       prefix: virtual_machine_
-    - $include: __az_vm_size_selector_field.yaml
+    - $include: az/__az_vm_size_selector_field.yaml
 
-- $include: __az_resource_group_selector.yaml
+- $include: az/__az_resource_group_selector.yaml
 
 - $include: generic_vm_size_information.yaml
 - $include: generic_vm_price_information.yaml
@@ -43,7 +43,7 @@
 #      text: From Image
 #      variable: os_disk_creation
 
-#- $include: __az_disk_selector.yaml
+#- $include: az/__az_disk_selector.yaml
 #  prefix: os_
 #  show-if:
 #    variable: os_disk_creation
@@ -67,17 +67,17 @@
 #      value: empty
 #      text: Empty
 #      variable: data_disk_creation
-#- $include: __az_disk_selector.yaml
+#- $include: az/__az_disk_selector.yaml
 #  prefix: data_
 #  show-if:
 #    variable: data_disk_creation
 #    value: attach
 
-#- $include: __az_subnet_selector.yaml
+#- $include: az/__az_subnet_selector.yaml
 
 - type: separator
 
-- $include: __az_vm_image_list_selector_row.yaml
+- $include: az/__az_vm_image_list_selector_row.yaml
 
 - type: separator
 

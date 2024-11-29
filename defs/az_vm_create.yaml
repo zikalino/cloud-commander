@@ -5,7 +5,7 @@ header:
     title: Virtual Machine
     logo: icon.webp
 form:
-  - $include: __az_resource_group_select_or_create.yaml
+  - $include: az/__az_resource_group_select_or_create.yaml
 
   - type: fieldset
     subitems:
@@ -29,7 +29,7 @@ form:
             text: From Image
             variable: os_disk_creation
 
-      - $include: __az_disk_selector.yaml
+      - $include: az/__az_disk_selector.yaml
         prefix: os_
         show-if:
           variable: os_disk_creation
@@ -55,7 +55,7 @@ form:
             value: empty
             text: Empty
             variable: data_disk_creation
-      - $include: __az_disk_selector.yaml
+      - $include: az/__az_disk_selector.yaml
         prefix: data_
         show-if:
           variable: data_disk_creation
@@ -70,10 +70,10 @@ form:
             name: Name
             produces:
               - variable: virtual_machine_name
-      - $include: __az_region_selector.yaml
+      - $include: az/__az_region_selector.yaml
         prefix: virtual_machine_
-      - $include: __az_vm_size_selector.yaml
-      - $include: __az_subnet_selector.yaml
+      - $include: az/__az_vm_size_selector.yaml
+      - $include: az/__az_subnet_selector.yaml
       - type: 'action-row'
         name: Create Virtual Machine
         consumes:

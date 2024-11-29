@@ -21,7 +21,7 @@
     variable: service-plan-creation
     value: create
   subitems:
-    - $include: __az_region_selector.yaml
+    - $include: az/__az_region_selector.yaml
       prefix: service_plan_
     - type: row
       id: service-plan-name-row

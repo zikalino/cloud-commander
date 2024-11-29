@@ -61,7 +61,7 @@ form:
             description: The initial size of this volume, in GB.
             produces: 
               - variable: size
-      - $include: __az_tags_list.yaml
+      - $include: az/__az_tags_list.yaml
       - type: 'action-row'
         expandable: false
         name: linode volumes create

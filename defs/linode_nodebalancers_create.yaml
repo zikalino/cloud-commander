@@ -94,7 +94,7 @@ form:
             description: This NodeBalancer's label.
             produces: 
               - variable: label
-      - $include: __az_tags_list.yaml
+      - $include: az/__az_tags_list.yaml
       - type: row
         subitems: 
           - type: textfield

@@ -22,7 +22,7 @@
     variable: storage-account-creation
     value: create
   subitems:
-    - $include: __az_region_selector.yaml
+    - $include: az/__az_region_selector.yaml
       prefix: storage_account_
     - type: row
       id: storage-account-name-row

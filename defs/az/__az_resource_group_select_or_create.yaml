@@ -18,7 +18,7 @@
     variable: resource-group-creation
     value: create
   subitems:
-    - $include: __az_region_selector.yaml
+    - $include: az/__az_region_selector.yaml
     - type: row
       subitems:
         - type: textfield

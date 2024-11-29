@@ -5,11 +5,11 @@ header:
     title: Azure - Create PostgreSQL Server
     logo: icon.webp
 form:
-  - $include: __az_resource_group_select_or_create.yaml
+  - $include: az/__az_resource_group_select_or_create.yaml
 
   - type: fieldset
     subitems:
-      - $include: __az_region_selector.yaml
+      - $include: az/__az_region_selector.yaml
         prefix: postgresql_server_
       - type: row
         subitems:
@@ -31,7 +31,7 @@ form:
             name: Password
             produces:
               - variable: postgresql_server_password
-      - $include: __az_postgresql_vm_size_selector.yaml
+      - $include: az/__az_postgresql_vm_size_selector.yaml
       - type: 'action-row'
         name: Create PostgreSQL Server
         consumes:
