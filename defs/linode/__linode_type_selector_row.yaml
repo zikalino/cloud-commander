@@ -8,5 +8,6 @@
           linode linodes types --json
         path-id: $[*].id
         path-name: $[*].label
+      cache: linode_type
       produces:
         - variable: linode_type

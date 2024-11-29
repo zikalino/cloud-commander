@@ -7,6 +7,7 @@
     path-id: $[*].slug
     path-name: $[*]
     format-name: "${description} - ${slug}"
+  cache: doctl_compute_size_list
   produces:
     - variable: vm_size
     - variable: vm_price_month

@@ -6,5 +6,6 @@
       doctl compute region list --output json
     path-id: $[*].slug
     path-name: $[*].name
+    cache: doctl_compute_region_list
   produces:
     - variable: region
