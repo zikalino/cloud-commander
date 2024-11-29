@@ -19,14 +19,14 @@
         name: generic_kubernetes_cluster_create
 
   # add definitions for rspective sections / resouce providers here
-- $include: ____tree_aws.yaml
-- $include: ____tree_az.yaml
-- $include: ____tree_civo.yaml
-- $include: ____tree_doctl.yaml
-- $include: ____tree_gcp.yaml
-- $include: ____tree_kamatera.yaml
-- $include: ____tree_linode.yaml
-- $include: ____tree_oci.yaml
-- $include: ____tree_ovh.yaml
-- $include: ____tree_upctl.yaml
-- $include: ____tree_vultr.yaml
+- $include: aws/____tree_aws.yaml
+- $include: az/____tree_az.yaml
+- $include: civo/____tree_civo.yaml
+- $include: doctl/____tree_doctl.yaml
+- $include: gcp/____tree_gcp.yaml
+- $include: kamatera/____tree_kamatera.yaml
+- $include: linode/____tree_linode.yaml
+- $include: oci/____tree_oci.yaml
+- $include: ovh/____tree_ovh.yaml
+- $include: upctl/____tree_upctl.yaml
+- $include: vultr/____tree_vultr.yaml
