@@ -6,6 +6,7 @@
       linode linodes types --json
     path-id: $[*].id
     path-name: $[*].label
+  cache: linode_type
   produces:
     - variable: vm_size
     - variable: vm_price_month

@@ -8,5 +8,6 @@
           civo size list --filter instance --output json
         path-id: $[*].name
         path-name: $[*].description
+      cache: civo_size_list_instance
       produces:
         - variable: size

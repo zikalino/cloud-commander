@@ -63,6 +63,11 @@
 - $include: generic_vm_price_information.yaml
 
 - $include: doctl/__doctl_compute_image_list_selector.yaml
+
+# do we need it??
+- $include: doctl/__doctl_1_click_list_droplet_selector.yaml
+
+
 - type: row
   subitems: 
     - type: checkbox

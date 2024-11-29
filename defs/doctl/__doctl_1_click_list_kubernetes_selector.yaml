@@ -1,0 +1,13 @@
+- type: row
+  subitems:
+    - type: dropdown
+      name: Select Application
+      items: []
+      source:
+        cmd: |
+          doctl 1-click list --type kubernetes --output json
+        path-id: $.[*].slug
+        path-name: $.[*].slug
+      cache: doctl_1_click_list_kubernetes
+      produces:
+        - variable: application_id

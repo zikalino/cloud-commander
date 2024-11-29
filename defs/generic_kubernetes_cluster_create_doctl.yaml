@@ -69,14 +69,9 @@
       produces: 
         - variable: name
 - $include: doctl/__doctl_compute_region_list_selector.yaml
-- type: row
-  subitems: 
-    - type: checkbox
-      name: 1-clicks
-      description: A comma-separated list of 1-click applications to install on the Kubernetes cluster. Use the `doctl kubernetes 1-click list` command for a list of available 1-click applications.
-      val-false: undefined
-      produces: 
-        - variable: 1_clicks
+
+- $include: doctl/__doctl_1_click_list_kubernetes_selector.yaml
+
 - type: row
   subitems: 
     - type: checkbox

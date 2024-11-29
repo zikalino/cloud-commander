@@ -6,6 +6,7 @@
       upctl server plans --output json
     path-id: $[::].name
     path-name: $[::].name
+  cache: upctl_server_plans
   produces:
     - variable: vm_size
     - variable: vm_price_month
