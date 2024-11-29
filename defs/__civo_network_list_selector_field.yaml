@@ -1,0 +1,10 @@
+- type: dropdown
+  name: Select Network
+  items: []
+  source:
+    cmd: |
+      civo network list --output json
+    path-id: $[*].id
+    path-name: $[*].label
+  produces:
+    - variable: network_id

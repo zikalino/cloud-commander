@@ -74,12 +74,22 @@
 
 - type: separator
 
+- $include: __civo_network_list_selector.yaml
+
+- type: separator
+
 - type: 'action-row'
   name: Create Civo Instances
   consumes:
     - variable: host_name
     - variable: region
     - variable: vm_size
+    - variable: network_id
+      parameter: --network
+    - variable: firewall_id
+      parameter: --firewall
+    - variable: image_id
+      parameter: --diskimage
   verify: |
       civo instance show ${host_name} --region ${region} --output json
   install: civo instance create --hostname ${host_name} --region ${region} --size ${vm_size}
