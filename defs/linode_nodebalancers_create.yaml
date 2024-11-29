@@ -72,7 +72,7 @@ header:
 form:
   - type: fieldset
     subitems:
-      - $include: __linode_regions_list_selector.yaml
+      - $include: linode/__linode_regions_list_selector.yaml
       - type: row
         subitems: 
           - type: textfield

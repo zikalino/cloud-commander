@@ -4,8 +4,8 @@
       name: Name (required)
       produces:
         - variable: name
-    - $include: __linode_regions_list_selector_field.yaml
-    - $include: __linode_type_selector_field.yaml
+    - $include: linode/__linode_regions_list_selector_field.yaml
+    - $include: linode/__linode_type_selector_field.yaml
 
 
 - $include: generic_vm_size_information.yaml
@@ -20,7 +20,7 @@
         - variable: password
 
 - type: separator
-- $include: __linode_images_list_selector.yaml
+- $include: linode/__linode_images_list_selector.yaml
 - type: separator
 
 - type: 'action-row'

@@ -32,8 +32,8 @@
       description: registry-name
       produces: 
         - variable: registry_name
-- $include: __doctl_compute_region_list_selector.yaml
-- $include: __doctl_registry_options_subscription_tiers_selector.yaml
+- $include: doctl/__doctl_compute_region_list_selector.yaml
+- $include: doctl/__doctl_registry_options_subscription_tiers_selector.yaml
 - type: row
   subitems: 
     - type: textfield

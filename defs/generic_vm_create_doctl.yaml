@@ -56,13 +56,13 @@
       description: droplet-name
       produces: 
         - variable: droplet_name
-    - $include: __doctl_compute_region_list_selector_field.yaml
-    - $include: __doctl_compute_size_list_selector_field.yaml
+    - $include: doctl/__doctl_compute_region_list_selector_field.yaml
+    - $include: doctl/__doctl_compute_size_list_selector_field.yaml
 
 - $include: generic_vm_size_information.yaml
 - $include: generic_vm_price_information.yaml
 
-- $include: __doctl_compute_image_list_selector.yaml
+- $include: doctl/__doctl_compute_image_list_selector.yaml
 - type: row
   subitems: 
     - type: checkbox

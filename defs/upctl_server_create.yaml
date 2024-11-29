@@ -132,14 +132,14 @@ header:
 form:
   - type: fieldset
     subitems:
-      - $include: __upctl_zone_list_selector.yaml
+      - $include: upctl/__upctl_zone_list_selector.yaml
       - type: row
         subitems:
           - type: textfield
             name: Host Name
             produces:
               - variable: host_name
-      - $include: __upctl_server_plans_selector.yaml
+      - $include: upctl/__upctl_server_plans_selector.yaml
       - type: 'action-row'
         id: create-container-instance
         name: Create Container Instance

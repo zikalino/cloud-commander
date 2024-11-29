@@ -73,7 +73,7 @@ header:
 form:
   - type: fieldset
     subitems:
-      - $include: __upctl_network_list_selector.yaml
+      - $include: upctl/__upctl_network_list_selector.yaml
       - type: row
         subitems: 
           - type: textfield
@@ -88,8 +88,8 @@ form:
             description: Labels to describe the cluster in `key=value` format, multiple can be declared. 
             produces: 
               - variable: label
-      - $include: __upctl_kubernetes_plans_selector.yaml
-      - $include: __upctl_kubernetes_versions_selector.yaml
+      - $include: upctl/__upctl_kubernetes_plans_selector.yaml
+      - $include: upctl/__upctl_kubernetes_versions_selector.yaml
       - type: row
         subitems: 
           - type: textfield
@@ -112,7 +112,7 @@ form:
             val-false: false
             produces: 
               - variable: private_node_groups
-      - $include: __upctl_zone_list_selector.yaml
+      - $include: upctl/__upctl_zone_list_selector.yaml
       - type: row
         subitems: 
           - type: checkbox

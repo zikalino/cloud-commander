@@ -72,7 +72,7 @@ form:
             description: "Size of the storage in GiB. Default: 10 "
             produces: 
               - variable: size
-      - $include: __upctl_zone_list_selector.yaml
+      - $include: upctl/__upctl_zone_list_selector.yaml
       - type: row
         subitems: 
           - type: textfield

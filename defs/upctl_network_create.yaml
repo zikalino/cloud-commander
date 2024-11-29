@@ -54,7 +54,7 @@ form:
             description: Names the network. 
             produces: 
               - variable: name
-      - $include: __upctl_zone_list_selector.yaml
+      - $include: upctl/__upctl_zone_list_selector.yaml
       - type: row
         subitems: 
           - type: textfield

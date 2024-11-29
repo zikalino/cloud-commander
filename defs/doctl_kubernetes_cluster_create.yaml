@@ -76,7 +76,7 @@ form:
             description: name
             produces: 
               - variable: name
-      - $include: __doctl_compute_region_list_selector.yaml
+      - $include: doctl/__doctl_compute_region_list_selector.yaml
       - type: row
         subitems: 
           - type: checkbox

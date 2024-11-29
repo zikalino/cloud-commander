@@ -64,9 +64,9 @@ form:
             description: droplet-name
             produces: 
               - variable: droplet_name
-      - $include: __doctl_compute_image_list_selector.yaml
-      - $include: __doctl_compute_region_list_selector.yaml
-      - $include: __doctl_compute_size_list_selector.yaml
+      - $include: doctl/__doctl_compute_image_list_selector.yaml
+      - $include: doctl/__doctl_compute_region_list_selector.yaml
+      - $include: doctl/__doctl_compute_size_list_selector.yaml
       - type: row
         subitems: 
           - type: checkbox
