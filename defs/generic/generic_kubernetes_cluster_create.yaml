@@ -7,7 +7,7 @@ header:
 form:
   - type: section
     subitems:
-      - $include: __generic_provider_selector.yaml
+      - $include: generic/__generic_provider_selector.yaml
 
   #
   # Azure
@@ -17,7 +17,7 @@ form:
       variable: cloud_provider
       value: cloud-az
     subitems:
-      - $include: generic_kubernetes_cluster_create_az.yaml
+      - $include: generic/generic_kubernetes_cluster_create_az.yaml
   #
   # Civo
   #
@@ -26,7 +26,7 @@ form:
       variable: cloud_provider
       value: cloud-civo
     subitems:
-      - $include: generic_kubernetes_cluster_create_civo.yaml
+      - $include: generic/generic_kubernetes_cluster_create_civo.yaml
   #
   # Digital Ocean
   #      
@@ -35,7 +35,7 @@ form:
       variable: cloud_provider
       value: cloud-doctl
     subitems:
-      - $include: generic_kubernetes_cluster_create_doctl.yaml
+      - $include: generic/generic_kubernetes_cluster_create_doctl.yaml
   #
   # Linode
   #      
@@ -44,7 +44,7 @@ form:
       variable: cloud_provider
       value: cloud-linode
     subitems:
-      - $include: generic_not_available.yaml
+      - $include: generic/generic_not_available.yaml
   #
   # UpCloud
   #      
@@ -53,7 +53,7 @@ form:
       variable: cloud_provider
       value: cloud-upctl
     subitems:
-      - $include: generic_kubernetes_cluster_create_upctl.yaml
+      - $include: generic/generic_kubernetes_cluster_create_upctl.yaml
   - type: section
     subitems:
       - type: 'output-row'

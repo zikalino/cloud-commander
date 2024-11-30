@@ -15,7 +15,7 @@
       - type: create
         name: Create Server
         template:
-          name: generic_vm_create
+          name: generic/generic_vm_create
           parameters:
             cloud_provider: cloud-upctl
       child-template:

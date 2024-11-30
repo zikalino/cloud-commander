@@ -7,32 +7,32 @@ header:
 form:
   - type: section
     subitems:
-      - $include: __generic_provider_selector.yaml
+      - $include: generic/__generic_provider_selector.yaml
 
   - type: section
     show-if:
       variable: cloud_provider
       value: cloud-linode
     subitems:
-      - $include: generic_not_available.yaml
+      - $include: generic/generic_not_available.yaml
   - type: section
     show-if:
       variable: cloud_provider
       value: cloud-az
     subitems:
-      - $include: generic_container_registry_create_az.yaml
+      - $include: generic/generic_container_registry_create_az.yaml
   - type: section
     show-if:
       variable: cloud_provider
       value: cloud-upctl
     subitems:
-      - $include: generic_not_available.yaml
+      - $include: generic/generic_not_available.yaml
   - type: section
     show-if:
       variable: cloud_provider
       value: cloud-doctl
     subitems:
-      - $include: generic_container_registry_create_doctl.yaml
+      - $include: generic/generic_container_registry_create_doctl.yaml
   - type: section
     subitems:
       - type: 'output-row'

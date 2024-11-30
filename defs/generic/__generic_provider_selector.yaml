@@ -1,0 +1,23 @@
+- type: section
+  subitems:
+    - type: text-block
+      width: wide
+      font: header-1
+      content: Infrastructure Provider
+    - type: row
+      subitems:
+        - type: dropdown
+          name: Select Infrastructure Provider
+          items:
+            - id: cloud-az
+              label: Azure
+            - id: cloud-civo
+              label: Civo
+            - id: cloud-doctl
+              label: Digital Ocean
+            - id: cloud-linode
+              label: Linode
+            - id: cloud-upctl
+              label: UpCloud
+          produces:
+            - variable: cloud_provider
