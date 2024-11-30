@@ -1,20 +1,28 @@
-- $include: az/__az_resource_group_selector.yaml
+- type: section
+  title: Basic Information
+  subitems:
+    - $include: az/__az_resource_group_selector.yaml
 
-- type: row
-  id: container-instance-name-row
+    - type: row
+      id: container-instance-name-row
+      subitems:
+        - type: textfield
+          id: container-instance-name-field
+          name: Container Name
+          produces:
+            - variable: container_name
+
+- type: section
+  title: Image / Application
   subitems:
-    - type: textfield
-      id: container-instance-name-field
-      name: Container Name
-      produces:
-        - variable: container_name
-- type: row
-  id: container-instance-image-row
-  subitems:
-    - type: textfield
-      name: Container Name
-      produces:
-        - variable: image
+    - type: row
+      id: container-instance-image-row
+      subitems:
+        - type: textfield
+          name: Container Name
+          produces:
+            - variable: image
+
 - type: 'action-row'
   id: create-container-instance
   name: Create Container Instance
