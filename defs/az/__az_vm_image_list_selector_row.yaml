@@ -6,5 +6,6 @@
       az vm image list
     path-id: $[*].offer
     path-name: $[*].urn
+    cache: az_vm_image_list
   produces:
     - variable: vm_image
