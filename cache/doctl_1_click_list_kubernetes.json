@@ -1,0 +1,214 @@
+[
+  {
+    "slug": "knative",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "kube-state-metrics",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "ambassador",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "wordpress-kubernetes",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "apache-pulsar",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "metrics-server",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "ingress-nginx",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "monitoring",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "cert-manager",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "ls-k8s-webadc",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "openfaas",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "jaeger",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "loki",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "helpy",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "rstudio",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "shiny",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "ant-media",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "argocd",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "kubernetes-dashboard",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "openebs-nfs-provisioner",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "csi-s3",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "headlamp",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "openebs",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "op-scim-bridge",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "netdata",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "linkerd2",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "cloudcasa",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "portainer",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "lakefs",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "kubesphere",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "chatwoot",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "triliovault-operator",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "victoria-metrics-cluster",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "pachyderm",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "pixie",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "epinio",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "memphis",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "paralus",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "fusionauth",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "gopaddle-lite",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "kubecost",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "infisical",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "kotal",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "easegress",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "resoto",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "webb.ai",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "kubefirst",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "flipt",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "ngrok-ingress-controller",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "kubearmor-operator",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "atm0s-media-stack",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "kubescape-operator",
+    "type": "kubernetes"
+  },
+  {
+    "slug": "easyhaproxy",
+    "type": "kubernetes"
+  }
+]

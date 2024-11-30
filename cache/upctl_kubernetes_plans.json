@@ -1,0 +1,12 @@
+[
+  {
+    "name": "development",
+    "server_number": 1,
+    "max_nodes": 50
+  },
+  {
+    "name": "production-small",
+    "server_number": 3,
+    "max_nodes": 200
+  }
+]

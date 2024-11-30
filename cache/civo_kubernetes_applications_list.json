@@ -1,0 +1,594 @@
+[
+  {
+    "category": "management",
+    "name": "acorn",
+    "plans": "Disabled Auto-TLS, Enabled Auto-TLS",
+    "version": "0.7.1"
+  },
+  {
+    "category": "architecture",
+    "name": "ambassador-edge-stack",
+    "version": "3.8.0"
+  },
+  {
+    "category": "architecture",
+    "name": "apisix-ingress-controller",
+    "version": "1.6.0"
+  },
+  {
+    "category": "ci_cd",
+    "name": "argo-rollouts",
+    "version": "v1.4.1"
+  },
+  {
+    "category": "ci_cd",
+    "name": "argo-workflows",
+    "version": "v3.0.3"
+  },
+  {
+    "category": "ci_cd",
+    "name": "argocd",
+    "version": "v2.12.6"
+  },
+  {
+    "category": "management",
+    "name": "aspnet",
+    "version": "5.0.5"
+  },
+  {
+    "category": "architecture",
+    "name": "atmo",
+    "version": "0.2.2"
+  },
+  {
+    "category": "management",
+    "dependencies": "cert-manager",
+    "name": "bitwarden-passwordless-dev",
+    "version": "1.0.74"
+  },
+  {
+    "category": "management",
+    "dependencies": "cert-manager",
+    "name": "bitwarden-passwordless-dev",
+    "version": "1.0.74"
+  },
+  {
+    "category": "management",
+    "dependencies": "cert-manager",
+    "name": "bitwarden-unified",
+    "version": "2024.1.0"
+  },
+  {
+    "category": "monitoring",
+    "name": "blackbox-exporter",
+    "version": "5.8.2"
+  },
+  {
+    "category": "security",
+    "name": "cerbos",
+    "version": "0.34.0"
+  },
+  {
+    "category": "architecture",
+    "name": "cert-manager",
+    "version": "v1.16.1"
+  },
+  {
+    "category": "ci_cd",
+    "name": "chaos-mesh",
+    "version": "(default)"
+  },
+  {
+    "category": "management",
+    "name": "civo-cluster-autoscaler",
+    "version": "v1.25.0"
+  },
+  {
+    "category": "management",
+    "dependencies": "cert-manager",
+    "name": "code-server",
+    "plans": "1GB, 2GB, 5GB",
+    "version": "3.11.1"
+  },
+  {
+    "category": "management",
+    "name": "cyclops",
+    "version": "v0.11.1"
+  },
+  {
+    "category": "architecture",
+    "name": "dapr",
+    "version": "1.11.0"
+  },
+  {
+    "category": "ci_cd",
+    "name": "devtron"
+  },
+  {
+    "category": "storage",
+    "dependencies": "prometheus-operator",
+    "name": "dynamic-pv-scaler",
+    "version": "0.1.0"
+  },
+  {
+    "category": "ci_cd",
+    "dependencies": "argocd, tekton, traefik2-nodeport",
+    "name": "edp",
+    "plans": "GitHub, GitLab",
+    "version": "3.8.1"
+  },
+  {
+    "category": "architecture",
+    "name": "enroute-onestep",
+    "version": "0.8.0"
+  },
+  {
+    "category": "management",
+    "dependencies": "cert-manager",
+    "name": "epinio",
+    "version": "v1.11.1"
+  },
+  {
+    "category": "security",
+    "name": "falco",
+    "version": "0.27"
+  },
+  {
+    "category": "database",
+    "name": "ferretdb",
+    "plans": "5GB, 10GB, 20GB",
+    "version": "1.24.0"
+  },
+  {
+    "category": "ci_cd",
+    "name": "flagsmith",
+    "version": "0.39.0"
+  },
+  {
+    "category": "ci_cd",
+    "name": "flux",
+    "version": "Latest"
+  },
+  {
+    "category": "security",
+    "name": "gatekeeper",
+    "version": "3.4.0"
+  },
+  {
+    "category": "management",
+    "name": "ghost",
+    "plans": "5GB, 10GB, 15GB",
+    "version": "5.98.0"
+  },
+  {
+    "category": "management",
+    "name": "gimlet",
+    "version": "v0.17.2"
+  },
+  {
+    "category": "management",
+    "name": "gitea",
+    "version": "1.12.5"
+  },
+  {
+    "category": "management",
+    "dependencies": "cert-manager",
+    "name": "gitlab",
+    "plans": "Community edition, Enterprise edition",
+    "version": "16.2.3"
+  },
+  {
+    "category": "architecture",
+    "name": "gloo-edge",
+    "version": "latest"
+  },
+  {
+    "category": "architecture",
+    "dependencies": "traefik2-nodeport, metrics-server, civo-cluster-autoscaler",
+    "name": "grapple-solution-framework",
+    "version": "0.2.8"
+  },
+  {
+    "category": "architecture",
+    "name": "haproxy",
+    "version": "1.5"
+  },
+  {
+    "category": "management",
+    "name": "helm",
+    "version": "2.16.5"
+  },
+  {
+    "category": "architecture",
+    "name": "istio",
+    "plans": "Istio Latest, Istio v1.10.1, Istio v1.9.5, Istio v1.8.6",
+    "version": "multiple"
+  },
+  {
+    "category": "ci_cd",
+    "name": "jenkins",
+    "plans": "5GB, 10GB, 20GB",
+    "version": "2.462.3"
+  },
+  {
+    "category": "management",
+    "dependencies": "mariadb:5GB, cert-manager",
+    "name": "joomla",
+    "plans": "5GB, 10GB, 20GB",
+    "version": "5.2.0"
+  },
+  {
+    "category": "architecture",
+    "name": "kafka",
+    "version": "2.7.0"
+  },
+  {
+    "category": "architecture",
+    "name": "keda",
+    "version": "2.15.1"
+  },
+  {
+    "category": "ci_cd",
+    "name": "keptn",
+    "version": "0.8.7"
+  },
+  {
+    "category": "management",
+    "dependencies": "cert-manager",
+    "name": "ketch",
+    "version": "0.7.0"
+  },
+  {
+    "category": "security",
+    "name": "keycloak",
+    "version": "26.0.2"
+  },
+  {
+    "category": "architecture",
+    "name": "kong-ingress-controller",
+    "version": "3.0.1"
+  },
+  {
+    "category": "architecture",
+    "name": "kriten",
+    "version": "4.0.1"
+  },
+  {
+    "category": "security",
+    "name": "kube-hunter",
+    "version": "latest"
+  },
+  {
+    "category": "security",
+    "name": "kubeclarity",
+    "version": "Latest"
+  },
+  {
+    "category": "management",
+    "name": "kubefirst",
+    "version": "v2.6.1"
+  },
+  {
+    "category": "management",
+    "name": "kubeflow",
+    "version": "1.6.0-rc.1"
+  },
+  {
+    "category": "management",
+    "name": "kubenav",
+    "version": "3.1.0"
+  },
+  {
+    "category": "management",
+    "name": "kubernetes-dashboard",
+    "version": "v2.4.0"
+  },
+  {
+    "category": "security",
+    "name": "kubernetes-external-secrets",
+    "version": "0.9.14"
+  },
+  {
+    "category": "ci_cd",
+    "dependencies": "argocd, tekton, traefik2-nodeport",
+    "name": "kuberocketci",
+    "plans": "GitHub, GitLab",
+    "version": "3.9.0"
+  },
+  {
+    "category": "management",
+    "name": "kubesphere",
+    "version": "v3.4.1"
+  },
+  {
+    "category": "management",
+    "name": "kubevela",
+    "version": "1.0.1"
+  },
+  {
+    "category": "management",
+    "name": "kubevious",
+    "version": "v1.0.3"
+  },
+  {
+    "category": "security",
+    "dependencies": "cert-manager",
+    "name": "kubewarden",
+    "version": "v1.17.0"
+  },
+  {
+    "category": "security",
+    "name": "kyverno",
+    "version": "1.8.2"
+  },
+  {
+    "category": "architecture",
+    "name": "linkerd",
+    "plans": "Linkerd Minimal, Linkerd & Jaeger, Linkerd with Dashboard, Linkerd with Dashboard & Jaeger",
+    "version": "Latest"
+  },
+  {
+    "category": "ci_cd",
+    "name": "litmuschaos",
+    "version": "2.0.0"
+  },
+  {
+    "category": "monitoring",
+    "dependencies": "prometheus-operator",
+    "name": "loki",
+    "version": "v2.9.11"
+  },
+  {
+    "category": "storage",
+    "name": "longhorn",
+    "version": "1.3.2"
+  },
+  {
+    "category": "architecture",
+    "name": "maesh",
+    "version": "v1.4.5"
+  },
+  {
+    "category": "database",
+    "name": "mariadb",
+    "plans": "5GB, 10GB, 20GB",
+    "version": "11.5.2"
+  },
+  {
+    "category": "architecture",
+    "name": "metrics-server",
+    "version": "(default)"
+  },
+  {
+    "category": "storage",
+    "name": "minio",
+    "plans": "5GB, 10GB, 20GB",
+    "version": "2019-08-29"
+  },
+  {
+    "category": "database",
+    "name": "mongodb",
+    "plans": "5GB, 10GB, 20GB",
+    "version": "4.2.12"
+  },
+  {
+    "category": "monitoring",
+    "name": "netdata",
+    "version": "Latest"
+  },
+  {
+    "category": "security",
+    "name": "neuvector",
+    "version": "latest"
+  },
+  {
+    "category": "management",
+    "dependencies": "mariadb:5GB, cert-manager",
+    "name": "nextcloud",
+    "plans": "5GB, 10GB, 20GB",
+    "version": "30.0.1"
+  },
+  {
+    "category": "ci_cd",
+    "name": "nexus3",
+    "version": "3.30.1"
+  },
+  {
+    "category": "architecture",
+    "name": "nginx",
+    "version": "latest"
+  },
+  {
+    "category": "architecture",
+    "name": "ngrok-ingress-controller",
+    "version": "0.12.1"
+  },
+  {
+    "category": "architecture",
+    "name": "nodered",
+    "plans": "5GB, 10GB, 20GB",
+    "version": "1.2.7"
+  },
+  {
+    "category": "architecture",
+    "name": "openfaas",
+    "version": "0.18.0"
+  },
+  {
+    "category": "monitoring",
+    "name": "openobserve",
+    "version": "v0.8.1"
+  },
+  {
+    "category": "security",
+    "name": "paralus",
+    "version": "0.2.3"
+  },
+  {
+    "category": "monitoring",
+    "name": "parca",
+    "version": "v0.15.0"
+  },
+  {
+    "category": "database",
+    "name": "percona-mysql",
+    "plans": "10GB, 20GB, 50GB",
+    "version": "1.11.0"
+  },
+  {
+    "category": "management",
+    "name": "permission-manager",
+    "version": "1.6.0"
+  },
+  {
+    "category": "monitoring",
+    "name": "pmm",
+    "version": "2.36.0"
+  },
+  {
+    "category": "security",
+    "name": "polaris",
+    "version": "7.3.2"
+  },
+  {
+    "category": "management",
+    "name": "portainer",
+    "plans": "Community edition, Business edition",
+    "version": "2.16.2"
+  },
+  {
+    "category": "database",
+    "name": "postgresql",
+    "plans": "5GB, 10GB, 20GB",
+    "version": "17"
+  },
+  {
+    "category": "management",
+    "name": "projectsveltos",
+    "version": "v0.40.0"
+  },
+  {
+    "category": "monitoring",
+    "name": "prometheus-operator",
+    "version": "0.38.1"
+  },
+  {
+    "category": "monitoring",
+    "name": "pyroscope",
+    "version": "0.2.5"
+  },
+  {
+    "category": "architecture",
+    "name": "rabbitmq",
+    "version": "4.0.3-management"
+  },
+  {
+    "category": "management",
+    "dependencies": "cert-manager",
+    "name": "rancher",
+    "version": "2.9.3"
+  },
+  {
+    "category": "database",
+    "name": "redis",
+    "version": "7.4-alpine"
+  },
+  {
+    "category": "architecture",
+    "name": "rekor",
+    "version": "0.2.2"
+  },
+  {
+    "category": "architecture",
+    "name": "reloader",
+    "version": "v1.1.0"
+  },
+  {
+    "category": "database",
+    "name": "rqlite",
+    "plans": "1GB, 5GB, 10GB, 3Replicas",
+    "version": "8.32.4"
+  },
+  {
+    "category": "architecture",
+    "name": "sealed-secrets",
+    "version": "v0.26.2"
+  },
+  {
+    "category": "ci_cd",
+    "name": "selenium",
+    "version": "4"
+  },
+  {
+    "category": "management",
+    "dependencies": "cert-manager",
+    "name": "shipa",
+    "version": "1.7.2"
+  },
+  {
+    "category": "monitoring",
+    "name": "siglens-oss",
+    "version": "0.1.22"
+  },
+  {
+    "category": "management",
+    "dependencies": "cert-manager",
+    "name": "spinkube",
+    "version": "v0.2.0"
+  },
+  {
+    "category": "architecture",
+    "name": "system-upgrade-controller",
+    "version": "v0.6.2"
+  },
+  {
+    "category": "ci_cd",
+    "dependencies": "metrics-server",
+    "name": "tekton",
+    "version": "v0.50.5"
+  },
+  {
+    "category": "architecture",
+    "name": "traefik2-loadbalancer",
+    "version": "2.11.0"
+  },
+  {
+    "category": "architecture",
+    "name": "traefik2-nodeport",
+    "version": "2.9.4"
+  },
+  {
+    "category": "management",
+    "name": "unifi-controller",
+    "version": "stable-6"
+  },
+  {
+    "category": "monitoring",
+    "name": "uptime-kuma",
+    "plans": "1GB, 2GB",
+    "version": "1.23.3"
+  },
+  {
+    "category": "security",
+    "name": "vault",
+    "plans": "Standalone, Dev, High-Availability",
+    "version": "0.24.0"
+  },
+  {
+    "category": "management",
+    "name": "volcano",
+    "version": "v1.10.0"
+  },
+  {
+    "category": "monitoring",
+    "name": "weavescope",
+    "version": "v1.13.2"
+  },
+  {
+    "category": "management",
+    "dependencies": "mariadb:5GB",
+    "name": "wordpress",
+    "plans": "5GB, 10GB, 20GB",
+    "version": "5.6.2"
+  }
+]
