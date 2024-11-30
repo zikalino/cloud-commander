@@ -5,7 +5,7 @@ header:
     logo: icon.webp
 form:
   - $include: az/__az_storage_account_selector.yaml
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems:

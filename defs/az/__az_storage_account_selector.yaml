@@ -1,4 +1,4 @@
-- type: fieldset
+- type: section
   subitems:
     - type: radio-group
       id: radio-group-storage-account-select-or-create
@@ -16,8 +16,7 @@
           variable: storage-account-creation
           default: false
   
-- type: fieldset
-  id: fieldset-storage-account-creation
+- type: section
   show-if:
     variable: storage-account-creation
     value: create
@@ -43,8 +42,7 @@
       install: az storage account create  --resource-group ${resource_group_name} --name ${storage_account_name} --location ${storage_account_region}
       uninstall: az storage account delete --resource-group ${resource_group_name} --name ${storage_account_name}
 
-- type: fieldset
-  id: fieldset-storage-account-selection
+- type: section
   show-if:
     variable: storage-account-creation
     value: select

@@ -7,7 +7,7 @@ header:
 form:
   - $include: az/__az_resource_group_select_or_create.yaml
 
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems:
@@ -30,7 +30,7 @@ form:
   #
   # FUNCTION APP ITSELF
   #
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems:

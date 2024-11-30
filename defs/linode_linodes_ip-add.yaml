@@ -22,7 +22,7 @@ header:
     title: linode linodes ip-add
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems: 

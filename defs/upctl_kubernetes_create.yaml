@@ -71,7 +71,7 @@ header:
     title: upctl kubernetes create
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - $include: upctl/__upctl_network_list_selector.yaml
       - type: row

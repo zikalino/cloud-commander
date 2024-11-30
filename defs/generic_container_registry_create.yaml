@@ -5,35 +5,35 @@ header:
     title: Create Container Registry
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - $include: __generic_provider_selector.yaml
 
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-linode
     subitems:
       - $include: generic_not_available.yaml
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-az
     subitems:
       - $include: generic_container_registry_create_az.yaml
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-upctl
     subitems:
       - $include: generic_not_available.yaml
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-doctl
     subitems:
       - $include: generic_container_registry_create_doctl.yaml
-  - type: fieldset
+  - type: section
     subitems:
       - type: 'output-row'
         data: output

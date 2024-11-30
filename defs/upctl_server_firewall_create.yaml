@@ -67,7 +67,7 @@ header:
     title: upctl server firewall create
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems: 

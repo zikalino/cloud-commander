@@ -1,7 +1,7 @@
 type: layout-form
 id: root
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: link-row
         text: Check documentation on Cloud Commander can be found here

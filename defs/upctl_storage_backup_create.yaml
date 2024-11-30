@@ -36,7 +36,7 @@ header:
     title: upctl storage backup create
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems: 

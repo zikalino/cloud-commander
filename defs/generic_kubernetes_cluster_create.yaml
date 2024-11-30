@@ -5,14 +5,14 @@ header:
     title: Create Kubernetes Cluster
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - $include: __generic_provider_selector.yaml
 
   #
   # Azure
   #
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-az
@@ -21,7 +21,7 @@ form:
   #
   # Civo
   #
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-civo
@@ -30,7 +30,7 @@ form:
   #
   # Digital Ocean
   #      
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-doctl
@@ -39,7 +39,7 @@ form:
   #
   # Linode
   #      
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-linode
@@ -48,13 +48,13 @@ form:
   #
   # UpCloud
   #      
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-upctl
     subitems:
       - $include: generic_kubernetes_cluster_create_upctl.yaml
-  - type: fieldset
+  - type: section
     subitems:
       - type: 'output-row'
         data: output

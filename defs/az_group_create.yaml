@@ -43,7 +43,7 @@ header:
     title: az group create
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - $include: az/__az_region_selector.yaml
       - type: row

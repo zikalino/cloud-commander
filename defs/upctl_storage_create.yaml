@@ -56,7 +56,7 @@ header:
     title: upctl storage create
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems: 

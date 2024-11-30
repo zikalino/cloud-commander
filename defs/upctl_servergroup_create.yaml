@@ -61,7 +61,7 @@ header:
     title: Create Server Group
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems:

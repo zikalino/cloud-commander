@@ -59,7 +59,7 @@ header:
     title: upctl server network-interface create
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems: 

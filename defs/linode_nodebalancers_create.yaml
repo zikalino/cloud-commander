@@ -70,7 +70,7 @@ header:
     title: linode nodebalancers create
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - $include: linode/__linode_regions_list_selector.yaml
       - type: row

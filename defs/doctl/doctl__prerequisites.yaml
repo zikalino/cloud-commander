@@ -1,7 +1,7 @@
 type: layout-form
 id: root
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: text-block
         width: wide

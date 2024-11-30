@@ -55,7 +55,7 @@ header:
     title: upctl kubernetes nodegroup create
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems: 

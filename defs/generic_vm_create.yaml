@@ -7,44 +7,44 @@ header:
     logo: icon.webp
 form:
 
-  - type: fieldset
+  - type: section
     subitems:
       - type: link-row
         text: Read more about virtual machines here
         link: https://open.substack.com/pub/zikalino/p/create-virtual-machines-using-cloud
       - $include: __generic_provider_selector.yaml
 
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-linode
     subitems:
       - $include: generic_vm_create_linode.yaml
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-az
     subitems:
       - $include: generic_vm_create_az.yaml
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-civo
     subitems:
       - $include: generic_vm_create_civo.yaml
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-upctl
     subitems:
       - $include: generic_vm_create_upctl.yaml
-  - type: fieldset
+  - type: section
     show-if:
       variable: cloud_provider
       value: cloud-doctl
     subitems:
       - $include: generic_vm_create_doctl.yaml
-  - type: fieldset
+  - type: section
     subitems:
       - type: 'output-row'
         data: output

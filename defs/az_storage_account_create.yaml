@@ -6,7 +6,7 @@ header:
 form:
   - $include: az/__az_resource_group_select_or_create.yaml
 
-  - type: fieldset
+  - type: section
     subitems:
       - $include: az/__az_region_selector.yaml
         prefix: storage_account_

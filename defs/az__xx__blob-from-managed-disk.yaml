@@ -4,14 +4,14 @@ header:
     title: Export Managed Disk as Blob
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
     - $include: az/__az_disk_selector.yaml
-  - type: fieldset
+  - type: section
     subitems:
     - $include: az/__az_storage_container_selector.yaml
 
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems:

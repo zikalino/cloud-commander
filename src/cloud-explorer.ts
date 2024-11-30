@@ -232,7 +232,7 @@ function createDetailsView(view: any, id: string) {
       let yml = loadYaml(extensionContext.extensionPath + "/defs/empty.yaml");
       yml['form'] = [
         {
-          type: 'fieldset',
+          type: 'section',
           subitems: []
         }
       ];

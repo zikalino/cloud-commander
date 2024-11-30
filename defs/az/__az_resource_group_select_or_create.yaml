@@ -1,4 +1,4 @@
-- type: fieldset
+- type: section
   subitems:
     - type: radio-group
       subitems:
@@ -13,7 +13,7 @@
           variable: resource-group-creation
           default: false
   
-- type: fieldset
+- type: section
   show-if:
     variable: resource-group-creation
     value: create
@@ -36,7 +36,7 @@
       install: az group create --name ${resource_group_name} --location ${region}
       uninstall: az group delete --name ${resource_group_name} --yes
 
-- type: fieldset
+- type: section
   show-if:
     variable: resource-group-creation
     value: select

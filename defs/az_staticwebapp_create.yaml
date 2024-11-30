@@ -6,7 +6,7 @@ header:
     logo: icon.webp
 form:
   - $include: az/__az_resource_group_select_or_create.yaml
-  - type: fieldset
+  - type: section
     subitems:
       - type: text-block
         font: header-1

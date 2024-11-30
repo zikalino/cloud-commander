@@ -12,7 +12,7 @@ form:
   #
   # LOGIC APP APP ITSELF
   #
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems:

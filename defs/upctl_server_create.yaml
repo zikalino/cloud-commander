@@ -130,7 +130,7 @@ header:
     title: Create Server
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - $include: upctl/__upctl_zone_list_selector.yaml
       - type: row

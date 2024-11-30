@@ -5,7 +5,7 @@ header:
     title: Linode (Virtual Machine)
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems:
@@ -21,7 +21,7 @@ form:
         produces:
           - variable: password
 
-  - type: fieldset
+  - type: section
     subitems:
       - type: 'action-row'
         name: Create Linode

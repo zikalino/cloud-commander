@@ -4,7 +4,7 @@ form:
   #
   # AWS CLI
   #
-  - type: fieldset
+  - type: section
     platform: win32
     subitems:
       - type: text-block

@@ -45,7 +45,7 @@ header:
     title: upctl network create
     logo: icon.webp
 form:
-  - type: fieldset
+  - type: section
     subitems:
       - type: row
         subitems: 
