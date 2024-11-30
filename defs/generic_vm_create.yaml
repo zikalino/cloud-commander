@@ -6,8 +6,12 @@ header:
     title: Create Virtual Machine
     logo: icon.webp
 form:
+
   - type: fieldset
     subitems:
+      - type: link-row
+        text: Read more about virtual machines here
+        link: https://open.substack.com/pub/zikalino/p/create-virtual-machines-using-cloud
       - $include: __generic_provider_selector.yaml
 
   - type: fieldset
