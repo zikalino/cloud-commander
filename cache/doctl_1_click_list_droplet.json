@@ -1,0 +1,1074 @@
+[
+  {
+    "slug": "rubyonrails-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "phpmyadmin-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "mean",
+    "type": "droplet"
+  },
+  {
+    "slug": "mern",
+    "type": "droplet"
+  },
+  {
+    "slug": "jitsiserver-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "farm",
+    "type": "droplet"
+  },
+  {
+    "slug": "dokku-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "discourse-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "mongodb-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "lamp-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "flask",
+    "type": "droplet"
+  },
+  {
+    "slug": "supabase",
+    "type": "droplet"
+  },
+  {
+    "slug": "ubuntudesktopgno",
+    "type": "droplet"
+  },
+  {
+    "slug": "linuxgsm",
+    "type": "droplet"
+  },
+  {
+    "slug": "minecraftforgeed",
+    "type": "droplet"
+  },
+  {
+    "slug": "hashicorpvault",
+    "type": "droplet"
+  },
+  {
+    "slug": "wordpress-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "rabbitmq",
+    "type": "droplet"
+  },
+  {
+    "slug": "nodejs-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "ghost-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "django-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "mysql-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "blueskysocialpds",
+    "type": "droplet"
+  },
+  {
+    "slug": "docker-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "lemp-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "plesk-pleskalmalinux",
+    "type": "droplet"
+  },
+  {
+    "slug": "plesk-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "litespeedtechnol-openlitespeedcla-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "litespeedtechnol-cyberpaneljoomla",
+    "type": "droplet"
+  },
+  {
+    "slug": "litespeedtechnol-openlitespeeddru",
+    "type": "droplet"
+  },
+  {
+    "slug": "litespeedtechnol-openlitespeedjoo-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "litespeedtechnol-openlitespeednod-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "litespeedtechnol-openlitespeeddja-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "litespeedtechnol-openlitespeedrai-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "litespeedtechnol-openlitespeedwor-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "litespeedtechnol-cyberpanel-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "softlab24-opensourcesocial-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "fathom-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "nknfullnode-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "cloudron-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "helpyio-helpypro-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "gitlab-gitlabenterprise-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "bitwarden",
+    "type": "droplet"
+  },
+  {
+    "slug": "passboltsa-passboltce-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "cpanel-cpanelwhmforubun",
+    "type": "droplet"
+  },
+  {
+    "slug": "cpanel-cpanelwhmforalma",
+    "type": "droplet"
+  },
+  {
+    "slug": "microwebercms-microweber-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "caprover-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "akaunting-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "acra-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "openvpn-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "opentradestatist-bigbluebuttonser-16-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "metabase-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "rstudio-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "ascensiosystem-onlyoffice-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "ascensiosystemsi-onlyofficeeditor-18-04-4",
+    "type": "droplet"
+  },
+  {
+    "slug": "restya-restyaboard-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "restya-restyaboardcento-8-3",
+    "type": "droplet"
+  },
+  {
+    "slug": "rocketchat-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "zabbix-7-6",
+    "type": "droplet"
+  },
+  {
+    "slug": "zabbix-zabbixproxy60",
+    "type": "droplet"
+  },
+  {
+    "slug": "zabbix-zabbixserver64",
+    "type": "droplet"
+  },
+  {
+    "slug": "zabbix-zabbixproxy64",
+    "type": "droplet"
+  },
+  {
+    "slug": "zabbix-zabbixserver60",
+    "type": "droplet"
+  },
+  {
+    "slug": "zabbix-zabbixserver62",
+    "type": "droplet"
+  },
+  {
+    "slug": "nakama-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "kandralabs-zulip-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "flashphoner-7-6",
+    "type": "droplet"
+  },
+  {
+    "slug": "rethinkdb-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "opencart-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "fastpanel-deb-9",
+    "type": "droplet"
+  },
+  {
+    "slug": "antmedia-antmediaserverco-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "antmedia-antmediaserveren-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "thingsboardpe-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-foldinghome-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "perconamonitorin-7",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-opensearch",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-matrixsynapsebac-10",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-piholevpn",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-minecraftjavaedi-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-erpodoo",
+    "type": "droplet"
+  },
+  {
+    "slug": "mariadb",
+    "type": "droplet"
+  },
+  {
+    "slug": "clickhouse",
+    "type": "droplet"
+  },
+  {
+    "slug": "elasticsearch",
+    "type": "droplet"
+  },
+  {
+    "slug": "temporal",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-counterstrike2",
+    "type": "droplet"
+  },
+  {
+    "slug": "codertechnologie-vscodeserver",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-paperminecraftse",
+    "type": "droplet"
+  },
+  {
+    "slug": "airflow",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-valkey",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-keycloak",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-jupyternotebook",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-apachekafka",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-conduktorconsole",
+    "type": "droplet"
+  },
+  {
+    "slug": "grafana-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-ollamawithopenwe",
+    "type": "droplet"
+  },
+  {
+    "slug": "prometheus-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-anaconda",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-kibana",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-logstash",
+    "type": "droplet"
+  },
+  {
+    "slug": "sharklabs-dropletnfsserver",
+    "type": "droplet"
+  },
+  {
+    "slug": "doteamaccount-pocketbase",
+    "type": "droplet"
+  },
+  {
+    "slug": "flexifyio-flexifyiomulticl-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "azuracast-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "chamilo-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "zeslecp-7",
+    "type": "droplet"
+  },
+  {
+    "slug": "jelastic-jelasticpaas-7",
+    "type": "droplet"
+  },
+  {
+    "slug": "jelastic-virtuozzoapplica",
+    "type": "droplet"
+  },
+  {
+    "slug": "apisnetworks-apiscp-8-3",
+    "type": "droplet"
+  },
+  {
+    "slug": "aplitel-vitalpbx-7",
+    "type": "droplet"
+  },
+  {
+    "slug": "wikijs-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "mozilla-hubscloudpersona-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "optimajet-workflowserver3",
+    "type": "droplet"
+  },
+  {
+    "slug": "eltrino-magento2opensour-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "nmtec-erxes-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "meilisas-meilisearch-10",
+    "type": "droplet"
+  },
+  {
+    "slug": "livehelperchat-7-8-2003",
+    "type": "droplet"
+  },
+  {
+    "slug": "analythium-shinyproxy-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "ultrahorizon-uhvpn-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "simontelephonics-freepbx-7-8",
+    "type": "droplet"
+  },
+  {
+    "slug": "nethesis-nethserver-7",
+    "type": "droplet"
+  },
+  {
+    "slug": "runcloud-runcloud2004-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "flipstarter-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "bagisto-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "webkul-qloapps-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "curiositygmbh-curiosity-16-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "devdojo-laravel-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "harperdb-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "mgtcommercegmbh-cloudpanel2ubunt",
+    "type": "droplet"
+  },
+  {
+    "slug": "searchblox-searchbloxenterp-7-6",
+    "type": "droplet"
+  },
+  {
+    "slug": "shiftedit-serverwand-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "vodianetworks-vodiaphonesystem-10",
+    "type": "droplet"
+  },
+  {
+    "slug": "eummena-moodle-10",
+    "type": "droplet"
+  },
+  {
+    "slug": "selfhostedpro-yacht-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "varnishsoftware-varnishcache-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "traccar-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "csmm-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "saltcorn-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "auspiciaab-theplanminderpos-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "openboxes-openboxesserver",
+    "type": "droplet"
+  },
+  {
+    "slug": "budibase-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "doppler-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "appwrite-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "3cxcommunication-3cx",
+    "type": "droplet"
+  },
+  {
+    "slug": "bunkercloudservi-warpspeedvpn-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "warpspeedvpn-wpcontroller",
+    "type": "droplet"
+  },
+  {
+    "slug": "threatwatch-twigs-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "owncast-10",
+    "type": "droplet"
+  },
+  {
+    "slug": "autopanel-selfhostedemails",
+    "type": "droplet"
+  },
+  {
+    "slug": "autopanel-postfix",
+    "type": "droplet"
+  },
+  {
+    "slug": "sandflysecurity-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "deskpro",
+    "type": "droplet"
+  },
+  {
+    "slug": "znuny-znunylts-10",
+    "type": "droplet"
+  },
+  {
+    "slug": "humhubgmbhkg-humhub-10",
+    "type": "droplet"
+  },
+  {
+    "slug": "greendeployhq-django32lts-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "chevereto-xrdebug",
+    "type": "droplet"
+  },
+  {
+    "slug": "chevereto-cheveretofree",
+    "type": "droplet"
+  },
+  {
+    "slug": "chevereto-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "severalnines-clustercontrol-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "questdb-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "appsmith-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "cubitetechnologi-cubite-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "nirvatosoftware-nirvashare-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "codelathe-filecloud-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "photoprism-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "devrel-teleport-20-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "utnadmins-utunnelvpn",
+    "type": "droplet"
+  },
+  {
+    "slug": "kasmtechnologies-kasmworkspaces-18-04",
+    "type": "droplet"
+  },
+  {
+    "slug": "gravitl-netmaker",
+    "type": "droplet"
+  },
+  {
+    "slug": "perforce-perforcehelixcor",
+    "type": "droplet"
+  },
+  {
+    "slug": "airbyte",
+    "type": "droplet"
+  },
+  {
+    "slug": "victoriametrics-victorialogssing",
+    "type": "droplet"
+  },
+  {
+    "slug": "victoriametrics-victoriametricss",
+    "type": "droplet"
+  },
+  {
+    "slug": "kuyio-konnectvpna",
+    "type": "droplet"
+  },
+  {
+    "slug": "edgedb",
+    "type": "droplet"
+  },
+  {
+    "slug": "goauthentikio-authentik",
+    "type": "droplet"
+  },
+  {
+    "slug": "postalsystemso-emailengine",
+    "type": "droplet"
+  },
+  {
+    "slug": "monetdbsolutions-monetdb",
+    "type": "droplet"
+  },
+  {
+    "slug": "oneledger-mainnetfullnode",
+    "type": "droplet"
+  },
+  {
+    "slug": "mjmair-inventree",
+    "type": "droplet"
+  },
+  {
+    "slug": "coder",
+    "type": "droplet"
+  },
+  {
+    "slug": "soos-soosdastdroplet",
+    "type": "droplet"
+  },
+  {
+    "slug": "stacksfoundation-stacksblockchain",
+    "type": "droplet"
+  },
+  {
+    "slug": "ossrs-srs",
+    "type": "droplet"
+  },
+  {
+    "slug": "origintrail-origintraildkgma",
+    "type": "droplet"
+  },
+  {
+    "slug": "origintrail-origintraildkgte",
+    "type": "droplet"
+  },
+  {
+    "slug": "easypanel",
+    "type": "droplet"
+  },
+  {
+    "slug": "osmosislabs-osmosis",
+    "type": "droplet"
+  },
+  {
+    "slug": "nextcloudgmbh-nextcloud",
+    "type": "droplet"
+  },
+  {
+    "slug": "hollaex-hollaexkit",
+    "type": "droplet"
+  },
+  {
+    "slug": "convoy",
+    "type": "droplet"
+  },
+  {
+    "slug": "smartarget-wordpresswoocomm",
+    "type": "droplet"
+  },
+  {
+    "slug": "smartarget-prestashop",
+    "type": "droplet"
+  },
+  {
+    "slug": "npool",
+    "type": "droplet"
+  },
+  {
+    "slug": "apliteni-keitaro",
+    "type": "droplet"
+  },
+  {
+    "slug": "axlabs-1clicknodeforneo",
+    "type": "droplet"
+  },
+  {
+    "slug": "wordsmythcreatio-aresmush",
+    "type": "droplet"
+  },
+  {
+    "slug": "nginx",
+    "type": "droplet"
+  },
+  {
+    "slug": "thegrampsproject-grampsweb",
+    "type": "droplet"
+  },
+  {
+    "slug": "botguardo-botguardgatekeep",
+    "type": "droplet"
+  },
+  {
+    "slug": "aqtraplatform",
+    "type": "droplet"
+  },
+  {
+    "slug": "haltdos-haltdoscommunity",
+    "type": "droplet"
+  },
+  {
+    "slug": "haltdos-haltdoswafpro",
+    "type": "droplet"
+  },
+  {
+    "slug": "openblocks",
+    "type": "droplet"
+  },
+  {
+    "slug": "ibsurgeon-hqbirdfirebirdv5",
+    "type": "droplet"
+  },
+  {
+    "slug": "ibsurgeon-hqbirdfirebirdv4",
+    "type": "droplet"
+  },
+  {
+    "slug": "ibsurgeon-hqbirdfirebirdv3",
+    "type": "droplet"
+  },
+  {
+    "slug": "ibsurgeon-hqbirdfirebirdv2",
+    "type": "droplet"
+  },
+  {
+    "slug": "chaarmiworlds-metaverse",
+    "type": "droplet"
+  },
+  {
+    "slug": "activepieces",
+    "type": "droplet"
+  },
+  {
+    "slug": "seatablegmbh-seatable",
+    "type": "droplet"
+  },
+  {
+    "slug": "flowforge",
+    "type": "droplet"
+  },
+  {
+    "slug": "flowforge-flowfuse",
+    "type": "droplet"
+  },
+  {
+    "slug": "ispmanager-ispmanager6",
+    "type": "droplet"
+  },
+  {
+    "slug": "dreamfactory",
+    "type": "droplet"
+  },
+  {
+    "slug": "spinupwp",
+    "type": "droplet"
+  },
+  {
+    "slug": "multiversx-multiversxtestne",
+    "type": "droplet"
+  },
+  {
+    "slug": "multiversx-multiversxobserv",
+    "type": "droplet"
+  },
+  {
+    "slug": "multiversx-multiversxfullob",
+    "type": "droplet"
+  },
+  {
+    "slug": "caligrafybypostc-caligrafy",
+    "type": "droplet"
+  },
+  {
+    "slug": "neuralmagic-deepsparseinfere",
+    "type": "droplet"
+  },
+  {
+    "slug": "yeastar-yeastarpseriesph",
+    "type": "droplet"
+  },
+  {
+    "slug": "supernetworks-spr",
+    "type": "droplet"
+  },
+  {
+    "slug": "swarmfoundation-swarmlightnode",
+    "type": "droplet"
+  },
+  {
+    "slug": "bevywise-bevywisemqttrout",
+    "type": "droplet"
+  },
+  {
+    "slug": "tebex-tebexrconadapter",
+    "type": "droplet"
+  },
+  {
+    "slug": "border0",
+    "type": "droplet"
+  },
+  {
+    "slug": "askarlabs-passwordlab",
+    "type": "droplet"
+  },
+  {
+    "slug": "quantrocket",
+    "type": "droplet"
+  },
+  {
+    "slug": "rackware-rackwarecloudmig",
+    "type": "droplet"
+  },
+  {
+    "slug": "pirichaintechnol-pirisubchainsnod",
+    "type": "droplet"
+  },
+  {
+    "slug": "superinverse-statusnook",
+    "type": "droplet"
+  },
+  {
+    "slug": "drakkarsoftware-octobot",
+    "type": "droplet"
+  },
+  {
+    "slug": "tips4designsrl-uxwizz",
+    "type": "droplet"
+  },
+  {
+    "slug": "skudonet-skudonetv10",
+    "type": "droplet"
+  },
+  {
+    "slug": "depomo-chartbrew",
+    "type": "droplet"
+  },
+  {
+    "slug": "openpanel",
+    "type": "droplet"
+  },
+  {
+    "slug": "decyphertekio-jenkinscicd",
+    "type": "droplet"
+  },
+  {
+    "slug": "decyphertekio-misp",
+    "type": "droplet"
+  },
+  {
+    "slug": "decyphertekio-uptimekuma",
+    "type": "droplet"
+  },
+  {
+    "slug": "planesoftware-planecommunityed",
+    "type": "droplet"
+  },
+  {
+    "slug": "babybuddy",
+    "type": "droplet"
+  },
+  {
+    "slug": "in4it-vpnserver",
+    "type": "droplet"
+  },
+  {
+    "slug": "uibakery",
+    "type": "droplet"
+  },
+  {
+    "slug": "aapanel",
+    "type": "droplet"
+  },
+  {
+    "slug": "aapanel-aapanellnmp",
+    "type": "droplet"
+  },
+  {
+    "slug": "linuxpatchcom-linuxpatchapplia",
+    "type": "droplet"
+  },
+  {
+    "slug": "xplex",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-llama31405binstructfp8",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-qwen27b1x",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-researchhermes3l",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-mixtral8x22binst",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-nresearchhermes3llama318b1x",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-mistral7binstruc",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-noushermes2mixtr",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-googlegemma227bi",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-googlegemma29bit",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-mixtral8x7binstructv018x",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-metallamallama3170binstruct1",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-metallamallama31",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-nresearchhermes3",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-mistral7binstructv038x",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-googlegemma227bit1x",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-googlegemma29b",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-metallamallama3170binstruct8",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-metallamallama318binstruct8x",
+    "type": "droplet"
+  },
+  {
+    "slug": "digitaloceanai-llama31405binstr",
+    "type": "droplet"
+  },
+  {
+    "slug": "automazeme-n8n",
+    "type": "droplet"
+  }
+]

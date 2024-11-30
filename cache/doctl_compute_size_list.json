@@ -1,0 +1,964 @@
+[
+  {
+    "slug": "s-1vcpu-512mb-10gb",
+    "memory": 512,
+    "vcpus": 1,
+    "disk": 10,
+    "price_monthly": 4,
+    "price_hourly": 0.00595,
+    "regions": [
+      "ams3",
+      "fra1",
+      "nyc1",
+      "sfo3",
+      "sgp1",
+      "syd1"
+    ],
+    "available": true,
+    "transfer": 0.5,
+    "description": "Basic",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 10,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-1vcpu-1gb",
+    "memory": 1024,
+    "vcpus": 1,
+    "disk": 25,
+    "price_monthly": 6,
+    "price_hourly": 0.00893,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo2",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 1,
+    "description": "Basic",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 25,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-1vcpu-1gb-amd",
+    "memory": 1024,
+    "vcpus": 1,
+    "disk": 25,
+    "price_monthly": 7,
+    "price_hourly": 0.01042,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 1,
+    "description": "Basic AMD",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 25,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-1vcpu-1gb-intel",
+    "memory": 1024,
+    "vcpus": 1,
+    "disk": 25,
+    "price_monthly": 7,
+    "price_hourly": 0.01042,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 1,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 25,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-1vcpu-1gb-35gb-intel",
+    "memory": 1024,
+    "vcpus": 1,
+    "disk": 35,
+    "price_monthly": 8,
+    "price_hourly": 0.0119,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 1,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 35,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-1vcpu-2gb",
+    "memory": 2048,
+    "vcpus": 1,
+    "disk": 50,
+    "price_monthly": 12,
+    "price_hourly": 0.01786,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo2",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 2,
+    "description": "Basic",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 50,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-1vcpu-2gb-amd",
+    "memory": 2048,
+    "vcpus": 1,
+    "disk": 50,
+    "price_monthly": 14,
+    "price_hourly": 0.02083,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 2,
+    "description": "Basic AMD",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 50,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-1vcpu-2gb-intel",
+    "memory": 2048,
+    "vcpus": 1,
+    "disk": 50,
+    "price_monthly": 14,
+    "price_hourly": 0.02083,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 2,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 50,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-1vcpu-2gb-70gb-intel",
+    "memory": 2048,
+    "vcpus": 1,
+    "disk": 70,
+    "price_monthly": 16,
+    "price_hourly": 0.02381,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 2,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 70,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-2vcpu-2gb",
+    "memory": 2048,
+    "vcpus": 2,
+    "disk": 60,
+    "price_monthly": 18,
+    "price_hourly": 0.02679,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo2",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 3,
+    "description": "Basic",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 60,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-2vcpu-2gb-amd",
+    "memory": 2048,
+    "vcpus": 2,
+    "disk": 60,
+    "price_monthly": 21,
+    "price_hourly": 0.03125,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 3,
+    "description": "Basic AMD",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 60,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-2vcpu-2gb-intel",
+    "memory": 2048,
+    "vcpus": 2,
+    "disk": 60,
+    "price_monthly": 21,
+    "price_hourly": 0.03125,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 3,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 60,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-2vcpu-2gb-90gb-intel",
+    "memory": 2048,
+    "vcpus": 2,
+    "disk": 90,
+    "price_monthly": 24,
+    "price_hourly": 0.03571,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 3,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 90,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-2vcpu-4gb",
+    "memory": 4096,
+    "vcpus": 2,
+    "disk": 80,
+    "price_monthly": 24,
+    "price_hourly": 0.03571,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo2",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 4,
+    "description": "Basic",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 80,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-2vcpu-4gb-amd",
+    "memory": 4096,
+    "vcpus": 2,
+    "disk": 80,
+    "price_monthly": 28,
+    "price_hourly": 0.04167,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 4,
+    "description": "Basic AMD",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 80,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-2vcpu-4gb-intel",
+    "memory": 4096,
+    "vcpus": 2,
+    "disk": 80,
+    "price_monthly": 28,
+    "price_hourly": 0.04167,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 4,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 80,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-2vcpu-4gb-120gb-intel",
+    "memory": 4096,
+    "vcpus": 2,
+    "disk": 120,
+    "price_monthly": 32,
+    "price_hourly": 0.04762,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 4,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 120,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-2vcpu-8gb-amd",
+    "memory": 8192,
+    "vcpus": 2,
+    "disk": 100,
+    "price_monthly": 42,
+    "price_hourly": 0.0625,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 5,
+    "description": "Basic AMD",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 100,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "c-2",
+    "memory": 4096,
+    "vcpus": 2,
+    "disk": 25,
+    "price_monthly": 42,
+    "price_hourly": 0.0625,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo2",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 4,
+    "description": "CPU-Optimized",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 25,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-2vcpu-8gb-160gb-intel",
+    "memory": 8192,
+    "vcpus": 2,
+    "disk": 160,
+    "price_monthly": 48,
+    "price_hourly": 0.07143,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 5,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 160,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-4vcpu-8gb",
+    "memory": 8192,
+    "vcpus": 4,
+    "disk": 160,
+    "price_monthly": 48,
+    "price_hourly": 0.07143,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo2",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 5,
+    "description": "Basic",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 160,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-4vcpu-8gb-amd",
+    "memory": 8192,
+    "vcpus": 4,
+    "disk": 160,
+    "price_monthly": 56,
+    "price_hourly": 0.08333,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 5,
+    "description": "Basic AMD",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 160,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-4vcpu-8gb-intel",
+    "memory": 8192,
+    "vcpus": 4,
+    "disk": 160,
+    "price_monthly": 56,
+    "price_hourly": 0.08333,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 5,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 160,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "g-2vcpu-8gb",
+    "memory": 8192,
+    "vcpus": 2,
+    "disk": 25,
+    "price_monthly": 63,
+    "price_hourly": 0.09375,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo2",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 4,
+    "description": "General Purpose",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 25,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-4vcpu-8gb-240gb-intel",
+    "memory": 8192,
+    "vcpus": 4,
+    "disk": 240,
+    "price_monthly": 64,
+    "price_hourly": 0.09524,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 6,
+    "description": "Basic Intel",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 240,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "gd-2vcpu-8gb",
+    "memory": 8192,
+    "vcpus": 2,
+    "disk": 50,
+    "price_monthly": 68,
+    "price_hourly": 0.10119,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo2",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 4,
+    "description": "General Purpose 2x SSD",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 50,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "s-4vcpu-16gb-amd",
+    "memory": 16384,
+    "vcpus": 4,
+    "disk": 200,
+    "price_monthly": 84,
+    "price_hourly": 0.125,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 8,
+    "description": "Basic AMD",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 200,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "m-2vcpu-16gb",
+    "memory": 16384,
+    "vcpus": 2,
+    "disk": 50,
+    "price_monthly": 84,
+    "price_hourly": 0.125,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo2",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 4,
+    "description": "Memory-Optimized",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 50,
+          "unit": "gib"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "c-4",
+    "memory": 8192,
+    "vcpus": 4,
+    "disk": 50,
+    "price_monthly": 84,
+    "price_hourly": 0.125,
+    "regions": [
+      "ams3",
+      "blr1",
+      "fra1",
+      "lon1",
+      "nyc1",
+      "nyc2",
+      "nyc3",
+      "sfo2",
+      "sfo3",
+      "sgp1",
+      "syd1",
+      "tor1"
+    ],
+    "available": true,
+    "transfer": 5,
+    "description": "CPU-Optimized",
+    "disk_info": [
+      {
+        "type": "local",
+        "size": {
+          "amount": 50,
+          "unit": "gib"
+        }
+      }
+    ]
+  }
+]
