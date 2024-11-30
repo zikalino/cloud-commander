@@ -5,9 +5,7 @@ header:
     title: Create Container Registry
     logo: icon.webp
 form:
-  - type: section
-    subitems:
-      - $include: generic/__generic_provider_selector.yaml
+  - $include: generic/__generic_provider_selector.yaml
 
   - type: section
     show-if:
