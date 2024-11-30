@@ -1,49 +1,41 @@
-- type: text-block
-  width: wide
-  font: header-1
-  content: Basic Information
-
-- type: row
+- type: section
+  title: Basic Information
   subitems:
-    - type: textfield
-      name: Name (required)
-      produces:
-        - variable: virtual_machine_name
-    - $include: az/__az_region_selector_field.yaml
-      prefix: virtual_machine_
-    - $include: az/__az_vm_size_selector_field.yaml
+    - type: row
+      subitems:
+        - type: textfield
+          name: Name (required)
+          produces:
+            - variable: virtual_machine_name
+        - $include: az/__az_region_selector_field.yaml
+          prefix: virtual_machine_
+        - $include: az/__az_vm_size_selector_field.yaml
 
-- $include: az/__az_resource_group_selector.yaml
+    - $include: az/__az_resource_group_selector.yaml
 
-- $include: generic/generic_vm_size_information.yaml
-- $include: generic/generic_vm_price_information.yaml
+    - $include: generic/generic_vm_size_information.yaml
+    - $include: generic/generic_vm_price_information.yaml
 
-- type: separator
-- type: text-block
-  width: wide
-  font: header-1
-  content: Image / Application
-- $include: az/__az_vm_image_list_selector_row.yaml
-
-- type: separator
-- type: text-block
-  width: wide
-  font: header-1
-  content: Network
-
-- type: separator
-- type: text-block
-  width: wide
-  font: header-1
-  content: Security
-
-- type: row
+- type: section
+  title: Image / Application
   subitems:
-    - type: textfield
-      narrow: true
-      name: Root Password
-      produces:
-        - variable: password
+    - $include: az/__az_vm_image_list_selector_row.yaml
+
+
+#- type: section
+#  title: Network
+#  subitems:
+
+- type: section
+  title: Security
+  subitems:
+    - type: row
+      subitems:
+        - type: textfield
+          narrow: true
+          name: Root Password
+          produces:
+            - variable: password
 
 #- type: text-block
 #  font: header-1

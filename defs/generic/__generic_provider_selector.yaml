@@ -1,9 +1,6 @@
 - type: section
+  title: Infrastructure Provider
   subitems:
-    - type: text-block
-      width: wide
-      font: header-1
-      content: Infrastructure Provider
     - type: row
       subitems:
         - type: dropdown
