@@ -49,23 +49,29 @@
 #       --trace                 Show a log of network activity while performing a command
 #   -v, --verbose               Enable verbose output
 # 
-- type: row
-  subitems: 
-    - type: textfield
-      name: Name (required)
-      description: droplet-name
-      produces: 
-        - variable: droplet_name
-    - $include: doctl/__doctl_compute_region_list_selector_field.yaml
-    - $include: doctl/__doctl_compute_size_list_selector_field.yaml
+- type: section
+  title: Basic Information
+  subitems:
+    - type: row
+      subitems: 
+        - type: textfield
+          name: Name (required)
+          description: droplet-name
+          produces: 
+            - variable: droplet_name
+        - $include: doctl/__doctl_compute_region_list_selector_field.yaml
+        - $include: doctl/__doctl_compute_size_list_selector_field.yaml
 
-- $include: generic/generic_vm_size_information.yaml
-- $include: generic/generic_vm_price_information.yaml
+    - $include: generic/generic_vm_size_information.yaml
+    - $include: generic/generic_vm_price_information.yaml
 
-- $include: doctl/__doctl_compute_image_list_selector.yaml
+- type: section
+  title: Image / Application
+  subitems:
+    - $include: doctl/__doctl_compute_image_list_selector.yaml
 
-# do we need it??
-- $include: doctl/__doctl_1_click_list_droplet_selector.yaml
+    # do we need it, or we should have some info here?
+    - $include: doctl/__doctl_1_click_list_droplet_selector.yaml
 
 
 - type: row

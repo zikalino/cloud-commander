@@ -1,27 +1,34 @@
-- type: row
+- type: section
+  title: Basic Information
   subitems:
-    - type: textfield
-      name: Name (required)
-      produces:
-        - variable: name
-    - $include: linode/__linode_regions_list_selector_field.yaml
-    - $include: linode/__linode_type_selector_field.yaml
+    - type: row
+      subitems:
+        - type: textfield
+          name: Name (required)
+          produces:
+            - variable: name
+        - $include: linode/__linode_regions_list_selector_field.yaml
+        - $include: linode/__linode_type_selector_field.yaml
 
 
-- $include: generic/generic_vm_size_information.yaml
-- $include: generic/generic_vm_price_information.yaml
+    - $include: generic/generic_vm_size_information.yaml
+    - $include: generic/generic_vm_price_information.yaml
 
-- type: row
+- type: section
+  title: Image / Application
   subitems:
-    - type: textfield
-      narrow: true
-      name: Root Password
-      produces:
-        - variable: password
+    - $include: linode/__linode_images_list_selector.yaml
 
-- type: separator
-- $include: linode/__linode_images_list_selector.yaml
-- type: separator
+- type: section
+  title: Security
+  subitems:
+    - type: row
+      subitems:
+        - type: textfield
+          narrow: true
+          name: Root Password
+          produces:
+            - variable: password
 
 - type: 'action-row'
   name: Create Linode

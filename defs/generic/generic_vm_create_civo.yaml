@@ -51,32 +51,33 @@
 #   -v, --volumes strings       List of volumes to attach at boot
 #   -w, --wait                  wait until the instance's is ready
 
-- type: row
+- type: section
+  title: Basic Information
   subitems:
-    - type: textfield
-      name: Name (required)
-      produces:
-        - variable: host_name
-    - $include: civo/__civo_region_list_selector_field.yaml
-    - $include: civo/__civo_size_list_selector_field.yaml
-# - $include: upctl/__upctl_storage_list_selector.yaml
+    - type: row
+      subitems:
+        - type: textfield
+          name: Name (required)
+          produces:
+            - variable: host_name
+        - $include: civo/__civo_region_list_selector_field.yaml
+        - $include: civo/__civo_size_list_selector_field.yaml
+    
+    # - $include: upctl/__upctl_storage_list_selector.yaml
 
-- $include: generic/generic_vm_size_information.yaml
-- $include: generic/generic_vm_price_information.yaml
+    - $include: generic/generic_vm_size_information.yaml
+    - $include: generic/generic_vm_price_information.yaml
 
-- type: separator
+- type: section
+  title: Image / Application
+  subitems:
+    - $include: civo/__civo_diskimage_list_selector.yaml
 
-- $include: civo/__civo_diskimage_list_selector.yaml
-
-- type: separator
-
-- $include: civo/__civo_firewall_list_selector.yaml
-
-- type: separator
-
-- $include: civo/__civo_network_list_selector.yaml
-
-- type: separator
+- type: section
+  title: Network
+  subitems:
+    - $include: civo/__civo_network_list_selector.yaml
+    - $include: civo/__civo_firewall_list_selector.yaml
 
 - type: 'action-row'
   name: Create Civo Instances

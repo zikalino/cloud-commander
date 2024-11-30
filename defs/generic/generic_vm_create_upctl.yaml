@@ -124,18 +124,21 @@
 #                                   Default: human                                                                                      
 # 
 
-- type: row
+- type: section
+  title: Basic Information
   subitems:
-    - type: textfield
-      name: Name (required)
-      produces:
-        - variable: host_name
-    - $include: upctl/__upctl_zone_list_selector_field.yaml
-    - $include: upctl/__upctl_server_plans_selector_field.yaml
-- $include: upctl/__upctl_storage_list_selector.yaml
+    - type: row
+      subitems:
+        - type: textfield
+          name: Name (required)
+          produces:
+            - variable: host_name
+        - $include: upctl/__upctl_zone_list_selector_field.yaml
+        - $include: upctl/__upctl_server_plans_selector_field.yaml
+    - $include: upctl/__upctl_storage_list_selector.yaml
 
-- $include: generic/generic_vm_size_information.yaml
-- $include: generic/generic_vm_price_information.yaml
+    - $include: generic/generic_vm_size_information.yaml
+    - $include: generic/generic_vm_price_information.yaml
 
 - type: separator
 
