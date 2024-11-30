@@ -83,16 +83,18 @@
           produces:
             - variable: sku
 
-- type: 'action-row'
-  name: Create Azure Container Registry
-  consumes:
-    - variable: resource_group
-      required: true
-    - variable: acr_name
-      required: true
-    - variable: sku
-      required: true
-  verify: |
-      az acr show --resource-group ${resource_group} --name ${acr_name}
-  install: az acr create --resource-group ${resource_group} --name ${acr_name} --sku ${sku}
-  uninstall: az acr delete --resource-group ${resource_group} --name ${acr_name} --yes
+- type: section
+  subitems:
+    - type: 'action-row'
+      name: Create Azure Container Registry
+      consumes:
+        - variable: resource_group
+          required: true
+        - variable: acr_name
+          required: true
+        - variable: sku
+          required: true
+      verify: |
+          az acr show --resource-group ${resource_group} --name ${acr_name}
+      install: az acr create --resource-group ${resource_group} --name ${acr_name} --sku ${sku}
+      uninstall: az acr delete --resource-group ${resource_group} --name ${acr_name} --yes

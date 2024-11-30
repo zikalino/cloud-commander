@@ -31,6 +31,7 @@ form:
       value: cloud-doctl
     subitems:
       - $include: generic/generic_container_registry_create_doctl.yaml
+
   - type: section
     subitems:
       - type: 'output-row'
