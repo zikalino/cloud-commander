@@ -58,14 +58,16 @@
 #      val-false: false
 #      produces: 
 #        - variable: wait
-- type: 'action-row'
-  expandable: false
-  name: upctl kubernetes create
-  consumes:
-    - variable: name
-      required: true
-    - variable: application_name
-      parameter: --applications
-  install: civo kubernetes create ${name} --wait
-  produces:
-    - variable: output
+- type: section
+  subitems:
+    - type: 'action-row'
+      expandable: false
+      name: upctl kubernetes create
+      consumes:
+        - variable: name
+          required: true
+        - variable: application_name
+          parameter: --applications
+      install: civo kubernetes create ${name} --wait
+      produces:
+        - variable: output

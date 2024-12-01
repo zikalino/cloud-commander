@@ -13,24 +13,23 @@ form:
       value: cloud-linode
     subitems:
       - $include: generic/generic_not_available.yaml
-  - type: section
+
+  - $include: generic/generic_container_registry_create_az.yaml
     show-if:
       variable: cloud_provider
       value: cloud-az
-    subitems:
-      - $include: generic/generic_container_registry_create_az.yaml
+
   - type: section
     show-if:
       variable: cloud_provider
       value: cloud-upctl
     subitems:
       - $include: generic/generic_not_available.yaml
-  - type: section
+
+  - $include: generic/generic_container_registry_create_doctl.yaml
     show-if:
       variable: cloud_provider
       value: cloud-doctl
-    subitems:
-      - $include: generic/generic_container_registry_create_doctl.yaml
 
   - type: section
     subitems:

@@ -281,96 +281,98 @@
           produces: 
             - variable: verbose
 
-- type: 'action-row'
-  expandable: false
-  name: doctl kubernetes cluster create
-  consumes:
-    - variable: name
-      required: true
-    - variable: region
-      parameter: --region
-      required: true
-    - variable: 1_clicks
-      parameter: --1-clicks
-      required: false
-    - variable: auto_upgrade
-      parameter: --auto-upgrade
-      required: false
-    - variable: cluster_subnet
-      parameter: --cluster-subnet
-      required: false
-    - variable: control_plane_firewall_allowed_addresses
-      parameter: --control-plane-firewall-allowed-addresses
-      required: false
-    - variable: count
-      parameter: --count
-      required: false
-    - variable: enable_control_plane_firewall
-      parameter: --enable-control-plane-firewall
-      required: false
-    - variable: ha
-      parameter: --ha
-      required: false
-    - variable: maintenance_window
-      parameter: --maintenance-window
-      required: false
-    - variable: node_pool
-      parameter: --node-pool
-      required: false
-    - variable: service_subnet
-      parameter: --service-subnet
-      required: false
-    - variable: set_current_context
-      parameter: --set-current-context
-      required: false
-    - variable: size
-      parameter: --size
-      required: false
-    - variable: surge_upgrade
-      parameter: --surge-upgrade
-      required: false
-    - variable: tag
-      parameter: --tag
-      required: false
-    - variable: update_kubeconfig
-      parameter: --update-kubeconfig
-      required: false
-    - variable: version
-      parameter: --version
-      required: false
-    - variable: vpc_uuid
-      parameter: --vpc-uuid
-      required: false
-    - variable: wait
-      parameter: --wait
-      required: false
-    - variable: access_token
-      parameter: --access-token
-      required: false
-    - variable: api_url
-      parameter: --api-url
-      required: false
-    - variable: config
-      parameter: --config
-      required: false
-    - variable: context
-      parameter: --context
-      required: false
-    - variable: http_retry_max
-      parameter: --http-retry-max
-      required: false
-    - variable: interactive
-      parameter: --interactive
-      required: false
-    - variable: output
-      parameter: --output
-      required: false
-    - variable: trace
-      parameter: --trace
-      required: false
-    - variable: verbose
-      parameter: --verbose
-      required: false
-  install: doctl kubernetes cluster create ${name}
-  produces:
-    - variable: output
+- type: section
+  subitems:
+    - type: 'action-row'
+      expandable: false
+      name: doctl kubernetes cluster create
+      consumes:
+        - variable: name
+          required: true
+        - variable: region
+          parameter: --region
+          required: true
+        - variable: 1_clicks
+          parameter: --1-clicks
+          required: false
+        - variable: auto_upgrade
+          parameter: --auto-upgrade
+          required: false
+        - variable: cluster_subnet
+          parameter: --cluster-subnet
+          required: false
+        - variable: control_plane_firewall_allowed_addresses
+          parameter: --control-plane-firewall-allowed-addresses
+          required: false
+        - variable: count
+          parameter: --count
+          required: false
+        - variable: enable_control_plane_firewall
+          parameter: --enable-control-plane-firewall
+          required: false
+        - variable: ha
+          parameter: --ha
+          required: false
+        - variable: maintenance_window
+          parameter: --maintenance-window
+          required: false
+        - variable: node_pool
+          parameter: --node-pool
+          required: false
+        - variable: service_subnet
+          parameter: --service-subnet
+          required: false
+        - variable: set_current_context
+          parameter: --set-current-context
+          required: false
+        - variable: size
+          parameter: --size
+          required: false
+        - variable: surge_upgrade
+          parameter: --surge-upgrade
+          required: false
+        - variable: tag
+          parameter: --tag
+          required: false
+        - variable: update_kubeconfig
+          parameter: --update-kubeconfig
+          required: false
+        - variable: version
+          parameter: --version
+          required: false
+        - variable: vpc_uuid
+          parameter: --vpc-uuid
+          required: false
+        - variable: wait
+          parameter: --wait
+          required: false
+        - variable: access_token
+          parameter: --access-token
+          required: false
+        - variable: api_url
+          parameter: --api-url
+          required: false
+        - variable: config
+          parameter: --config
+          required: false
+        - variable: context
+          parameter: --context
+          required: false
+        - variable: http_retry_max
+          parameter: --http-retry-max
+          required: false
+        - variable: interactive
+          parameter: --interactive
+          required: false
+        - variable: output
+          parameter: --output
+          required: false
+        - variable: trace
+          parameter: --trace
+          required: false
+        - variable: verbose
+          parameter: --verbose
+          required: false
+      install: doctl kubernetes cluster create ${name}
+      produces:
+        - variable: output

@@ -10,48 +10,39 @@ form:
   #
   # Azure
   #
-  - type: section
+  - $include: generic/generic_kubernetes_cluster_create_az.yaml
     show-if:
       variable: cloud_provider
       value: cloud-az
-    subitems:
-      - $include: generic/generic_kubernetes_cluster_create_az.yaml
   #
   # Civo
   #
-  - type: section
+  - $include: generic/generic_kubernetes_cluster_create_civo.yaml
     show-if:
       variable: cloud_provider
       value: cloud-civo
-    subitems:
-      - $include: generic/generic_kubernetes_cluster_create_civo.yaml
   #
   # Digital Ocean
   #      
-  - type: section
+  - $include: generic/generic_kubernetes_cluster_create_doctl.yaml
     show-if:
       variable: cloud_provider
       value: cloud-doctl
-    subitems:
-      - $include: generic/generic_kubernetes_cluster_create_doctl.yaml
   #
   # Linode
   #      
-  - type: section
+  - $include: generic/generic_not_available.yaml
     show-if:
       variable: cloud_provider
       value: cloud-linode
-    subitems:
-      - $include: generic/generic_not_available.yaml
   #
   # UpCloud
   #      
-  - type: section
+  - $include: generic/generic_kubernetes_cluster_create_upctl.yaml
     show-if:
       variable: cloud_provider
       value: cloud-upctl
-    subitems:
-      - $include: generic/generic_kubernetes_cluster_create_upctl.yaml
+
   - type: section
     subitems:
       - type: 'output-row'

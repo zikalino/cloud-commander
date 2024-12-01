@@ -127,40 +127,42 @@
           produces: 
             - variable: wait
 
-- type: 'action-row'
-  expandable: false
-  name: upctl kubernetes create
-  consumes:
-    - variable: network
-      parameter: --network
-      required: true
-    - variable: name
-      parameter: --name
-      required: false
-    - variable: label
-      parameter: --label
-      required: false
-    - variable: plan
-      parameter: --plan
-      required: false
-    - variable: version
-      parameter: --version
-      required: false
-    - variable: node_group
-      parameter: --node-group
-      required: false
-    - variable: kubernetes_api_allow_ip
-      parameter: --kubernetes-api-allow-ip
-      required: false
-    - variable: private_node_groups
-      parameter: --private-node-groups
-      required: false
-    - variable: zone
-      parameter: --zone
-      required: false
-    - variable: wait
-      parameter: --wait
-      required: false
-  install: upctl kubernetes create
-  produces:
-    - variable: output
+- type: section
+  subitems:
+    - type: 'action-row'
+      expandable: false
+      name: upctl kubernetes create
+      consumes:
+        - variable: network
+          parameter: --network
+          required: true
+        - variable: name
+          parameter: --name
+          required: false
+        - variable: label
+          parameter: --label
+          required: false
+        - variable: plan
+          parameter: --plan
+          required: false
+        - variable: version
+          parameter: --version
+          required: false
+        - variable: node_group
+          parameter: --node-group
+          required: false
+        - variable: kubernetes_api_allow_ip
+          parameter: --kubernetes-api-allow-ip
+          required: false
+        - variable: private_node_groups
+          parameter: --private-node-groups
+          required: false
+        - variable: zone
+          parameter: --zone
+          required: false
+        - variable: wait
+          parameter: --wait
+          required: false
+      install: upctl kubernetes create
+      produces:
+        - variable: output
