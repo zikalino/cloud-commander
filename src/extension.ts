@@ -95,16 +95,36 @@ async function loadYamlView(yml: any, refresh_id: string|null, parameters: any =
 }
 
 // XXX - perhaps this should be moved to helpers
+// XXX - move to a separate class
+var yamlErrors: string[] = [];
+
 export function loadYaml(location: string) : any {
   // extensionContext.extensionPath + "/defs/" + result + ".yaml"
-  let y = fs.readFileSync(location, "utf8");
-  y = YAML.parse(y);
-  loadIncludes(y);
-  return y;
+  var content: string = "";
+  var parsed: any = null;
+
+  try {
+    content = fs.readFileSync(location, "utf8");
+  } catch (e) {
+    yamlErrors.push("ERROR: couldn't load file: " + location);
+    return null;
+  }
+
+  try {
+    parsed = YAML.parse(content);
+  } catch (e) {
+    yamlErrors.push("ERROR: couldn't parse YAML: " + location + " " + e);
+    return null;
+  }
+
+  if (!loadIncludes(parsed)) {
+    return null;
+  }
+  return parsed;
 }
 
-function loadIncludes(data: any) {
-
+function loadIncludes(data: any): boolean {
+  var success: boolean = true;
   if (typeof data === 'object') {
     if (Array.isArray(data)) {
       for (let i = data.length - 1; i >= 0; i--) {
@@ -121,32 +141,38 @@ function loadIncludes(data: any) {
 
           var included = loadYaml(extensionContext.extensionPath + "/defs/" + data[i]['$include']);
 
-          // apply prefix
-          if (prefix !== undefined) {
-            applyPrefix(included, prefix);
-          }
-
-          if (typeof included === 'object') {
-            if (Array.isArray(included)) {
-
-              if (showif !== undefined) {
-                for (var j = 0; j < included.length; j++) {
-                  included[j]['show-if'] = showif;
-                }
-              }
-
-              // insert several elements
-              data.splice(i, 1, ...included);
-            } else {
-              if (showif !== undefined) {
-                included['show-if'] = showif;
-              }
-              // just replace this entry with new dictionary
-              data[i] = included;
+          if (included !== null) {
+            // apply prefix
+            if (prefix !== undefined) {
+              applyPrefix(included, prefix);
             }
+
+            if (typeof included === 'object') {
+              if (Array.isArray(included)) {
+
+                if (showif !== undefined) {
+                  for (var j = 0; j < included.length; j++) {
+                    included[j]['show-if'] = showif;
+                  }
+                }
+
+                // insert several elements
+                data.splice(i, 1, ...included);
+              } else {
+                if (showif !== undefined) {
+                  included['show-if'] = showif;
+                }
+                // just replace this entry with new dictionary
+                data[i] = included;
+              }
+            }
+          } else {
+            success = false;
           }
         } else {
-          loadIncludes(data[i]);
+          if (!loadIncludes(data[i])) {
+            success = false;
+          }
         }
       }
     }
@@ -154,19 +180,27 @@ function loadIncludes(data: any) {
       if ((data !== null) && ('@include' in data)) {
         // XXX - load this include
         var included = loadYaml(extensionContext.extensionPath + "/defs/" + data['location']);
-        data.clear();
-        for (var k in included) {
-          data[k] = included[k];
+        if (included !== null) {
+          data.clear();
+          for (var k in included) {
+            data[k] = included[k];
+          }
+        } else {
+          success = false;
         }
       }
 
       for (let key in data) {
         if (typeof data[key] === 'object') {
-          loadIncludes(data[key]);
+          if (!loadIncludes(data[key])) {
+            success = false;
+          }
         }
       }
     }
   }
+
+  return success;
 }
 
 function applyPrefix(data: any, prefix: string) {
