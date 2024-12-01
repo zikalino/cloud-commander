@@ -14,6 +14,11 @@ var view: helpers.GenericWebView|null = null;
 
 export function displayCloudExplorer(extensionContext : vscode.ExtensionContext) {
 
+  // do not display more than one Cloud Explorer panel
+  if (view !== null && !view.destroyed) {
+    view.focus();
+    return;
+  }
 
   let formDefinition = {
     type: 'layout-tree-with-details',
