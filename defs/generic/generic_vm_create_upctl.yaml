@@ -140,16 +140,16 @@
     - $include: generic/generic_vm_size_information.yaml
     - $include: generic/generic_vm_price_information.yaml
 
-- type: separator
-
-- type: 'action-row'
-  name: Create UpCloud Server
-  consumes:
-    - variable: host_name
-    - variable: zone
-    - variable: vm_size
-    - variable: storage_id
-      parameter: --os
-  verify: |
-      upctl server show ${host_name}
-  install: upctl server create --hostname ${host_name} --zone ${zone} --plan ${vm_size} --password-delivery email
+- type: section
+  subitems:
+    - type: 'action-row'
+      name: Create UpCloud Server
+      consumes:
+        - variable: host_name
+        - variable: zone
+        - variable: vm_size
+        - variable: storage_id
+          parameter: --os
+      verify: |
+          upctl server show ${host_name}
+      install: upctl server create --hostname ${host_name} --zone ${zone} --plan ${vm_size} --password-delivery email

@@ -89,33 +89,32 @@
 
 #- $include: az/__az_subnet_selector.yaml
 
-
-- type: separator
-
-- type: 'action-row'
-  name: Create Virtual Machine
-  consumes:
-    - variable: resource_group
-    - variable: virtual_machine_name
-    - variable: virtual_machine_region
-    - variable: vm_size
-      parameter: --size
-    - variable: os_disk_id
-      parameter: --attach-os-disk ${os_disk_id}
-      required-if:
-        variable: os_disk_creation
-        value: attach
-    - variable: data_disk_id
-      parameter: --attach-data-disks ${data_disk_id}
-      required-if:
-        variable: data_disk_creation
-        value: attach
-    - variable: password
-      required: true
-      parameter: --admin-password
-  verify: |
-      az vm show --resource-group ${resource_group} --name ${virtual_machine_name}
-  install: az vm create --resource-group ${resource_group} --name ${virtual_machine_name} --location ${virtual_machine_region}
+- type: section
+  subitems:
+    - type: 'action-row'
+      name: Create Virtual Machine
+      consumes:
+        - variable: resource_group
+        - variable: virtual_machine_name
+        - variable: virtual_machine_region
+        - variable: vm_size
+          parameter: --size
+        - variable: os_disk_id
+          parameter: --attach-os-disk ${os_disk_id}
+          required-if:
+            variable: os_disk_creation
+            value: attach
+        - variable: data_disk_id
+          parameter: --attach-data-disks ${data_disk_id}
+          required-if:
+            variable: data_disk_creation
+            value: attach
+        - variable: password
+          required: true
+          parameter: --admin-password
+      verify: |
+          az vm show --resource-group ${resource_group} --name ${virtual_machine_name}
+      install: az vm create --resource-group ${resource_group} --name ${virtual_machine_name} --location ${virtual_machine_region}
 
 #    --name -n                                       [Required] : Name of the virtual machine.
 #    --resource-group -g                             [Required] : Name of resource group. You can

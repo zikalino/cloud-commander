@@ -30,18 +30,20 @@
           produces:
             - variable: password
 
-- type: 'action-row'
-  name: Create Linode
-  consumes:
-    - variable: vm_size
-    - variable: region
-    - variable: name
-    - variable: password
-    - variable: images_id
-      parameter: --image
-  verify: |
-      linode list --label ${name}
-  install: linode linodes create --region ${region} --type ${vm_size} --label ${name}  --root_pass ${password}
+- type: section
+  subitems:
+    - type: 'action-row'
+      name: Create Linode
+      consumes:
+        - variable: vm_size
+        - variable: region
+        - variable: name
+        - variable: password
+        - variable: images_id
+          parameter: --image
+      verify: |
+          linode list --label ${name}
+      install: linode linodes create --region ${region} --type ${vm_size} --label ${name}  --root_pass ${password}
 
 # linode-cli linodes create
 # Create a Linode

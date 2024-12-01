@@ -16,38 +16,31 @@ form:
   # cloud provider selection section
   - $include: generic/__generic_provider_selector.yaml
 
-  - type: section
+  - $include: generic/generic_vm_create_linode.yaml
     show-if:
       variable: cloud_provider
       value: cloud-linode
-    subitems:
-      - $include: generic/generic_vm_create_linode.yaml
 
-  - type: section
+  - $include: generic/generic_vm_create_az.yaml
     show-if:
       variable: cloud_provider
       value: cloud-az
-    subitems:
-      - $include: generic/generic_vm_create_az.yaml
 
-  - type: section
+  - $include: generic/generic_vm_create_civo.yaml
     show-if:
       variable: cloud_provider
       value: cloud-civo
-    subitems:
-      - $include: generic/generic_vm_create_civo.yaml
-  - type: section
+
+  - $include: generic/generic_vm_create_upctl.yaml
     show-if:
       variable: cloud_provider
       value: cloud-upctl
-    subitems:
-      - $include: generic/generic_vm_create_upctl.yaml
-  - type: section
+
+  - $include: generic/generic_vm_create_doctl.yaml
     show-if:
       variable: cloud_provider
       value: cloud-doctl
-    subitems:
-      - $include: generic/generic_vm_create_doctl.yaml
+
   - type: section
     subitems:
       - type: 'output-row'
