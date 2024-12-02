@@ -83,6 +83,36 @@
       #    #  path: "$[0].status"
       #    #  value: off
 
+    - name: Kubernetes
+      id: cloud-civo-kubernetes
+      icon: civo.png
+      subitems: []
+      raw: {}
+      query: civo kubernetes list --region fra1 --output json
+      path-id: $[::].id
+      path-name: $[::].name
+      path-raw: $[::]
+      operations:
+        - type: create
+          name: Create Kubernetes Cluster
+          template:
+            name: generic/generic_kubernetes_create
+            parameters:
+              cloud_provider: cloud-civo
+      child-template:
+        # this is a template for resource group level
+        - type: delete
+          name: Delete
+          cmd: civo kubernetes delete ${name} --region fra1
+          refresh: parent
+        # This is copied from level below, but is exactly the same
+        - type: query-details
+          query: civo kubernetes show ${id} --region fra1 --output json
+          refresh: self
+          #extract:
+          #  - field: location
+          #    path: "$.location"
+
     - name: Load Balancers
       id: cloud-civo-loadbalancers
       icon: civo.png
