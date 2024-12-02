@@ -3,8 +3,10 @@
   items: []
   source:
     cmd: |
-      civo firewall list --output json
+      civo firewall list --region ${region} --output json
     path-id: $[*].id
     path-name: $[*].name
+  consumes:
+    - variable: region
   produces:
     - variable: firewall_id

@@ -4,7 +4,8 @@
   source:
     cmd: |
       civo diskimage list --output json
-    path-id: $[*].id
+    # it seems that id doesn't work anywhere
+    path-id: $[*].name
     path-name: $[*].name
     cache: civo_diskimage_list
   produces:

@@ -1,9 +1,11 @@
 - type: dropdown
   name: Select Network
   items: []
+  consumes:
+    - variable: region
   source:
     cmd: |
-      civo network list --output json
+      civo network list --region ${region} --output json
     path-id: $[*].id
     path-name: $[*].label
   produces:
