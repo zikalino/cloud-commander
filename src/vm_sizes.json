@@ -7,7 +7,7 @@
     "id": "g3.xsmall",
     "size_memory": "1024",
     "type": "Instance",
-    "price_hour": "-",
+    "price_hour": "0.0074",
     "price_month": 5.43,
     "price_currency": "USD"
   },
@@ -19,7 +19,7 @@
     "id": "g3.small",
     "size_memory": "2048",
     "type": "Instance",
-    "price_hour": "-",
+    "price_hour": "0.0149",
     "price_month": 10.86,
     "price_currency": "USD"
   },
@@ -31,7 +31,7 @@
     "id": "g3.medium",
     "size_memory": "4096",
     "type": "Instance",
-    "price_hour": "-",
+    "price_hour": "0.0298",
     "price_month": 21.73,
     "price_currency": "USD"
   },
@@ -43,7 +43,7 @@
     "id": "g3.large",
     "size_memory": "8192",
     "type": "Instance",
-    "price_hour": "-",
+    "price_hour": "0.0595",
     "price_month": 43.45,
     "price_currency": "USD"
   },
@@ -55,7 +55,7 @@
     "id": "g3.xlarge",
     "size_memory": "16384",
     "type": "Instance",
-    "price_hour": "-",
+    "price_hour": "0.1191",
     "price_month": 86.91,
     "price_currency": "USD"
   },
