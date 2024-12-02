@@ -6,29 +6,28 @@
     - type: row
       subitems:
         - type: textfield
-          name: Container Name
+          name: Cluster Name
           produces:
-            - variable: container_name
+            - variable: cluster_name
 
-- type: section
-  title: Image / Application
-  subitems:
-    - type: row
-      subitems:
-        - type: textfield
-          name: Container Name
-          produces:
-            - variable: image
+#- type: section
+#  title: Image / Application
+  #subitems:
+  #  - type: row
+  #    subitems:
+  #      - type: textfield
+  #        name: Container Name
+  #        produces:
+  #          - variable: image
 
 - type: section
   subitems:
     - type: 'action-row'
-      name: Create Container Instance
+      name: az aks create
       consumes:
-        - variable: resource_group_name
-        - variable: container_name
-        - variable: image
+        - variable: resource_group
+        - variable: cluster_name
+        # - variable: image
       verify: |
-          az container show --resource-group ${resource_group_name} --name ${container_name}
-      install: az container create --resource-group ${resource_group_name} --name ${container_name} --image ${image}
-      uninstall: az container delete --resource-group ${resource_group_name} --name ${container_name}
+          az aks show --resource-group ${resource_group} --name ${cluster_name}
+      install: az aks create --resource-group ${resource_group} --name ${cluster_name}

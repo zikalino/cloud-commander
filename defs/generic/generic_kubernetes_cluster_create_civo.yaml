@@ -62,12 +62,14 @@
   subitems:
     - type: 'action-row'
       expandable: false
-      name: upctl kubernetes create
+      name: civo kubernetes create
       consumes:
         - variable: name
           required: true
         - variable: application_name
           parameter: --applications
-      install: civo kubernetes create ${name} --wait
+        - variable: region
+          required: true
+      install: civo kubernetes create ${name} --region ${region} --wait
       produces:
         - variable: output

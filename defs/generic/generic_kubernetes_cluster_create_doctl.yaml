@@ -67,7 +67,7 @@
     - type: row
       subitems: 
         - type: textfield
-          name: <name> (required)
+          name: Name (required)
           description: name
           produces: 
             - variable: name
@@ -206,80 +206,6 @@
           description: The UUID of a VPC network to create the cluster in. Must be the UUID of a valid VPC in the same region specified for the cluster. If a VPC is not specified, the cluster is placed in the default VPC network for the region.
           produces: 
             - variable: vpc_uuid
-    - type: row
-      subitems: 
-        - type: checkbox
-          name: wait
-          description: "Instructs the terminal to wait for the action to complete before returning control to the user (default true)  lobal Flags:"
-          val-false: undefined
-          produces: 
-            - variable: wait
-    - type: row
-      subitems: 
-        - type: textfield
-          name: access-token
-          description: API V2 access token
-          produces: 
-            - variable: access_token
-    - type: row
-      subitems: 
-        - type: textfield
-          name: api-url
-          description: Override default API endpoint
-          produces: 
-            - variable: api_url
-    - type: row
-      subitems: 
-        - type: textfield
-          name: config
-          description: "Specify a custom config file (default \"C:\\Users\\Lenovo\\AppData\\Roaming\\doctl\\config.yaml\")"
-          produces: 
-            - variable: config
-    - type: row
-      subitems: 
-        - type: textfield
-          name: context
-          description: Specify a custom authentication context name
-          produces: 
-            - variable: context
-    - type: row
-      subitems: 
-        - type: textfield
-          name: http-retry-max
-          description: Set maximum number of retries for requests that fail with a 429 or 500-level error (default 5)
-          produces: 
-            - variable: http_retry_max
-    - type: row
-      subitems: 
-        - type: checkbox
-          name: interactive
-          description: Enable interactive behavior. Defaults to true if the terminal supports it (default false)
-          val-false: undefined
-          produces: 
-            - variable: interactive
-    - type: row
-      subitems: 
-        - type: textfield
-          name: output
-          description: Desired output format [text|json] (default "text")
-          produces: 
-            - variable: output
-    - type: row
-      subitems: 
-        - type: checkbox
-          name: trace
-          description: Show a log of network activity while performing a command
-          val-false: undefined
-          produces: 
-            - variable: trace
-    - type: row
-      subitems: 
-        - type: checkbox
-          name: verbose
-          description: Enable verbose output 
-          val-false: undefined
-          produces: 
-            - variable: verbose
 
 - type: section
   subitems:
@@ -343,36 +269,6 @@
         - variable: vpc_uuid
           parameter: --vpc-uuid
           required: false
-        - variable: wait
-          parameter: --wait
-          required: false
-        - variable: access_token
-          parameter: --access-token
-          required: false
-        - variable: api_url
-          parameter: --api-url
-          required: false
-        - variable: config
-          parameter: --config
-          required: false
-        - variable: context
-          parameter: --context
-          required: false
-        - variable: http_retry_max
-          parameter: --http-retry-max
-          required: false
-        - variable: interactive
-          parameter: --interactive
-          required: false
-        - variable: output
-          parameter: --output
-          required: false
-        - variable: trace
-          parameter: --trace
-          required: false
-        - variable: verbose
-          parameter: --verbose
-          required: false
-      install: doctl kubernetes cluster create ${name}
+      install: doctl kubernetes cluster create ${name} --region ${region} --wait
       produces:
         - variable: output
