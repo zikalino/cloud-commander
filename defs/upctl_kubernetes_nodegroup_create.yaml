@@ -178,4 +178,4 @@ form:
           - variable: output
       - type: 'output-row'
         data: output
-        content: ...
+        content: ''

@@ -11,12 +11,10 @@ form:
 
   - $include: generic/__generic_provider_selector.yaml
 
-  - type: section
-    subitems:
-      - $include: generic/generic_not_available.yaml
+  - $include: generic/generic_not_available.yaml
 
   - type: section
     subitems:
       - type: 'output-row'
         data: output
-        content: ...
+        content: ''

@@ -1,6 +1,7 @@
 - type: section
+  title: Feature Information
   subitems:
     - type: text-block
       width: wide
-      font: header-1
-      content: Feature not Available
+      content: This feature is not natively available from selected provider, however we may provide alternative solution in the future.
+

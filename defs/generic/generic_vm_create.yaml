@@ -45,4 +45,4 @@ form:
     subitems:
       - type: 'output-row'
         data: output
-        content: ...
+        content: ''

@@ -46,6 +46,3 @@
       install: doctl registry create ${registry_name}
       produces:
         - variable: output
-    - type: 'output-row'
-      data: output
-      content: ...
