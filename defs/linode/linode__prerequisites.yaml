@@ -3,15 +3,13 @@ id: root
 form:
   - type: section
     subitems:
-      - type: text-block
-        width: wide
-        font: header-1
-        content: Prerequisites
-      - type: separator
       - type: link-row
         text: Read Getting Started Guide to learn more details on registering and configuring your Linode account
         link: https://zikalino.substack.com/p/getting-started-with-linode-using
-      - type: separator
+
+  - type: section
+    title: Prerequisites
+    subitems:
       - $include: __python_install_step.yaml
       - type: 'action-row'
         name: Install Linode CLI

@@ -2,20 +2,14 @@ type: layout-form
 id: root
 form:
   - type: section
-    platform: win32
     subitems:
-      - type: text-block
-        width: wide
-        font: header-1
-        content: Prerequisites
-
-      - type: separator
-
       - type: link-row
         text: Read Getting Started Guide to learn more details on registering and configuring your Civo account
         link: https://zikalino.substack.com/p/getting-started-with-civo-using-cloudcommander
 
-      - type: separator
+  - type: section
+    title: Prerequisites
+    subitems:
 
       - $include: __scoop_install_step.yaml
 

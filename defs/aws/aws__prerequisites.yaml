@@ -5,17 +5,14 @@ form:
   # AWS CLI
   #
   - type: section
-    platform: win32
     subitems:
-      - type: text-block
-        width: wide
-        font: header-1
-        content: Prerequisites
-      - type: separator
       - type: link-row
         text: Read Getting Started Guide to learn more details on registering and configuring your AWS account
         link: https://zikalino.substack.com/p/getting-started-with-aws-using-cloudcommander
-      - type: separator
+
+  - type: section
+    title: Prerequisites
+    subitems:
       - type: 'action-row'
         platform: win32
         id: install-aws-cli
