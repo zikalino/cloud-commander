@@ -26,7 +26,9 @@
           description: registry-name
           produces: 
             - variable: registry_name
+
     - $include: doctl/__doctl_compute_region_list_selector.yaml
+
     - $include: doctl/__doctl_registry_options_subscription_tiers_selector.yaml
 
 - type: section
@@ -43,6 +45,6 @@
         - variable: subscription_tier
           parameter: --subscription-tier
           required: true
-      install: doctl registry create ${registry_name}
+      install: doctl registry create ${registry_name} --region ${region}
       produces:
         - variable: output

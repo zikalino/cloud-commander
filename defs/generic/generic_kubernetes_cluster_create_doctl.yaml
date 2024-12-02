@@ -216,7 +216,6 @@
         - variable: name
           required: true
         - variable: region
-          parameter: --region
           required: true
         - variable: 1_clicks
           parameter: --1-clicks

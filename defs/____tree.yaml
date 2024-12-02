@@ -14,6 +14,10 @@
       template:
         name: generic/generic_container_registry_create
     - type: create
+      name: Create Container Instance
+      template:
+        name: generic/generic_container_instance_create
+    - type: create
       name: Create Kubernetes Cluster
       template:
         name: generic/generic_kubernetes_cluster_create

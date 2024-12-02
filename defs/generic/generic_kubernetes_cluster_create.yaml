@@ -31,7 +31,7 @@ form:
   #
   # Linode
   #      
-  - $include: generic/generic_not_available.yaml
+  - $include: generic/generic_kubernetes_cluster_create_linode.yaml
     show-if:
       variable: cloud_provider
       value: cloud-linode
