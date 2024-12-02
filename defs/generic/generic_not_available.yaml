@@ -1,4 +1,6 @@
-- type: text-block
-  width: wide
-  font: header-1
-  content: Feature not Available
+- type: section
+  subitems:
+    - type: text-block
+      width: wide
+      font: header-1
+      content: Feature not Available

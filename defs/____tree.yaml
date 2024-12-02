@@ -17,6 +17,10 @@
       name: Create Kubernetes Cluster
       template:
         name: generic/generic_kubernetes_cluster_create
+    - type: create
+      name: Deploy Application
+      template:
+        name: generic/generic_deploy_application
 
   # add definitions for rspective sections / resouce providers here
 - $include: aws/____tree_aws.yaml
