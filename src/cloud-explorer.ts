@@ -235,31 +235,25 @@ function createDetailsView(view: any, id: string) {
       // could be executed on that resource. If so, append appropriate actions.
       //
       let yml = loadYaml(extensionContext.extensionPath + "/defs/empty.yaml");
-      yml['form'] = [
-        {
-          type: 'section',
-          subitems: []
-        }
-      ];
+      let sections: any[] = [];
+      let basicInformationItems: any[] = [];
+      let operationItems: any[] = [];
+      yml['form'] = sections;
 
       //
       // Basic Information - whatever is available for this resource type
       //
       if ('id' in resource) {
-        yml['form'][0]['subitems'].push(
+        sections.push(
           {
-            type: 'text-block',
-            width: 'wide',
-            font: 'header-1',
-            content: 'Basic Information'
-          },
-          {
-            type: 'separator'
+            type: 'section',
+            title: 'Basic Information',
+            subitems: basicInformationItems
           }
         );
 
         if ('id' in resource) {
-          yml['form'][0]['subitems'].push(
+          basicInformationItems.push(
             {
               type: 'info-row',
               icon: 'codicon-symbol-field',
@@ -278,7 +272,7 @@ function createDetailsView(view: any, id: string) {
             icon = 'icon-square-red.png';
           }
 
-          yml['form'][0]['subitems'].push(
+          basicInformationItems.push(
             {
               type: 'row',
               subitems: [
@@ -309,7 +303,7 @@ function createDetailsView(view: any, id: string) {
         }
 
         if ('size' in resource || 'price' in resource) {
-          yml['form'][0]['subitems'].push(
+          basicInformationItems.push(
             {
               type: 'row',
               subitems: [
@@ -333,7 +327,7 @@ function createDetailsView(view: any, id: string) {
         }
 
         if ('size_cores' in resource || 'size_memory' in resource || 'size_disk' in resource) {
-          yml['form'][0]['subitems'].push(
+          basicInformationItems.push(
             {
               type: 'row',
               subitems: [
@@ -364,7 +358,7 @@ function createDetailsView(view: any, id: string) {
         }
 
         if ('image' in resource) {
-          yml['form'][0]['subitems'].push(
+          basicInformationItems.push(
             {
               type: 'info-row',
               icon: 'codicon-file-binary',
@@ -382,15 +376,11 @@ function createDetailsView(view: any, id: string) {
       var operations = findOperations(id);
 
       if (operations.length > 0) {
-        yml['form'][0]['subitems'].push(
+        sections.push(
           {
-            type: 'text-block',
-            width: 'wide',
-            font: 'header-1',
-            content: 'Operations'
-          },
-          {
-            type: 'separator'
+            type: 'section',
+            title: 'Operations',
+            subitems: operationItems
           }  
         );
 
@@ -420,28 +410,25 @@ function createDetailsView(view: any, id: string) {
                 row['refresh'] = id;
               }
             }
-            yml['form'][0]['subitems'].push(row);
+            operationItems.push(row);
           }
         }
       }
 
       var raw = JSON.stringify(resource['raw'], null, 2);
-      yml['form'][0]['subitems'].push(
+      sections.push(
             {
-              type: 'text-block',
-              width: 'wide',
-              font: 'header-1',
-              content: 'Raw Info'
-            },
-            {
-              type: 'separator'
-            },
-            {
-              type: 'code-block',
-              content: raw
+              type: 'section',
+              title: 'Raw Info',
+              subitems: [
+                {
+                  type: 'code-block',
+                  content: raw
+                }
+    
+              ]
             }
           );
-
 
       view.updateTreeViewDetails(yml);
     } else {
