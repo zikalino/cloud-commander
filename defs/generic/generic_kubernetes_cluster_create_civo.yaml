@@ -20,6 +20,8 @@
           produces: 
             - variable: label
 
+    - $include: civo/__civo_region_list_selector.yaml
+
     - type: row
       subitems:
         - type: dropdown
@@ -37,47 +39,26 @@
           show-if:
             variable: type
             value: k3s
+        - type: dropdown
+          name: CNI Plugin
+          items:
+            - flannel
+            - cilium
+          produces:
+            - variable: cni_plugin
 
 
-#- $include: upctl/__upctl_kubernetes_plans_selector.yaml
-#- $include: upctl/__upctl_kubernetes_versions_selector.yaml
-#- type: row
-#  subitems: 
-#    - type: textfield
-#      name: node-group
-#      description: "Node group(s) for running workloads, multiple can be declared. Usage: `--node-group count=8,kubelet-arg=\"log-flush-frequency=5s\",label=\"owner=devteam\",label=\"env=dev\",name=my-node-grou p,plan=2xCPU-4GB,ssh-key=\"ssh-ed25519 AAAAo admin@user.com\",ssh-key=\"/path/to/your/public/ssh/key.pub\",storage=01000000-0000-4000-8000-000160010 100,taint=\"env=dev:NoSchedule\",taint=\"env=dev2:NoSchedule\"` "
-#      produces: 
-#        - variable: node_group
-#- type: row
-#  subitems: 
-#    - type: textfield
-#      name: kubernetes-api-allow-ip
-#      description: Allow cluster's Kubernetes API to be accessed from an IP address or a network CIDR, multiple can be declared. 
-#      produces: 
-#        - variable: kubernetes_api_allow_ip
-#- type: row
-#  subitems: 
-#    - type: checkbox
-#      name: private-node-groups
-#      description: Do not assign public IPs to worker nodes. If set, the attached network should have a NAT gateway configured to provide internet access to the worker nodes. 
-#      val-false: false
-#      produces: 
-#        - variable: private_node_groups
-    - $include: civo/__civo_region_list_selector.yaml
+- type: section
+  title: Network
+  subitems:
+    - $include: civo/__civo_network_list_selector.yaml
+
 
 - type: section
   title: Image / Application
   subitems:
     - $include: civo/__civo_kubernetes_applications_list_selector.yaml
 
-#- type: row
-#  subitems: 
-#    - type: checkbox
-#      name: wait
-#      description: Wait for cluster to be in running state before returning. 
-#      val-false: false
-#      produces: 
-#        - variable: wait
 - type: section
   subitems:
     - type: 'action-row'
@@ -86,10 +67,18 @@
       consumes:
         - variable: name
           required: true
-        - variable: application_name
-          parameter: --applications
         - variable: region
           required: true
+        - variable: application_name
+          parameter: --applications
+        - variable: network_id
+          parameter: --network
+        - variable: cni_plugin
+          parameter: --cni-plugin
+        - variable: type
+          parameter: --cluster-type
+        - variable: cluster_version
+          parameter: --version
       install: civo kubernetes create ${name} --region ${region} --wait
       produces:
         - variable: output

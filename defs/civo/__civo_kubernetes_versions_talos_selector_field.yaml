@@ -8,4 +8,4 @@
     path-name: $[?(type='talos')].version
     cache: civo_kubernetes_versions_talos
   produces:
-    - variable: application_name
+    - variable: cluster_version

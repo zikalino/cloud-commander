@@ -79,6 +79,16 @@
     - $include: civo/__civo_network_list_selector.yaml
     - $include: civo/__civo_firewall_list_selector.yaml
 
+    - type: row
+      subitems:
+        - type: dropdown
+          name: Public IP
+          items:
+            - create
+            - none
+          produces:
+            - variable: public_ip
+
 - type: section
   subitems:
     - type: 'action-row'
@@ -93,6 +103,8 @@
           parameter: --firewall
         - variable: image_id
           parameter: --diskimage
+        - variable: public_ip
+          parameter: --public-ip
       verify: |
           civo instance show ${host_name} --region ${region} --output json
       install: civo instance create --hostname ${host_name} --region ${region} --size ${vm_size}

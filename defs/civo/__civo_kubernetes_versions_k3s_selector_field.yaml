@@ -8,4 +8,4 @@
     path-name: $[?(type='k3s')].version
     cache: civo_kubernetes_versions_k3s
   produces:
-    - variable: application_name
+    - variable: cluster_version
