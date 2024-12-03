@@ -1,0 +1,11 @@
+- type: dropdown
+  name: Select Version
+  items: []
+  source:
+    cmd: |
+      civo kubernetes versions --output json
+    path-id: $[?(type='talos')].label
+    path-name: $[?(type='talos')].version
+    cache: civo_kubernetes_versions_talos
+  produces:
+    - variable: application_name

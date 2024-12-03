@@ -1,0 +1,149 @@
+[
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.24.4-k3s1",
+    "type": "deprecated",
+    "version": "1.24.4-k3s1"
+  },
+  {
+    "cluster_type": "talos",
+    "default": "true",
+    "label": "talos-v1.5.0",
+    "type": "stable",
+    "version": "1.27.0"
+  },
+  {
+    "cluster_type": "talos",
+    "default": "false",
+    "label": "talos-v1.2.8",
+    "type": "deprecated",
+    "version": "1.25.5"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.23.6-k3s1",
+    "type": "deprecated",
+    "version": "1.23.6-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.25.9-k3s1",
+    "type": "deprecated",
+    "version": "1.25.9-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.28.2-k3s1",
+    "type": "deprecated",
+    "version": "1.28.2-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.26.4-k3s1",
+    "type": "deprecated",
+    "version": "1.26.4-k3s1"
+  },
+  {
+    "cluster_type": "talos",
+    "default": "false",
+    "label": "talos-v1.7.6",
+    "type": "development",
+    "version": "1.30.3"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.29.2-k3s1",
+    "type": "development",
+    "version": "1.29.2-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.25.0-k3s1",
+    "type": "deprecated",
+    "version": "1.25.0-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.27.11-k3s1",
+    "type": "deprecated",
+    "version": "1.27.11-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "true",
+    "label": "1.28.7-k3s1",
+    "type": "stable",
+    "version": "1.28.7-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.24.13-k3s1",
+    "type": "deprecated",
+    "version": "1.24.13-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.22.2-k3s1",
+    "type": "deprecated",
+    "version": "1.22.2-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.30.5-k3s1",
+    "type": "development",
+    "version": "1.30.5-k3s1"
+  },
+  {
+    "cluster_type": "talos",
+    "default": "false",
+    "label": "talos-v1.6.8",
+    "type": "development",
+    "version": "1.29.7"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.27.1-k3s1",
+    "type": "deprecated",
+    "version": "1.27.1-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.22.11-k3s1",
+    "type": "deprecated",
+    "version": "1.22.11-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.29.8-k3s1",
+    "type": "development",
+    "version": "1.29.8-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.26.14-k3s1",
+    "type": "deprecated",
+    "version": "1.26.14-k3s1"
+  },
+  {
+    "cluster_type": "k3s",
+    "default": "false",
+    "label": "1.21.2-k3s1",
+    "type": "deprecated",
+    "version": "1.21.2-k3s1"
+  }
+]
