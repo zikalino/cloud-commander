@@ -77,8 +77,6 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
   view.createPanel(formDefinition, "media/icon.webp");
 }
 
-import { loadYaml } from "./extension";
-
 async function tryToQueryItems(view: any, id: string) {
 
   var resource = setContext(id);
@@ -227,14 +225,18 @@ function createDetailsView(view: any, id: string) {
       //
       // if details definition is specified, just use it
       //
-      let yml = loadYaml(extensionContext.extensionPath + "/defs/" + resource['details']);
+
+      var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/" + resource['details']);
+      let yml = loader.getYaml();
       view.updateTreeViewDetails(yml);
     } else if ('raw' in resource && Object.keys(resource['raw']).length !== 0) {
       //
       // If there's raw resource, we can also check if there are any operations that
       // could be executed on that resource. If so, append appropriate actions.
       //
-      let yml = loadYaml(extensionContext.extensionPath + "/defs/empty.yaml");
+      var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/empty.yaml");
+      let yml = loader.getYaml();
+
       let sections: any[] = [];
       let basicInformationItems: any[] = [];
       let operationItems: any[] = [];
@@ -505,7 +507,8 @@ function setContextRecursive(id: string, resources: any[]): any {
 }
 
 function queryAllResources() {
-  resources = loadYaml(extensionContext.extensionPath + "/defs/____tree.yaml");
+  var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/____tree.yaml");
+  resources = loader.getYaml();
 }
 
 async function azQueryResources(): Promise<any> {
