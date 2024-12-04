@@ -423,7 +423,7 @@ function findParent(item: any, item_id: string): any {
 
 function findOperations(item_id: string): any[] {
   var operations: any[] = [];
-  var item = findItem(resources, item_id);
+  var item = findItem(view.treeGetItems(), item_id);
 
   if (item !== null) {
     findOperationsRecursive(item, operations, 0);
