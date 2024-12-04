@@ -1,12 +1,14 @@
 - type: dropdown
   name: Select Image
   items: []
+  consumes:
+    - variable: region
   source:
     cmd: |
-      civo diskimage list --output json
+      civo diskimage list --region ${region} --output json
     # it seems that id doesn't work anywhere
     path-id: $[*].name
     path-name: $[*].name
-    cache: civo_diskimage_list
+    cache: civo_diskimage_list_${region}
   produces:
     - variable: image_id

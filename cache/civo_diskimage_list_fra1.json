@@ -1,0 +1,79 @@
+[
+  {
+    "distribution": "ubuntu",
+    "id": "466039f3-f625-44aa-82fd-a2a90b9ba292",
+    "name": "ubuntu-noble",
+    "state": "available",
+    "version": "24.04"
+  },
+  {
+    "distribution": "debian",
+    "id": "e1a83a29-d35b-433b-b1cb-4baade48c81a",
+    "name": "debian-10",
+    "state": "available",
+    "version": "10"
+  },
+  {
+    "distribution": "talos",
+    "id": "eca9fa00-185c-48b1-ba99-378af339e0cc",
+    "name": "talos-v1.7.6",
+    "state": "available",
+    "version": "1.30.3"
+  },
+  {
+    "distribution": "debian",
+    "id": "44f2e782-1c06-49da-bacb-a6159a7c3716",
+    "name": "debian-11",
+    "state": "available",
+    "version": "11"
+  },
+  {
+    "distribution": "ubuntu",
+    "id": "8897716a-8e28-4e99-a3de-9e3a0cc8911b",
+    "name": "ubuntu-focal",
+    "state": "available",
+    "version": "20.04"
+  },
+  {
+    "distribution": "ubuntu",
+    "id": "19c4c893-b452-4bcc-a3f2-42f8204a36ac",
+    "name": "ubuntu-jammy",
+    "state": "available",
+    "version": "22.04"
+  },
+  {
+    "distribution": "talos",
+    "id": "2ac3ae5a-3315-4d5c-ad2c-624c96484c85",
+    "name": "talos-v1.6.8",
+    "state": "available",
+    "version": "1.29.7"
+  },
+  {
+    "distribution": "debian",
+    "id": "2d0985a8-c011-4c82-b163-e95b26df0a82",
+    "name": "debian-9",
+    "state": "available",
+    "version": "9"
+  },
+  {
+    "distribution": "talos",
+    "id": "4015aec1-3516-41eb-a1f2-5296a28d99de",
+    "name": "talos-v1.2.8",
+    "state": "available",
+    "version": "1.25.5"
+  },
+  {
+    "distribution": "talos",
+    "id": "59eaada8-1acb-4ece-8119-b7511b010313",
+    "name": "talos-v1.5.0",
+    "state": "available",
+    "version": "1.27.0"
+  },
+  {
+    "distribution": "rocky",
+    "id": "590f3f43-3320-42d5-b30b-ef684d254a0c",
+    "name": "rocky-9-1",
+    "state": "available",
+    "version": "9.1"
+  }
+]
