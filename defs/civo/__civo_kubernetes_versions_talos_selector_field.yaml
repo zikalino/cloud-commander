@@ -1,5 +1,5 @@
 - type: dropdown
-  name: Select Version
+  name: Select Version (talos)
   items: []
   source:
     cmd: |

@@ -1,5 +1,5 @@
 - type: dropdown
-  name: Select Version
+  name: Select Version (k3s)
   items: []
   source:
     cmd: |

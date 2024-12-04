@@ -7,9 +7,6 @@ import { displayMenu } from './extension';
 import { extensionContext } from './extension';
 import vm_sizes from './vm_sizes.json' assert {type: 'json'};
 
-var currentCloudId = "";
-var currentResourceId  = "";
-var resources: any[] = []; 
 var view: helpers.GenericWebView|null = null;
 
 export function displayCloudExplorer(extensionContext : vscode.ExtensionContext) {
@@ -33,7 +30,7 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
     switch (msg.command) {
       case 'ready':
         var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/____tree.yaml");
-        resources = loader.getYaml();
+        var resources = loader.getYaml();
         view.updateTreeViewItems(resources, null);
         return;
 
@@ -42,14 +39,14 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
         if ('id' in msg) {
           CloudExplorerRefresh(msg['id']);
         } else {
-          CloudExplorerRefresh(currentResourceId);
+          CloudExplorerRefresh(view.treeGetCurrentId());
         }
         return;
       case 'selected':
 
         // XXX - this should be optimized
         // don't requery subitems if already there
-        var item = findItem(resources, msg.id);
+        var item = findItem(this.treeGetItems(), msg.id);
         if (!('subitems' in item) || item['subitems'].length === 0) {
           view.tryToQueryItems(view, msg.id);
         }
@@ -63,7 +60,7 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
         if (msg.id === 'action-refresh') {
           RefreshCurrentContext();
         } else if (msg.id === 'action-add') {
-          displayCreateResourceMenu(currentResourceId);
+          displayCreateResourceMenu(view.treeGetCurrentId());
         }
         return;
       case 'button-clicked':
@@ -297,7 +294,7 @@ function createDetailsView(view: any, id: string) {
             if ('refresh' in op) {
               if (op['refresh'] === 'parent') {
                 // we need to refresh list where this particular item is located
-                var parent = findParent({ subitems: resources}, id);
+                var parent = findParent({ subitems: view.treeGetItems()}, id);
                 row['refresh'] = parent['id'];
               } else if (op['refresh'] === 'self') {
                 row['refresh'] = id;
@@ -367,28 +364,18 @@ function createDetailsView(view: any, id: string) {
 }
 
 function setContext(id: string): any {
-  currentCloudId = "";
-  currentResourceId = "";
-
-  return setContextRecursive(id, resources);
+  return setContextRecursive(id, view.treeGetItems());
 }
 
 function setContextRecursive(id: string, resources: any[]): any {
   for (var i = 0; i < resources.length; i++) {
     if (resources[i]['id'] === id) {
-      if (id.startsWith("cloud-") && (currentCloudId === "")) {
-        currentCloudId = id;
-      }
-      currentResourceId = id;
       return resources[i];
     }
 
     if (resources[i]['subitems']) {
       var found: any =  setContextRecursive(id, resources[i]['subitems']);
       if (found) {
-        if (resources[i]['id'].startsWith('cloud-')) {
-          currentCloudId = resources[i]['id'];
-        }
         return found;
       }
     }
@@ -504,20 +491,16 @@ function displayCreateResourceMenu(item_id: string) {
 }
 
 function RefreshCurrentContext() {
-
-  // Use:
-  // currentCloudId
-  // currentResourceId
-  view.tryToQueryItems(view, currentResourceId);
+  view.tryToQueryItems(view, view.treeGetCurrentId());
 
   // a tree item was selected, display details accordingly
   // or try to query items accordingly
-  createDetailsView(view, currentResourceId);
+  createDetailsView(view, view.treeGetCurrentId());
 }
 
 export function CloudExplorerRefresh(refresh_id: string) {
 
-  var id = (refresh_id !== "" ? refresh_id : currentResourceId);
+  var id = (refresh_id !== "" ? refresh_id : view.treeGetCurrentId());
   view.tryToQueryItems(view, id);
 
   // a tree item was selected, display details accordingly
