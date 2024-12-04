@@ -8,7 +8,11 @@
       subitems: []
       raw: {}
       source:
-        cmd: civo instances list --region fra1 --output json
+        cmd:
+          - civo instances list --region fra1 --output json
+          - civo instances list --region phx1 --output json
+          - civo instances list --region lon1 --output json
+          - civo instances list --region nyc1 --output json
         path-id: $[::].id
         path-name: $[::].hostname
         path-raw: $[::]
