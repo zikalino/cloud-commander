@@ -24,10 +24,10 @@
             parameters:
               cloud_provider: cloud-civo
 
-      #child-template:
-      #  - type: query-details
-      #    query: doctl compute droplet get ${id} -o json
-      #    refresh: self
+      child-template:
+        - type: query-details
+          query: civo instances show ${id} ${region} -o json
+          refresh: self
       #    extract:
       #      - field: state
       #        path: "$[0].status"
@@ -94,7 +94,11 @@
       subitems: []
       raw: {}
       source:
-        cmd: civo kubernetes list --region fra1 --output json
+        cmd:
+          - civo kubernetes list --region lon1 --output json
+          - civo kubernetes list --region phx1 --output json
+          - civo kubernetes list --region fra1 --output json
+          - civo kubernetes list --region nyc1 --output json
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
@@ -125,7 +129,11 @@
       subitems: []
       raw: {}
       source:
-        cmd: civo loadbalancer list --region fra1 --output json
+        cmd:
+          - civo loadbalancer list --region lon1 --output json
+          - civo loadbalancer list --region phx1 --output json
+          - civo loadbalancer list --region fra1 --output json
+          - civo loadbalancer list --region nyc1 --output json
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
@@ -136,7 +144,11 @@
       subitems: []
       raw: {}
       source:
-        cmd: civo firewall list --region fra1 --output json
+        cmd:
+          - civo firewall list --region lon1 --output json
+          - civo firewall list --region phx1 --output json
+          - civo firewall list --region fra1 --output json
+          - civo firewall list --region nyc1 --output json
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
@@ -158,7 +170,11 @@
       subitems: []
       raw: {}
       source:
-        cmd: civo database list --region fra1 --output json
+        cmd:
+          - civo database list --region lon1 --output json
+          - civo database list --region phx1 --output json
+          - civo database list --region fra1 --output json
+          - civo database list --region nyc1 --output json
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
@@ -169,7 +185,11 @@
       subitems: []
       raw: {}
       source:
-        cmd: civo domain list --region fra1 --output json
+        cmd:
+          - civo domain list --region lon1 --output json
+          - civo domain list --region phx1 --output json
+          - civo domain list --region fra1 --output json
+          - civo domain list --region nyc1 --output json
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
@@ -180,7 +200,11 @@
       subitems: []
       raw: {}
       source:
-        cmd: civo ip list --region fra1 --output json
+        cmd:
+          - civo ip list --region lon1 --output json
+          - civo ip list --region phx1 --output json
+          - civo ip list --region fra1 --output json
+          - civo ip list --region nyc1 --output json
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
@@ -191,7 +215,11 @@
       subitems: []
       raw: {}
       source:
-        cmd: civo network list --region fra1 --output json
+        cmd:
+          - civo network list --region lon1 --output json
+          - civo network list --region phx1 --output json
+          - civo network list --region fra1 --output json
+          - civo network list --region nyc1 --output json
         path-id: $[::].id
         path-name: $[::].label
         path-raw: $[::]
@@ -202,7 +230,11 @@
       subitems: []
       raw: {}
       source:
-        cmd: civo objectstore list --region fra1 --output json
+        cmd:
+          - civo objectstore list --region lon1 --output json
+          - civo objectstore list --region phx1 --output json
+          - civo objectstore list --region fra1 --output json
+          - civo objectstore list --region nyc1 --output json
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
@@ -213,7 +245,11 @@
       subitems: []
       raw: {}
       source:
-        cmd: civo volume list --region fra1 --output json
+        cmd:
+          - civo volume list --region lon1 --output json
+          - civo volume list --region phx1 --output json
+          - civo volume list --region fra1 --output json
+          - civo volume list --region nyc1 --output json
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
