@@ -46,9 +46,9 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
 
         // XXX - this should be optimized
         // don't requery subitems if already there
-        var item = findItem(this.treeGetItems(), msg.id);
+        var item = view.treeFindItem(this.treeGetItems(), msg.id);
         if (!('subitems' in item) || item['subitems'].length === 0) {
-          view.tryToQueryItems(view, msg.id);
+          view.treeQueryItems(view, msg.id);
         }
 
         // a tree item was selected, display details accordingly
@@ -103,7 +103,7 @@ function getFormattedValue(resource: any, id: string): string {
 }
 
 function createDetailsView(view: any, id: string) {
-  var resource = setContext(id);
+  var resource = view.treeFindItem(view.treeGetItems(), id);
 
   if (resource) {
     var hasSource: boolean = ('source' in resource);
@@ -294,7 +294,7 @@ function createDetailsView(view: any, id: string) {
             if ('refresh' in op) {
               if (op['refresh'] === 'parent') {
                 // we need to refresh list where this particular item is located
-                var parent = findParent({ subitems: view.treeGetItems()}, id);
+                var parent = view.treeFindParent({ subitems: view.treeGetItems()}, id);
                 row['refresh'] = parent['id'];
               } else if (op['refresh'] === 'self') {
                 row['refresh'] = id;
@@ -363,67 +363,9 @@ function createDetailsView(view: any, id: string) {
   }
 }
 
-function setContext(id: string): any {
-  return setContextRecursive(id, view.treeGetItems());
-}
-
-function setContextRecursive(id: string, resources: any[]): any {
-  for (var i = 0; i < resources.length; i++) {
-    if (resources[i]['id'] === id) {
-      return resources[i];
-    }
-
-    if (resources[i]['subitems']) {
-      var found: any =  setContextRecursive(id, resources[i]['subitems']);
-      if (found) {
-        return found;
-      }
-    }
-  }
-
-  return null;
-}
-
-function findItem(subtree: any[], item_id: string): any {
-  for (var idx in subtree) {
-    var item = subtree[idx];
-    if (item['id'] === item_id) {
-      return item;
-    }
-
-    if ('subitems' in item) {
-      var found = findItem(item['subitems'], item_id);
-
-      if (found) {
-        return  found;
-      }
-    }
-  }
-
-  return null;
-}
-
-function findParent(item: any, item_id: string): any {
-  if ('subitems' in item) {
-
-    for (var idx = 0; idx < item['subitems'].length; idx++) {
-      var child: any = item['subitems'][idx];
-      if (child['id'] === item_id) {
-        return item;
-      }
-
-      var found = findParent(child, item_id);
-      if (found) {
-        return found;
-      }
-    }
-  }
-  return null;
-}
-
 function findOperations(item_id: string): any[] {
   var operations: any[] = [];
-  var item = findItem(view.treeGetItems(), item_id);
+  var item = view.treeFindItem(view.treeGetItems(), item_id);
 
   if (item !== null) {
     findOperationsRecursive(item, operations, 0);
@@ -491,7 +433,7 @@ function displayCreateResourceMenu(item_id: string) {
 }
 
 function RefreshCurrentContext() {
-  view.tryToQueryItems(view, view.treeGetCurrentId());
+  view.treeQueryItems(view, view.treeGetCurrentId());
 
   // a tree item was selected, display details accordingly
   // or try to query items accordingly
@@ -501,7 +443,7 @@ function RefreshCurrentContext() {
 export function CloudExplorerRefresh(refresh_id: string) {
 
   var id = (refresh_id !== "" ? refresh_id : view.treeGetCurrentId());
-  view.tryToQueryItems(view, id);
+  view.treeQueryItems(view, id);
 
   // a tree item was selected, display details accordingly
   // or try to query items accordingly
