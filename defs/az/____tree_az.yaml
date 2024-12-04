@@ -9,6 +9,7 @@
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
+    type: group
   operations:
     - type: create
       name: Create Resource Group
@@ -34,6 +35,9 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: $.type
+        type-map:
+          - "Microsoft.Compute/virtualMachines": vm
     # This is copied from level below, but is exactly the same
     - type: query-details
       when:

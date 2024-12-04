@@ -12,6 +12,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: vm
       operations:
         - type: create
           name: Create Droplet
@@ -93,6 +94,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: disk
       operations:
         - type: create
           name: Create Volume
@@ -124,6 +126,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: kubernetes
       operations:
         - type: create
           name: Create Kubernetes Cluster
@@ -154,6 +157,7 @@
         path-id: $[::].id
         path-name: $[::].spec_name
         path-raw: $[::]
+        type: application
     - name: Databases
       id: cloud-digital-ocean-databases
       icon: digital-ocean.svg
@@ -164,6 +168,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: database
       operations:
         - type: create
           name: Create Database
@@ -190,6 +195,7 @@
         path-id: $[::].domain
         path-name: $[::].domain
         path-raw: $[::]
+        type: objectstorage
     - name: Cloud Firewalls
       id: cloud-digital-ocean-firewalls
       icon: digital-ocean.svg
@@ -200,6 +206,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: firewall
       operations:
         - type: create
           name: Create Firewall
@@ -219,6 +226,7 @@
         path-id: $[::].ip
         path-name: $[::].ip
         path-raw: $[::]
+        type: ipaddress
     - name: Load Balancers
       id: cloud-digital-ocean-load-balancers
       icon: digital-ocean.svg
@@ -229,6 +237,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: loadbalancer
     - name: Container Registries
       id: cloud-digital-ocean-registries
       icon: digital-ocean.svg
@@ -239,6 +248,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: containerregistry
       operations:
         - type: create
           name: Create Container Registry

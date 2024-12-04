@@ -12,6 +12,7 @@
         path-id: $.servers[::].uuid
         path-name: $.servers[::].hostname
         path-raw: $.servers[::]
+        type: vm
       operations:
       - type: create
         name: Create Server
@@ -76,6 +77,7 @@
         path-id: $.storages[::].uuid
         path-name: $.storages[::].title
         path-raw: $.storages[::]
+        type: objectstorage
       operations:
       - type: create
         name: Create Storage
@@ -95,6 +97,7 @@
         path-id: $.server_groups[::].uuid
         path-name: $.server_groups[::].title
         path-raw: $.server_groups[::]
+        type: servergroup
       operations:
       - type: create
         name: Create Server Group
@@ -114,6 +117,7 @@
         path-id: $.databases[::].uuid
         path-name: $.databases[::].title
         path-raw: $.databases[::]
+        type: database
       child-template:
         - type: delete
           name: Delete
@@ -129,6 +133,7 @@
         path-id: $.gateways[::].uuid
         path-name: $.gateways[::].name
         path-raw: $.gateways[::]
+        type: gateway
       child-template:
         - type: delete
           name: Delete
@@ -144,6 +149,7 @@
         path-id: $.ip_addresses.[::].address
         path-name: $.ip_addresses[::].address
         path-raw: $.ip_addresses[::]
+        type: ipaddress
       child-template:
         - type: delete
           name: Delete
@@ -159,6 +165,7 @@
         path-id: $.[::].uuid
         path-name: $.[::].name
         path-raw: $.[::]
+        type: kubernetes
       operations:
       - type: create
         name: Create Kubernetes Cluster
@@ -178,6 +185,7 @@
         path-id: $.hosts[::].id
         path-name: $.hosts[::].description
         path-raw: $.hosts[::]
+        type: host
       child-template:
         - type: delete
           name: Delete
@@ -193,6 +201,7 @@
         path-id: $.loadbalancers[::].uuid
         path-name: $.loadbalancers[::].name
         path-raw: $.loadbalancers[::]
+        type: loadbalancer
       child-template:
         - type: delete
           name: Delete
@@ -208,6 +217,7 @@
         path-id: $.networks[::].uuid
         path-name: $.networks[::].name
         path-raw: $.networks[::]
+        type: network
       operations:
         - type: create
           name: Create Network
@@ -227,6 +237,7 @@
         path-id: $.networks[::].uuid
         path-name: $.networks[::].name
         path-raw: $.networks[::]
+        type: peering
       child-template:
         - type: delete
           name: Delete
@@ -242,6 +253,7 @@
         path-id: $.object_storages[::].uuid
         path-name: $.object_storages[::].name
         path-raw: $.object_storages[::]
+        type: objectstorage
       child-template:
         - type: delete
           name: Delete
@@ -257,6 +269,7 @@
         path-id: $.routers[::].uuid
         path-name: $.routers[::].name
         path-raw: $.routers[::]
+        type: router
       operations:
         - type: create
           name: Create Router

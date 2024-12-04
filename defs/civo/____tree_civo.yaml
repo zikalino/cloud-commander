@@ -16,6 +16,7 @@
         path-id: $[::].id
         path-name: $[::].hostname
         path-raw: $[::]
+        type: vm
       operations:
         - type: create
           name: Create Instance
@@ -102,6 +103,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: kubernetes
       operations:
         - type: create
           name: Create Kubernetes Cluster
@@ -137,6 +139,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: loadbalancer
 
     - name: Firewalls
       id: cloud-civo-firewalls
@@ -152,6 +155,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: firewall
 
     - name: API Keys
       id: cloud-civo-apikeys
@@ -163,6 +167,7 @@
         path-id: $[::].name
         path-name: $[::].name
         path-raw: $[::]
+        type: apikey
 
     - name: Databases
       id: cloud-civo-databases
@@ -178,6 +183,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: database
 
     - name: Domains
       id: cloud-civo-domains
@@ -193,6 +199,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: domain
 
     - name: IP Addresses
       id: cloud-civo-ips
@@ -208,6 +215,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: ipaddress
 
     - name: Networks
       id: cloud-civo-network
@@ -223,6 +231,7 @@
         path-id: $[::].id
         path-name: $[::].label
         path-raw: $[::]
+        type: network
 
     - name: Object Stores
       id: cloud-civo-objectstores
@@ -238,6 +247,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: objectstorage
 
     - name: SSH Keys
       id: cloud-civo-volumes
@@ -253,6 +263,7 @@
         path-id: $[::].id
         path-name: $[::].name
         path-raw: $[::]
+        type: sshkey
 
   raw: {}
   details: civo/civo__prerequisites.yaml

@@ -12,6 +12,7 @@
         path-id: $[::].id
         path-name: $[::].label
         path-raw: $[::]
+        type: vm
       operations:
         - type: create
           name: Create Linode (Virtual Machine)
@@ -113,6 +114,7 @@
         path-id: $[::].id
         path-name: $[::].label
         path-raw: $[::]
+        type: loadbalancer
       operations:
         - type: create
           name: Create Node Balancer
@@ -133,6 +135,7 @@
         path-id: $[::].id
         path-name: $[::].label
         path-raw: $[::]
+        type: firewall
       operations:
       - type: create
         name: Create Firewall
@@ -153,6 +156,7 @@
         path-id: $[::].address
         path-name: $[::].address
         path-raw: $[::]
+        type: ipaddress
     - name: Object Storage Clusters
       id: cloud-linode-object-storage-clusters
       icon: linode.png
@@ -163,6 +167,7 @@
         path-id: $[::].id
         path-name: $[::].domain
         path-raw: $[::]
+        type: objectstorage
     - name: Volumes
       id: cloud-linode-volumes
       icon: linode.png
@@ -173,6 +178,7 @@
         path-id: $[::].id
         path-name: $[::].label
         path-raw: $[::]
+        type: disk
       operations:
         - type: create
           name: Create Volume
@@ -193,5 +199,6 @@
         path-id: $[::].id
         path-name: $[::].label
         path-raw: $[::]
+        type: vpc
   raw: {}
   details: linode/linode__prerequisites.yaml
