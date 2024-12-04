@@ -7,10 +7,11 @@
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo instances list --region fra1 --output json
-      path-id: $[::].id
-      path-name: $[::].hostname
-      path-raw: $[::]
+      source:
+        cmd: civo instances list --region fra1 --output json
+        path-id: $[::].id
+        path-name: $[::].hostname
+        path-raw: $[::]
       operations:
         - type: create
           name: Create Instance
@@ -88,10 +89,11 @@
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo kubernetes list --region fra1 --output json
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: civo kubernetes list --region fra1 --output json
+        path-id: $[::].id
+        path-name: $[::].name
+        path-raw: $[::]
       operations:
         - type: create
           name: Create Kubernetes Cluster
@@ -118,90 +120,99 @@
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo loadbalancer list --region fra1 --output json
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: civo loadbalancer list --region fra1 --output json
+        path-id: $[::].id
+        path-name: $[::].name
+        path-raw: $[::]
 
     - name: Firewalls
       id: cloud-civo-firewalls
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo firewall list --region fra1 --output json
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: civo firewall list --region fra1 --output json
+        path-id: $[::].id
+        path-name: $[::].name
+        path-raw: $[::]
 
     - name: API Keys
       id: cloud-civo-apikeys
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo apikey list --region fra1 --output json
-      path-id: $[::].name
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: civo apikey list --region fra1 --output json
+        path-id: $[::].name
+        path-name: $[::].name
+        path-raw: $[::]
 
     - name: Databases
       id: cloud-civo-databases
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo database list --region fra1 --output json
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: civo database list --region fra1 --output json
+        path-id: $[::].id
+        path-name: $[::].name
+        path-raw: $[::]
 
     - name: Domains
       id: cloud-civo-domains
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo domain list --region fra1 --output json
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: civo domain list --region fra1 --output json
+        path-id: $[::].id
+        path-name: $[::].name
+        path-raw: $[::]
 
     - name: IP Addresses
       id: cloud-civo-ips
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo ip list --region fra1 --output json
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: civo ip list --region fra1 --output json
+        path-id: $[::].id
+        path-name: $[::].name
+        path-raw: $[::]
 
     - name: Networks
       id: cloud-civo-network
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo network list --region fra1 --output json
-      path-id: $[::].id
-      path-name: $[::].label
-      path-raw: $[::]
+      source:
+        cmd: civo network list --region fra1 --output json
+        path-id: $[::].id
+        path-name: $[::].label
+        path-raw: $[::]
 
     - name: Object Stores
       id: cloud-civo-objectstores
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo objectstore list --region fra1 --output json
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: civo objectstore list --region fra1 --output json
+        path-id: $[::].id
+        path-name: $[::].name
+        path-raw: $[::]
 
     - name: SSH Keys
       id: cloud-civo-volumes
       icon: civo.png
       subitems: []
       raw: {}
-      query: civo volume list --region fra1 --output json
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: civo volume list --region fra1 --output json
+        path-id: $[::].id
+        path-name: $[::].name
+        path-raw: $[::]
 
   raw: {}
   details: civo/civo__prerequisites.yaml

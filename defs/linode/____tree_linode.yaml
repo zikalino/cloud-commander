@@ -7,10 +7,11 @@
       icon: linode.png
       subitems: []
       raw: {}
-      query: linode linodes list --json
-      path-id: $[::].id
-      path-name: $[::].label
-      path-raw: $[::]
+      source:
+        cmd: linode linodes list --json
+        path-id: $[::].id
+        path-name: $[::].label
+        path-raw: $[::]
       operations:
         - type: create
           name: Create Linode (Virtual Machine)
@@ -107,10 +108,11 @@
       icon: linode.png
       subitems: []
       raw: {}
-      query: linode nodebalancers list --json
-      path-id: $[::].id
-      path-name: $[::].label
-      path-raw: $[::]
+      source:
+        cmd: linode nodebalancers list --json
+        path-id: $[::].id
+        path-name: $[::].label
+        path-raw: $[::]
       operations:
         - type: create
           name: Create Node Balancer
@@ -126,10 +128,11 @@
       icon: linode.png
       subitems: []
       raw: {}
-      query: linode firewalls list --json
-      path-id: $[::].id
-      path-name: $[::].label
-      path-raw: $[::]
+      source:
+        cmd: linode firewalls list --json
+        path-id: $[::].id
+        path-name: $[::].label
+        path-raw: $[::]
       operations:
       - type: create
         name: Create Firewall
@@ -145,28 +148,31 @@
       icon: linode.png
       subitems: []
       raw: {}
-      query: linode networking ips-list --json
-      path-id: $[::].address
-      path-name: $[::].address
-      path-raw: $[::]
+      source:
+        cmd: linode networking ips-list --json
+        path-id: $[::].address
+        path-name: $[::].address
+        path-raw: $[::]
     - name: Object Storage Clusters
       id: cloud-linode-object-storage-clusters
       icon: linode.png
       subitems: []
       raw: {}
-      query: linode object-storage clusters-list --json
-      path-id: $[::].id
-      path-name: $[::].domain
-      path-raw: $[::]
+      source:
+        cmd: linode object-storage clusters-list --json
+        path-id: $[::].id
+        path-name: $[::].domain
+        path-raw: $[::]
     - name: Volumes
       id: cloud-linode-volumes
       icon: linode.png
       subitems: []
       raw: {}
-      query: linode volumes list --json
-      path-id: $[::].id
-      path-name: $[::].label
-      path-raw: $[::]
+      source:
+        cmd: linode volumes list --json
+        path-id: $[::].id
+        path-name: $[::].label
+        path-raw: $[::]
       operations:
         - type: create
           name: Create Volume
@@ -182,9 +188,10 @@
       icon: linode.png
       subitems: []
       raw: {}
-      query: linode vpcs list --json
-      path-id: $[::].id
-      path-name: $[::].label
-      path-raw: $[::]
+      source:
+        cmd: linode vpcs list --json
+        path-id: $[::].id
+        path-name: $[::].label
+        path-raw: $[::]
   raw: {}
   details: linode/linode__prerequisites.yaml

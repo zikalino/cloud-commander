@@ -4,10 +4,11 @@
   subitems: []
   raw: {}
   details: az/az__prerequisites.yaml
-  query: az group list
-  path-id: $[::].id
-  path-name: $[::].name
-  path-raw: $[::]
+  source:
+    cmd: az group list
+    path-id: $[::].id
+    path-name: $[::].name
+    path-raw: $[::]
   operations:
     - type: create
       name: Create Resource Group
@@ -28,10 +29,11 @@
       cmd: az resource delete --ids ${id}
       refresh: parent
     - type: query
-      query: az resource list --resource-group ${name}
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: az resource list --resource-group ${name}
+        path-id: $[::].id
+        path-name: $[::].name
+        path-raw: $[::]
     # This is copied from level below, but is exactly the same
     - type: query-details
       when:

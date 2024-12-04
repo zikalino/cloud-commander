@@ -7,9 +7,10 @@
       icon: kamatera.png
       subitems: []
       raw: {}
-      query: cloudcli server list --format json
-      path-id: $[::].id
-      path-name: $[::].name
-      path-raw: $[::]
+      source:
+        cmd: cloudcli server list --format json
+        path-id: $[::].id
+        path-name: $[::].name
+        path-raw: $[::]
   raw: {}
   details: kamatera/kamatera__prerequisites.yaml

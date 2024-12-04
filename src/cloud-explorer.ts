@@ -106,7 +106,7 @@ function createDetailsView(view: any, id: string) {
   var resource = setContext(id);
 
   if (resource) {
-    var hasQuery: boolean = ('query' in resource);
+    var hasSource: boolean = ('source' in resource);
     var hasQueryDetails: boolean = ('query-details' in resource);
 
     if ('details' in resource) {
@@ -348,7 +348,7 @@ function createDetailsView(view: any, id: string) {
       });
     }
 
-    if (hasQuery || hasQueryDetails) {
+    if (hasSource || hasQueryDetails) {
       setActionsMsg['data'].push(
       {
         codicon: 'codicon-refresh',

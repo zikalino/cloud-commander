@@ -86,7 +86,6 @@ async function loadYamlView(yml: any, refresh_id: string|null, parameters: any =
         CloudExplorerRefresh(refresh_id ? refresh_id : "");
       }
     } else if (msg.command === 'button-clicked') {
-      //vscode.window.showInformationMessage('Button ' + msg.id + ' Clicked!');
       if (msg.id === 'close') {
         view.close();
       } else if (msg.id === 'install_button') {
@@ -95,4 +94,3 @@ async function loadYamlView(yml: any, refresh_id: string|null, parameters: any =
     }
   };
 }
-
