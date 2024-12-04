@@ -32,9 +32,11 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
   view.MsgHandler = function (msg: any) {
     switch (msg.command) {
       case 'ready':
-        queryAllResources();
+        var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/____tree.yaml");
+        resources = loader.getYaml();
         view.updateTreeViewItems(resources, null);
         return;
+
       case 'refresh':
         // XXX - need to send refresh event to explorer
         if ('id' in msg) {
@@ -44,16 +46,18 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
         }
         return;
       case 'selected':
-        // a tree item was selected, display details accordingly
-        // or try to query items accordingly
-        createDetailsView(view, msg.id);
 
         // XXX - this should be optimized
         // don't requery subitems if already there
         var item = findItem(resources, msg.id);
         if (!('subitems' in item) || item['subitems'].length === 0) {
-          tryToQueryItems(view, msg.id);
+          view.tryToQueryItems(view, msg.id);
         }
+
+        // a tree item was selected, display details accordingly
+        // or try to query items accordingly
+        createDetailsView(view, msg.id);
+
         return;
       case 'action-clicked':
         if (msg.id === 'action-refresh') {
@@ -75,119 +79,6 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
   };
 
   view.createPanel(formDefinition, "media/icon.webp");
-}
-
-async function tryToQueryItems(view: any, id: string) {
-
-  var resource = setContext(id);
-
-  if ('query-details' in resource) {
-
-    // check if there's condition and validate
-    // XXX - could we have more query details than one?
-    view.postMessage({ command: 'set-item-state', id: id, state: 'loading'});
-    var data = genericQuery(resource['query-details']);
-    resource['raw'] = data;
-
-    if ('extract-details' in resource) {
-      var extract = resource['extract-details'];
-      for (var extractIdx = 0; extractIdx < extract.length; extractIdx++) {
-        var field = extract[extractIdx]['field'];
-        var path = extract[extractIdx]['path'];
-        var value = JSONPath({path: path, json: data})[0];
-        if ('map' in extract[extractIdx]) {
-          value = extract[extractIdx]['map'][value];
-        }
-        resource[field] = value;
-      }
-    }
-
-    // update details
-    createDetailsView(view, id);
-    view.postMessage({ command: 'set-item-state', id: id, state: 'loaded'});
-  }
-
-  if ('query' in resource) {
-
-    view.postMessage({ command: 'set-item-state', id: id, state: 'loading'});
-
-    var data = genericQuery(resource['query']);
-    var items: any[] = [];
-    var ids: string[] = JSONPath({path: resource['path-id'], json: data});
-    var names: string[] = JSONPath({path: resource['path-name'], json: data});
-    var raw: any[] = JSONPath({path: resource['path-raw'], json: data});
-
-    for (var idx in ids) {
-      var item: any = {
-        "name": names[idx],
-        "id": ids[idx].toString(),
-        "icon": resource['icon'],
-        "subitems": [],
-        "raw": raw[idx]
-      };
-
-      if ('child-template' in resource) {
-        item['operations'] = [];
-        for (var opIdx in resource['child-template']) {
-          var operation = resource['child-template'][opIdx];
-
-          // if it has another child-template, then stick it into the item
-          if (operation['type'] === 'child-template') {
-            item['child-template'] = operation['template'];
-            continue;
-          }
-
-          var child_operation: any = {
-            type: operation['type'],
-            name: operation['name']
-          };
-
-          if ('refresh' in operation) {
-            child_operation['refresh'] = operation['refresh'];
-          }
-
-          if ('cmd' in operation) {
-            var cmd = operation['cmd'].replaceAll("${id}", ids[idx].toString());
-            cmd = cmd.replaceAll("${name}", names[idx]);
-            child_operation['cmd'] = cmd;
-            child_operation['global'] = false;
-          }
-
-          if ('when' in operation) {
-            child_operation['when'] = operation['when'];
-          }
-          if (operation['type'] === 'query-details') {
-            // we know item type already, so we can check it now and create query-details if matches
-            if (validateCondition(item, operation)) {
-              var query = operation['query'].replaceAll("${id}", ids[idx].toString());
-              query = query.replaceAll("${name}", names[idx]);
-              item['query-details'] = query;
-              if ('extract' in operation) {
-                item['extract-details'] = operation['extract'];
-              }
-            }
-            // XXX - details mapping???
-          } else if ('query' in operation) {
-            var query = operation['query'].replaceAll("${id}", ids[idx].toString());
-            query = query.replaceAll("${name}", names[idx]);
-            item['query'] = query;
-            item['path-id'] = operation['path-id'];
-            item['path-name'] = operation['path-name'];
-            item['path-raw'] = operation['path-raw'];
-          } else {
-            item['operations'].push(child_operation);
-          }
-        }
-      }
-      items.push(item);
-    }
-
-    // just sort items by label
-    items.sort((a: any, b: any) => a['name'].localeCompare(b['name']));
-
-    resource.subitems = items;
-    view.updateTreeViewItems(items, id);
-  }
 }
 
 function validateCondition(resource: any, op: any) {
@@ -506,28 +397,6 @@ function setContextRecursive(id: string, resources: any[]): any {
   return null;
 }
 
-function queryAllResources() {
-  var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/____tree.yaml");
-  resources = loader.getYaml();
-}
-
-function genericQuery(cmd: string) {
-  var r: string = "";
-
-  const cp = require('child_process');
-  if (process.platform === "win32") {
-    r = cp.execSync(cmd, { shell: 'powershell' }).toString();
-  } else {
-    r = cp.execSync(cmd, { shell: '/bin/bash' }).toString();
-  }
-
-  var json = [];
-  try {
-    json = JSON.parse(r);
-  } catch (e) {}
-  return json;  
-}
-
 function findItem(subtree: any[], item_id: string): any {
   for (var idx in subtree) {
     var item = subtree[idx];
@@ -639,9 +508,19 @@ function RefreshCurrentContext() {
   // Use:
   // currentCloudId
   // currentResourceId
-  tryToQueryItems(view, currentResourceId);
+  view.tryToQueryItems(view, currentResourceId);
+
+  // a tree item was selected, display details accordingly
+  // or try to query items accordingly
+  createDetailsView(view, currentResourceId);
 }
 
 export function CloudExplorerRefresh(refresh_id: string) {
-  tryToQueryItems(view, refresh_id !== "" ? refresh_id : currentResourceId);
+
+  var id = (refresh_id !== "" ? refresh_id : currentResourceId);
+  view.tryToQueryItems(view, id);
+
+  // a tree item was selected, display details accordingly
+  // or try to query items accordingly
+  createDetailsView(view, id);
 }
