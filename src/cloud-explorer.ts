@@ -1,10 +1,8 @@
 import * as vscode from 'vscode';
 import * as helpers from '@zim.kalinowski/vscode-helper-toolkit';
-import { JSONPath } from 'jsonpath-plus';
 
 import { displayMenu } from './extension';
 
-import { extensionContext } from './extension';
 import vm_sizes from './vm_sizes.json' assert {type: 'json'};
 
 var view: helpers.GenericWebView|null = null;
@@ -77,31 +75,6 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
 
   view.createPanel(formDefinition, "media/icon.webp");
 }
-
-function validateCondition(resource: any, op: any) {
-  if ('when' in op) {
-    var p = op['when']['path'];
-    var requiredValue = op['when']['value'];
-    var actualValue = JSONPath({path: p, json: resource['raw']})[0];
-    var compare = (("compare" in op['when']) ? op['when']['compare'] : "eq"); 
-
-    if (compare === "eq") {
-      return (requiredValue === actualValue);
-    } else if (compare === "ne") {
-      return (requiredValue !== actualValue);
-    }
-  }
-  return true;
-}
-
-function getFormattedValue(resource: any, id: string): string {
-  if (id in resource) {
-    return resource[id];
-  } else {
-    return "-";
-  }
-}
-
 
 
 function displayCreateResourceMenu(item_id: string) {
