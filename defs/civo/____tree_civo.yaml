@@ -27,28 +27,28 @@
 
       child-template:
         - type: query-details
-          query: civo instances show ${id} ${region} -o json
+          query: civo instances show ${id} --region ${region} -o json
           refresh: self
-      #    extract:
-      #      - field: state
-      #        path: "$[0].status"
-      #        map:
-      #          active: started
-      #          off: stopped
-      #      - field: size
-      #        path: "$[0].size.slug"
-      #      - field: location
-      #        path: "$[0].region.slug"
-      #      - field: size_cores
-      #        path: "$[0].size.vcpus"
-      #      - field: size_memory
-      #        path: "$[0].size.memory"
-      #      - field: size_disk
-      #        path: "$[0].size.disk"
-      #      - field: price
-      #        path: "$[0].size.price_monthly"
-      #      - field: image
-      #        path: "$[0].image.slug"
+          extract:
+            - field: state
+              path: "$.status"
+              map:
+                ACTIVE: started
+                off: stopped
+            - field: size
+              path: "$.size"
+            - field: location
+              path: "$.region"
+            - field: size_cores
+              path: "$.cpu_cores"
+            - field: size_memory
+              path: "$.ram_mb"
+            - field: size_disk
+              path: "$.disk_gb"
+            - field: price
+              path: "$.price_monthly"
+            - field: image
+              path: "$.diskimage_id"
       #  - type: delete
       #    name: Delete
       #    cmd: doctl compute droplet delete ${id} --force
