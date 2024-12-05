@@ -141,135 +141,14 @@ function createDetailsView(view: any, id: string) {
         sections.push(definition);
       }
 
-      //
-      // Basic Information - whatever is available for this resource type
-      //
-      if ('id' in resource) {
-        sections.push(
-          {
-            type: 'section',
-            title: 'Basic Information',
-            subitems: basicInformationItems
-          }
-        );
-
-        if ('id' in resource) {
-          basicInformationItems.push(
-            {
-              type: 'info-row',
-              icon: 'codicon-symbol-field',
-              color: 'black',
-              label: 'ID',
-              value: resource['id']
-            }
-          );
-        }
-
-        if ('name' in resource || 'state' in resource || 'location' in resource) {
-          var icon = 'icon-square-orange.png';
-          if (resource['state'] === 'started') {
-            icon = 'icon-square-green.png';
-          } else if (resource['state'] === 'stopped') {
-            icon = 'icon-square-red.png';
-          }
-
-          basicInformationItems.push(
-            {
-              type: 'row',
-              subitems: [
-                {
-                  type: 'field',
-                  icon: 'codicon-symbol-string',
-                  color: 'black',
-                  label: 'Name:',
-                  value: getFormattedValue(resource, "name")
-                },
-                {
-                  type: 'field',
-                  icon: icon,
-                  color: 'black',
-                  label: 'State:',
-                  value: getFormattedValue(resource, "state")
-                },
-                {
-                  type: 'field',
-                  icon: 'codicon-location',
-                  color: 'black',
-                  label: 'Location:',
-                  value: getFormattedValue(resource, "location")
-                }        
-              ]
-            }
-          );
-        }
-
-        if ('size' in resource || 'price' in resource) {
-          basicInformationItems.push(
-            {
-              type: 'row',
-              subitems: [
-                {
-                  type: 'field',
-                  icon: 'icon-size.png',
-                  color: 'black',
-                  label: 'Size:',
-                  value: getFormattedValue(resource, "size")
-                },
-                {
-                  type: 'field',
-                  icon: 'icon-price.png',
-                  color: 'black',
-                  label: 'Price:',
-                  value: getFormattedValue(resource, "price") + "/month"
-                }    
-              ]
-            }
-          );
-        }
-
-        if ('size_cores' in resource || 'size_memory' in resource || 'size_disk' in resource) {
-          basicInformationItems.push(
-            {
-              type: 'row',
-              subitems: [
-                {
-                  type: 'field',
-                  icon: 'icon-cores.png',
-                  color: 'black',
-                  label: 'Cores:',
-                  value: getFormattedValue(resource, "size_cores")
-                },
-                {
-                  type: 'field',
-                  icon: 'icon-memory.png',
-                  color: 'black',
-                  label: 'Memory:',
-                  value: getFormattedValue(resource, "size_memory")
-                },
-                {
-                  type: 'field',
-                  icon: 'icon-storage.png',
-                  color: 'black',
-                  label: 'Disk Size:',
-                  value: getFormattedValue(resource, "size_disk")
-                }
-              ]
-            }
-          );
-        }
-
-        if ('image' in resource) {
-          basicInformationItems.push(
-            {
-              type: 'info-row',
-              icon: 'codicon-file-binary',
-              color: 'black',
-              label: 'Image',
-              value: getFormattedValue(resource, "image")
-            }
-          );
-        }
-      }
+        //if ('name' in resource || 'state' in resource || 'location' in resource) {
+        //  var icon = 'icon-square-orange.png';
+        //  if (resource['state'] === 'started') {
+        //    icon = 'icon-square-green.png';
+        //  } else if (resource['state'] === 'stopped') {
+        //    icon = 'icon-square-red.png';
+        //  }
+        //}
 
       //
       // get all the operations here
