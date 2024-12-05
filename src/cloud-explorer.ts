@@ -53,7 +53,7 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
 
         // a tree item was selected, display details accordingly
         // or try to query items accordingly
-        createDetailsView(view, msg.id);
+        view.createDetailsView(msg.id);
 
         return;
       case 'action-clicked':
@@ -102,195 +102,11 @@ function getFormattedValue(resource: any, id: string): string {
   }
 }
 
-function createDetailsView(view: any, id: string) {
-  var resource = view.treeFindItem(view.treeGetItems(), id);
-
-  if (resource) {
-    var hasSource: boolean = ('source' in resource);
-    var hasQueryDetails: boolean = ('query-details' in resource);
-
-    if ('details' in resource) {
-      //
-      // if details definition is specified, just use it
-      //
-
-      var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/" + resource['details']);
-      let yml = loader.getYaml();
-      view.updateTreeViewDetails(yml);
-    } else if ('raw' in resource && Object.keys(resource['raw']).length !== 0) {
-      //
-      // If there's raw resource, we can also check if there are any operations that
-      // could be executed on that resource. If so, append appropriate actions.
-      //
-      var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/empty.yaml");
-      let yml = loader.getYaml();
-
-      let sections: any[] = [];
-      let basicInformationItems: any[] = [];
-      let operationItems: any[] = [];
-      yml['form'] = sections;
-
-
-      // first matching templates
-      var templates: any[] = view.treeFindMatchingDetailsTemplates(resource['type']);
-
-      for (var templateIdx = 0; templateIdx < templates.length; templateIdx++) {
-
-        var definition: any = view.createDefinitionFromTemplate(templates[templateIdx]['definition'], resource);
-
-        sections.push(definition);
-      }
-
-        //if ('name' in resource || 'state' in resource || 'location' in resource) {
-        //  var icon = 'icon-square-orange.png';
-        //  if (resource['state'] === 'started') {
-        //    icon = 'icon-square-green.png';
-        //  } else if (resource['state'] === 'stopped') {
-        //    icon = 'icon-square-red.png';
-        //  }
-        //}
-
-      //
-      // get all the operations here
-      //
-      var operations = findOperations(id);
-
-      if (operations.length > 0) {
-        sections.push(
-          {
-            type: 'section',
-            title: 'Operations',
-            subitems: operationItems
-          }  
-        );
-
-        for (var idx in operations) {
-          var op = operations[idx];
-
-          // check if there's condition and validate
-          if (!validateCondition(resource, op)) {
-            continue;
-          }
-
-          if (op['type'] !== 'create') {
-            var cmd = op['cmd'].replace("${id}", id);
-            var name = op['name'];
-            var row: any = {
-                type: 'action-row',
-                name: name,
-                install: cmd
-              };
-            // does anything need to be refreshed after operation is executed?
-            if ('refresh' in op) {
-              if (op['refresh'] === 'parent') {
-                // we need to refresh list where this particular item is located
-                var parent = view.treeFindParent({ subitems: view.treeGetItems()}, id);
-                row['refresh'] = parent['id'];
-              } else if (op['refresh'] === 'self') {
-                row['refresh'] = id;
-              }
-            }
-            operationItems.push(row);
-          }
-        }
-      }
-
-      var raw = JSON.stringify(resource['raw'], null, 2);
-      sections.push(
-            {
-              type: 'section',
-              title: 'Raw Info',
-              subitems: [
-                {
-                  type: 'code-block',
-                  content: raw
-                }
-    
-              ]
-            }
-          );
-
-      view.updateTreeViewDetails(yml);
-    } else {
-      //
-      // We have nothing to show here. Perhaps we could show some links or create icons?
-      //
-      view.updateTreeViewDetails({});
-    }
-
-    //
-    // Here we are setting action icons that will appear in the header
-    //
-    let setActionsMsg: any = {
-      command: 'actions',
-      data: [
-      ]
-    };
-
-    if (resource['id'].startsWith('cloud-') ||
-        resource['id'] === 'welcome' ||
-        (resource['raw'] && resource['raw']['type'] && resource['raw']['type'] === 'Microsoft.Resources/resourceGroups' )) {
-      setActionsMsg['data'].push(
-      {
-        codicon: 'codicon-add',
-        description: 'Create Resource',
-        action: 'action-add'
-      });
-    }
-
-    if (hasSource || hasQueryDetails) {
-      setActionsMsg['data'].push(
-      {
-        codicon: 'codicon-refresh',
-        description: 'Refresh',
-        action: 'action-refresh'
-      });
-    }
-
-    view.postMessage(setActionsMsg);
-  }else {
-    view.updateTreeViewDetails({});
-  }
-}
-
-function findOperations(item_id: string): any[] {
-  var operations: any[] = [];
-  var item = view.treeFindItem(view.treeGetItems(), item_id);
-
-  if (item !== null) {
-    findOperationsRecursive(item, operations, 0);
-  }
-
-  return operations;
-}
-
-function findOperationsRecursive(item: any, operations: any[], level: number) {
-
-  if (item !== null) {
-    // operations from this item
-    if ('operations' in item) {
-      for (var opIdx = 0; opIdx < item['operations'].length; opIdx++) {
-        let operation = item['operations'][opIdx];
-        let global = !('global' in operation) || operation['global'];
-        if (level === 0 || global) {
-          operations.push(operation);
-        }
-      }
-    }
-
-    // and all the matching operations from subitems
-    if ('subitems' in item) {
-      for (var idx in item['subitems']) {
-        findOperationsRecursive(item['subitems'][idx], operations, level + 1);
-      }
-    }
-  }
-}
 
 
 function displayCreateResourceMenu(item_id: string) {
   // XXX - find menu item
-  var operations: any[] = findOperations(item_id);
+  var operations: any[] = view.findOperations(item_id);
   var menu_items: any[] = [];
 
   for (var idx in operations) {
@@ -327,7 +143,7 @@ function RefreshCurrentContext() {
 
   // a tree item was selected, display details accordingly
   // or try to query items accordingly
-  createDetailsView(view, view.treeGetCurrentId());
+  view.createDetailsView(view.treeGetCurrentId());
 }
 
 export function CloudExplorerRefresh(refresh_id: string) {
@@ -337,5 +153,5 @@ export function CloudExplorerRefresh(refresh_id: string) {
 
   // a tree item was selected, display details accordingly
   // or try to query items accordingly
-  createDetailsView(view, id);
+  view.createDetailsView(id);
 }
