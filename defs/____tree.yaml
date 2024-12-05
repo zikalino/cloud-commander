@@ -25,6 +25,25 @@
       name: Deploy Application
       template:
         name: generic/generic_deploy_application
+  templates:
+    - item-type: '*'
+      definition:
+        type: section
+        title: Basic Information
+        subitems:
+          - type: 'info-row'
+            icon: 'codicon-symbol-field'
+            color: 'black'
+            label: 'ID'
+            value: '${id}'
+
+    - item-type: vm
+      definition:
+        type: section
+        title: Virtual Machine
+        subitems: []
+      
+
 
   # add definitions for rspective sections / resouce providers here
 - $include: aws/____tree_aws.yaml

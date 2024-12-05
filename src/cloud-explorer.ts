@@ -130,6 +130,17 @@ function createDetailsView(view: any, id: string) {
       let operationItems: any[] = [];
       yml['form'] = sections;
 
+
+      // first matching templates
+      var templates: any[] = view.treeFindMatchingDetailsTemplates(resource['type']);
+
+      for (var templateIdx = 0; templateIdx < templates.length; templateIdx++) {
+
+        var definition: any = view.createDefinitionFromTemplate(templates[templateIdx]['definition'], resource);
+
+        sections.push(definition);
+      }
+
       //
       // Basic Information - whatever is available for this resource type
       //
