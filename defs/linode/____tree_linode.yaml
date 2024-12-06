@@ -4,34 +4,40 @@
   subitems:
     - name: Linodes
       id: cloud-linode-linodes
+      type: linode-linode-list
       icon: linode.png
       subitems: []
       raw: {}
 
     - name: Node Balancers
       id: cloud-linode-nodebalancers
+      type: linode-loadbalancer-list
       icon: linode.png
       subitems: []
       raw: {}
 
     - name: Firewalls
       id: cloud-linode-firewalls
+      type: linode-firewall-list
       icon: linode.png
       subitems: []
       raw: {}
 
     - name: Networking IPs
       id: cloud-linode-networking-ips
+      type: linode-network-list
       icon: linode.png
       subitems: []
       raw: {}
     - name: Object Storage Clusters
       id: cloud-linode-object-storage-clusters
+      type: linode-objectstorage-list
       icon: linode.png
       subitems: []
       raw: {}
     - name: Volumes
       id: cloud-linode-volumes
+      type: linode-volume-list
       icon: linode.png
       subitems: []
       raw: {}
@@ -42,6 +48,7 @@
 
     - name: VPCs
       id: cloud-linode-vpcs
+      type: linode-vpc-list
       icon: linode.png
       subitems: []
       raw: {}

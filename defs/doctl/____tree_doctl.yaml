@@ -4,63 +4,75 @@
   subitems:
     - name: Droplets
       id: cloud-digital-ocean-droplets
+      type: doctl-droplet-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
     - name: Volumes
       id: cloud-digital-ocean-volumes
+      type: doctl-volume-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
     - name: Kubernetes
       id: cloud-digital-ocean-kubernetes
+      type: doctl-kubernetes-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
 
     - name: App Platform
       id: cloud-digital-ocean-app-platform
+      type: doctl-application-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
     - name: Functions
       id: cloud-digital-ocean-functions
+      type: doctl-function-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
     - name: Databases
       id: cloud-digital-ocean-databases
+      type: doctl-database-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
 
     - name: Spaces Object Storage
       id: cloud-digital-ocean-spaces-object-storage
+      type: doctl-objectstorage-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
     - name: Domains/DNS
       id: cloud-digital-ocean-domains-dns
+      type: doctl-domain-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
     - name: Cloud Firewalls
       id: cloud-digital-ocean-firewalls
+      type: doctl-firewall-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
     - name: Reserved IPs
       id: cloud-digital-ocean-reserved-ips
+      type: doctl-ip-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
     - name: Load Balancers
       id: cloud-digital-ocean-load-balancers
+      type: doctl-loadbalancer-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}
     - name: Container Registries
       id: cloud-digital-ocean-registries
+      type: doctl-containerregistry-list
       icon: digital-ocean.svg
       subitems: []
       raw: {}

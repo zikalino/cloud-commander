@@ -4,51 +4,61 @@
   subitems:
     - name: Servers
       id: cloud-upcloud-servers
+      type: upctl-server-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: Storage
       id: cloud-upcloud-storages
+      type: upctl-storage-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: Server Groups
       id: cloud-upcloud-server-groups
+      type: upctl-servergroup-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: Databases
       id: cloud-upcloud-databases
+      type: upctl-database-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: Gateways
       id: cloud-upcloud-gateways
+      type: upctl-gateway-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: IP Addresses
       id: cloud-upcloud-ip-addresses
+      type: upctl-ip-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: Kubernetes
       id: cloud-upcloud-kubernetes
+      type: upctl-kubernetes-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: Hosts
       id: cloud-upcloud-hosts
+      type: upctl-host-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: Load Balancers
       id: cloud-upcloud-loadbalancers
+      type: upctl-loadbalancer-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: Networks
       id: cloud-upcloud-networks
+      type: upctl-network-list
       icon: upcloud.png
       subitems: []
       raw: {}
@@ -58,16 +68,19 @@
           template: upctl_network_create
     - name: Network Peerings
       id: cloud-upcloud-network-peerings
+      type: upctl-peering-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: Object Storages
       id: cloud-upcloud-object-storages
+      type: upctl-objectstorage-list
       icon: upcloud.png
       subitems: []
       raw: {}
     - name: Routers
       id: cloud-upcloud-routers
+      type: upctl-router-list
       icon: upcloud.png
       subitems: []
       raw: {}
