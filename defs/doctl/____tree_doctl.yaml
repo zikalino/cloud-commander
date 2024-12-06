@@ -7,12 +7,6 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl compute droplet list --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: vm
       operations:
         - type: create
           name: Create Droplet
@@ -22,29 +16,6 @@
               cloud_provider: cloud-doctl
 
       child-template:
-        - type: query-details
-          query: doctl compute droplet get ${id} -o json
-          refresh: self
-          extract:
-            - field: state
-              path: "$[0].status"
-              map:
-                active: started
-                off: stopped
-            - field: size
-              path: "$[0].size.slug"
-            - field: location
-              path: "$[0].region.slug"
-            - field: size_cores
-              path: "$[0].size.vcpus"
-            - field: size_memory
-              path: "$[0].size.memory"
-            - field: size_disk
-              path: "$[0].size.disk"
-            - field: price
-              path: "$[0].size.price_monthly"
-            - field: image
-              path: "$[0].image.slug"
         - type: delete
           name: Delete
           cmd: doctl compute droplet delete ${id} --force
@@ -89,12 +60,6 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl compute volume list --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: disk
       operations:
         - type: create
           name: Create Volume
@@ -121,12 +86,6 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl kubernetes cluster list --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: kubernetes
       operations:
         - type: create
           name: Create Kubernetes Cluster
@@ -142,33 +101,16 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl apps list --output json
-        path-id: $[::].id
-        path-name: $[::].spec_name
-        path-raw: $[::]
     - name: Functions
       id: cloud-digital-ocean-functions
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl serverless functions list --output json
-        path-id: $[::].id
-        path-name: $[::].spec_name
-        path-raw: $[::]
-        type: application
     - name: Databases
       id: cloud-digital-ocean-databases
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl databases list --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: database
       operations:
         - type: create
           name: Create Database
@@ -190,23 +132,11 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl compute domain list --output json
-        path-id: $[::].domain
-        path-name: $[::].domain
-        path-raw: $[::]
-        type: objectstorage
     - name: Cloud Firewalls
       id: cloud-digital-ocean-firewalls
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl compute firewall list --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: firewall
       operations:
         - type: create
           name: Create Firewall
@@ -221,34 +151,16 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl compute reserved-ip list --output json
-        path-id: $[::].ip
-        path-name: $[::].ip
-        path-raw: $[::]
-        type: ipaddress
     - name: Load Balancers
       id: cloud-digital-ocean-load-balancers
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl compute load-balancer list --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: loadbalancer
     - name: Container Registries
       id: cloud-digital-ocean-registries
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      source:
-        cmd: doctl registry list --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: containerregistry
       operations:
         - type: create
           name: Create Container Registry

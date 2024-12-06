@@ -7,12 +7,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl server list -o json
-        path-id: $.servers[::].uuid
-        path-name: $.servers[::].hostname
-        path-raw: $.servers[::]
-        type: vm
       operations:
       - type: create
         name: Create Server
@@ -21,24 +15,6 @@
           parameters:
             cloud_provider: cloud-upctl
       child-template:
-        - type: query-details
-          query: upctl server show ${id} -o json
-          refresh: self
-          extract:
-            - field: state
-              path: "$.state"
-            - field: size
-              path: "$.plan"
-            - field: location
-              path: "$.zone"
-            - field: size_cores
-              path: "$.core_number"
-            - field: size_memory
-              path: "$.memory_amount"
-            - field: size_disk
-              path: "$[0].specs.disk"
-            - field: image
-              path: "$[0].image"
         - type: delete
           name: Delete
           cmd: upctl server delete ${id}
@@ -72,12 +48,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl storage list -o json
-        path-id: $.storages[::].uuid
-        path-name: $.storages[::].title
-        path-raw: $.storages[::]
-        type: objectstorage
       operations:
       - type: create
         name: Create Storage
@@ -92,12 +62,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl servergroup list -o json
-        path-id: $.server_groups[::].uuid
-        path-name: $.server_groups[::].title
-        path-raw: $.server_groups[::]
-        type: servergroup
       operations:
       - type: create
         name: Create Server Group
@@ -112,12 +76,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl database list -o json
-        path-id: $.databases[::].uuid
-        path-name: $.databases[::].title
-        path-raw: $.databases[::]
-        type: database
       child-template:
         - type: delete
           name: Delete
@@ -128,12 +86,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl gateway list -o json
-        path-id: $.gateways[::].uuid
-        path-name: $.gateways[::].name
-        path-raw: $.gateways[::]
-        type: gateway
       child-template:
         - type: delete
           name: Delete
@@ -144,12 +96,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl ip-address list -o json
-        path-id: $.ip_addresses.[::].address
-        path-name: $.ip_addresses[::].address
-        path-raw: $.ip_addresses[::]
-        type: ipaddress
       child-template:
         - type: delete
           name: Delete
@@ -160,12 +106,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl kubernetes list -o json
-        path-id: $.[::].uuid
-        path-name: $.[::].name
-        path-raw: $.[::]
-        type: kubernetes
       operations:
       - type: create
         name: Create Kubernetes Cluster
@@ -180,12 +120,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl host list -o json
-        path-id: $.hosts[::].id
-        path-name: $.hosts[::].description
-        path-raw: $.hosts[::]
-        type: host
       child-template:
         - type: delete
           name: Delete
@@ -196,12 +130,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl loadbalancer list -o json
-        path-id: $.loadbalancers[::].uuid
-        path-name: $.loadbalancers[::].name
-        path-raw: $.loadbalancers[::]
-        type: loadbalancer
       child-template:
         - type: delete
           name: Delete
@@ -212,12 +140,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl network list -o json
-        path-id: $.networks[::].uuid
-        path-name: $.networks[::].name
-        path-raw: $.networks[::]
-        type: network
       operations:
         - type: create
           name: Create Network
@@ -232,12 +154,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl networkpeering list -o json
-        path-id: $.networks[::].uuid
-        path-name: $.networks[::].name
-        path-raw: $.networks[::]
-        type: peering
       child-template:
         - type: delete
           name: Delete
@@ -248,12 +164,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl object-storage list -o json
-        path-id: $.object_storages[::].uuid
-        path-name: $.object_storages[::].name
-        path-raw: $.object_storages[::]
-        type: objectstorage
       child-template:
         - type: delete
           name: Delete
@@ -264,12 +174,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      source:
-        cmd: upctl router list -o json
-        path-id: $.routers[::].uuid
-        path-name: $.routers[::].name
-        path-raw: $.routers[::]
-        type: router
       operations:
         - type: create
           name: Create Router

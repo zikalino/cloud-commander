@@ -4,22 +4,10 @@
   subitems:
     - name: Instances
       id: cloud-civo-instances
+      type: civo-instance-list
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd:
-          - civo instances list --region fra1 --output json
-          - civo instances list --region phx1 --output json
-          - civo instances list --region lon1 --output json
-          - civo instances list --region nyc1 --output json
-        path-id: $[::].id
-        path-name: $[::].hostname
-        path-raw: $[::]
-        type: vm
-      extract-details:
-        - field: location
-          path: "$.region"
 
       operations:
         - type: create
@@ -30,29 +18,6 @@
               cloud_provider: cloud-civo
 
       child-template:
-        - type: query-details
-          query: civo instances show ${id} --region ${location} -o json
-          refresh: self
-          extract:
-            - field: state
-              path: "$.status"
-              map:
-                ACTIVE: started
-                off: stopped
-            - field: size
-              path: "$.size"
-            - field: location
-              path: "$.region"
-            - field: size_cores
-              path: "$.cpu_cores"
-            - field: size_memory
-              path: "$.ram_mb"
-            - field: size_disk
-              path: "$.disk_gb"
-            - field: price
-              path: "$.price_monthly"
-            - field: image
-              path: "$.diskimage_id"
       #  - type: delete
       #    name: Delete
       #    cmd: doctl compute droplet delete ${id} --force
@@ -98,16 +63,6 @@
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd:
-          - civo kubernetes list --region lon1 --output json
-          - civo kubernetes list --region phx1 --output json
-          - civo kubernetes list --region fra1 --output json
-          - civo kubernetes list --region nyc1 --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: kubernetes
       operations:
         - type: create
           name: Create Kubernetes Cluster
@@ -122,152 +77,59 @@
           cmd: civo kubernetes delete ${name} --region fra1
           refresh: parent
         # This is copied from level below, but is exactly the same
-        - type: query-details
-          query: civo kubernetes show ${id} --region fra1 --output json
-          refresh: self
-          #extract:
-          #  - field: location
-          #    path: "$.location"
 
     - name: Load Balancers
       id: cloud-civo-loadbalancers
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd:
-          - civo loadbalancer list --region lon1 --output json
-          - civo loadbalancer list --region phx1 --output json
-          - civo loadbalancer list --region fra1 --output json
-          - civo loadbalancer list --region nyc1 --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: loadbalancer
 
     - name: Firewalls
       id: cloud-civo-firewalls
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd:
-          - civo firewall list --region lon1 --output json
-          - civo firewall list --region phx1 --output json
-          - civo firewall list --region fra1 --output json
-          - civo firewall list --region nyc1 --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: firewall
 
     - name: API Keys
       id: cloud-civo-apikeys
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd: civo apikey list --region fra1 --output json
-        path-id: $[::].name
-        path-name: $[::].name
-        path-raw: $[::]
-        type: apikey
 
     - name: Databases
       id: cloud-civo-databases
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd:
-          - civo database list --region lon1 --output json
-          - civo database list --region phx1 --output json
-          - civo database list --region fra1 --output json
-          - civo database list --region nyc1 --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: database
 
     - name: Domains
       id: cloud-civo-domains
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd:
-          - civo domain list --region lon1 --output json
-          - civo domain list --region phx1 --output json
-          - civo domain list --region fra1 --output json
-          - civo domain list --region nyc1 --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: domain
 
     - name: IP Addresses
       id: cloud-civo-ips
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd:
-          - civo ip list --region lon1 --output json
-          - civo ip list --region phx1 --output json
-          - civo ip list --region fra1 --output json
-          - civo ip list --region nyc1 --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: ipaddress
 
     - name: Networks
       id: cloud-civo-network
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd:
-          - civo network list --region lon1 --output json
-          - civo network list --region phx1 --output json
-          - civo network list --region fra1 --output json
-          - civo network list --region nyc1 --output json
-        path-id: $[::].id
-        path-name: $[::].label
-        path-raw: $[::]
-        type: network
 
     - name: Object Stores
       id: cloud-civo-objectstores
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd:
-          - civo objectstore list --region lon1 --output json
-          - civo objectstore list --region phx1 --output json
-          - civo objectstore list --region fra1 --output json
-          - civo objectstore list --region nyc1 --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: objectstorage
 
     - name: SSH Keys
       id: cloud-civo-volumes
       icon: civo.png
       subitems: []
       raw: {}
-      source:
-        cmd:
-          - civo volume list --region lon1 --output json
-          - civo volume list --region phx1 --output json
-          - civo volume list --region fra1 --output json
-          - civo volume list --region nyc1 --output json
-        path-id: $[::].id
-        path-name: $[::].name
-        path-raw: $[::]
-        type: sshkey
-
   raw: {}
   details: civo/civo__prerequisites.yaml

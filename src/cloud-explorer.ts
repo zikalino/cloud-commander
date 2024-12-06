@@ -24,12 +24,17 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
 
   view.setVariable("vm_sizes", vm_sizes);
 
+  // load templates
+  var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/____tree_templates.yaml");
+  var templates = loader.getYaml();
+  view.treeSetTemplates(templates);
+
   view.MsgHandler = function (msg: any) {
     switch (msg.command) {
       case 'ready':
         var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/____tree.yaml");
         var resources = loader.getYaml();
-        view.updateTreeViewItems(resources, null);
+        view.treeSetItems(resources, null);
         return;
 
       case 'refresh':
