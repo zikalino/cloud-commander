@@ -50,7 +50,7 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
         // XXX - this should be optimized
         // don't requery subitems if already there
         var item = view.treeFindItem(this.treeGetItems(), msg.id);
-        if (!('subitems' in item) || item['subitems'].length === 0) {
+        if (('subitems' in item) && (item['subitems'].length === 0)) {
           view.treeQueryItems(view, msg.id);
         }
 
