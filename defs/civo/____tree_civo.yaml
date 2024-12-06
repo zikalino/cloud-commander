@@ -9,55 +9,6 @@
       subitems: []
       raw: {}
 
-      operations:
-        - type: create
-          name: Create Instance
-          template:
-            name: generic/generic_vm_create
-            parameters:
-              cloud_provider: cloud-civo
-
-      child-template:
-      #  - type: delete
-      #    name: Delete
-      #    cmd: doctl compute droplet delete ${id} --force
-      #    refresh: parent
-      #  - type: reboot
-      #    name: Reboot
-      #    cmd: doctl compute droplet-action reboot ${id}
-      #    when:
-      #      path: "$[0].status"
-      #      value: active
-      #    refresh: self
-      #  - type: power-off
-      #    name: Power off
-      #    cmd: doctl compute droplet-action power-off ${id}
-      #    when:
-      #      path: "$[0].status"
-      #      value: active
-      #    refresh: self
-      #  - type: power-on
-      #    name: Power on
-      #    cmd: doctl compute droplet-action power-on ${id}
-      #    when:
-      #      path: "$[0].status"
-      #      value: off
-      #    refresh: self
-      #  - type: other
-      #    name: Enable backups
-      #    cmd: doctl compute droplet-action enable-backups ${id}
-      #    refresh: self
-      #    #when:
-      #    #  path: "$[0].status"
-      #    #  value: on
-      #  - type: other
-      #    name: Disable backups
-      #    cmd: doctl compute droplet-action disable-backups ${id}
-      #    refresh: self
-      #    #when:
-      #    #  path: "$[0].status"
-      #    #  value: off
-
     - name: Kubernetes
       id: cloud-civo-kubernetes
       icon: civo.png
@@ -70,13 +21,6 @@
             name: generic/generic_kubernetes_create
             parameters:
               cloud_provider: cloud-civo
-      child-template:
-        # this is a template for resource group level
-        - type: delete
-          name: Delete
-          cmd: civo kubernetes delete ${name} --region fra1
-          refresh: parent
-        # This is copied from level below, but is exactly the same
 
     - name: Load Balancers
       id: cloud-civo-loadbalancers

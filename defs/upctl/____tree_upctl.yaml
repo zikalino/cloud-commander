@@ -7,134 +7,46 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      operations:
-      - type: create
-        name: Create Server
-        template:
-          name: generic/generic_vm_create
-          parameters:
-            cloud_provider: cloud-upctl
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl server delete ${id}
-          refresh: parent
-          when:
-            path: state
-            value: stopped
-        - type: start
-          name: Start
-          cmd: upctl server start ${id}
-          refresh: self
-          when:
-            path: state
-            value: stopped
-        - type: stop
-          name: Stop
-          cmd: upctl server stop ${id} --wait
-          refresh: self
-          when:
-            path: state
-            value: started
-        - type: restart
-          name: Restart
-          cmd: upctl server restart ${id}
-          refresh: self
-          when:
-            path: state
-            value: started
     - name: Storage
       id: cloud-upcloud-storages
       icon: upcloud.png
       subitems: []
       raw: {}
-      operations:
-      - type: create
-        name: Create Storage
-        template: upctl_storage_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl storage delete ${id}
-          refresh: parent
     - name: Server Groups
       id: cloud-upcloud-server-groups
       icon: upcloud.png
       subitems: []
       raw: {}
-      operations:
-      - type: create
-        name: Create Server Group
-        template: upctl_servergroup_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl servergroup delete ${id}
-          refresh: parent
     - name: Databases
       id: cloud-upcloud-databases
       icon: upcloud.png
       subitems: []
       raw: {}
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl database delete ${id}
-          refresh: parent
     - name: Gateways
       id: cloud-upcloud-gateways
       icon: upcloud.png
       subitems: []
       raw: {}
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl gateway delete ${id}
-          refresh: parent
     - name: IP Addresses
       id: cloud-upcloud-ip-addresses
       icon: upcloud.png
       subitems: []
       raw: {}
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl ip-address remove ${id}
-          refresh: parent
     - name: Kubernetes
       id: cloud-upcloud-kubernetes
       icon: upcloud.png
       subitems: []
       raw: {}
-      operations:
-      - type: create
-        name: Create Kubernetes Cluster
-        template: upctl_kubernetes_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl kubernetes delete ${id}
-          refresh: parent
     - name: Hosts
       id: cloud-upcloud-hosts
       icon: upcloud.png
       subitems: []
       raw: {}
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl host delete ${id}
-          refresh: parent
     - name: Load Balancers
       id: cloud-upcloud-loadbalancers
       icon: upcloud.png
       subitems: []
       raw: {}
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl loadbalancer delete ${id}
-          refresh: parent
     - name: Networks
       id: cloud-upcloud-networks
       icon: upcloud.png
@@ -144,44 +56,20 @@
         - type: create
           name: Create Network
           template: upctl_network_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl network delete ${id}
-          refresh: parent
     - name: Network Peerings
       id: cloud-upcloud-network-peerings
       icon: upcloud.png
       subitems: []
       raw: {}
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl networkpeering delete ${id}
-          refresh: parent
     - name: Object Storages
       id: cloud-upcloud-object-storages
       icon: upcloud.png
       subitems: []
       raw: {}
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl object-storage delete ${id}
-          refresh: parent
     - name: Routers
       id: cloud-upcloud-routers
       icon: upcloud.png
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Router
-          template: upctl_router_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: upctl router delete ${id}
-          refresh: parent
   raw: {}
   details: upctl/upctl__prerequisites.yaml

@@ -15,7 +15,8 @@ item-sources:
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: $.type
+    item-type: $.type
+    item-type-generic: unknown
     type-map:
       - "Microsoft.Compute/virtualMachines": vm
 
@@ -73,7 +74,7 @@ item-sources:
     path-raw: $[::]
     item-type: civo-apikey
     item-type-generic: apikey
-  - type:
+  - type: civo-database-list
     cmd:
       - civo database list --region lon1 --output json
       - civo database list --region phx1 --output json
@@ -82,8 +83,9 @@ item-sources:
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: database
-  - type:
+    item-type: civo-database
+    item-type-generic: database
+  - type: civo-domain-list
     cmd:
       - civo domain list --region lon1 --output json
       - civo domain list --region phx1 --output json
@@ -92,8 +94,9 @@ item-sources:
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: domain
-  - type:
+    item-type: civo-domain
+    item-type-generic: domain
+  - type: civo-ip-list
     cmd:
       - civo ip list --region lon1 --output json
       - civo ip list --region phx1 --output json
@@ -102,8 +105,9 @@ item-sources:
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: ipaddress
-  - type:
+    item-type: civo-ipaddress
+    item-type-generic: ipaddress
+  - type: civo-network-list
     cmd:
       - civo network list --region lon1 --output json
       - civo network list --region phx1 --output json
@@ -112,8 +116,9 @@ item-sources:
     path-id: $[::].id
     path-name: $[::].label
     path-raw: $[::]
-    type: network
-  - type:
+    item-type: civo-network
+    item-type-generic: network
+  - type: civo-objectstore-list
     cmd:
       - civo objectstore list --region lon1 --output json
       - civo objectstore list --region phx1 --output json
@@ -122,8 +127,9 @@ item-sources:
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: objectstorage
-  - type:
+    item-type: civo-objectstorage
+    item-type-generic: objectstorage
+  - type: civo-volume-list
     cmd:
       - civo volume list --region lon1 --output json
       - civo volume list --region phx1 --output json
@@ -132,207 +138,238 @@ item-sources:
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: sshkey
+    item-type-generic: civo-sshkey
+    item-type-generic: sshkey
 
   #
   # Digital Ocean
   #
-  - type:
+  - type: doctl-droplet-list
     cmd: doctl compute droplet list --output json
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    generic-type: vm
-    type: doctl-droplet
-  - type:
+    item-type-generic: vm
+    item-type-generic: doctl-droplet
+  - type: doctl-volume-list
     cmd: doctl compute volume list --output json
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: disk
-  - type:
+    item-type: doctl-disk
+    item-type-generic: disk
+  - type: doctl-kubernetes-list
     cmd: doctl kubernetes cluster list --output json
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: kubernetes
-  - type:
+    item-type: doctl-kubernetes
+    item-type-generic: kubernetes
+  - type: doctl-apps-list
     cmd: doctl apps list --output json
     path-id: $[::].id
     path-name: $[::].spec_name
     path-raw: $[::]
-  - type:
+    item-type: doctl-application
+    item-type-generic: application
+
+  - type: doctl-functions-list
     cmd: doctl serverless functions list --output json
     path-id: $[::].id
     path-name: $[::].spec_name
     path-raw: $[::]
-    type: application
-  - type:
+    item-type: doctl-function
+    item-type-generic: function
+  - type: doctl-database-list
     cmd: doctl databases list --output json
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: database
-  - type:
+    item-type: doctl-database
+    item-type-generic: database
+  - type: doctl-domain-list
     cmd: doctl compute domain list --output json
     path-id: $[::].domain
     path-name: $[::].domain
     path-raw: $[::]
-    type: objectstorage
-  - type:
+    item-type: doctl-objectstorage
+    item-type-generic: objectstorage
+  - type: doctl-firewall-list
     cmd: doctl compute firewall list --output json
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: firewall
-  - type:
+    item-type: doctl-firewall
+    item-type-generic: firewall
+  - type: doctl-ip-list
     cmd: doctl compute reserved-ip list --output json
     path-id: $[::].ip
     path-name: $[::].ip
     path-raw: $[::]
-    type: ipaddress
-  - type:
+    item-type: doctl-ipaddress
+    item-type-generic: ipaddress
+  - type: doctl-loadbalancer-list
     cmd: doctl compute load-balancer list --output json
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: loadbalancer
-  - type:
+    item-type: doctl-loadbalancer
+    item-type-generic: loadbalancer
+  - type: doctl-registry-list
     cmd: doctl registry list --output json
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    type: containerregistry
+    item-type: doctl-containerregistry
+    item-type-generic: containerregistry
 
   #
   # linode
   #
-  - type:
+  - type: linode-linode-list
     cmd: linode linodes list --json
     path-id: $[::].id
     path-name: $[::].label
     path-raw: $[::]
-    generic-type: vm
-    type: linode-linode
-  - type:
+    item-type-generic: vm
+    item-type: linode-linode
+  - type: linode-nodebalancer-list
     cmd: linode nodebalancers list --json
     path-id: $[::].id
     path-name: $[::].label
     path-raw: $[::]
-    type: loadbalancer
-  - type:
+    item-type: linode-loadbalancer
+    item-type-generic: loadbalancer
+  - type: linode-firewall-list
     cmd: linode firewalls list --json
     path-id: $[::].id
     path-name: $[::].label
     path-raw: $[::]
-    type: firewall
-  - type:
+    item-type: linode-firewall
+    item-type-generic: firewall
+  - type: linode-ip-list
     cmd: linode networking ips-list --json
     path-id: $[::].address
     path-name: $[::].address
     path-raw: $[::]
-    type: ipaddress
-  - type:
+    item-type: linode-ipaddress
+    item-type-generic: ipaddress
+  - type: linode-objectstorage-list
     cmd: linode object-storage clusters-list --json
     path-id: $[::].id
     path-name: $[::].domain
     path-raw: $[::]
-    type: objectstorage
-  - type:
+    item-type: linode-objectstorage
+    item-type-generic: objectstorage
+  - type: linode-volume-list
     cmd: linode volumes list --json
     path-id: $[::].id
     path-name: $[::].label
     path-raw: $[::]
-    type: disk
-  - type:
+    item-type: linode-disk
+    item-type-generic: disk
+  - type: linode-vpc-list
     cmd: linode vpcs list --json
     path-id: $[::].id
     path-name: $[::].label
     path-raw: $[::]
-    type: vpc
+    item-type: linode-vpc
+    item-type-generic: vpc
 
   #
   # UpCloud
   #
-  - type:
+  - type: upctl-server-list
     cmd: upctl server list -o json
     path-id: $.servers[::].uuid
     path-name: $.servers[::].hostname
     path-raw: $.servers[::]
-    generic-type: vm
-    type: upcloud-server
-  - type:
+    item-type-generic: vm
+    item-type-generic: upcloud-server
+  - type: upctl-storage-list
     cmd: upctl storage list -o json
     path-id: $.storages[::].uuid
     path-name: $.storages[::].title
     path-raw: $.storages[::]
-    type: objectstorage
-  - type:
+    item-type: upctl-objectstorage
+    item-type-generic: objectstorage
+  - type: upctl-servergroup-list
     cmd: upctl servergroup list -o json
     path-id: $.server_groups[::].uuid
     path-name: $.server_groups[::].title
     path-raw: $.server_groups[::]
-    type: servergroup
-  - type:
+    item-type: upctl-servergroup
+    item-type-generic: servergroup
+  - type: upctl-database-list
     cmd: upctl database list -o json
     path-id: $.databases[::].uuid
     path-name: $.databases[::].title
     path-raw: $.databases[::]
-    type: database
-  - type:
+    item-type: upctl-database
+    item-type-generic: database
+  - type: upctl-gateway-list
     cmd: upctl gateway list -o json
     path-id: $.gateways[::].uuid
     path-name: $.gateways[::].name
     path-raw: $.gateways[::]
-    type: gateway
-  - type:
+    item-type: upctl-gateway
+    item-type-generic: gateway
+  - type: upctl-ip-list
     cmd: upctl ip-address list -o json
     path-id: $.ip_addresses.[::].address
     path-name: $.ip_addresses[::].address
     path-raw: $.ip_addresses[::]
-    type: ipaddress
-  - type:
+    item-type: upctl-ipaddress
+    item-type-generic: ipaddress
+  - type: upctl-kubernetes-list
     cmd: upctl kubernetes list -o json
     path-id: $.[::].uuid
     path-name: $.[::].name
     path-raw: $.[::]
-    type: kubernetes
-  - type:
+    item-type: upctl-kubernetes
+    item-type-generic: kubernetes
+  - type: upctl-host-list
     cmd: upctl host list -o json
     path-id: $.hosts[::].id
     path-name: $.hosts[::].description
     path-raw: $.hosts[::]
-    type: host
-  - type:
+    item-type: upctl-host
+    item-type-generic: host
+  - type: upctl-loadbalancer-list
     cmd: upctl loadbalancer list -o json
     path-id: $.loadbalancers[::].uuid
     path-name: $.loadbalancers[::].name
     path-raw: $.loadbalancers[::]
-    type: loadbalancer
-  - type:
+    item-type: upctl-loadbalancer
+    item-type-generic: loadbalancer
+  - type: upctl-network-list
     cmd: upctl network list -o json
     path-id: $.networks[::].uuid
     path-name: $.networks[::].name
     path-raw: $.networks[::]
-    type: network
-  - type:
+    item-type: upctl-network
+    item-type-generic: network
+  - type: upctl-peering-list
     cmd: upctl networkpeering list -o json
     path-id: $.networks[::].uuid
     path-name: $.networks[::].name
     path-raw: $.networks[::]
-    type: peering
-  - type:
+    item-type: upctl-peering
+    item-type-generic: peering
+  - type: upctl-objectstorage-list
     cmd: upctl object-storage list -o json
     path-id: $.object_storages[::].uuid
     path-name: $.object_storages[::].name
     path-raw: $.object_storages[::]
-    type: objectstorage
-  - type:
+    item-type: upctl-objectstorage
+    item-type-generic: objectstorage
+  - type: upctl-router-list
     cmd: upctl router list -o json
     path-id: $.routers[::].uuid
     path-name: $.routers[::].name
     path-raw: $.routers[::]
-    type: router
+    item-type: upctl-router
+    item-type-generic: router
 
 
 details-sources:
@@ -475,4 +512,439 @@ extractors:
         path: "$[0].image"
 
 
-operations: []
+operations:
+  #
+  # az
+  #
+    - type: create
+      name: Create Resource Group
+      template: az_group_create
+    - type: create
+      name: Create Virtual Machine
+      template:
+        name: generic/generic_vm_create
+        parameters:
+          cloud_provider: cloud-az
+    - type: create
+      name: Create Container Registry
+      template: az_acr_create
+    # this is a template for resource group level
+    - type: delete
+      name: Delete
+      cmd: az resource delete --ids ${id}
+      refresh: parent
+
+    - type: child-template
+      # this is a template for any resource in the resource group
+      template:
+        # delete is the same for any resouce in tre resource group
+        - type: delete
+          name: Delete
+          cmd: az resource delete --ids ${id}
+          refresh: parent
+        - type: start
+          name: Start
+          cmd: az vm start --ids ${id}
+          refresh: self
+          when:
+            path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
+            value: "PowerState/stopped"
+        - type: stop
+          name: Stop
+          cmd: az vm stop --ids ${id}
+          refresh: self
+          when:
+            path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
+            value: "PowerState/running"
+        - type: restart
+          name: Restart
+          cmd: az vm restart --ids ${id}
+          refresh: self
+          when:
+            path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
+            value: "PowerState/running"
+
+  #
+  # civo
+  #
+      operations:
+        - type: create
+          name: Create Instance
+          template:
+            name: generic/generic_vm_create
+            parameters:
+              cloud_provider: cloud-civo
+
+      child-template:
+      #  - type: delete
+      #    name: Delete
+      #    cmd: doctl compute droplet delete ${id} --force
+      #    refresh: parent
+      #  - type: reboot
+      #    name: Reboot
+      #    cmd: doctl compute droplet-action reboot ${id}
+      #    when:
+      #      path: "$[0].status"
+      #      value: active
+      #    refresh: self
+      #  - type: power-off
+      #    name: Power off
+      #    cmd: doctl compute droplet-action power-off ${id}
+      #    when:
+      #      path: "$[0].status"
+      #      value: active
+      #    refresh: self
+      #  - type: power-on
+      #    name: Power on
+      #    cmd: doctl compute droplet-action power-on ${id}
+      #    when:
+      #      path: "$[0].status"
+      #      value: off
+      #    refresh: self
+      #  - type: other
+      #    name: Enable backups
+      #    cmd: doctl compute droplet-action enable-backups ${id}
+      #    refresh: self
+      #    #when:
+      #    #  path: "$[0].status"
+      #    #  value: on
+      #  - type: other
+      #    name: Disable backups
+      #    cmd: doctl compute droplet-action disable-backups ${id}
+      #    refresh: self
+      #    #when:
+      #    #  path: "$[0].status"
+      #    #  value: off
+
+      child-template:
+        # this is a template for resource group level
+        - type: delete
+          name: Delete
+          cmd: civo kubernetes delete ${name} --region fra1
+          refresh: parent
+        # This is copied from level below, but is exactly the same
+
+#
+# doctl
+# 
+
+      operations:
+        - type: create
+          name: Create Droplet
+          template:
+            name: generic/generic_vm_create
+            parameters:
+              cloud_provider: cloud-doctl
+
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: doctl compute droplet delete ${id} --force
+          refresh: parent
+        - type: reboot
+          name: Reboot
+          cmd: doctl compute droplet-action reboot ${id}
+          when:
+            path: "$[0].status"
+            value: active
+          refresh: self
+        - type: power-off
+          name: Power off
+          cmd: doctl compute droplet-action power-off ${id}
+          when:
+            path: "$[0].status"
+            value: active
+          refresh: self
+        - type: power-on
+          name: Power on
+          cmd: doctl compute droplet-action power-on ${id}
+          when:
+            path: "$[0].status"
+            value: off
+          refresh: self
+        - type: other
+          name: Enable backups
+          cmd: doctl compute droplet-action enable-backups ${id}
+          refresh: self
+          #when:
+          #  path: "$[0].status"
+          #  value: on
+        - type: other
+          name: Disable backups
+          cmd: doctl compute droplet-action disable-backups ${id}
+          refresh: self
+          #when:
+          #  path: "$[0].status"
+          #  value: off
+
+      operations:
+        - type: create
+          name: Create Volume
+          template: doctl_compute_volume_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: doctl compute volume delete ${id} --force
+          refresh: parent
+        - type: other
+          name: Resize
+          cmd: doctl compute volume-action resize ${id}
+          refresh: self
+        - type: other
+          name: Attach
+          cmd: doctl compute volume-action attach ${id}
+          refresh: self
+        - type: other
+          name: Detach
+          cmd: doctl compute volume-action detach ${id}
+          refresh: self
+      operations:
+        - type: create
+          name: Create Kubernetes Cluster
+          template: doctl_kubernetes_cluster_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: doctl kubernetes cluster delete ${id} --force
+          refresh: parent
+      operations:
+        - type: create
+          name: Create Database
+          template: doctl_databases_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: doctl databases delete ${id} --force
+          refresh: parent
+      operations:
+        - type: create
+          name: Create Firewall
+          template: doctl_compute_firewall_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: doctl compute firewall delete ${id}
+          refresh: parent
+      operations:
+        - type: create
+          name: Create Container Registry
+          template: doctl_registry_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: doctl registry delete ${id}
+          refresh: parent
+
+
+#
+# linode
+#
+      operations:
+        - type: create
+          name: Create Linode (Virtual Machine)
+          template:
+            name: generic/generic_vm_create
+            parameters:
+              cloud_provider: cloud-linode
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: linode linodes delete ${id}
+          refresh: parent
+        - type: reboot
+          name: Reboot
+          cmd: linode linodes reboot ${id}
+          when:
+            path: "$[0].status"
+            value: running
+          refresh: self
+        - type: rebuild
+          name: Rebuild
+          cmd: linode linodes rebuild ${id}
+        - type: power-off
+          name: Power off
+          cmd: linode linodes shutdown ${id}
+          when:
+            path: "$[0].status"
+            value: running
+          refresh: self
+        - type: power-on
+          name: Power on
+          cmd: linode linodes boot ${id}
+          when:
+            path: "$[0].status"
+            value: offline
+          refresh: self
+        - type: other
+          name: Enable backups
+          cmd: linode linodes backups-enable ${id}
+          when:
+            path: "$[0].backups.enabled"
+            value: false
+          refresh: self
+        - type: other
+          name: Enable backups
+          cmd: linode linodes backups-cancel ${id}
+          when:
+            path: "$[0].backups.enabled"
+            value: true
+          refresh: self
+        - type: other
+          name: Update
+          cmd: linode linodes update ${id}
+        - type: other
+          name: Upgrade
+          cmd: linode linodes upgrade ${id}
+        - type: other
+          name: Snapshot
+          cmd: linode linodes snapshot ${id}
+        - type: other
+          name: Resize
+          cmd: linode linodes resize ${id}
+        - type: other
+          name: Rescue
+          cmd: linode linodes rescue ${id}
+        - type: other
+          name: Clone
+          cmd: linode linodes clone ${id}
+      operations:
+        - type: create
+          name: Create Node Balancer
+          template: linode_nodebalancers_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: linode nodebalancers delete ${id}
+          refresh: parent
+      operations:
+      - type: create
+        name: Create Firewall
+        template: linode_firewalls_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: linode firewalls delete ${id}
+          refresh: parent
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: linode volumes delete ${id}
+          refresh: parent
+
+
+#
+# upctl
+#
+
+      operations:
+      - type: create
+        name: Create Server
+        template:
+          name: generic/generic_vm_create
+          parameters:
+            cloud_provider: cloud-upctl
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl server delete ${id}
+          refresh: parent
+          when:
+            path: state
+            value: stopped
+        - type: start
+          name: Start
+          cmd: upctl server start ${id}
+          refresh: self
+          when:
+            path: state
+            value: stopped
+        - type: stop
+          name: Stop
+          cmd: upctl server stop ${id} --wait
+          refresh: self
+          when:
+            path: state
+            value: started
+        - type: restart
+          name: Restart
+          cmd: upctl server restart ${id}
+          refresh: self
+          when:
+            path: state
+            value: started
+      operations:
+      - type: create
+        name: Create Storage
+        template: upctl_storage_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl storage delete ${id}
+          refresh: parent
+      operations:
+      - type: create
+        name: Create Server Group
+        template: upctl_servergroup_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl servergroup delete ${id}
+          refresh: parent
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl database delete ${id}
+          refresh: parent
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl gateway delete ${id}
+          refresh: parent
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl ip-address remove ${id}
+          refresh: parent
+      operations:
+      - type: create
+        name: Create Kubernetes Cluster
+        template: upctl_kubernetes_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl kubernetes delete ${id}
+          refresh: parent
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl host delete ${id}
+          refresh: parent
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl loadbalancer delete ${id}
+          refresh: parent
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl network delete ${id}
+          refresh: parent
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl networkpeering delete ${id}
+          refresh: parent
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl object-storage delete ${id}
+          refresh: parent
+      operations:
+        - type: create
+          name: Create Router
+          template: upctl_router_create
+      child-template:
+        - type: delete
+          name: Delete
+          cmd: upctl router delete ${id}
+          refresh: parent

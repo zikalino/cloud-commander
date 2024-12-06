@@ -7,104 +7,18 @@
       icon: linode.png
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Linode (Virtual Machine)
-          template:
-            name: generic/generic_vm_create
-            parameters:
-              cloud_provider: cloud-linode
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: linode linodes delete ${id}
-          refresh: parent
-        - type: reboot
-          name: Reboot
-          cmd: linode linodes reboot ${id}
-          when:
-            path: "$[0].status"
-            value: running
-          refresh: self
-        - type: rebuild
-          name: Rebuild
-          cmd: linode linodes rebuild ${id}
-        - type: power-off
-          name: Power off
-          cmd: linode linodes shutdown ${id}
-          when:
-            path: "$[0].status"
-            value: running
-          refresh: self
-        - type: power-on
-          name: Power on
-          cmd: linode linodes boot ${id}
-          when:
-            path: "$[0].status"
-            value: offline
-          refresh: self
-        - type: other
-          name: Enable backups
-          cmd: linode linodes backups-enable ${id}
-          when:
-            path: "$[0].backups.enabled"
-            value: false
-          refresh: self
-        - type: other
-          name: Enable backups
-          cmd: linode linodes backups-cancel ${id}
-          when:
-            path: "$[0].backups.enabled"
-            value: true
-          refresh: self
-        - type: other
-          name: Update
-          cmd: linode linodes update ${id}
-        - type: other
-          name: Upgrade
-          cmd: linode linodes upgrade ${id}
-        - type: other
-          name: Snapshot
-          cmd: linode linodes snapshot ${id}
-        - type: other
-          name: Resize
-          cmd: linode linodes resize ${id}
-        - type: other
-          name: Rescue
-          cmd: linode linodes rescue ${id}
-        - type: other
-          name: Clone
-          cmd: linode linodes clone ${id}
 
     - name: Node Balancers
       id: cloud-linode-nodebalancers
       icon: linode.png
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Node Balancer
-          template: linode_nodebalancers_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: linode nodebalancers delete ${id}
-          refresh: parent
 
     - name: Firewalls
       id: cloud-linode-firewalls
       icon: linode.png
       subitems: []
       raw: {}
-      operations:
-      - type: create
-        name: Create Firewall
-        template: linode_firewalls_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: linode firewalls delete ${id}
-          refresh: parent
 
     - name: Networking IPs
       id: cloud-linode-networking-ips
@@ -125,11 +39,6 @@
         - type: create
           name: Create Volume
           template: linode_volumes_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: linode volumes delete ${id}
-          refresh: parent
 
     - name: VPCs
       id: cloud-linode-vpcs

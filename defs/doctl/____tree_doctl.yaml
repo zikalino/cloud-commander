@@ -7,94 +7,16 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Droplet
-          template:
-            name: generic/generic_vm_create
-            parameters:
-              cloud_provider: cloud-doctl
-
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: doctl compute droplet delete ${id} --force
-          refresh: parent
-        - type: reboot
-          name: Reboot
-          cmd: doctl compute droplet-action reboot ${id}
-          when:
-            path: "$[0].status"
-            value: active
-          refresh: self
-        - type: power-off
-          name: Power off
-          cmd: doctl compute droplet-action power-off ${id}
-          when:
-            path: "$[0].status"
-            value: active
-          refresh: self
-        - type: power-on
-          name: Power on
-          cmd: doctl compute droplet-action power-on ${id}
-          when:
-            path: "$[0].status"
-            value: off
-          refresh: self
-        - type: other
-          name: Enable backups
-          cmd: doctl compute droplet-action enable-backups ${id}
-          refresh: self
-          #when:
-          #  path: "$[0].status"
-          #  value: on
-        - type: other
-          name: Disable backups
-          cmd: doctl compute droplet-action disable-backups ${id}
-          refresh: self
-          #when:
-          #  path: "$[0].status"
-          #  value: off
     - name: Volumes
       id: cloud-digital-ocean-volumes
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Volume
-          template: doctl_compute_volume_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: doctl compute volume delete ${id} --force
-          refresh: parent
-        - type: other
-          name: Resize
-          cmd: doctl compute volume-action resize ${id}
-          refresh: self
-        - type: other
-          name: Attach
-          cmd: doctl compute volume-action attach ${id}
-          refresh: self
-        - type: other
-          name: Detach
-          cmd: doctl compute volume-action detach ${id}
-          refresh: self
     - name: Kubernetes
       id: cloud-digital-ocean-kubernetes
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Kubernetes Cluster
-          template: doctl_kubernetes_cluster_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: doctl kubernetes cluster delete ${id} --force
-          refresh: parent
 
     - name: App Platform
       id: cloud-digital-ocean-app-platform
@@ -111,16 +33,6 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Database
-          template: doctl_databases_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: doctl databases delete ${id} --force
-          refresh: parent
-
 
     - name: Spaces Object Storage
       id: cloud-digital-ocean-spaces-object-storage
@@ -137,15 +49,6 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Firewall
-          template: doctl_compute_firewall_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: doctl compute firewall delete ${id}
-          refresh: parent
     - name: Reserved IPs
       id: cloud-digital-ocean-reserved-ips
       icon: digital-ocean.svg
@@ -161,14 +64,5 @@
       icon: digital-ocean.svg
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Container Registry
-          template: doctl_registry_create
-      child-template:
-        - type: delete
-          name: Delete
-          cmd: doctl registry delete ${id}
-          refresh: parent
   raw: {}
   details: doctl/doctl__prerequisites.yaml
