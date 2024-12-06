@@ -17,6 +17,10 @@
         path-name: $[::].hostname
         path-raw: $[::]
         type: vm
+      extract-details:
+        - field: location
+          path: "$.region"
+
       operations:
         - type: create
           name: Create Instance
@@ -27,7 +31,7 @@
 
       child-template:
         - type: query-details
-          query: civo instances show ${id} --region ${region} -o json
+          query: civo instances show ${id} --region ${location} -o json
           refresh: self
           extract:
             - field: state
