@@ -46,18 +46,8 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
         }
         return;
       case 'selected':
-
-        // XXX - this should be optimized
-        // don't requery subitems if already there
-        var item = view.treeFindItem(this.treeGetItems(), msg.id);
-        if (('subitems' in item) && (item['subitems'].length === 0)) {
-          view.treeQueryItems(view, msg.id);
-        }
-
-        // a tree item was selected, display details accordingly
-        // or try to query items accordingly
-        view.createDetailsView(msg.id);
-
+        console.log('ITEM SELECTED');
+        // any additional implementation should be placed here
         return;
       case 'action-clicked':
         if (msg.id === 'action-refresh') {
