@@ -3,28 +3,7 @@
   id: welcome
   icon: icon.webp
   details: welcome_details.yaml
-  operations:
-    # add generic resource creation here
-    - type: create
-      name: Create Virtual Machine
-      template:
-        name: generic/generic_vm_create
-    - type: create
-      name: Create Container Registry
-      template:
-        name: generic/generic_container_registry_create
-    - type: create
-      name: Create Container Instance
-      template:
-        name: generic/generic_container_instance_create
-    - type: create
-      name: Create Kubernetes Cluster
-      template:
-        name: generic/generic_kubernetes_cluster_create
-    - type: create
-      name: Deploy Application
-      template:
-        name: generic/generic_deploy_application
+  type: generic
   templates:
     - item-type: '*'
       definition:

@@ -514,9 +514,41 @@ extractors:
 
 operations:
   #
+  # Generic
+  #
+  - type: create
+    item-type: generic
+    name: Create Virtual Machine
+    template:
+      name: generic/generic_vm_create
+  - type: create
+    item-type: generic
+    name: Create Container Registry
+    template:
+      name: generic/generic_container_registry_create
+  - type: create
+    item-type: generic
+    name: Create Container Instance
+    template:
+      name: generic/generic_container_instance_create
+  - type: create
+    item-type: generic
+    name: Create Kubernetes Cluster
+    template:
+      name: generic/generic_kubernetes_cluster_create
+  - type: create
+    item-type: generic
+    name: Deploy Application
+    template:
+      name: generic/generic_deploy_application
+
+
+  #
   # az
   #
   - type: create
+    item-types:
+      - 
     name: Create Resource Group
     template: az_group_create
   - type: create
