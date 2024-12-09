@@ -60,7 +60,7 @@
     "@apidevtools/swagger-parser": "^10.1.0",
     "@vscode/codicons": "0.0.20",
     "@vscode/webview-ui-toolkit": "^1.4.0",
-    "@zim.kalinowski/vscode-helper-toolkit": "^0.1.2",
+    "@zim.kalinowski/vscode-helper-toolkit": "^0.1.3",
     "jsonpath-plus": "^9.0.0",
     "marked": "^12.0.1",
     "yaml": "^2.3.4"

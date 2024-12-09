@@ -26,7 +26,6 @@ const validateConfig = {
   format: "cjs",
   entryPoints: ["./src/validate.ts"],
   outfile: "./out/validate.js",
-  external: ["vscode"],
   loader: {".html": "text"}
 };
 
