@@ -19,16 +19,16 @@ const extensionConfig = {
   loader: {".html": "text"}
 };
 
-
-//const webviewConfig = {
-//  ...baseConfig,
-//  target: "es2020",
-//  format: "esm",
-//  bundle: true,
-//  entryPoints: ["./src/vscode-helper-toolkit/src/webview/main.ts"],
-//  outfile: "./out/webview.js",
-//  loader: {".html": "text"}
-//};
+const validateConfig = {
+  ...baseConfig,
+  platform: "node",
+  mainFields: ["module", "main"],
+  format: "cjs",
+  entryPoints: ["./src/validate.ts"],
+  outfile: "./out/validate.js",
+  external: ["vscode"],
+  loader: {".html": "text"}
+};
 
 (async () => {
   const args = process.argv.slice(2);
@@ -48,6 +48,7 @@ const extensionConfig = {
     } else {
       // Build extension and webview code
       await build(extensionConfig);
+      await build(validateConfig);
       // await build(webviewConfig);
       console.log("build complete");
     }
