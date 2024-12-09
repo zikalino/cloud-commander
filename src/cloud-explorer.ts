@@ -32,7 +32,7 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
   view.MsgHandler = function (msg: any) {
     switch (msg.command) {
       case 'ready':
-        var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/____tree.yaml");
+        var loader = new helpers.DefinitionLoader(extensionContext.extensionPath, "defs/____tree_items.yaml");
         var resources = loader.getYaml();
         view.treeSetItems(resources, null);
         return;

@@ -2,7 +2,7 @@ import * as helpers from '@zim.kalinowski/vscode-helper-toolkit';
 
 console.log("Validation...");
 
-var loader = new helpers.DefinitionLoader("./", "defs/____tree_templates.yaml");
+var loader = new helpers.DefinitionLoader("./", "defs/____tree.yaml");
 var templates = loader.getYaml();
 
 if (templates === null) {
