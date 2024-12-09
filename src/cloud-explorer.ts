@@ -20,7 +20,7 @@ export function displayCloudExplorer(extensionContext : vscode.ExtensionContext)
     id: 'layout'
     };
 
-  view = new helpers.GenericWebView(extensionContext, "Cloud Commander", "Cloud Commander");
+  view = new helpers.GenericWebView(extensionContext, "Cloud Commander", "Cloud Commander", vscode);
 
   view.setVariable("vm_sizes", vm_sizes);
 

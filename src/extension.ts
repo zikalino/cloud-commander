@@ -1,19 +1,22 @@
 import * as vscode from 'vscode';
+import type { ExtensionContext, Uri } from 'vscode';
+
 import * as helpers from '@zim.kalinowski/vscode-helper-toolkit';
 
 import { displayCloudExplorer, CloudExplorerRefresh } from './cloud-explorer';
 import vm_sizes from './vm_sizes.json' assert {type: 'json'};
+import { exec } from 'child_process';
 
 //import SwaggerParser from "@apidevtools/swagger-parser";
-var extensionUri: vscode.Uri;
-var mediaFolder: vscode.Uri;
-export var extensionContext: vscode.ExtensionContext;
+var extensionUri: Uri;
+var mediaFolder: Uri;
+export var extensionContext: ExtensionContext;
 
 const fs = require("fs");
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
-export function activate (context: vscode.ExtensionContext) {
+export function activate (context: ExtensionContext) {
   extensionContext = context;
   extensionUri = context.extensionUri;
 
@@ -22,7 +25,6 @@ export function activate (context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     'vscode-cloud.displayCloudExplorer',
     () => {
-      //parseCommands();
       displayCloudExplorer(extensionContext);
     }
   );
@@ -64,7 +66,7 @@ async function loadYamlView(yml: any, refresh_id: string|null, parameters: any =
 
   var tabTitle: string = ('title' in yml) ? yml['title'] : "Raw CLI";
 
-  let view = new helpers.GenericWebView(extensionContext, tabTitle, "Cloud Commmander"); 
+  let view = new helpers.GenericWebView(extensionContext, tabTitle, "Cloud Commmander", vscode); 
   view.setVariable("vm_sizes", vm_sizes);
 
   if (parameters !== null) {
