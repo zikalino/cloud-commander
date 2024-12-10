@@ -11,6 +11,8 @@ if (templates === null) {
   for (var i = 0; i < errors.length; i++) {
     console.log(errors[i]);
   }
+
+  console.log("** TOTAL VALIDATION ERRORS: " + errors.length);
   
   process.exit(1);
 }

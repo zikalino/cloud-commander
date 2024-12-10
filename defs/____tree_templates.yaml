@@ -412,7 +412,6 @@ detail-sources:
     cmd: upctl server show ${id} -o json
     refresh: self
 
-
 extractors:
 
   - type: "Microsoft.Compute/virtualMachines"
@@ -547,30 +546,29 @@ operations:
   # az
   #
   - type: create
-    item-types:
-      - 
+    item-type: az-group
     name: Create Resource Group
     template: az_group_create
   - type: create
+    item-type: 
+      - vm
     name: Create Virtual Machine
     template:
       name: generic/generic_vm_create
       parameters:
         cloud_provider: cloud-az
   - type: create
+    item-type: container-registry
     name: Create Container Registry
     template: az_acr_create
   # this is a template for resource group level
   - type: delete
-    name: Delete
-    cmd: az resource delete --ids ${id}
-    refresh: parent
-
-  - type: delete
+    item-type: az-generic
     name: Delete
     cmd: az resource delete --ids ${id}
     refresh: parent
   - type: start
+    item-type: az-vm
     name: Start
     cmd: az vm start --ids ${id}
     refresh: self
@@ -578,6 +576,7 @@ operations:
       path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
       value: "PowerState/stopped"
   - type: stop
+    item-type: az-vm
     name: Stop
     cmd: az vm stop --ids ${id}
     refresh: self
@@ -585,6 +584,7 @@ operations:
       path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
       value: "PowerState/running"
   - type: restart
+    item-type: az-vm
     name: Restart
     cmd: az vm restart --ids ${id}
     refresh: self
@@ -596,6 +596,7 @@ operations:
   # civo
   #
   - type: create
+    item-type: civo-vm
     name: Create Instance
     template:
       name: generic/generic_vm_create
@@ -643,6 +644,7 @@ operations:
   #    #  value: off
 
   - type: delete
+    item-type: civo-kubernetes
     name: Delete
     cmd: civo kubernetes delete ${name} --region fra1
     refresh: parent
@@ -653,6 +655,7 @@ operations:
   # 
 
   - type: create
+    item-type: doctl-droplet
     name: Create Droplet
     template:
       name: generic/generic_vm_create
@@ -660,10 +663,12 @@ operations:
         cloud_provider: cloud-doctl
 
   - type: delete
+    item-type: doctl-droplet
     name: Delete
     cmd: doctl compute droplet delete ${id} --force
     refresh: parent
   - type: reboot
+    item-type: doctl-droplet
     name: Reboot
     cmd: doctl compute droplet-action reboot ${id}
     when:
@@ -671,6 +676,7 @@ operations:
       value: active
     refresh: self
   - type: power-off
+    item-type: doctl-droplet
     name: Power off
     cmd: doctl compute droplet-action power-off ${id}
     when:
@@ -678,6 +684,7 @@ operations:
       value: active
     refresh: self
   - type: power-on
+    item-type: doctl-droplet
     name: Power on
     cmd: doctl compute droplet-action power-on ${id}
     when:
@@ -685,6 +692,7 @@ operations:
       value: off
     refresh: self
   - type: other
+    item-type: doctl-droplet
     name: Enable backups
     cmd: doctl compute droplet-action enable-backups ${id}
     refresh: self
@@ -692,6 +700,7 @@ operations:
     #  path: "$[0].status"
     #  value: on
   - type: other
+    item-type: doctl-droplet
     name: Disable backups
     cmd: doctl compute droplet-action disable-backups ${id}
     refresh: self
@@ -700,49 +709,62 @@ operations:
     #  value: off
 
   - type: create
+    item-type: doctl-volume
     name: Create Volume
     template: doctl_compute_volume_create
   - type: delete
+    item-type: doctl-volume
     name: Delete
     cmd: doctl compute volume delete ${id} --force
     refresh: parent
   - type: other
+    item-type: doctl-volume
     name: Resize
     cmd: doctl compute volume-action resize ${id}
     refresh: self
   - type: other
+    item-type: doctl-volume
     name: Attach
     cmd: doctl compute volume-action attach ${id}
     refresh: self
   - type: other
+    item-type: doctl-volume
     name: Detach
     cmd: doctl compute volume-action detach ${id}
     refresh: self
   - type: create
+    item-type: doctl-kubernetes
     name: Create Kubernetes Cluster
     template: doctl_kubernetes_cluster_create
   - type: delete
+    item-type: doctl-kubernetes
     name: Delete
     cmd: doctl kubernetes cluster delete ${id} --force
     refresh: parent
   - type: create
+    item-type: doctl-database
     name: Create Database
     template: doctl_databases_create
   - type: delete
+    item-type: doctl-database
     name: Delete
     cmd: doctl databases delete ${id} --force
     refresh: parent
   - type: create
+    item-type: doctl-firewall
     name: Create Firewall
     template: doctl_compute_firewall_create
   - type: delete
+    item-type: doctl-firewall
     name: Delete
     cmd: doctl compute firewall delete ${id}
     refresh: parent
   - type: create
+    item-type: doctl-container-registry
     name: Create Container Registry
     template: doctl_registry_create
   - type: delete
+    item-type: doctl-container-registry
     name: Delete
     cmd: doctl registry delete ${id}
     refresh: parent
@@ -752,16 +774,19 @@ operations:
   # linode
   #
   - type: create
+    item-type: linode-linode
     name: Create Linode (Virtual Machine)
     template:
       name: generic/generic_vm_create
       parameters:
         cloud_provider: cloud-linode
   - type: delete
+    item-type: linode-linode
     name: Delete
     cmd: linode linodes delete ${id}
     refresh: parent
   - type: reboot
+    item-type: linode-linode
     name: Reboot
     cmd: linode linodes reboot ${id}
     when:
@@ -769,9 +794,11 @@ operations:
       value: running
     refresh: self
   - type: rebuild
+    item-type: linode-linode
     name: Rebuild
     cmd: linode linodes rebuild ${id}
   - type: power-off
+    item-type: linode-linode
     name: Power off
     cmd: linode linodes shutdown ${id}
     when:
@@ -779,6 +806,7 @@ operations:
       value: running
     refresh: self
   - type: power-on
+    item-type: linode-linode
     name: Power on
     cmd: linode linodes boot ${id}
     when:
@@ -786,6 +814,7 @@ operations:
       value: offline
     refresh: self
   - type: other
+    item-type: linode-linode
     name: Enable backups
     cmd: linode linodes backups-enable ${id}
     when:
@@ -793,6 +822,7 @@ operations:
       value: false
     refresh: self
   - type: other
+    item-type: linode-linode
     name: Enable backups
     cmd: linode linodes backups-cancel ${id}
     when:
@@ -800,38 +830,49 @@ operations:
       value: true
     refresh: self
   - type: other
+    item-type: linode-linode
     name: Update
     cmd: linode linodes update ${id}
   - type: other
+    item-type: linode-linode
     name: Upgrade
     cmd: linode linodes upgrade ${id}
   - type: other
+    item-type: linode-linode
     name: Snapshot
     cmd: linode linodes snapshot ${id}
   - type: other
+    item-type: linode-linode
     name: Resize
     cmd: linode linodes resize ${id}
   - type: other
+    item-type: linode-linode
     name: Rescue
     cmd: linode linodes rescue ${id}
   - type: other
+    item-type: linode-linode
     name: Clone
     cmd: linode linodes clone ${id}
   - type: create
+    item-type: linode-loadbalancer
     name: Create Node Balancer
     template: linode_nodebalancers_create
   - type: delete
+    item-type: linode-loadbalancer
     name: Delete
     cmd: linode nodebalancers delete ${id}
     refresh: parent
   - type: create
+    item-type: linode-firewall
     name: Create Firewall
     template: linode_firewalls_create
   - type: delete
+    item-type: linode-firewall
     name: Delete
     cmd: linode firewalls delete ${id}
     refresh: parent
   - type: delete
+    item-type: linode-volume
     name: Delete
     cmd: linode volumes delete ${id}
     refresh: parent
@@ -842,12 +883,14 @@ operations:
   #
 
   - type: create
+    item-type: upctl-server
     name: Create Server
     template:
       name: generic/generic_vm_create
       parameters:
         cloud_provider: cloud-upctl
   - type: delete
+    item-type: upctl-server
     name: Delete
     cmd: upctl server delete ${id}
     refresh: parent
@@ -855,6 +898,7 @@ operations:
       path: state
       value: stopped
   - type: start
+    item-type: upctl-server
     name: Start
     cmd: upctl server start ${id}
     refresh: self
@@ -862,6 +906,7 @@ operations:
       path: state
       value: stopped
   - type: stop
+    item-type: upctl-server
     name: Stop
     cmd: upctl server stop ${id} --wait
     refresh: self
@@ -869,6 +914,7 @@ operations:
       path: state
       value: started
   - type: restart
+    item-type: upctl-server
     name: Restart
     cmd: upctl server restart ${id}
     refresh: self
@@ -876,62 +922,145 @@ operations:
       path: state
       value: started
   - type: create
+    item-type: upctl-server
     name: Create Storage
     template: upctl_storage_create
   - type: delete
+    item-type: upctl-storage
     name: Delete
     cmd: upctl storage delete ${id}
     refresh: parent
   - type: create
+    item-type: upctl-servergroup
     name: Create Server Group
     template: upctl_servergroup_create
   - type: delete
+    item-type: upctl-servergroup
     name: Delete
     cmd: upctl servergroup delete ${id}
     refresh: parent
   - type: delete
+    item-type: upctl-database
     name: Delete
     cmd: upctl database delete ${id}
     refresh: parent
   - type: delete
+    item-type: upctl-gateway
     name: Delete
     cmd: upctl gateway delete ${id}
     refresh: parent
   - type: delete
+    item-type: upctl-ipaddress
     name: Delete
     cmd: upctl ip-address remove ${id}
     refresh: parent
   - type: create
+    item-type: upctl-kubernetes
     name: Create Kubernetes Cluster
     template: upctl_kubernetes_create
   - type: delete
+    item-type: upctl-kubernetes
     name: Delete
     cmd: upctl kubernetes delete ${id}
     refresh: parent
   - type: delete
+    item-type: upctl-host
     name: Delete
     cmd: upctl host delete ${id}
     refresh: parent
   - type: delete
+    item-type: upctl-loadbalancer
     name: Delete
     cmd: upctl loadbalancer delete ${id}
     refresh: parent
   - type: delete
+    item-type: upctl-network
     name: Delete
     cmd: upctl network delete ${id}
     refresh: parent
   - type: delete
+    item-type: upctl-peering
     name: Delete
     cmd: upctl networkpeering delete ${id}
     refresh: parent
   - type: delete
+    item-type: upctl-object-storage
     name: Delete
     cmd: upctl object-storage delete ${id}
     refresh: parent
   - type: create
+    item-type: upctl-router
     name: Create Router
     template: upctl_router_create
   - type: delete
+    item-type: upctl-router
     name: Delete
     cmd: upctl router delete ${id}
     refresh: parent
+
+detail-templates:
+  - item-type: '*'
+    definition:
+      type: section
+      title: Basic Information
+      subitems:
+        - type: 'info-row'
+          icon: 'codicon-symbol-field'
+          color: 'black'
+          label: 'ID'
+          value: '${id}'
+        - type: 'row'
+          subitems: 
+            - type: 'field'
+              icon: 'codicon-symbol-string'
+              color: 'black'
+              label: 'Name:'
+              value: '${name}'
+            - type: 'field'
+              icon: 'codicon-symbol-string'
+              color: 'black'
+              label: 'Type:'
+              value: '${type}'
+            - type: 'field'
+              icon: 'codicon-location'
+              color: 'black'
+              label: 'Location:'
+              value: '${location}'
+
+
+  - item-type: vm
+    definition:
+      type: section
+      title: Virtual Machine
+      subitems:
+        - type: row
+          subitems:
+            - type: field
+              icon: icon-square-orange.png
+              color: black
+              label: 'State:'
+              value: '${state}'
+        - type: 'row'
+          subitems:
+            - type: field
+              icon: icon-cores.png
+              color: black
+              label: 'Cores:'
+              value: '${size_cores}'
+            - type: field
+              icon: 'icon-memory.png'
+              color: black
+              label: 'Memory:'
+              value: '${size_memory}'
+            - type: field
+              icon: icon-storage.png
+              color: black
+              label: 'Disk Size:'
+              value: '${size_disk}'
+        - type: 'row'
+          subitems:
+            - type: info-row
+              icon: codicon-file-binary
+              color: black
+              label: 'Image:'
+              value: '${image}'
