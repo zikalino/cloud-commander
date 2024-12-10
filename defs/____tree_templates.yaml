@@ -618,7 +618,7 @@ operations:
     item-type: civo-kubernetes
     name: Create Kubernetes Cluster
     template:
-      name: generic/generic_kubernetes_create
+      name: generic/generic_kubernetes_cluster_create
       parameters:
         cloud_provider: cloud-civo
 
