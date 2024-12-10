@@ -62,10 +62,6 @@
       icon: upcloud.png
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Network
-          template: upctl_network_create
     - name: Network Peerings
       id: cloud-upcloud-network-peerings
       type: upctl-peering-list

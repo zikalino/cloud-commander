@@ -41,10 +41,6 @@
       icon: linode.png
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Volume
-          template: linode_volumes_create
 
     - name: VPCs
       id: cloud-linode-vpcs

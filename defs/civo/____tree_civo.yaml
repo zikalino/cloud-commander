@@ -15,13 +15,6 @@
       icon: civo.png
       subitems: []
       raw: {}
-      operations:
-        - type: create
-          name: Create Kubernetes Cluster
-          template:
-            name: generic/generic_kubernetes_create
-            parameters:
-              cloud_provider: cloud-civo
 
     - name: Load Balancers
       id: cloud-civo-loadbalancers

@@ -224,6 +224,18 @@ item-sources:
     item-type-generic: containerregistry
 
   #
+  # Kamatera
+  #
+  - type: kamatera-server-list
+    cmd: cloudcli server list --format json
+    path-id: $[::].id
+    path-name: $[::].name
+    path-raw: $[::]
+    item-type-generic: vm
+    item-type: kamatera-server
+
+
+  #
   # linode
   #
   - type: linode-linode-list
@@ -602,6 +614,13 @@ operations:
       name: generic/generic_vm_create
       parameters:
         cloud_provider: cloud-civo
+  - type: create
+    item-type: civo-kubernetes
+    name: Create Kubernetes Cluster
+    template:
+      name: generic/generic_kubernetes_create
+      parameters:
+        cloud_provider: cloud-civo
 
   #  - type: delete
   #    name: Delete
@@ -780,6 +799,10 @@ operations:
       name: generic/generic_vm_create
       parameters:
         cloud_provider: cloud-linode
+  - type: create
+    item-type: linode-volume
+    name: Create Volume
+    template: linode_volumes_create
   - type: delete
     item-type: linode-linode
     name: Delete
@@ -973,11 +996,16 @@ operations:
     name: Delete
     cmd: upctl loadbalancer delete ${id}
     refresh: parent
+  - type: create
+    item-type: upctl-network
+    name: Create Network
+    template: upctl_network_create
   - type: delete
     item-type: upctl-network
     name: Delete
     cmd: upctl network delete ${id}
     refresh: parent
+    
   - type: delete
     item-type: upctl-peering
     name: Delete
