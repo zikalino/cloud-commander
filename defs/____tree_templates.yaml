@@ -1,4 +1,4 @@
-items-sources:
+item-sources:
   #
   # az
   #
@@ -372,7 +372,7 @@ items-sources:
     item-type-generic: router
 
 
-details-sources:
+detail-sources:
   - type: query-details
     when:
       path: "$.type"
