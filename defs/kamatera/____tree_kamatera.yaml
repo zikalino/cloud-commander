@@ -4,6 +4,7 @@
   subitems:
     - name: Servers
       id: cloud-kamatera-servers
+      type: kamatera-server-list
       icon: kamatera.png
       subitems: []
       raw: {}

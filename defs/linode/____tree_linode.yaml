@@ -25,7 +25,7 @@
 
     - name: Networking IPs
       id: cloud-linode-networking-ips
-      type: linode-network-list
+      type: linode-ip-list
       icon: linode.png
       subitems: []
       raw: {}

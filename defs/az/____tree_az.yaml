@@ -1,5 +1,6 @@
 - name: Azure
   id: cloud-azure
+  type: cloud-azure
   icon: azure.png
   subitems: []
   raw: {}

@@ -165,7 +165,7 @@ item-sources:
     path-raw: $[::]
     item-type: doctl-kubernetes
     item-type-generic: kubernetes
-  - type: doctl-apps-list
+  - type: doctl-application-list
     cmd: doctl apps list --output json
     path-id: $[::].id
     path-name: $[::].spec_name
@@ -173,7 +173,7 @@ item-sources:
     item-type: doctl-application
     item-type-generic: application
 
-  - type: doctl-functions-list
+  - type: doctl-function-list
     cmd: doctl serverless functions list --output json
     path-id: $[::].id
     path-name: $[::].spec_name
@@ -215,7 +215,7 @@ item-sources:
     path-raw: $[::]
     item-type: doctl-loadbalancer
     item-type-generic: loadbalancer
-  - type: doctl-registry-list
+  - type: doctl-containerregistry-list
     cmd: doctl registry list --output json
     path-id: $[::].id
     path-name: $[::].name
@@ -245,7 +245,7 @@ item-sources:
     path-raw: $[::]
     item-type-generic: vm
     item-type: linode-linode
-  - type: linode-nodebalancer-list
+  - type: linode-loadbalancer-list
     cmd: linode nodebalancers list --json
     path-id: $[::].id
     path-name: $[::].label
@@ -297,7 +297,7 @@ item-sources:
     path-name: $.servers[::].hostname
     path-raw: $.servers[::]
     item-type-generic: vm
-    item-type: upcloud-server
+    item-type: upctl-server
   - type: upctl-storage-list
     cmd: upctl storage list -o json
     path-id: $.storages[::].uuid
