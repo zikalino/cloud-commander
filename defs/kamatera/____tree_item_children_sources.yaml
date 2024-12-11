@@ -1,11 +1,10 @@
-- name: Vultr
-  id: cloud-vultr
-  icon: vultr.png
-  subitems:
-    - name: Coming Soon...
-      id: cloud-vultr-coming-soon
-      icon: vultr.png
-      subitems: []
-      raw: {}
-  raw: {}
-  details: vultr/vultr__prerequisites.yaml
+#
+# Kamatera
+#
+- item-types: kamatera-server-list
+  cmd: cloudcli server list --format json
+  path-id: $[::].id
+  path-name: $[::].name
+  path-raw: $[::]
+  item-type-generic: vm
+  item-type: kamatera-server

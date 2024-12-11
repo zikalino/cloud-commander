@@ -1,11 +1,81 @@
-- name: Vultr
-  id: cloud-vultr
-  icon: vultr.png
-  subitems:
-    - name: Coming Soon...
-      id: cloud-vultr-coming-soon
-      icon: vultr.png
-      subitems: []
-      raw: {}
-  raw: {}
-  details: vultr/vultr__prerequisites.yaml
+#
+# Digital Ocean
+#
+- item-types: doctl-droplet-list
+  cmd: doctl compute droplet list --output json
+  path-id: $[::].id
+  path-name: $[::].name
+  path-raw: $[::]
+  item-type-generic: vm
+  item-type: doctl-droplet
+- item-types: doctl-volume-list
+  cmd: doctl compute volume list --output json
+  path-id: $[::].id
+  path-name: $[::].name
+  path-raw: $[::]
+  item-type: doctl-volume
+  item-type-generic: disk
+- item-types: doctl-kubernetes-list
+  cmd: doctl kubernetes cluster list --output json
+  path-id: $[::].id
+  path-name: $[::].name
+  path-raw: $[::]
+  item-type: doctl-kubernetes
+  item-type-generic: kubernetes
+- item-types: doctl-application-list
+  cmd: doctl apps list --output json
+  path-id: $[::].id
+  path-name: $[::].spec_name
+  path-raw: $[::]
+  item-type: doctl-application
+  item-type-generic: application
+
+- item-types: doctl-function-list
+  cmd: doctl serverless functions list --output json
+  path-id: $[::].id
+  path-name: $[::].spec_name
+  path-raw: $[::]
+  item-type: doctl-function
+  item-type-generic: function
+- item-types: doctl-database-list
+  cmd: doctl databases list --output json
+  path-id: $[::].id
+  path-name: $[::].name
+  path-raw: $[::]
+  item-type: doctl-database
+  item-type-generic: database
+- item-types: doctl-domain-list
+  cmd: doctl compute domain list --output json
+  path-id: $[::].domain
+  path-name: $[::].domain
+  path-raw: $[::]
+  item-type: doctl-objectstorage
+  item-type-generic: objectstorage
+- item-types: doctl-firewall-list
+  cmd: doctl compute firewall list --output json
+  path-id: $[::].id
+  path-name: $[::].name
+  path-raw: $[::]
+  item-type: doctl-firewall
+  item-type-generic: firewall
+- item-types: doctl-ip-list
+  cmd: doctl compute reserved-ip list --output json
+  path-id: $[::].ip
+  path-name: $[::].ip
+  path-raw: $[::]
+  item-type: doctl-ipaddress
+  item-type-generic: ipaddress
+- item-types: doctl-loadbalancer-list
+  cmd: doctl compute load-balancer list --output json
+  path-id: $[::].id
+  path-name: $[::].name
+  path-raw: $[::]
+  item-type: doctl-loadbalancer
+  item-type-generic: loadbalancer
+- item-types: doctl-containerregistry-list
+  cmd: doctl registry list --output json
+  path-id: $[::].id
+  path-name: $[::].name
+  path-raw: $[::]
+  item-type: doctl-containerregistry
+  item-type-generic: containerregistry

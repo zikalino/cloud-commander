@@ -1,11 +1,52 @@
-- name: Vultr
-  id: cloud-vultr
-  icon: vultr.png
-  subitems:
-    - name: Coming Soon...
-      id: cloud-vultr-coming-soon
-      icon: vultr.png
-      subitems: []
-      raw: {}
-  raw: {}
-  details: vultr/vultr__prerequisites.yaml
+  #
+  # linode
+  #
+  - item-types: linode-linode-list
+    cmd: linode linodes list --json
+    path-id: $[::].id
+    path-name: $[::].label
+    path-raw: $[::]
+    item-type-generic: vm
+    item-type: linode-linode
+  - item-types: linode-loadbalancer-list
+    cmd: linode nodebalancers list --json
+    path-id: $[::].id
+    path-name: $[::].label
+    path-raw: $[::]
+    item-type: linode-loadbalancer
+    item-type-generic: loadbalancer
+  - item-types: linode-firewall-list
+    cmd: linode firewalls list --json
+    path-id: $[::].id
+    path-name: $[::].label
+    path-raw: $[::]
+    item-type: linode-firewall
+    item-type-generic: firewall
+  - item-types: linode-ip-list
+    cmd: linode networking ips-list --json
+    path-id: $[::].address
+    path-name: $[::].address
+    path-raw: $[::]
+    item-type: linode-ipaddress
+    item-type-generic: ipaddress
+  - item-types: linode-objectstorage-list
+    cmd: linode object-storage clusters-list --json
+    path-id: $[::].id
+    path-name: $[::].domain
+    path-raw: $[::]
+    item-type: linode-objectstorage
+    item-type-generic: objectstorage
+  - item-types: linode-volume-list
+    cmd: linode volumes list --json
+    path-id: $[::].id
+    path-name: $[::].label
+    path-raw: $[::]
+    item-type: linode-volume
+    item-type-generic: disk
+  - item-types: linode-vpc-list
+    cmd: linode vpcs list --json
+    path-id: $[::].id
+    path-name: $[::].label
+    path-raw: $[::]
+    item-type: linode-vpc
+    item-type-generic: vpc

@@ -1,11 +1,94 @@
-- name: Vultr
-  id: cloud-vultr
-  icon: vultr.png
-  subitems:
-    - name: Coming Soon...
-      id: cloud-vultr-coming-soon
-      icon: vultr.png
-      subitems: []
-      raw: {}
-  raw: {}
-  details: vultr/vultr__prerequisites.yaml
+#
+# UpCloud
+#
+- item-types: upctl-server-list
+  cmd: upctl server list -o json
+  path-id: $.servers[::].uuid
+  path-name: $.servers[::].hostname
+  path-raw: $.servers[::]
+  item-type-generic: vm
+  item-type: upctl-server
+- item-types: upctl-storage-list
+  cmd: upctl storage list -o json
+  path-id: $.storages[::].uuid
+  path-name: $.storages[::].title
+  path-raw: $.storages[::]
+  item-type: upctl-storage
+  item-type-generic: disk
+- item-types: upctl-servergroup-list
+  cmd: upctl servergroup list -o json
+  path-id: $.server_groups[::].uuid
+  path-name: $.server_groups[::].title
+  path-raw: $.server_groups[::]
+  item-type: upctl-servergroup
+  item-type-generic: servergroup
+- item-types: upctl-database-list
+  cmd: upctl database list -o json
+  path-id: $.databases[::].uuid
+  path-name: $.databases[::].title
+  path-raw: $.databases[::]
+  item-type: upctl-database
+  item-type-generic: database
+- item-types: upctl-gateway-list
+  cmd: upctl gateway list -o json
+  path-id: $.gateways[::].uuid
+  path-name: $.gateways[::].name
+  path-raw: $.gateways[::]
+  item-type: upctl-gateway
+  item-type-generic: gateway
+- item-types: upctl-ip-list
+  cmd: upctl ip-address list -o json
+  path-id: $.ip_addresses.[::].address
+  path-name: $.ip_addresses[::].address
+  path-raw: $.ip_addresses[::]
+  item-type: upctl-ipaddress
+  item-type-generic: ipaddress
+- item-types: upctl-kubernetes-list
+  cmd: upctl kubernetes list -o json
+  path-id: $.[::].uuid
+  path-name: $.[::].name
+  path-raw: $.[::]
+  item-type: upctl-kubernetes
+  item-type-generic: kubernetes
+- item-types: upctl-host-list
+  cmd: upctl host list -o json
+  path-id: $.hosts[::].id
+  path-name: $.hosts[::].description
+  path-raw: $.hosts[::]
+  item-type: upctl-host
+  item-type-generic: host
+- item-types: upctl-loadbalancer-list
+  cmd: upctl loadbalancer list -o json
+  path-id: $.loadbalancers[::].uuid
+  path-name: $.loadbalancers[::].name
+  path-raw: $.loadbalancers[::]
+  item-type: upctl-loadbalancer
+  item-type-generic: loadbalancer
+- item-types: upctl-network-list
+  cmd: upctl network list -o json
+  path-id: $.networks[::].uuid
+  path-name: $.networks[::].name
+  path-raw: $.networks[::]
+  item-type: upctl-network
+  item-type-generic: network
+- item-types: upctl-peering-list
+  cmd: upctl networkpeering list -o json
+  path-id: $.networks[::].uuid
+  path-name: $.networks[::].name
+  path-raw: $.networks[::]
+  item-type: upctl-peering
+  item-type-generic: peering
+- item-types: upctl-objectstorage-list
+  cmd: upctl object-storage list -o json
+  path-id: $.object_storages[::].uuid
+  path-name: $.object_storages[::].name
+  path-raw: $.object_storages[::]
+  item-type: upctl-objectstorage
+  item-type-generic: objectstorage
+- item-types: upctl-router-list
+  cmd: upctl router list -o json
+  path-id: $.routers[::].uuid
+  path-name: $.routers[::].name
+  path-raw: $.routers[::]
+  item-type: upctl-router
+  item-type-generic: router
