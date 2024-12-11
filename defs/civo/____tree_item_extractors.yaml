@@ -1,0 +1,21 @@
+- item-types: civo-instance
+  fields:
+    location:
+      path: "$.region"
+    state:
+      path: "$.status"
+      map:
+        ACTIVE: started
+        off: stopped
+    size:
+      path: "$.size"
+    size_cores:
+      path: "$.cpu_cores"
+    size_memory:
+      path: "$.ram_mb"
+    size_disk:
+      path: "$.disk_gb"
+    price:
+      path: "$.price_monthly"
+    image:
+      path: "$.diskimage_id"

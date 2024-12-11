@@ -1,0 +1,110 @@
+#
+# linode
+#
+- type: create
+  item-types: linode-linode
+  name: Create Linode (Virtual Machine)
+  template:
+    name: generic/generic_vm_create
+    parameters:
+      cloud_provider: cloud-linode
+- type: create
+  item-types: linode-volume
+  name: Create Volume
+  template: linode_volumes_create
+- type: delete
+  item-types: linode-linode
+  name: Delete
+  cmd: linode linodes delete ${id}
+  refresh: parent
+- type: reboot
+  item-types: linode-linode
+  name: Reboot
+  cmd: linode linodes reboot ${id}
+  when:
+    path: "$[0].status"
+    value: running
+  refresh: self
+- type: rebuild
+  item-types: linode-linode
+  name: Rebuild
+  cmd: linode linodes rebuild ${id}
+- type: power-off
+  item-types: linode-linode
+  name: Power off
+  cmd: linode linodes shutdown ${id}
+  when:
+    path: "$[0].status"
+    value: running
+  refresh: self
+- type: power-on
+  item-types: linode-linode
+  name: Power on
+  cmd: linode linodes boot ${id}
+  when:
+    path: "$[0].status"
+    value: offline
+  refresh: self
+- type: other
+  item-types: linode-linode
+  name: Enable backups
+  cmd: linode linodes backups-enable ${id}
+  when:
+    path: "$[0].backups.enabled"
+    value: false
+  refresh: self
+- type: other
+  item-types: linode-linode
+  name: Enable backups
+  cmd: linode linodes backups-cancel ${id}
+  when:
+    path: "$[0].backups.enabled"
+    value: true
+  refresh: self
+- type: other
+  item-types: linode-linode
+  name: Update
+  cmd: linode linodes update ${id}
+- type: other
+  item-types: linode-linode
+  name: Upgrade
+  cmd: linode linodes upgrade ${id}
+- type: other
+  item-types: linode-linode
+  name: Snapshot
+  cmd: linode linodes snapshot ${id}
+- type: other
+  item-types: linode-linode
+  name: Resize
+  cmd: linode linodes resize ${id}
+- type: other
+  item-types: linode-linode
+  name: Rescue
+  cmd: linode linodes rescue ${id}
+- type: other
+  item-types: linode-linode
+  name: Clone
+  cmd: linode linodes clone ${id}
+- type: create
+  item-types: linode-loadbalancer
+  name: Create Node Balancer
+  template: linode_nodebalancers_create
+- type: delete
+  item-types: linode-loadbalancer
+  name: Delete
+  cmd: linode nodebalancers delete ${id}
+  refresh: parent
+- type: create
+  item-types: linode-firewall
+  name: Create Firewall
+  template: linode_firewalls_create
+- type: delete
+  item-types: linode-firewall
+  name: Delete
+  cmd: linode firewalls delete ${id}
+  refresh: parent
+- type: delete
+  item-types: linode-volume
+  name: Delete
+  cmd: linode volumes delete ${id}
+  refresh: parent

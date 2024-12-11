@@ -1,0 +1,21 @@
+- item-types: doctl-droplet
+  fields:
+    state:
+      path: "$[0].status"
+      map:
+        active: started
+        off: stopped
+    size:
+      path: "$[0].size.slug"
+    location:
+      path: "$[0].region.slug"
+    size_cores:
+      path: "$[0].size.vcpus"
+    size_memory:
+      path: "$[0].size.memory"
+    size_disk:
+      path: "$[0].size.disk"
+    price:
+      path: "$[0].size.price_monthly"
+    image:
+      path: "$[0].image.slug"

@@ -1,0 +1,68 @@
+#
+# civo
+#
+- type: create
+  item-types: civo-instance
+  name: Create Instance
+  template:
+    name: generic/generic_vm_create
+    parameters:
+      cloud_provider: cloud-civo
+- type: power-off
+  item-types: civo-instance
+  name: Power Off
+  cmd: civo instance stop ${id}
+
+- type: create
+  item-types: civo-kubernetes
+  name: Create Kubernetes Cluster
+  template:
+    name: generic/generic_kubernetes_cluster_create
+    parameters:
+      cloud_provider: cloud-civo
+
+#  - type: delete
+#    name: Delete
+#    cmd: doctl compute droplet delete ${id} --force
+#    refresh: parent
+#  - type: reboot
+#    name: Reboot
+#    cmd: doctl compute droplet-action reboot ${id}
+#    when:
+#      path: "$[0].status"
+#      value: active
+#    refresh: self
+#  - type: power-off
+#    name: Power off
+#    cmd: doctl compute droplet-action power-off ${id}
+#    when:
+#      path: "$[0].status"
+#      value: active
+#    refresh: self
+#  - type: power-on
+#    name: Power on
+#    cmd: doctl compute droplet-action power-on ${id}
+#    when:
+#      path: "$[0].status"
+#      value: off
+#    refresh: self
+#  - type: other
+#    name: Enable backups
+#    cmd: doctl compute droplet-action enable-backups ${id}
+#    refresh: self
+#    #when:
+#    #  path: "$[0].status"
+#    #  value: on
+#  - type: other
+#    name: Disable backups
+#    cmd: doctl compute droplet-action disable-backups ${id}
+#    refresh: self
+#    #when:
+#    #  path: "$[0].status"
+#    #  value: off
+
+- type: delete
+  item-types: civo-kubernetes
+  name: Delete
+  cmd: civo kubernetes delete ${name} --region fra1
+  refresh: parent

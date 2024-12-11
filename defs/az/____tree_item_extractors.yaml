@@ -1,0 +1,13 @@
+- item-types: "Microsoft.Compute/virtualMachines"
+  fields:
+    state:
+      path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
+      map:
+        "PowerState/running": started
+        "PowerState/stopped": stopped
+    size:
+      path: "$.hardwareProfile.vmSize"
+    size_disk:
+      path: "$.storageProfile.osDisk.diskSizeGb"
+    location:
+      path: "$.location"

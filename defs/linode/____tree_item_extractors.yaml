@@ -1,0 +1,20 @@
+- item-types: linode-linode
+  fields:
+    state:
+      path: "$[0].status"
+      map:
+        running: started
+        offline: stopped
+        provisioning: provisioning
+    size:
+      path: "$[0].type"
+    location:
+      path: "$[0].region"
+    size_cores:
+      path: "$[0].specs.vcpus"
+    size_memory:
+      path: "$[0].specs.memory"
+    size_disk:
+      path: "$[0].specs.disk"
+    image:
+      path: "$[0].image"

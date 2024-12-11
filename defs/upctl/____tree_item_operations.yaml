@@ -1,0 +1,123 @@
+#
+# upctl
+#
+- type: create
+  item-types: upctl-server
+  name: Create Server
+  template:
+    name: generic/generic_vm_create
+    parameters:
+      cloud_provider: cloud-upctl
+- type: delete
+  item-types: upctl-server
+  name: Delete
+  cmd: upctl server delete ${id}
+  refresh: parent
+  when:
+    path: state
+    value: stopped
+- type: start
+  item-types: upctl-server
+  name: Start
+  cmd: upctl server start ${id}
+  refresh: self
+  when:
+    path: state
+    value: stopped
+- type: stop
+  item-types: upctl-server
+  name: Stop
+  cmd: upctl server stop ${id} --wait
+  refresh: self
+  when:
+    path: state
+    value: started
+- type: restart
+  item-types: upctl-server
+  name: Restart
+  cmd: upctl server restart ${id}
+  refresh: self
+  when:
+    path: state
+    value: started
+- type: create
+  item-types: upctl-server
+  name: Create Storage
+  template: upctl_storage_create
+- type: delete
+  item-types: upctl-storage
+  name: Delete
+  cmd: upctl storage delete ${id}
+  refresh: parent
+- type: create
+  item-types: upctl-servergroup
+  name: Create Server Group
+  template: upctl_servergroup_create
+- type: delete
+  item-types: upctl-servergroup
+  name: Delete
+  cmd: upctl servergroup delete ${id}
+  refresh: parent
+- type: delete
+  item-types: upctl-database
+  name: Delete
+  cmd: upctl database delete ${id}
+  refresh: parent
+- type: delete
+  item-types: upctl-gateway
+  name: Delete
+  cmd: upctl gateway delete ${id}
+  refresh: parent
+- type: delete
+  item-types: upctl-ipaddress
+  name: Delete
+  cmd: upctl ip-address remove ${id}
+  refresh: parent
+- type: create
+  item-types: upctl-kubernetes
+  name: Create Kubernetes Cluster
+  template: upctl_kubernetes_create
+- type: delete
+  item-types: upctl-kubernetes
+  name: Delete
+  cmd: upctl kubernetes delete ${id}
+  refresh: parent
+- type: delete
+  item-types: upctl-host
+  name: Delete
+  cmd: upctl host delete ${id}
+  refresh: parent
+- type: delete
+  item-types: upctl-loadbalancer
+  name: Delete
+  cmd: upctl loadbalancer delete ${id}
+  refresh: parent
+- type: create
+  item-types: upctl-network
+  name: Create Network
+  template: upctl_network_create
+- type: delete
+  item-types: upctl-network
+  name: Delete
+  cmd: upctl network delete ${id}
+  refresh: parent
+  
+- type: delete
+  item-types: upctl-peering
+  name: Delete
+  cmd: upctl networkpeering delete ${id}
+  refresh: parent
+- type: delete
+  item-types: upctl-objectstorage
+  name: Delete
+  cmd: upctl object-storage delete ${id}
+  refresh: parent
+- type: create
+  item-types: upctl-router
+  name: Create Router
+  template: upctl_router_create
+- type: delete
+  item-types: upctl-router
+  name: Delete
+  cmd: upctl router delete ${id}
+  refresh: parent
