@@ -409,10 +409,10 @@ detail-sources:
     refresh: self
 
   - type: civo-instance
-    cmd: civo instances show ${id} --region ${location} -o json
+    cmd: civo instances show ${id} --region ${region} -o json
     refresh: self
   - type: civo-kubernetes
-    cmd: civo kubernetes show ${id} --region fra1 --output json
+    cmd: civo kubernetes show ${id} --region ${region} --output json
     refresh: self
   - type: doctl-droplet
     cmd: doctl compute droplet get ${id} -o json
@@ -614,6 +614,11 @@ operations:
       name: generic/generic_vm_create
       parameters:
         cloud_provider: cloud-civo
+  - type: power-off
+    item-type: civo-instance
+    name: Power Off
+    cmd: civo instance stop ${id}
+
   - type: create
     item-type: civo-kubernetes
     name: Create Kubernetes Cluster
