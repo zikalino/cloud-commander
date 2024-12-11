@@ -156,7 +156,7 @@ item-sources:
     path-id: $[::].id
     path-name: $[::].name
     path-raw: $[::]
-    item-type: doctl-disk
+    item-type: doctl-volume
     item-type-generic: disk
   - type: doctl-kubernetes-list
     cmd: doctl kubernetes cluster list --output json
@@ -278,7 +278,7 @@ item-sources:
     path-id: $[::].id
     path-name: $[::].label
     path-raw: $[::]
-    item-type: linode-disk
+    item-type: linode-volume
     item-type-generic: disk
   - type: linode-vpc-list
     cmd: linode vpcs list --json
@@ -303,8 +303,8 @@ item-sources:
     path-id: $.storages[::].uuid
     path-name: $.storages[::].title
     path-raw: $.storages[::]
-    item-type: upctl-objectstorage
-    item-type-generic: objectstorage
+    item-type: upctl-storage
+    item-type-generic: disk
   - type: upctl-servergroup-list
     cmd: upctl servergroup list -o json
     path-id: $.server_groups[::].uuid
@@ -505,7 +505,7 @@ extractors:
       image:
         path: "$[0].image"
 
-  - type: upcloud-server
+  - type: upctl-server
     fields:
       state:
         path: "$.state"
@@ -608,7 +608,7 @@ operations:
   # civo
   #
   - type: create
-    item-type: civo-vm
+    item-type: civo-instance
     name: Create Instance
     template:
       name: generic/generic_vm_create
@@ -779,11 +779,11 @@ operations:
     cmd: doctl compute firewall delete ${id}
     refresh: parent
   - type: create
-    item-type: doctl-container-registry
+    item-type: doctl-containerregistry
     name: Create Container Registry
     template: doctl_registry_create
   - type: delete
-    item-type: doctl-container-registry
+    item-type: doctl-containerregistry
     name: Delete
     cmd: doctl registry delete ${id}
     refresh: parent
@@ -1012,7 +1012,7 @@ operations:
     cmd: upctl networkpeering delete ${id}
     refresh: parent
   - type: delete
-    item-type: upctl-object-storage
+    item-type: upctl-objectstorage
     name: Delete
     cmd: upctl object-storage delete ${id}
     refresh: parent

@@ -5,7 +5,6 @@ import * as helpers from '@zim.kalinowski/vscode-helper-toolkit';
 
 import { displayCloudExplorer, CloudExplorerRefresh } from './cloud-explorer';
 import vm_sizes from './vm_sizes.json' assert {type: 'json'};
-import { exec } from 'child_process';
 
 //import SwaggerParser from "@apidevtools/swagger-parser";
 var extensionUri: Uri;
