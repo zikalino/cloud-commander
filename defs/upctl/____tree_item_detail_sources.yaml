@@ -1,0 +1,3 @@
+- item-types: upctl-server
+  cmd: upctl server show ${id} -o json
+  refresh: self

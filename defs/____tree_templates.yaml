@@ -7,44 +7,12 @@ item-sources:
   - $include: upctl/____tree_item_children_sources.yaml
 
 detail-sources:
-  - item-types: query-details
-    when:
-      path: "$.type"
-      value: "Microsoft.Compute/virtualMachines"
-      compare: ne
-    cmd: az resource show --ids ${id}
-    refresh: self
-  # This is details query for VMs only
-  - item-types: query-details
-    when:
-      path: "$.type"
-      value: "Microsoft.Compute/virtualMachines"
-    cmd: az vm get-instance-view --ids ${id}
-    refresh: self
-  # This is details query for any other resources
-  - item-types: query-details
-    when:
-      path: "$.type"
-      value: "Microsoft.Compute/virtualMachines"
-      compare: ne
-    cmd: az resource show --ids ${id}
-    refresh: self
+  - $include: az/____tree_item_detail_sources.yaml
+  - $include: civo/____tree_item_detail_sources.yaml
+  - $include: doctl/____tree_item_detail_sources.yaml
+  - $include: linode/____tree_item_detail_sources.yaml
+  - $include: upctl/____tree_item_detail_sources.yaml
 
-  - item-types: civo-instance
-    cmd: civo instances show ${id} --region ${region} -o json
-    refresh: self
-  - item-types: civo-kubernetes
-    cmd: civo kubernetes show ${id} --region ${region} --output json
-    refresh: self
-  - item-types: doctl-droplet
-    cmd: doctl compute droplet get ${id} -o json
-    refresh: self
-  - item-types: linode-linode
-    cmd: linode linodes view ${id} --json
-    refresh: self
-  - item-types: upctl-server
-    cmd: upctl server show ${id} -o json
-    refresh: self
 
 extractors:
 

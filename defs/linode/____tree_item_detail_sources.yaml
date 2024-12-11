@@ -1,0 +1,3 @@
+- item-types: linode-linode
+  cmd: linode linodes view ${id} --json
+  refresh: self

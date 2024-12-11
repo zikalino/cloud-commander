@@ -1,0 +1,3 @@
+- item-types: doctl-droplet
+  cmd: doctl compute droplet get ${id} -o json
+  refresh: self
