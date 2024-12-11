@@ -1,5 +1,6 @@
 - name: Civo
   id: cloud-civo
+  type: cloud-civo
   icon: civo.png
   subitems:
     - name: Instances
