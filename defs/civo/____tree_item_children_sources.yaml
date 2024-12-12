@@ -2,44 +2,40 @@
 # civo
 #
 - item-types: civo-instance-list
-  cmd:
-    - civo instances list --region fra1 --output json
-    - civo instances list --region phx1 --output json
-    - civo instances list --region lon1 --output json
-    - civo instances list --region nyc1 --output json
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd: civo instances list --region ${parameter} --output json
   path-id: $[::].id
   path-name: $[::].hostname
   path-raw: $[::]
   item-type: civo-instance
   item-type-generic: vm
 - item-types: civo-kubernetes-list
-  cmd:
-    - civo kubernetes list --region lon1 --output json
-    - civo kubernetes list --region phx1 --output json
-    - civo kubernetes list --region fra1 --output json
-    - civo kubernetes list --region nyc1 --output json
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd: civo kubernetes list --region ${parameter} --output json
   path-id: $[::].id
   path-name: $[::].name
   path-raw: $[::]
   item-type: civo-kubernetes
   item-type-generic: kubernetes
 - item-types: civo-loadbalancer-list
-  cmd:
-    - civo loadbalancer list --region lon1 --output json
-    - civo loadbalancer list --region phx1 --output json
-    - civo loadbalancer list --region fra1 --output json
-    - civo loadbalancer list --region nyc1 --output json
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd: civo loadbalancer list --region ${parameter} --output json
   path-id: $[::].id
   path-name: $[::].name
   path-raw: $[::]
   item-type: civo-loadbalancer
   item-type-generic: loadbalancer
 - item-types: civo-firewall-list
-  cmd:
-    - civo firewall list --region lon1 --output json
-    - civo firewall list --region phx1 --output json
-    - civo firewall list --region fra1 --output json
-    - civo firewall list --region nyc1 --output json
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd: civo firewall list --region ${parameter} --output json
   path-id: $[::].id
   path-name: $[::].name
   path-raw: $[::]
@@ -53,66 +49,60 @@
   item-type: civo-apikey
   item-type-generic: apikey
 - item-types: civo-database-list
-  cmd:
-    - civo database list --region lon1 --output json
-    - civo database list --region phx1 --output json
-    - civo database list --region fra1 --output json
-    - civo database list --region nyc1 --output json
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd: civo database list --region ${parameter} --output json
   path-id: $[::].id
   path-name: $[::].name
   path-raw: $[::]
   item-type: civo-database
   item-type-generic: database
 - item-types: civo-domain-list
-  cmd:
-    - civo domain list --region lon1 --output json
-    - civo domain list --region phx1 --output json
-    - civo domain list --region fra1 --output json
-    - civo domain list --region nyc1 --output json
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd: civo domain list --region ${parameter} --output json
   path-id: $[::].id
   path-name: $[::].name
   path-raw: $[::]
   item-type: civo-domain
   item-type-generic: domain
 - item-types: civo-ip-list
-  cmd:
-    - civo ip list --region lon1 --output json
-    - civo ip list --region phx1 --output json
-    - civo ip list --region fra1 --output json
-    - civo ip list --region nyc1 --output json
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd: civo ip list --region ${parameter} --output json
   path-id: $[::].id
   path-name: $[::].name
   path-raw: $[::]
   item-type: civo-ipaddress
   item-type-generic: ipaddress
 - item-types: civo-network-list
-  cmd:
-    - civo network list --region lon1 --output json
-    - civo network list --region phx1 --output json
-    - civo network list --region fra1 --output json
-    - civo network list --region nyc1 --output json
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd:  civo network list --region ${parameter} --output json
   path-id: $[::].id
   path-name: $[::].label
   path-raw: $[::]
   item-type: civo-network
   item-type-generic: network
 - item-types: civo-objectstore-list
-  cmd:
-    - civo objectstore list --region lon1 --output json
-    - civo objectstore list --region phx1 --output json
-    - civo objectstore list --region fra1 --output json
-    - civo objectstore list --region nyc1 --output json
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd:  civo objectstore list --region ${parameter} --output json
   path-id: $[::].id
   path-name: $[::].name
   path-raw: $[::]
   item-type: civo-objectstorage
   item-type-generic: objectstorage
 - item-types: civo-volume-list
-  cmd:
-    - civo volume list --region lon1 --output json
-    - civo volume list --region phx1 --output json
-    - civo volume list --region fra1 --output json
-    - civo volume list --region nyc1 --output json
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd:  civo volume list --region ${parameter} --output json
   path-id: $[::].id
   path-name: $[::].name
   path-raw: $[::]
