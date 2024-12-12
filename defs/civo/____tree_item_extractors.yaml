@@ -5,7 +5,7 @@
     state:
       path: "$.status"
       map:
-        ACTIVE: started
+        .*ACTIVE.*$: started
         off: stopped
     size:
       path: "$.size"
