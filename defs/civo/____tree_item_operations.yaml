@@ -40,45 +40,110 @@
   cmd: civo kubernetes delete ${name} --region ${location}
   refresh: parent
 
+#
+# Firewalls
+#
+# TODO: create
+- type: delete
+  item-types: civo-firewall
+  name: Delete
+  cmd: civo firewall delete ${id} --region ${location}
+  refresh: parent
 
+#
+# Loadbalancers
+#
+- type: delete
+  item-types: civo-loadbalancer
+  name: Delete
+  cmd: civo loadbalancer delete ${id} --region ${location}
+  refresh: parent
 
+#
+# API Keys
+#
+- type: delete
+  item-types: civo-apikey
+  name: Delete
+  cmd: civo apikey delete ${id}
+  refresh: parent
 
-#  - type: delete
-#    name: Delete
-#    cmd: doctl compute droplet delete ${id} --force
-#    refresh: parent
-#  - type: reboot
-#    name: Reboot
-#    cmd: doctl compute droplet-action reboot ${id}
-#    when:
-#      path: "$[0].status"
-#      value: active
-#    refresh: self
-#  - type: power-off
-#    name: Power off
-#    cmd: doctl compute droplet-action power-off ${id}
-#    when:
-#      path: "$[0].status"
-#      value: active
-#    refresh: self
-#  - type: power-on
-#    name: Power on
-#    cmd: doctl compute droplet-action power-on ${id}
-#    when:
-#      path: "$[0].status"
-#      value: off
-#    refresh: self
-#  - type: other
-#    name: Enable backups
-#    cmd: doctl compute droplet-action enable-backups ${id}
-#    refresh: self
-#    #when:
-#    #  path: "$[0].status"
-#    #  value: on
-#  - type: other
-#    name: Disable backups
-#    cmd: doctl compute droplet-action disable-backups ${id}
-#    refresh: self
-#    #when:
-#    #  path: "$[0].status"
-#    #  value: off
+#
+# Databases
+#
+# TODO: create
+# TODO: delete
+# TODO: show
+# TODO: + more
+
+#
+# Domains
+#
+# TODO: create
+- type: delete
+  item-types: civo-domain
+  name: Delete
+  cmd: civo domain remove ${name} --region ${location}
+  refresh: parent
+
+#
+# IP Addresses
+#
+# TODO: reserve
+# TODO: delete
+# TODO: assign
+# TODO: unassign
+- type: delete
+  item-types: civo-ipaddress
+  name: Delete
+  cmd: civo ip remove ${name} --region ${location}
+  refresh: parent
+
+#
+# Networks
+#
+# TODO: create
+# TODO: remove
+# TODO: connect
+# TODO: update
+- type: delete
+  item-types: civo-network
+  name: Delete
+  cmd: civo network remove ${name} --region ${location}
+  refresh: parent
+
+#
+# Object Stores
+#
+# TODO: create
+# TODO: delete
+# TODO: resize
+# TODO: credential
+- type: delete
+  item-types: civo-objectstore
+  name: Delete
+  cmd: civo objectstore remove ${name} --region ${location}
+  refresh: parent
+
+#
+# SSH Keys
+#
+# TODO: create
+# TODO: remove
+- type: delete
+  item-types: civo-domain
+  name: Delete
+  cmd: civo sshkey remove ${name} --region ${location}
+  refresh: parent
+
+#
+# Volumes
+#
+# TODO: create
+# TODO: attach
+# TODO: detach
+- type: delete
+  item-types: civo-volume
+  name: Delete
+  cmd: civo volume remove ${name} --region ${location}
+  refresh: parent
