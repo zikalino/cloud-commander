@@ -19,6 +19,17 @@ form:
         install: |
             scoop bucket add extras
             scoop install civo
+
+      #
+      # Make sure user is logged in
+      #
+      - type: 'action-row'
+        name: Authentication
+        verify: civo permissions ls
+        interactive: true
+        install: |
+            civo apikey save
+
 footer:
   - type: footer
     subitems:
