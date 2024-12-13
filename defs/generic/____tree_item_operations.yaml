@@ -2,12 +2,14 @@
 # Generic
 #
 - type: create
-  item-types: generic
+  item-types:
+    - generic
   name: Create Virtual Machine
   template:
     name: generic/generic_vm_create
 - type: create
-  item-types: generic
+  item-types:
+    - generic
   name: Create Container Registry
   template:
     name: generic/generic_container_registry_create
@@ -17,7 +19,8 @@
   template:
     name: generic/generic_container_instance_create
 - type: create
-  item-types: generic
+  item-types:
+    - generic
   name: Create Kubernetes Cluster
   template:
     name: generic/generic_kubernetes_cluster_create

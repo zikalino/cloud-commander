@@ -1,8 +1,10 @@
 #
-# civo
+# Instances
 #
 - type: create
-  item-types: civo-instance
+  item-types:
+    - cloud-civo
+    - civo-instance-list
   name: Create Instance
   template:
     name: generic/generic_vm_create
@@ -13,13 +15,33 @@
   name: Power Off
   cmd: civo instance stop ${id}
 
+- type: delete
+  item-types: civo-instance
+  name: Delete
+  cmd: civo instance delete ${name} --region ${location}
+  refresh: parent
+
+#
+# Kubernetes
+#
 - type: create
-  item-types: civo-kubernetes
+  item-types:
+    - cloud-civo
+    - civo-kubernetes-list
   name: Create Kubernetes Cluster
   template:
     name: generic/generic_kubernetes_cluster_create
     parameters:
       cloud_provider: cloud-civo
+
+- type: delete
+  item-types: civo-kubernetes
+  name: Delete
+  cmd: civo kubernetes delete ${name} --region ${location}
+  refresh: parent
+
+
+
 
 #  - type: delete
 #    name: Delete
@@ -60,9 +82,3 @@
 #    #when:
 #    #  path: "$[0].status"
 #    #  value: off
-
-- type: delete
-  item-types: civo-kubernetes
-  name: Delete
-  cmd: civo kubernetes delete ${name} --region fra1
-  refresh: parent
