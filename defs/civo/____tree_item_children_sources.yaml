@@ -21,6 +21,7 @@
   path-raw: $[::]
   item-type: civo-kubernetes
   item-type-generic: kubernetes
+
 - item-types: civo-loadbalancer-list
   parametrise:
     values: ['fra1', 'phx1', 'lon1', 'nyc1']
@@ -31,6 +32,7 @@
   path-raw: $[::]
   item-type: civo-loadbalancer
   item-type-generic: loadbalancer
+
 - item-types: civo-firewall-list
   parametrise:
     values: ['fra1', 'phx1', 'lon1', 'nyc1']
@@ -41,6 +43,7 @@
   path-raw: $[::]
   item-type: civo-firewall
   item-type-generic: firewall
+
 - item-types: civo-apikey-list
   cmd: civo apikey list --region fra1 --output json
   path-id: $[::].name
@@ -48,6 +51,7 @@
   path-raw: $[::]
   item-type: civo-apikey
   item-type-generic: apikey
+
 - item-types: civo-database-list
   parametrise:
     values: ['fra1', 'phx1', 'lon1', 'nyc1']
@@ -58,6 +62,7 @@
   path-raw: $[::]
   item-type: civo-database
   item-type-generic: database
+
 - item-types: civo-domain-list
   parametrise:
     values: ['fra1', 'phx1', 'lon1', 'nyc1']
@@ -68,6 +73,7 @@
   path-raw: $[::]
   item-type: civo-domain
   item-type-generic: domain
+
 - item-types: civo-ip-list
   parametrise:
     values: ['fra1', 'phx1', 'lon1', 'nyc1']
@@ -78,6 +84,7 @@
   path-raw: $[::]
   item-type: civo-ipaddress
   item-type-generic: ipaddress
+
 - item-types: civo-network-list
   parametrise:
     values: ['fra1', 'phx1', 'lon1', 'nyc1']
@@ -88,6 +95,7 @@
   path-raw: $[::]
   item-type: civo-network
   item-type-generic: network
+
 - item-types: civo-objectstore-list
   parametrise:
     values: ['fra1', 'phx1', 'lon1', 'nyc1']
@@ -98,6 +106,7 @@
   path-raw: $[::]
   item-type: civo-objectstorage
   item-type-generic: objectstorage
+
 - item-types: civo-volume-list
   parametrise:
     values: ['fra1', 'phx1', 'lon1', 'nyc1']

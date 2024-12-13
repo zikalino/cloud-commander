@@ -19,3 +19,18 @@
       path: "$.price_monthly"
     image:
       path: "$.diskimage_id"
+
+- item-types:
+    - civo-loadbalancer
+    - civo-kubernetes
+    - civo-firewall
+    - civo-database
+    - civo-domain
+    - civo-ipaddress
+    - civo-network
+    - civo-objectstore
+    - civo-sshkey
+    - civo-volume
+  fields:
+    location:
+      path: "$.region"
