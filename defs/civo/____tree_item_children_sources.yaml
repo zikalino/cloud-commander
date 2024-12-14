@@ -11,6 +11,18 @@
   path-raw: $[::]
   item-type: civo-instance
   item-type-generic: vm
+
+- item-types: civo-volume-list
+  parametrise:
+    values: ['fra1', 'phx1', 'lon1', 'nyc1']
+    store: region
+  cmd: civo volumes list --region ${parameter} --output json
+  path-id: $[::].id
+  path-name: $[::].name
+  path-raw: $[::]
+  item-type: civo-volume
+  item-type-generic: disk
+
 - item-types: civo-kubernetes-list
   parametrise:
     values: ['fra1', 'phx1', 'lon1', 'nyc1']
@@ -104,7 +116,7 @@
   path-id: $[::].id
   path-name: $[::].name
   path-raw: $[::]
-  item-type: civo-objectstorage
+  item-type: civo-objectstore
   item-type-generic: objectstorage
 
 - item-types: civo-volume-list

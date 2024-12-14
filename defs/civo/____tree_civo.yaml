@@ -10,6 +10,13 @@
       subitems: []
       raw: {}
 
+    - name: Volumes
+      id: cloud-civo-volumes
+      type: civo-volume-list
+      icon: civo.png
+      subitems: []
+      raw: {}
+
     - name: Kubernetes
       id: cloud-civo-kubernetes
       type: civo-kubernetes-list
@@ -74,8 +81,8 @@
       raw: {}
 
     - name: SSH Keys
-      id: cloud-civo-volumes
-      type: civo-volume-list
+      id: cloud-civo-sshkeys
+      type: civo-sshkey-list
       icon: civo.png
       subitems: []
       raw: {}
