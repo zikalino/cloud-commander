@@ -1,5 +1,6 @@
 - name: Linode/Akamai
   id: cloud-linode
+  type: cloud-linode
   icon: linode.png
   subitems:
     - name: Linodes

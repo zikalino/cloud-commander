@@ -23,6 +23,7 @@ extractors:
 operations:
   - $include: az/____tree_item_operations.yaml
   - $include: civo/____tree_item_operations.yaml
+  - $include: doctl/____tree_item_operations.yaml
   - $include: generic/____tree_item_operations.yaml
   - $include: linode/____tree_item_operations.yaml
   - $include: upctl/____tree_item_operations.yaml

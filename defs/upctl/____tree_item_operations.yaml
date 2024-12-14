@@ -2,7 +2,9 @@
 # upctl
 #
 - type: create
-  item-types: upctl-server
+  item-types:
+    - cloud-upctl
+    - upctl-server-list
   name: Create Server
   template:
     name: generic/generic_vm_create

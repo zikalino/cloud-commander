@@ -1,5 +1,6 @@
 - name: UpCloud
   id: cloud-upcloud
+  type: cloud-upctl
   icon: upcloud.png
   subitems:
     - name: Servers

@@ -1,19 +1,44 @@
 #
-# doctl
+# create
 # 
 - type: create
-  item-types: doctl-droplet
+  item-types:
+    - cloud-doctl
+    - doctl-droplet-list
   name: Create Droplet
   template:
     name: generic/generic_vm_create
     parameters:
       cloud_provider: cloud-doctl
 
+#
+# delete
+#
 - type: delete
   item-types: doctl-droplet
   name: Delete
   cmd: doctl compute droplet delete ${id} --force
   refresh: parent
+
+#  change-kernel             Change a Droplet's kernel
+#  disable-backups           Disable backups on a Droplet
+#  enable-backups            Enable backups on a Droplet
+#  enable-ipv6               Enable IPv6 on a Droplet
+#  enable-private-networking Enable private networking on a Droplet
+#  get                       Retrieve a specific Droplet action
+#  password-reset            Reset the root password for a Droplet
+#  power-cycle               Powercycle a Droplet
+#  power-off                 Power off a Droplet
+#  power-on                  Power on a Droplet
+#  reboot                    Reboot a Droplet
+#  rebuild                   Rebuild a Droplet
+#  rename                    Rename a Droplet
+#  resize                    Resize a Droplet
+#  restore                   Restore a Droplet from a backup
+#  shutdown                  Shut down a Droplet
+#  snapshot                  Take a Droplet snapshot
+
+
 - type: reboot
   item-types: doctl-droplet
   name: Reboot

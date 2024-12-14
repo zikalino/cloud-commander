@@ -2,7 +2,9 @@
 # linode
 #
 - type: create
-  item-types: linode-linode
+  item-types:
+    - cloud-linode
+    - linode-linode-list
   name: Create Linode (Virtual Machine)
   template:
     name: generic/generic_vm_create

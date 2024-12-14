@@ -1,5 +1,6 @@
 - name: Digital Ocean
   id: cloud-digital-ocean
+  type: cloud-doctl
   icon: digital-ocean.svg
   subitems:
     - name: Droplets
