@@ -1,9 +1,9 @@
 - item-types: civo-instance
-  cmd: civo instances show ${id} --region ${region} -o json
+  cmd: civo instances show ${id} --region ${location} -o json
   refresh: self
 - item-types: civo-kubernetes
-  cmd: civo kubernetes show ${id} --region ${region} -o json
+  cmd: civo kubernetes show ${id} --region ${location} -o json
   refresh: self
 - item-types: civo-loadbalancer
-  cmd: civo loadbalancer show ${id} --region ${region} -o json
+  cmd: civo loadbalancer show ${id} --region ${location} -o json
   refresh: self
