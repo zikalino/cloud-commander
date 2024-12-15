@@ -14,17 +14,19 @@
     parameters:
       cloud_provider: cloud-az
 - type: create
-  item-types: container-registry
+  item-types:
+    - "Microsoft.Compute/containerRegistry"
   name: Create Container Registry
   template: az_acr_create
 # this is a template for resource group level
 - type: delete
-  item-types: az-generic
+  item-types:
+    - "Microsoft.Compute/virtualMachines"
   name: Delete
   cmd: az resource delete --ids ${id}
   refresh: parent
 - type: start
-  item-types: az-vm
+  item-types: "Microsoft.Compute/virtualMachines"
   name: Start
   cmd: az vm start --ids ${id}
   refresh: self
@@ -32,7 +34,7 @@
     path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
     value: "PowerState/stopped"
 - type: stop
-  item-types: az-vm
+  item-types: "Microsoft.Compute/virtualMachines"
   name: Stop
   cmd: az vm stop --ids ${id}
   refresh: self
@@ -40,7 +42,7 @@
     path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
     value: "PowerState/running"
 - type: restart
-  item-types: az-vm
+  item-types: "Microsoft.Compute/virtualMachines"
   name: Restart
   cmd: az vm restart --ids ${id}
   refresh: self

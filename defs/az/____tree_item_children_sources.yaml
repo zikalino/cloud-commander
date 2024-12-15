@@ -17,4 +17,5 @@
     item-type: $.type
     item-type-generic: unknown
     type-map:
-      - "Microsoft.Compute/virtualMachines": vm
+      "Microsoft.Compute/virtualMachines": vm
+      "Microsoft.Compute/containerRegistry": container-registry

@@ -1,22 +1,14 @@
-- item-types: query-details
+- item-types:
+  - "Microsoft.Compute/*"
   when:
     path: "$.type"
     value: "Microsoft.Compute/virtualMachines"
     compare: ne
   cmd: az resource show --ids ${id}
   refresh: self
+
 # This is details query for VMs only
-- item-types: query-details
-  when:
-    path: "$.type"
-    value: "Microsoft.Compute/virtualMachines"
+- item-types:
+    - "Microsoft.Compute/virtualMachines"
   cmd: az vm get-instance-view --ids ${id}
-  refresh: self
-# This is details query for any other resources
-- item-types: query-details
-  when:
-    path: "$.type"
-    value: "Microsoft.Compute/virtualMachines"
-    compare: ne
-  cmd: az resource show --ids ${id}
   refresh: self
