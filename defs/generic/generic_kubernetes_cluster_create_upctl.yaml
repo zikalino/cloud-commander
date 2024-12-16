@@ -164,5 +164,6 @@
           parameter: --wait
           required: false
       install: upctl kubernetes create
+      verify: upctl kubernetes show ${name}
       produces:
         - variable: output

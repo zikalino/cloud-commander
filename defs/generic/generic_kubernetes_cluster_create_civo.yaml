@@ -80,5 +80,6 @@
         - variable: cluster_version
           parameter: --version
       install: civo kubernetes create ${name} --region ${region} --wait
+      verify: civo kubernetes show ${name}
       produces:
         - variable: output

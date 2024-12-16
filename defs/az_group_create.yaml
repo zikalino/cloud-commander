@@ -78,6 +78,7 @@ form:
             parameter: --tags
             required: false
         install: az group create
+        verify: az group show ${resource_group}
         produces:
           - variable: output
       - type: 'output-row'

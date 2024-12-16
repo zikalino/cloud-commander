@@ -232,6 +232,7 @@ form:
             parameter: --verbose
             required: false
         install: doctl compute firewall create
+        verify: doctl compute firewall get ${name}
         produces:
           - variable: output
       - type: 'output-row'

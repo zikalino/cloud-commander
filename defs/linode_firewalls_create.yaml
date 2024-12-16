@@ -122,6 +122,7 @@ form:
             parameter: --rules.outbound
             required: false
         install: linode firewalls create
+        verify: linode firewalls view ${label}
         produces:
           - variable: output
       - type: 'output-row'

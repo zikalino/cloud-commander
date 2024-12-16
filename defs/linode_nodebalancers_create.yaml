@@ -325,6 +325,7 @@ form:
             parameter: --configs.nodes.weight
             required: false
         install: linode nodebalancers create
+        verify: linode firewalls view ${label}
         produces:
           - variable: output
       - type: 'output-row'

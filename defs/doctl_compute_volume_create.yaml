@@ -157,6 +157,7 @@ form:
             parameter: --tag
             required: false
         install: doctl compute volume create ${volume_name}
+        verify: doctl compute volume get ${volume_name}
         produces:
           - variable: output
       - type: 'output-row'

@@ -267,6 +267,7 @@ form:
             parameter: --verbose
             required: false
         install: doctl databases create ${name}
+        verify: doctl databases get ${name}
         produces:
           - variable: output
       - type: 'output-row'

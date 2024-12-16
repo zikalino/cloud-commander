@@ -204,6 +204,7 @@ form:
             parameter: --output
             required: false
         install: upctl storage create
+        verify: upctl storage show ${name}
         produces:
           - variable: output
       - type: 'output-row'

@@ -375,6 +375,7 @@ form:
             parameter: --verbose
             required: false
         install: doctl kubernetes cluster create ${name}
+        verify: doctl kubernetes cluster get ${name}
         produces:
           - variable: output
       - type: 'output-row'

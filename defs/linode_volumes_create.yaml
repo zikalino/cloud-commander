@@ -85,6 +85,7 @@ form:
             parameter: --tags
             required: false
         install: linode volumes create
+        verify: linode volumes view ${label}
         produces:
           - variable: output
       - type: 'output-row'

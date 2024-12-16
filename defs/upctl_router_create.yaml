@@ -53,6 +53,7 @@ form:
             parameter: --name
             required: false
         install: upctl router create
+        verify: upctl router show ${name}
         produces:
           - variable: output
       - type: 'output-row'

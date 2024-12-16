@@ -86,6 +86,7 @@ form:
             parameter: --ip-network
             required: false
         install: upctl network create
+        verify: upctl network show ${name}
         produces:
           - variable: output
       - type: 'output-row'

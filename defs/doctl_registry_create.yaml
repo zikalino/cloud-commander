@@ -148,6 +148,7 @@ form:
             parameter: --verbose
             required: false
         install: doctl registry create ${registry_name}
+        verify: doctl registry get ${registry_name}
         produces:
           - variable: output
       - type: 'output-row'

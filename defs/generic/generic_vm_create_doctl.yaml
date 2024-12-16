@@ -239,5 +239,6 @@
           parameter: --wait
           required: false
       install: doctl compute droplet create ${droplet_name}
+      verify: doctl compute droplet get ${droplet_name}
       produces:
         - variable: output

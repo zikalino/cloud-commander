@@ -46,5 +46,6 @@
           parameter: --subscription-tier
           required: true
       install: doctl registry create ${registry_name} --region ${region}
+      verify: doctl registry get ${registry_name}
       produces:
         - variable: output
