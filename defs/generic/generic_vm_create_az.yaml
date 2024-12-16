@@ -99,16 +99,16 @@
         - variable: virtual_machine_region
         - variable: vm_size
           parameter: --size
-        - variable: os_disk_id
-          parameter: --attach-os-disk ${os_disk_id}
-          required-if:
-            variable: os_disk_creation
-            value: attach
-        - variable: data_disk_id
-          parameter: --attach-data-disks ${data_disk_id}
-          required-if:
-            variable: data_disk_creation
-            value: attach
+        #- variable: os_disk_id
+        #  parameter: --attach-os-disk ${os_disk_id}
+        #  required-if:
+        #    variable: os_disk_creation
+        #    value: attach
+        #- variable: data_disk_id
+        #  parameter: --attach-data-disks ${data_disk_id}
+        #  required-if:
+        #    variable: data_disk_creation
+        #    value: attach
         - variable: password
           required: true
           parameter: --admin-password

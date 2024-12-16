@@ -126,9 +126,9 @@
       id: create-container-instance
       name: Create Container Instance
       consumes:
-        - variable: resource_group_name
+        - variable: resource_group
         - variable: container_name
         - variable: image
       verify: |
-          az container show --resource-group ${resource_group_name} --name ${container_name}
-      install: az container create --resource-group ${resource_group_name} --name ${container_name} --image ${image}
+          az container show --resource-group ${resource_group} --name ${container_name}
+      install: az container create --resource-group ${resource_group} --name ${container_name} --image ${image}

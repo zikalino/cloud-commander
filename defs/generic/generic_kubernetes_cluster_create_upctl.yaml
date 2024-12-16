@@ -142,7 +142,7 @@
         - variable: label
           parameter: --label
           required: false
-        - variable: plan
+        - variable: kubernetes_plan
           parameter: --plan
           required: false
         - variable: version

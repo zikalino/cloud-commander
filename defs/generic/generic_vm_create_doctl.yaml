@@ -84,7 +84,7 @@
           description: Specifies whether or not the Droplet monitoring agent should be installed. By default, the agent is installed on new Droplets but installation errors are ignored. Set --droplet-agent=false to prevent installation. Set to `true` to make installation errors fatal.
           val-false: undefined
           produces: 
-            - variable: droplet_agent=false
+            - variable: droplet_agent # =false
         - type: checkbox
           name: enable-backups
           description: Enables backups for the Droplet. By default, backups are created on a daily basis.
@@ -211,33 +211,33 @@
         - variable: enable_private_networking
           parameter: --enable-private-networking
           required: false
-        - variable: project_id
-          parameter: --project-id
-          required: false
-        - variable: ssh_keys
-          parameter: --ssh-keys
-          required: false
-        - variable: tag_name
-          parameter: --tag-name
-          required: false
-        - variable: tag_names
-          parameter: --tag-names
-          required: false
-        - variable: user_data
-          parameter: --user-data
-          required: false
-        - variable: user_data_file
-          parameter: --user-data-file
-          required: false
-        - variable: volumes
-          parameter: --volumes
-          required: false
-        - variable: vpc_uuid
-          parameter: --vpc-uuid
-          required: false
-        - variable: wait
-          parameter: --wait
-          required: false
+        #- variable: project_id
+        #  parameter: --project-id
+        #  required: false
+        #- variable: ssh_keys
+        #  parameter: --ssh-keys
+        #  required: false
+        #- variable: tag_name
+        #  parameter: --tag-name
+        #  required: false
+        #- variable: tag_names
+        #  parameter: --tag-names
+        #  required: false
+        # - variable: user_data
+        #   parameter: --user-data
+        #   required: false
+        # - variable: user_data_file
+        #   parameter: --user-data-file
+        #   required: false
+        # - variable: volumes
+        #   parameter: --volumes
+        #   required: false
+        #- variable: vpc_uuid
+        #  parameter: --vpc-uuid
+        #  required: false
+        #- variable: wait
+        #  parameter: --wait
+        #  required: false
       install: doctl compute droplet create ${droplet_name}
       verify: doctl compute droplet get ${droplet_name}
       produces:

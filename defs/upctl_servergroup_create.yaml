@@ -84,7 +84,7 @@ form:
         consumes:
           - variable: title
           - variable: anti_affinity_policy
-          - variable: server
+          - variable: server_id
         verify: |
             upctl servergroup show ${title}
         install: upctl servergroup create --title ${title} --anti-affinity-policy ${anti_affinity_policy} --server ${server}

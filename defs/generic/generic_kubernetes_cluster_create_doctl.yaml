@@ -217,9 +217,9 @@
           required: true
         - variable: region
           required: true
-        - variable: 1_clicks
-          parameter: --1-clicks
-          required: false
+        # - variable: 1_clicks
+        #   parameter: --1-clicks
+        #   required: false
         - variable: auto_upgrade
           parameter: --auto-upgrade
           required: false

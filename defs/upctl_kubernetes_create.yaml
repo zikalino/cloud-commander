@@ -134,10 +134,10 @@ form:
           - variable: label
             parameter: --label
             required: false
-          - variable: plan
+          - variable: kubernetes_plan
             parameter: --plan
             required: false
-          - variable: version
+          - variable: kubernetes_version
             parameter: --version
             required: false
           - variable: node_group
