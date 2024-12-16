@@ -1,3 +1,5 @@
 type: layout-form
 id: root
-section: []
+form:
+  - type: section
+    subitems: []

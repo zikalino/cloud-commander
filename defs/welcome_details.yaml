@@ -18,6 +18,7 @@ form:
     subitems:
       - $include: __git_install_step.yaml
       - $include: __gh_install_step.yaml
+      - $include: __gh_login_step.yaml
 
 footer:
   - type: footer
