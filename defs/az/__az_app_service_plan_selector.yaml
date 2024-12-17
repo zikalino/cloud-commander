@@ -14,6 +14,8 @@
           text: New App Service Plan
           variable: service-plan-creation
           default: false
+      produces:
+        - variable: service-plan-creation
   
 - type: section
   show-if:

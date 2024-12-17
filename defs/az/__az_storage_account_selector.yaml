@@ -15,6 +15,8 @@
           text: New Storage Account
           variable: storage-account-creation
           default: false
+      produces:
+        - variable: storage-account-creation
   
 - type: section
   show-if:

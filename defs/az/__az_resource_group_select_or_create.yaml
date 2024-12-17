@@ -12,6 +12,8 @@
           text: New Resource Group
           variable: resource-group-creation
           default: false
+      produces:
+        - variable: resource-group-creation
   
 - type: section
   show-if:

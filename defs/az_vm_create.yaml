@@ -14,6 +14,7 @@ form:
         content: OS Disk
 
       - type: radio-group
+        produces: os_disk_creation
         subitems:
           - type: radio
             value: default
@@ -41,6 +42,7 @@ form:
         font: header-1
         content: Data Disks
       - type: radio-group
+        produces: data_disk_creation
         subitems:
           - type: radio
             value: default
