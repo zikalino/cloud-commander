@@ -110,3 +110,22 @@
   name: Delete
   cmd: linode volumes delete ${id}
   refresh: parent
+
+#
+# Kubernetes
+#
+- type: create
+  item-types:
+    - cloud-linode
+    - linode-kubernetes-list
+  name: Create Kubernetes Cluster
+  template:
+    name: generic/generic_kubernetes_cluster_create
+    parameters:
+      cloud_provider: cloud-linode
+
+- type: delete
+  item-types: linode-kubernetes
+  name: Delete
+  cmd: linode lke cluster-delete ${id}
+  refresh: parent

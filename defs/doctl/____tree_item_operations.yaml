@@ -80,6 +80,26 @@
   #  path: "$[0].status"
   #  value: off
 
+#
+# Kubernetes
+#
+- type: create
+  item-types:
+    - cloud-doctl
+    - doctl-kubernetes-list
+  name: Create Kubernetes Cluster
+  template:
+    name: generic/generic_kubernetes_cluster_create
+    parameters:
+      cloud_provider: cloud-doctl
+
+- type: delete
+  item-types: doctl-kubernetes
+  name: Delete
+  cmd: doctl kubernetes cluster delete ${id}
+  refresh: parent
+
+
 - type: create
   item-types: doctl-volume
   name: Create Volume

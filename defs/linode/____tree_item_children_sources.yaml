@@ -8,6 +8,15 @@
     path-raw: $[::]
     item-type-generic: vm
     item-type: linode-linode
+
+  - item-types: linode-kubernetes-list
+    cmd: linode lke clusters-list --json
+    path-id: $[::].id
+    path-name: $[::].label
+    path-raw: $[::]
+    item-type: linode-kubernetes
+    item-type-generic: kubernetes
+
   - item-types: linode-loadbalancer-list
     cmd: linode nodebalancers list --json
     path-id: $[::].id
@@ -15,6 +24,7 @@
     path-raw: $[::]
     item-type: linode-loadbalancer
     item-type-generic: loadbalancer
+
   - item-types: linode-firewall-list
     cmd: linode firewalls list --json
     path-id: $[::].id

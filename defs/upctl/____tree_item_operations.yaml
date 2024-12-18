@@ -42,6 +42,27 @@
   when:
     path: state
     value: started
+
+#
+# Kubernetes
+#
+- type: create
+  item-types:
+    - cloud-upctl
+    - upctl-kubernetes-list
+  name: Create Kubernetes Cluster
+  template:
+    name: generic/generic_kubernetes_cluster_create
+    parameters:
+      cloud_provider: cloud-upctl
+
+- type: delete
+  item-types: upctl-kubernetes
+  name: Delete
+  cmd: upctl kubernetes delete ${id}
+  refresh: parent
+
+
 - type: create
   item-types: upctl-server
   name: Create Storage

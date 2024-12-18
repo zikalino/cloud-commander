@@ -10,6 +10,13 @@
       subitems: []
       raw: {}
 
+    - name: Kubernetes
+      id: cloud-linode-kubernetes
+      type: linode-kubernetes-list
+      icon: linode.png
+      subitems: []
+      raw: {}
+
     - name: Node Balancers
       id: cloud-linode-nodebalancers
       type: linode-loadbalancer-list
