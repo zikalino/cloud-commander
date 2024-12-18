@@ -1,5 +1,5 @@
 #
-# create
+# droplets
 # 
 - type: create
   item-types:
@@ -10,10 +10,6 @@
     name: generic/generic_vm_create.yaml
     parameters:
       cloud_provider: cloud-doctl
-
-#
-# delete
-#
 - type: delete
   item-types: doctl-droplet
   name: Delete
@@ -101,7 +97,9 @@
 
 
 - type: create
-  item-types: doctl-volume
+  item-types: 
+    - cloud-doctl
+    - doctl-volume-list
   name: Create Volume
   template: doctl_compute_volume_create.yaml
 - type: delete
@@ -124,8 +122,11 @@
   name: Detach
   cmd: doctl compute volume-action detach ${id}
   refresh: self
+
 - type: create
-  item-types: doctl-kubernetes
+  item-types: 
+    - cloud-doctl
+    - doctl-kubernetes-list
   name: Create Kubernetes Cluster
   template: doctl_kubernetes_cluster_create.yaml
 - type: delete
@@ -133,8 +134,14 @@
   name: Delete
   cmd: doctl kubernetes cluster delete ${id} --force
   refresh: parent
+
+#
+# databases
+#
 - type: create
-  item-types: doctl-database
+  item-types: 
+    - cloud-doctl
+    - doctl-database-list
   name: Create Database
   template: doctl_databases_create.yaml
 - type: delete
@@ -142,8 +149,14 @@
   name: Delete
   cmd: doctl databases delete ${id} --force
   refresh: parent
+
+#
+# Firewalls
+#
 - type: create
-  item-types: doctl-firewall
+  item-types: 
+    - cloud-doctl
+    - doctl-firewall-list
   name: Create Firewall
   template: doctl_compute_firewall_create.yaml
 - type: delete
@@ -151,8 +164,14 @@
   name: Delete
   cmd: doctl compute firewall delete ${id}
   refresh: parent
+
+#
+# Container registries
+#
 - type: create
-  item-types: doctl-containerregistry
+  item-types: 
+    - cloud-doctl
+    - doctl-containerregistry-list
   name: Create Container Registry
   template: doctl_registry_create.yaml
 - type: delete

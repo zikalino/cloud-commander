@@ -10,10 +10,6 @@
     name: generic/generic_vm_create.yaml
     parameters:
       cloud_provider: cloud-linode
-- type: create
-  item-types: linode-volume
-  name: Create Volume
-  template: linode_volumes_create.yaml
 - type: delete
   item-types: linode-linode
   name: Delete
@@ -87,8 +83,30 @@
   item-types: linode-linode
   name: Clone
   cmd: linode linodes clone ${id}
+
+
+#
+# Volumes (disks)
+#
 - type: create
-  item-types: linode-loadbalancer
+  item-types: 
+    - cloud-linode
+    - linode-volume-list
+  name: Create Volume
+  template: linode_volumes_create.yaml
+- type: delete
+  item-types: linode-volume
+  name: Delete
+  cmd: linode volumes delete ${id}
+  refresh: parent
+
+#
+# Load balancers
+#
+- type: create
+  item-types: 
+    - cloud-linode
+    - linode-loadbalancer-list
   name: Create Node Balancer
   template: linode_nodebalancers_create.yaml
 - type: delete
@@ -96,19 +114,20 @@
   name: Delete
   cmd: linode nodebalancers delete ${id}
   refresh: parent
+
+#
+# Firewalls
+#
 - type: create
-  item-types: linode-firewall
+  item-types: 
+    - cloud-linode
+    - linode-firewall-list
   name: Create Firewall
   template: linode_firewalls_create.yaml
 - type: delete
   item-types: linode-firewall
   name: Delete
   cmd: linode firewalls delete ${id}
-  refresh: parent
-- type: delete
-  item-types: linode-volume
-  name: Delete
-  cmd: linode volumes delete ${id}
   refresh: parent
 
 #
