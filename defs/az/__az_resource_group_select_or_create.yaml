@@ -1,17 +1,12 @@
 - type: section
   subitems:
     - type: radio-group
-      subitems:
-        - type: radio
-          value: select
+      items:
+        - value: select
           text: Existing Resource Group
-          variable: resource-group-creation
-          default: true
-        - type: radio
-          value: create
+        - value: create
           text: New Resource Group
-          variable: resource-group-creation
-          default: false
+      default: select
       produces:
         - variable: resource-group-creation
   
