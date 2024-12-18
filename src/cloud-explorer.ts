@@ -94,7 +94,7 @@ function displayCreateResourceMenu(item_id: string) {
 
         if (template !== "") {
           menu_items.push({
-            location: template + ".yaml",
+            location: template,
             name: operation['name'],
             parameters: parameters
           });

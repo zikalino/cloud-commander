@@ -1,5 +1,5 @@
 #
-# resource group
+# Resource Group
 #
 - type: create
   item-types:
@@ -8,7 +8,7 @@
   template: az/az_group_create.yaml
 
 #
-# virtual machine
+# Virtual Machine
 #
 - type: create
   item-types:
@@ -19,18 +19,6 @@
     name: generic/generic_vm_create.yaml
     parameters:
       cloud_provider: cloud-azure
-
-- type: create
-  item-types:
-    - "Microsoft.Compute/containerRegistry"
-  name: Create Container Registry
-  template: az/az_acr_create.yaml
-- type: delete
-  item-types:
-    - "Microsoft.Compute/virtualMachines"
-  name: Delete
-  cmd: az resource delete --ids ${id}
-  refresh: parent
 - type: start
   item-types: "Microsoft.Compute/virtualMachines"
   name: Start
@@ -55,3 +43,23 @@
   when:
     path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
     value: "PowerState/running"
+
+#
+# Container Registry
+#
+- type: create
+  item-types:
+    - cloud-azure
+    - az-group
+  name: Create Container Registry
+  template: az/az_acr_create.yaml
+
+#
+# General resource delete --- should work on any resource
+#
+- type: delete
+  item-types:
+    - "Microsoft.Compute/virtualMachines"
+  name: Delete
+  cmd: az resource delete --ids ${id}
+  refresh: parent
