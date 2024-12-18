@@ -1,24 +1,30 @@
 #
-# az
+# resource group
 #
 - type: create
-  item-types: az-group
+  item-types:
+    - cloud-azure
   name: Create Resource Group
   template: az_group_create
+
+#
+# virtual machine
+#
 - type: create
-  item-types: 
-    - vm
+  item-types:
+    - cloud-azure
+    - az-group
   name: Create Virtual Machine
   template:
     name: generic/generic_vm_create
     parameters:
-      cloud_provider: cloud-az
+      cloud_provider: cloud-azure
+
 - type: create
   item-types:
     - "Microsoft.Compute/containerRegistry"
   name: Create Container Registry
   template: az_acr_create
-# this is a template for resource group level
 - type: delete
   item-types:
     - "Microsoft.Compute/virtualMachines"
