@@ -101,7 +101,7 @@
     - cloud-doctl
     - doctl-volume-list
   name: Create Volume
-  template: doctl_compute_volume_create.yaml
+  template: doctl/doctl_compute_volume_create.yaml
 - type: delete
   item-types: doctl-volume
   name: Delete
@@ -128,7 +128,7 @@
     - cloud-doctl
     - doctl-kubernetes-list
   name: Create Kubernetes Cluster
-  template: doctl_kubernetes_cluster_create.yaml
+  template: doctl/doctl_kubernetes_cluster_create.yaml
 - type: delete
   item-types: doctl-kubernetes
   name: Delete
@@ -143,7 +143,7 @@
     - cloud-doctl
     - doctl-database-list
   name: Create Database
-  template: doctl_databases_create.yaml
+  template: doctl/doctl_databases_create.yaml
 - type: delete
   item-types: doctl-database
   name: Delete
@@ -158,7 +158,7 @@
     - cloud-doctl
     - doctl-firewall-list
   name: Create Firewall
-  template: doctl_compute_firewall_create.yaml
+  template: doctl/doctl_compute_firewall_create.yaml
 - type: delete
   item-types: doctl-firewall
   name: Delete
@@ -173,7 +173,7 @@
     - cloud-doctl
     - doctl-containerregistry-list
   name: Create Container Registry
-  template: doctl_registry_create.yaml
+  template: doctl/doctl_registry_create.yaml
 - type: delete
   item-types: doctl-containerregistry
   name: Delete

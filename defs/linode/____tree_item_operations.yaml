@@ -93,7 +93,7 @@
     - cloud-linode
     - linode-volume-list
   name: Create Volume
-  template: linode_volumes_create.yaml
+  template: linode/linode_volumes_create.yaml
 - type: delete
   item-types: linode-volume
   name: Delete
@@ -108,7 +108,7 @@
     - cloud-linode
     - linode-loadbalancer-list
   name: Create Node Balancer
-  template: linode_nodebalancers_create.yaml
+  template: linode/linode_nodebalancers_create.yaml
 - type: delete
   item-types: linode-loadbalancer
   name: Delete
@@ -123,7 +123,7 @@
     - cloud-linode
     - linode-firewall-list
   name: Create Firewall
-  template: linode_firewalls_create.yaml
+  template: linode/linode_firewalls_create.yaml
 - type: delete
   item-types: linode-firewall
   name: Delete
