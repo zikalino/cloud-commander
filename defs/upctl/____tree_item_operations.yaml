@@ -7,7 +7,7 @@
     - upctl-server-list
   name: Create Server
   template:
-    name: generic/generic_vm_create
+    name: generic/generic_vm_create.yaml
     parameters:
       cloud_provider: cloud-upctl
 - type: delete
@@ -52,7 +52,7 @@
     - upctl-kubernetes-list
   name: Create Kubernetes Cluster
   template:
-    name: generic/generic_kubernetes_cluster_create
+    name: generic/generic_kubernetes_cluster_create.yaml
     parameters:
       cloud_provider: cloud-upctl
 
@@ -66,7 +66,7 @@
 - type: create
   item-types: upctl-server
   name: Create Storage
-  template: upctl_storage_create
+  template: upctl_storage_create.yaml
 - type: delete
   item-types: upctl-storage
   name: Delete
@@ -75,7 +75,7 @@
 - type: create
   item-types: upctl-servergroup
   name: Create Server Group
-  template: upctl_servergroup_create
+  template: upctl_servergroup_create.yaml
 - type: delete
   item-types: upctl-servergroup
   name: Delete
@@ -99,7 +99,7 @@
 - type: create
   item-types: upctl-kubernetes
   name: Create Kubernetes Cluster
-  template: upctl_kubernetes_create
+  template: upctl_kubernetes_create.yaml
 - type: delete
   item-types: upctl-kubernetes
   name: Delete
@@ -118,7 +118,7 @@
 - type: create
   item-types: upctl-network
   name: Create Network
-  template: upctl_network_create
+  template: upctl_network_create.yaml
 - type: delete
   item-types: upctl-network
   name: Delete
@@ -138,7 +138,7 @@
 - type: create
   item-types: upctl-router
   name: Create Router
-  template: upctl_router_create
+  template: upctl_router_create.yaml
 - type: delete
   item-types: upctl-router
   name: Delete

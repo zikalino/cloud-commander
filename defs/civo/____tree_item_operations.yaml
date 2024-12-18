@@ -7,7 +7,7 @@
     - civo-instance-list
   name: Create Instance
   template:
-    name: generic/generic_vm_create
+    name: generic/generic_vm_create.yaml
     parameters:
       cloud_provider: cloud-civo
 - type: power-off
@@ -30,7 +30,7 @@
     - civo-kubernetes-list
   name: Create Kubernetes Cluster
   template:
-    name: generic/generic_kubernetes_cluster_create
+    name: generic/generic_kubernetes_cluster_create.yaml
     parameters:
       cloud_provider: cloud-civo
 

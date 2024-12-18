@@ -7,13 +7,13 @@
     - linode-linode-list
   name: Create Linode (Virtual Machine)
   template:
-    name: generic/generic_vm_create
+    name: generic/generic_vm_create.yaml
     parameters:
       cloud_provider: cloud-linode
 - type: create
   item-types: linode-volume
   name: Create Volume
-  template: linode_volumes_create
+  template: linode_volumes_create.yaml
 - type: delete
   item-types: linode-linode
   name: Delete
@@ -90,7 +90,7 @@
 - type: create
   item-types: linode-loadbalancer
   name: Create Node Balancer
-  template: linode_nodebalancers_create
+  template: linode_nodebalancers_create.yaml
 - type: delete
   item-types: linode-loadbalancer
   name: Delete
@@ -99,7 +99,7 @@
 - type: create
   item-types: linode-firewall
   name: Create Firewall
-  template: linode_firewalls_create
+  template: linode_firewalls_create.yaml
 - type: delete
   item-types: linode-firewall
   name: Delete
@@ -120,7 +120,7 @@
     - linode-kubernetes-list
   name: Create Kubernetes Cluster
   template:
-    name: generic/generic_kubernetes_cluster_create
+    name: generic/generic_kubernetes_cluster_create.yaml
     parameters:
       cloud_provider: cloud-linode
 
