@@ -11,10 +11,10 @@
   item-type: docker-image
 
 - item-types: docker-container-list
-  cmd: upctl storage list --format json
+  cmd: docker ps --format json
   parser: rows-json
-  path-id: $[::].uuid
-  path-name: $[::].title
+  path-id: $[::].ID
+  path-name: $[::].Names
   path-raw: $[::]
   item-type: docker-container
   item-type-generic: docker-container

@@ -1,12 +1,12 @@
 - name: Docker
   type: docker
   id: docker
-  icon: docker.svg
+  icon: docker.png
   subitems:
     - name: Images
       type: docker-image-list
       id: docker-image-list
-      icon: docker.svg
+      icon: docker.png
       subitems: []
       raw: {}
     - name: Containers
