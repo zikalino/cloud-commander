@@ -1,18 +1,20 @@
 #
 # Docker
 #
-#- item-types: docker-image-list
-#  cmd: docker image list --format json
-#  path-id: $.servers[::].ID
-#  path-name: $.servers[::].hostname
-#  path-raw: $.servers[::]
-#  item-type-generic: docker-image
-#  item-type: docker-image
+- item-types: docker-image-list
+  cmd: docker image list --format json
+  parser: rows-json
+  path-id: $[::].ID
+  path-name: $[::].Repository
+  path-raw: $[::]
+  item-type-generic: docker-image
+  item-type: docker-image
 
-#- item-types: docker-container-list
-#  cmd: upctl storage list -o json
-#  path-id: $.storages[::].uuid
-#  path-name: $.storages[::].title
-#  path-raw: $.storages[::]
-#  item-type: docker-container
-#  item-type-generic: docker-container
+- item-types: docker-container-list
+  cmd: upctl storage list --format json
+  parser: rows-json
+  path-id: $[::].uuid
+  path-name: $[::].title
+  path-raw: $[::]
+  item-type: docker-container
+  item-type-generic: docker-container

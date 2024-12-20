@@ -5,6 +5,7 @@ item-sources:
   - $include: kamatera/____tree_item_children_sources.yaml
   - $include: linode/____tree_item_children_sources.yaml
   - $include: upctl/____tree_item_children_sources.yaml
+  - $include: docker/____tree_item_children_sources.yaml
 
 detail-sources:
   - $include: az/____tree_item_detail_sources.yaml

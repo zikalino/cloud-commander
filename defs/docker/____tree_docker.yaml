@@ -1,24 +1,24 @@
 - name: Docker
   type: docker
   id: docker
-  icon: docker.png
+  icon: docker.svg
   subitems:
     - name: Images
       type: docker-image-list
       id: docker-image-list
-      icon: upcloud.png
+      icon: docker.svg
       subitems: []
       raw: {}
     - name: Containers
       type: docker-container-list
       id: docker-container-list
-      icon: upcloud.png
+      icon: docker.svg
       subitems: []
       raw: {}
     - name: Registries
       type: docker-registry-list
       id: docker-registry-list
-      icon: upcloud.png
+      icon: docker.svg
       subitems: []
       raw: {}
   raw: {}
