@@ -1,0 +1,26 @@
+type: layout-form
+id: root
+form:
+  - type: section
+    subitems:
+      - type: link-row
+        text: Read Getting Started Guide to learn more details on registering and configuring your UpCloud account
+        link: https://zikalino.substack.com/p/getting-started-with-upcloud-using
+
+  - type: section
+    title: Prerequisites
+    subitems:
+      - $include: __go_install_step.yaml
+      - type: 'action-row'
+        name: Install UpCloud CLI
+        verify: upctl version
+        install: go install github.com/UpCloudLtd/upcloud-cli/v3/...@latest
+
+
+footer:
+  - type: footer
+    id: footer
+    subitems:
+      - type: button
+        id: install_button
+        codicon: run-all

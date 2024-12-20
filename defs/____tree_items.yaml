@@ -17,3 +17,4 @@
 # - $include: ovh/____tree_ovh.yaml
 - $include: upctl/____tree_upctl.yaml
 # - $include: vultr/____tree_vultr.yaml
+- $include: docker/____tree_docker.yaml

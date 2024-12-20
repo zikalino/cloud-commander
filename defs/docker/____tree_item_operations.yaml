@@ -1,0 +1,20 @@
+#
+# upctl
+#
+- type: create
+  item-types:
+    - docker-xxxx
+    - docker-xxxx-yyy
+  name: Create Server
+  template:
+    name: generic/generic_vm_create.yaml
+    parameters:
+      cloud_provider: cloud-upctl
+- type: delete
+  item-types: docker-zzzzz
+  name: Delete
+  cmd: upctl server delete ${id}
+  refresh: parent
+  when:
+    path: state
+    value: stopped
