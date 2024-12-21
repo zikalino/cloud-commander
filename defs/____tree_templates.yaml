@@ -28,6 +28,7 @@ operations:
   - $include: generic/____tree_item_operations.yaml
   - $include: linode/____tree_item_operations.yaml
   - $include: upctl/____tree_item_operations.yaml
+  - $include: docker/____tree_item_operations.yaml
 
 detail-templates:
   - $include: generic/____tree_item_detail_templates.yaml
