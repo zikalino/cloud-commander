@@ -15,7 +15,7 @@
   name: Delete
   cmd: linode linodes delete ${id}
   refresh: parent
-- type: reboot
+- type: restart
   item-types: linode-linode
   name: Reboot
   cmd: linode linodes reboot ${id}
@@ -27,7 +27,7 @@
   item-types: linode-linode
   name: Rebuild
   cmd: linode linodes rebuild ${id}
-- type: power-off
+- type: stop
   item-types: linode-linode
   name: Power off
   cmd: linode linodes shutdown ${id}
@@ -35,7 +35,7 @@
     path: "$[0].status"
     value: running
   refresh: self
-- type: power-on
+- type: start
   item-types: linode-linode
   name: Power on
   cmd: linode linodes boot ${id}

@@ -10,7 +10,7 @@
     name: generic/generic_vm_create.yaml
     parameters:
       cloud_provider: cloud-civo
-- type: power-off
+- type: stop
   item-types: civo-instance
   name: Power Off
   cmd: civo instance stop ${id}

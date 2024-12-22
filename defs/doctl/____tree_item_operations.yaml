@@ -35,7 +35,7 @@
 #  snapshot                  Take a Droplet snapshot
 
 
-- type: reboot
+- type: restart
   item-types: doctl-droplet
   name: Reboot
   cmd: doctl compute droplet-action reboot ${id}
@@ -43,7 +43,7 @@
     path: "$[0].status"
     value: active
   refresh: self
-- type: power-off
+- type: stop
   item-types: doctl-droplet
   name: Power off
   cmd: doctl compute droplet-action power-off ${id}
@@ -51,7 +51,7 @@
     path: "$[0].status"
     value: active
   refresh: self
-- type: power-on
+- type: start
   item-types: doctl-droplet
   name: Power on
   cmd: doctl compute droplet-action power-on ${id}
