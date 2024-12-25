@@ -9,5 +9,5 @@
   platform: linux
   name: Install GitHub CLI
   verify: gh --version
-  interactive: true
+  behavior: interactive
   install: "sudo apt update; sudo apt install gh"

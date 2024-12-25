@@ -9,5 +9,5 @@
   platform: linux
   name: Install Git
   verify: git --version
-  interactive: true
+  behavior: interactive
   install: "sudo apt update ; sudo apt install git"

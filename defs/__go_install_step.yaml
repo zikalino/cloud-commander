@@ -9,5 +9,5 @@
   platform: linux
   name: Install Go
   verify: go version
-  interactive: true
+  behavior: interactive
   install: "sudo snap install --classic --channel=1.16/stable go"

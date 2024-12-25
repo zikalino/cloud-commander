@@ -31,7 +31,7 @@ form:
         platform: linux
         name: Install Azure CLI
         verify: az --version
-        interactive: true
+        behavior: interactive
         install: "curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash"
 
       - type: 'action-row'
@@ -41,7 +41,7 @@ form:
         verify: az account show
         install: | 
                 az login
-        interactive: true
+        behavior: interactive
 
 footer:
   - type: footer

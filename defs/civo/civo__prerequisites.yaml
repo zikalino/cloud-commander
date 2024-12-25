@@ -26,7 +26,7 @@ form:
       - type: 'action-row'
         name: Authentication
         verify: civo permissions ls
-        interactive: true
+        behavior: interactive
         install: |
             civo apikey save
 
