@@ -34,7 +34,7 @@
       - type: row
         subitems:
           - type: field
-            icon: icon-square-orange.png
+            icon: icon-state-${state}.png
             color: black
             label: 'State:'
             value: '${state}'
