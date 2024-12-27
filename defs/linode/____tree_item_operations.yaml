@@ -20,7 +20,7 @@
   name: Reboot
   cmd: linode linodes reboot ${id}
   when:
-    path: "$[0].status"
+    path: "$.raw[0].status"
     value: running
   refresh: self
 - type: rebuild
@@ -32,7 +32,7 @@
   name: Power off
   cmd: linode linodes shutdown ${id}
   when:
-    path: "$[0].status"
+    path: "$.raw[0].status"
     value: running
   refresh: self
 - type: start
@@ -40,7 +40,7 @@
   name: Power on
   cmd: linode linodes boot ${id}
   when:
-    path: "$[0].status"
+    path: "$.raw[0].status"
     value: offline
   refresh: self
 - type: other
@@ -48,7 +48,7 @@
   name: Enable backups
   cmd: linode linodes backups-enable ${id}
   when:
-    path: "$[0].backups.enabled"
+    path: "$.raw[0].backups.enabled"
     value: false
   refresh: self
 - type: other
@@ -56,7 +56,7 @@
   name: Enable backups
   cmd: linode linodes backups-cancel ${id}
   when:
-    path: "$[0].backups.enabled"
+    path: "$.raw[0].backups.enabled"
     value: true
   refresh: self
 - type: other

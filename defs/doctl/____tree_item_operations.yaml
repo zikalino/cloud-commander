@@ -40,7 +40,7 @@
   name: Reboot
   cmd: doctl compute droplet-action reboot ${id}
   when:
-    path: "$[0].status"
+    path: "$.raw[0].status"
     value: active
   refresh: self
 - type: stop
@@ -48,7 +48,7 @@
   name: Power off
   cmd: doctl compute droplet-action power-off ${id}
   when:
-    path: "$[0].status"
+    path: "$.raw[0].status"
     value: active
   refresh: self
 - type: start
@@ -56,7 +56,7 @@
   name: Power on
   cmd: doctl compute droplet-action power-on ${id}
   when:
-    path: "$[0].status"
+    path: "$.raw[0].status"
     value: off
   refresh: self
 - type: other
@@ -65,7 +65,7 @@
   cmd: doctl compute droplet-action enable-backups ${id}
   refresh: self
   #when:
-  #  path: "$[0].status"
+  #  path: "$.raw[0].status"
   #  value: on
 - type: other
   item-types: doctl-droplet
@@ -73,7 +73,7 @@
   cmd: doctl compute droplet-action disable-backups ${id}
   refresh: self
   #when:
-  #  path: "$[0].status"
+  #  path: "$.raw[0].status"
   #  value: off
 
 #

@@ -1,7 +1,7 @@
 - item-types:
   - "Microsoft.Compute/*"
   when:
-    path: "$.type"
+    path: "$.raw.type"
     value: "Microsoft.Compute/virtualMachines"
     compare: ne
   cmd: az resource show --ids ${id}

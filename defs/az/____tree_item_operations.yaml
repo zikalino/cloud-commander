@@ -25,7 +25,7 @@
   cmd: az vm start --ids ${id}
   refresh: self
   when:
-    path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
+    path: "$.raw.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
     value: "PowerState/stopped"
 - type: stop
   item-types: "Microsoft.Compute/virtualMachines"
@@ -33,7 +33,7 @@
   cmd: az vm stop --ids ${id}
   refresh: self
   when:
-    path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
+    path: "$.raw.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
     value: "PowerState/running"
 - type: restart
   item-types: "Microsoft.Compute/virtualMachines"
@@ -41,7 +41,7 @@
   cmd: az vm restart --ids ${id}
   refresh: self
   when:
-    path: "$.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
+    path: "$.raw.instanceView.statuses[?(@.code < 'ProvisioningState')].code"
     value: "PowerState/running"
 
 #

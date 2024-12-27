@@ -16,7 +16,7 @@
   cmd: upctl server delete ${id}
   refresh: parent
   when:
-    path: state
+    path: $.state
     value: stopped
 - type: start
   item-types: upctl-server
@@ -24,7 +24,7 @@
   cmd: upctl server start ${id}
   refresh: self
   when:
-    path: state
+    path: $.state
     value: stopped
 - type: stop
   item-types: upctl-server
@@ -32,7 +32,7 @@
   cmd: upctl server stop ${id} --wait
   refresh: self
   when:
-    path: state
+    path: $.state
     value: started
 - type: restart
   item-types: upctl-server
@@ -40,7 +40,7 @@
   cmd: upctl server restart ${id}
   refresh: self
   when:
-    path: state
+    path: $.state
     value: started
 
 #
